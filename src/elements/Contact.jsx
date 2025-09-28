@@ -25,8 +25,9 @@ const Contact = () => {
           your ideas to life.
         </p>
 
-        <div className="flex flex-col gap-4 text-sm opacity-80" data-aos="fade-up"
-          data-aos-duration="1000">
+        <div className="flex flex-col gap-4 text-sm opacity-80" data-aos-delay="500"
+        data-aos="fade-up"
+        data-aos-duration="1000">
           <p>
             <span className="font-semibold">Email:</span>{" "}
             <a
@@ -43,7 +44,7 @@ const Contact = () => {
             </a>
           </p>
           <p>
-            <span className="font-semibold">Location:</span> Bandung, Indonesia
+            <span className="font-semibold">Location:</span> Banten, Indonesia
           </p>
         </div>
       </div>
