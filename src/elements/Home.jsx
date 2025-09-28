@@ -5,7 +5,7 @@ const Home = () => {
   return (
     <div>
       <div
-        className="hero grid md:grid-cols-2 grid-cols-1 pt-10 items-center xl:gap-0 gap-6 mt-18"
+        className="hero grid md:grid-cols-2 grid-cols-1 pt-10 items-center xl:gap-0 gap-6 mt-5 sm:mt-18"
         id="beranda"
       >
         <div className="animate__animated animate__fadeInUp animate__delay-3s">
@@ -16,7 +16,7 @@ const Home = () => {
               className="w-10 rounded-md"
               loading="lazy"
             />
-            <q>I Agree to myself to keep always improving.🚀</q>
+            <q>I Agree to myself to always keep improving.🚀</q>
           </div>
           <h1 className="text-4xl/tight sm:text-5xl/tight font-black mb-6">
             Hi, Saya Aditya Fajar Satya Yudha
@@ -47,9 +47,7 @@ const Home = () => {
           src={DataImage.HeroImage}
           loading="lazy"
           alt="Hero Img"
-          className="w-[500px] md:ml-auto rounded-2xl shadow-lg
-          transition-transform duration-500 ease-in-out
-          hover:scale-105 hover:-rotate-2 hover:-translate-y-2  animate__animated animate__fadeInUp animate__delay-4s"
+          className="w-[500px] md:ml-auto animate__animated animate__fadeInUp animate__delay-4s"
         />
       </div>
     </div>

@@ -25,7 +25,7 @@ const Contact = () => {
           your ideas to life.
         </p>
 
-        <div className="flex flex-col gap-4 text-sm opacity-80" data-aos-delay="500"
+        <div className="flex flex-col gap-4 text-sm opacity-80" data-aos-delay="1500"
         data-aos="fade-up"
         data-aos-duration="1000">
           <p>
@@ -40,7 +40,7 @@ const Contact = () => {
           <p>
             <span className="font-semibold">Phone:</span>{" "}
             <a href="tel:+6281234567890" className="hover:text-violet-500">
-              +62 812-3456-7890
+              +62 881-8080-1448
             </a>
           </p>
           <p>
@@ -62,7 +62,7 @@ const Contact = () => {
           <div className="flex flex-col gap-2">
             <label className="font-semibold">Nama* </label>
             <input
-              className="border border-zinc-500/30 p-2 rounded-md"
+              className="border border-zinc-500/10 p-2 rounded-md  placeholder:opacity-60"
               type="text"
               name="nama"
               placeholder="Your Name.."
@@ -72,7 +72,7 @@ const Contact = () => {
           <div className="flex flex-col gap-2">
             <label className="font-semibold">Email* </label>
             <input
-              className="border border-zinc-500/30 p-2 rounded-md"
+              className="border border-zinc-500/10 p-2 rounded-md  placeholder:opacity-60"
               type="email"
               name="email"
               placeholder="Your email.."
@@ -84,7 +84,7 @@ const Contact = () => {
               Message*
             </label>
             <textarea
-              className="border border-zinc-500/30 p-2 rounded-md"
+              className="border border-zinc-500/10 p-2 rounded-md placeholder:opacity-60"
               name="pesan"
               id="pesan"
               cols="45"
@@ -95,7 +95,7 @@ const Contact = () => {
           <div className="text-center">
             <button
               type="submit"
-              className="bg-violet-700 p-3 rounded-lg w-full cursor-pointer border-zinc-600 hover:bg-violet-600 "
+              className="bg-violet-700 p-3 rounded-lg w-full cursor-pointer border-zinc-600 hover:bg-violet-600"
             >
               Kirim Pesan
             </button>

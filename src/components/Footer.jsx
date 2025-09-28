@@ -20,9 +20,6 @@ const Footer = () => {
         <a href="#">
             <i className='ri-linkedin-fill ri-2x'></i>
         </a>
-        <a href="#">
-            <i className='ri-youtube-fill ri-2x'></i>
-        </a>
       </div>
     </div>
   )
