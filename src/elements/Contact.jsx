@@ -95,7 +95,7 @@ const Contact = () => {
           <div className="text-center">
             <button
               type="submit"
-              className="bg-violet-700 p-3 rounded-lg w-full cursor-pointer border-zinc-600 hover:bg-violet-600"
+              className="bg-stone-700 p-3 rounded-lg w-full cursor-pointer border-zinc-600 hover:bg-stone-800 transition-colors duration-200"
             >
               Kirim Pesan
             </button>

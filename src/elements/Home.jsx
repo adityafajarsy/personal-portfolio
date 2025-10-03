@@ -9,23 +9,22 @@ const Home = () => {
         id="beranda"
       >
         <div className="animate__animated animate__fadeInUp animate__delay-3s">
-          <div className="flex items-center gap-3 mb-6 bg-zinc-800 w-fit p-4 rounded-2xl text-sm sm:text-lg">
+          <div className="flex items-center gap-3 mb-6 bg-zinc-800 w-fit p-4 rounded-2xl text-sm sm:text-lg ">
+          <div className="w-8 h-8 rounded-lg overflow-hidden">
             <img
-              src={DataImage.HeroImage}
+              src='/public/assets/BRI01432.JPG'
               alt="Hero Image"
-              className="w-10 rounded-md"
+              className="w-full h-full object-cover scale-300 translate-x-[15%] object-[70%_70%]"
               loading="lazy"
             />
-            <q>I Agree to myself to always keep improving.🚀</q>
+            </div>
+            <q>I Agree to myself to always keep improving.</q>
           </div>
           <h1 className="text-4xl/tight sm:text-5xl/tight font-black mb-6">
-            Hi, Saya Aditya Fajar Satya Yudha
+            Hi, I'm Aditya Fajar Satya Yudha
           </h1>
           <p className="text-base/loose mb-6 opacity-60">
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Obcaecati
-            maxime dolorem ex sed at similique architecto maiores laboriosam
-            illum, minima et labore ratione nihil odit provident debitis facilis
-            iste excepturi.
+          I envision myself growing in the tech industry as a developer who contributes to meaningful innovations. Technology is constantly evolving, and I aim to be at the forefront creating solutions. My longterm goal is to keep pushing boundaries, exploring new ideas, and becoming part of the innovation that drives the future.
           </p>
           <div className="flex items-center sm:gap-4 gap-2">
             <a

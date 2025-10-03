@@ -5,3 +5,31 @@
     font-family: "Poppins", sans-serif;
   }
 }
+
+.starry {
+  background: #111;
+  position: relative;
+  overflow: hidden;
+}
+
+.starry::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 200%;
+  height: 200%;
+  background: transparent url("https://www.transparenttextures.com/patterns/stardust.png") repeat;
+  background-size: cover;
+  opacity: 0.6;
+  animation: moveStars 60s linear infinite;
+}
+
+@keyframes moveStars {
+  from {
+    transform: translate(0, 0);
+  }
+  to {
+    transform: translate(-100px, -200px);
+  }
+}

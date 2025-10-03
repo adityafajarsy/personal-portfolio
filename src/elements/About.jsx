@@ -19,30 +19,25 @@ const About = () => {
             className="w-12 rounded-md sm:hidden block mb-2"
           />
           <p className="text-base/loose mb-10">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo ut
-            architecto quaerat nihil nulla placeat facilis, consequatur enim
-            velit earum, voluptatibus iusto fugit laboriosam non minus minima
-            hic beatae quae dolorum accusamus eaque nesciunt quod qui inventore.
-            Beatae, incidunt dolores, rerum fugiat blanditiis similique corrupti
-            repellendus recusandae, nobis sit quasi.
+          I started my <b>journey</b> in the <b>creative field</b> during freshyear college, working on <b>Graphic Designs</b>, logos, banners, ID cards, and <b>video productions</b>. My path in software development began in <b>Sept 2024</b> through a four month bootcamp <b>"Hactiv8"</b>. After a short break to finish my studies, I’ve been fully focused on self learning since <b>August 2025</b>, continuously grinding my skills as a  <b>developer</b>.
           </p>
           <div className="flex items-center justify-between">
             <img
-              src={DataImage.HeroImage}
+              src={'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ5zv605IDYRA7f3I0IMFUy4BKP3ETSMleuJA&s'}
               alt="Image"
               className="w-12 rounded-md sm:block hidden"
             />
             <div className="flex items-center gap-6">
               <div>
                 <h1 className="text-4xl mb-1">
-                  5<span className="text-violet-500">+</span>
+                  5<span className="text-orange-500">+</span>
                 </h1>
                 <p>Projects done</p>
               </div>
               <div>
                 <div>
                   <h1 className="text-4xl mb-1">
-                    7<span className="text-violet-500">+</span>
+                    7<span className="text-orange-500">+</span>
                   </h1>
                   <p>Months of Learning</p>
                 </div>
@@ -57,7 +52,7 @@ const About = () => {
             data-aos="fade-up"
             data-aos-duration="1000"
           >
-            Tools yang dipakai
+            Tools i Use
           </h1>
           <p
             className="xl:w-2/5 lg:w-2/4 md:w-2/3 sm:w-3/4 w-full text-base/loose opacity-50"
@@ -65,8 +60,7 @@ const About = () => {
             data-aos="fade-up"
             data-aos-duration="1000"
           >
-            Berikut ini beberapa tools yang biasa saya pakai untuk pembuatan
-            website atau Design
+            This is the tools that i usually used to make web app
           </p>
           <div className="tools-box mt-14 grid lg:grid-cols-4 md:grid-cols-3 sm:grid-cols-2 grid-cols-1 gap-4">
             {listTools.map((tool) => (
