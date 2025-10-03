@@ -1,5 +1,4 @@
 import React from "react";
-import DataImage from "../data";
 import ShinyText from "../components/ShinyText/ShinyText";
 import ProfileCard from "../components/ProfileCard/ProfileCard";
 
@@ -64,7 +63,7 @@ const Home = () => {
             handle="adityafajarsyy"
             status="Online"
             contactText="Contact Me"
-            avatarUrl="/public/assets/adityafajarsy.png"
+            avatarUrl="./assets/adityafajarsy.png"
             showUserInfo={true}
             enableTilt={true}
             enableMobileTilt={false}
