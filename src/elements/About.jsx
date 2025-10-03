@@ -1,6 +1,5 @@
 import React from "react";
 import {listTools} from "../data"
-import DataImage from "../data"
 
 const About = () => {
   return (
@@ -13,13 +12,13 @@ const About = () => {
           data-aos-once={true}
         >
           <img
-            src={DataImage.HeroImage}
+            src={'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ5zv605IDYRA7f3I0IMFUy4BKP3ETSMleuJA&s'}
             loading="lazy"
             alt="Image"
             className="w-12 rounded-md sm:hidden block mb-2"
           />
           <p className="text-base/loose mb-10">
-          I started my <b>journey</b> in the <b>creative field</b> during freshyear college, working on <b>Graphic Designs</b>, logos, banners, ID cards, and <b>video productions</b>. My path in software development began in <b>Sept 2024</b> through a four month bootcamp <b>"Hactiv8"</b>. After a short break to finish my studies, I’ve been fully focused on self learning since <b>August 2025</b>, continuously grinding my skills as a  <b>developer</b>.
+          I started my <b>journey</b> in the <b>creative field</b> during freshyear college, working on <b>Graphic Designs</b>, logos, banners, ID cards, lanyards, and <b>video productions</b>. My path in software development began in <b>Sept 2024</b> through a four month bootcamp <b>"Hactiv8"</b>. After a short break to finish my studies, I’ve been fully focused on self learning since <b>August 2025</b>, continuously grinding my skills as a  <b>developer</b>.
           </p>
           <div className="flex items-center justify-between">
             <img
@@ -52,7 +51,7 @@ const About = () => {
             data-aos="fade-up"
             data-aos-duration="1000"
           >
-            Tools i Use
+            Tools 
           </h1>
           <p
             className="xl:w-2/5 lg:w-2/4 md:w-2/3 sm:w-3/4 w-full text-base/loose opacity-50"
@@ -60,7 +59,7 @@ const About = () => {
             data-aos="fade-up"
             data-aos-duration="1000"
           >
-            This is the tools that i usually used to make web app
+            The tools that i usually used to make web app
           </p>
           <div className="tools-box mt-14 grid lg:grid-cols-4 md:grid-cols-3 sm:grid-cols-2 grid-cols-1 gap-4">
             {listTools.map((tool) => (

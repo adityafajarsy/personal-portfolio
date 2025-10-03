@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import ShinyText from "./ShinyText/ShinyText";
 
 const Navbar = () => {
   const [active, setActive] = useState(false);
@@ -21,8 +22,14 @@ const Navbar = () => {
   return (
     <div className="navbar py-7 flex items-center justify-between">
       <div className="logo">
-        <h1 className="text-3xl font-black bg-white text-black p-1 md:bg-transparent md:text-white">
-          Portfolio
+        <h1 className="text-3xl font-black p-1 bg-transparent md:text-white">
+        <ShinyText
+              text={`Portfolio`} 
+              disabled={false}
+              speed={3}
+              className="custom-class text-4xl/snug"
+              type={'default'}
+            />
         </h1>
       </div>
       <ul
