@@ -5,11 +5,12 @@ const Project = () => {
   return (
     <div>
       {/* Project */}
-      <div className="project mt-32 py-10" id="project">
+      <div className="project mt-16 py-10" id="project">
         <h1
           className="text-center text-4xl font-bold mb-2"
           data-aos="fade-up"
           data-aos-duration="1000"
+          data-aos-once={true}
         >
           Project
         </h1>
@@ -18,6 +19,7 @@ const Project = () => {
           data-aos-delay="300"
           data-aos="fade-up"
           data-aos-duration="1000"
+          data-aos-once={true}
         >
           This Projects i made
         </p>
@@ -29,6 +31,7 @@ const Project = () => {
               data-aos-delay={project.dad}
               data-aos="fade-up"
               data-aos-duration="1000"
+              data-aos-once={true}
             >
               <img src={project.gambar} alt={project.nama} loading="lazy" />
               <div>

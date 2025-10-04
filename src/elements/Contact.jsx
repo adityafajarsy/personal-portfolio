@@ -3,7 +3,7 @@ import React from "react";
 const Contact = () => {
   return (
     <div
-      className="kontak mt-32 sm:p-10 p-4 flex flex-col md:flex-row justify-between gap-10"
+      className="kontak mt-26 sm:p-10 p-4 flex flex-col md:flex-row justify-between gap-10"
       id="kontak"
     >
       <div className="flex flex-col text-left">
@@ -12,6 +12,7 @@ const Contact = () => {
           data-aos-delay="300"
           data-aos="fade-up"
           data-aos-duration="1000"
+          data-aos-once={true}
         >
           Get in Touch
         </h1>
@@ -20,6 +21,7 @@ const Contact = () => {
           data-aos-delay="300"
           data-aos="fade-up"
           data-aos-duration="1000"
+          data-aos-once={true}
         >
           Ready to work on your next project. Let's discuss how i can help bring
           your ideas to life.
@@ -27,7 +29,9 @@ const Contact = () => {
 
         <div className="flex flex-col gap-4 text-sm opacity-80" data-aos-delay="1500"
         data-aos="fade-up"
-        data-aos-duration="1000">
+        data-aos-duration="1000"
+        data-aos-once={true}>
+          
           <p>
             <span className="font-semibold">Email:</span>{" "}
             <a
@@ -57,6 +61,7 @@ const Contact = () => {
         data-aos-delay="500"
         data-aos="fade-up"
         data-aos-duration="1000"
+        data-aos-once={true}
       >
         <div className="flex flex-col gap-6">
           <div className="flex flex-col gap-2">

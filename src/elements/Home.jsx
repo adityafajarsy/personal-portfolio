@@ -21,7 +21,7 @@ const Home = () => {
             </div>
             <q>I Agree to myself to always keep improving.</q>
           </div>
-          <h1 className="text-3xl/snug sm:text-4xl/tight md:text-5xl/tight font-black mb-6">
+          <h1 className="text-4xl/tight sm:text-4xl/tight md:text-4xl/tight lg:text-5xl/tight xl:text-6xl/tight font-black mb-6">
             <ShinyText
               text={`Hi I'm\nAditya Fajar Satya Y`}
               disabled={false}
@@ -39,12 +39,12 @@ const Home = () => {
               className="border border-violet-500/40 hover:bg-black/20 p-4 rounded-2xl  transition-colors text-xs sm:text-base"
             >
               <ShinyText
-                text={`Download CV`}
-                disabled={false}
-                speed={3}
-                className="custom-class"
-                type={"default"}
-              />{" "}
+                    text={`Download CV`}
+                    disabled={false}
+                    speed={3}
+                    className="custom-class"
+                    type={"default"}
+                  />{" "}
               <i className="ri-download-line ri-lg"></i>
             </a>
             <a
@@ -52,11 +52,11 @@ const Home = () => {
               className="bg-zinc-700 p-4 rounded-2xl hover:bg-zinc-600 transition-colors text-xs sm:text-base "
               target="_blank"
             >
-              Connect with me! <i class="ri-linkedin-box-fill ri-xl"></i>
+              Connect with me! <i className="ri-linkedin-box-fill ri-xl"></i>
             </a>
           </div>
         </div>
-        <div className="w-[300px] md:ml-auto animate__animated animate__fadeInUp animate__delay-4s mx-auto">
+        <div className="w-[300px] mt-5 sm:mt-0 md:ml-auto animate__animated animate__fadeInUp animate__delay-4s mx-auto">
           <ProfileCard
             name="Aditya Fajar SY"
             title="Web Developer"
@@ -67,7 +67,9 @@ const Home = () => {
             showUserInfo={true}
             enableTilt={true}
             enableMobileTilt={false}
-            onContactClick={() => console.log("Contact clicked")}
+            onContactClick={() => {
+              window.open("https://wa.me/6287741583948", "_blank");
+            }}
           />
           {/* <img
             src={DataImage.HeroImage}
