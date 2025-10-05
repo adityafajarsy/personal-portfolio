@@ -23,18 +23,21 @@ const Footer = () => {
         <a
           href="https://github.com/adityafajarsy"
           className="transition-transform duration-300 hover:-translate-y-2"
+          target="_blank"
         >
           <i className="ri-github-fill ri-2x"></i>
         </a>
         <a
           href="https://instagram.com/adityafajarsyy"
           className="transition-transform duration-300 hover:-translate-y-2"
+          target="_blank"
         >
           <i className="ri-instagram-fill ri-2x"></i>
         </a>
         <a
           href="https://www.linkedin.com/in/adityafajarsy/"
           className="transition-transform duration-300 hover:-translate-y-2"
+          target="_blank"
         >
           <i className="ri-linkedin-fill ri-2x"></i>
         </a>

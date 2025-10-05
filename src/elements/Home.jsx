@@ -37,6 +37,7 @@ const Home = () => {
             <a
               href="#"
               className="border border-violet-500/40 hover:bg-black/20 p-4 rounded-2xl  transition-colors text-xs sm:text-base"
+              download="/assets/Aditya Fajar Satya Yudha-resume.pdf"
             >
               <ShinyText
                     text={`Download CV`}
