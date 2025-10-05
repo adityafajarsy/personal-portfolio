@@ -1,12 +1,27 @@
 import React from "react";
 import { listTools } from "../data";
 import ShinyText from "../components/ShinyText/ShinyText";
-import Career from "./Career"
+import Career from "./Career";
+import { Sparkles } from "lucide-react";
 
 const About = () => {
   return (
     <div>
       <div className="tentang mt-26 py-10" id="tentang">
+        <div
+          className="flex items-center justify-center gap-3 mb-12"
+          data-aos="fade-up"
+          data-aos-duration="1400"
+          data-aos-once={true}
+        >
+          <div
+            className="p-2 border-indigo-400/20 
+    shadow-[0_0_25px_rgba(93,68,255,0.25)] rounded-lg"
+          >
+            <Sparkles size={24} className="text-indigo-400" />
+          </div>
+          <h2 className="text-3xl font-bold">The Intersection</h2>
+        </div>
         <div
           className="xl:w-2/3 lg:w-3/4 w-full mx-auto p-7
           rounded-2xl 
@@ -45,7 +60,7 @@ const About = () => {
           <div className="flex items-center justify-between">
             <div className="sm:block hidden">
               <ShinyText
-                text={`Work hard Grind Hard`}
+                text={`Work Hard Grind Hard`}
                 disabled={false}
                 speed={3}
                 className="custom-class mt-5"

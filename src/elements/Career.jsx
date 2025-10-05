@@ -13,69 +13,71 @@ export default function EducationExperience() {
       location: "Bandung, Sumedang",
       logo: "/assets/logo-unpad1.png",
       responsibilities: [
-        "Meraih Juara 2 dalam lomba desain poster tingkat mahasiswa bertema Keselamatan dan Kesehatan Kerja (K3).",
-        "Aktif mengikuti seminar dan workshop pengembangan teknologi komputer, keamanan jaringan, dan inovasi digital.",
-        "Aktif terlibat dalam berbagai kepanitiaan organisasi, termasuk himpunan mahasiswa jurusan Teknologi Komputer dan Badan Eksekutif Mahasiswa (BEM) di kampus.",
+        "Actively participated in various campus organizations, including the Russian Studies Student Association and the Student Executive Board (BEM).",
+        "Engaged in self development through seminars and workshops on Graphic Design, Video Editing, AI, Programming, Finance, and Investment.",
+        "Contributed directly to the Russian Studies Department by assisting in visual design and video editing for academic and promotional purposes.",
       ],
       projects: [
-        "Mendesain dan membangun website portofolio menggunakan React, Tailwind CSS, Vite, dan ESLint.",
-        "Membangun sistem online exam berbasis web menggunakan HTML, CSS, JavaScript, PHP, dan MySQL.",
+        ""
       ],
       achievements: [
-        "Dean's List selama 3 semester berturut-turut",
-        "Juara 2 lomba desain poster K3 tingkat mahasiswa",
+        ""
       ],
     },
   ];
 
   const careerExperiences = [
     {
-      title: "Divisi HUMAS Hubungan & Masyarakat",
-      company: "Himpunan Mahasiswa Teknologi Komputer",
-      location: "Bantul, Daerah Istimewa Yogyakarta",
-      period: "Aug 2024 - Present",
+      title: "Creative Media Lead",
+      company: "Himpunan Mahasiswa Sastra Rusia",
+      location: "Bandung - Sumedang",
+      period: "Jan 2023 - Jan-2024",
       type: "Part-time",
       mode: "Onsite",
-      logo: "/assets/himatekkom-logo.png",
+      logo: "/assets/logo himarus crop.png",
       responsibilities: [
-        "Menyusun dan mengirimkan surat kerja sama, undangan, dan proposal ke instansi eksternal.",
-        "Mengelola media sosial HIMATEKKOM untuk publikasi kegiatan dan informasi penting.",
-        "Menjalin komunikasi dengan organisasi lain, sponsor, media partner, serta alumni.",
+        "Led the creation of Himarus’ complete social media branding, including the logos, color palette, design structure, and overall visual identity.",
+        "Collaborated with departments to deliver design and publication materials.",
+        "Pioneered the integration of AI tools in content creation and caption writing during the early release of GPT based models.",
+        "Increased social media engagement significantly, with each post averaging 50+ likes, marking a clear improvement from the previous year.",
+        "Led Creative Media to become the most productive division in the cabinet.",
       ],
       description:
-        "Himpunan Mahasiswa Teknologi Komputer (HIMATEKKOM) merupakan organisasi mahasiswa di Universitas Teknologi Digital Indonesia.",
+        "Himarus (Himpunan Mahasiswa Sastra Rusia) is the official student association of the Russian Literature Department at Universitas Padjadjaran.",
     },
     {
-      title: "Divisi HUMAS Hubungan & Masyarakat",
-      company: "Himpunan Mahasiswa Teknologi Komputer",
-      location: "Bantul, Daerah Istimewa Yogyakarta",
-      period: "Aug 2024 - Present",
+      title: "Graphic Design Creative Division Lead",
+      company: "Russian festival",
+      location: "Bandung, Sumedang",
+      period: "July 2023 - Dec 2023",
       type: "Part-time",
       mode: "Onsite",
-      logo: "/assets/himatekkom-logo.png",
+      logo: "/assets/logo fesrus.png",
       responsibilities: [
-        "Menyusun dan mengirimkan surat kerja sama, undangan, dan proposal ke instansi eksternal.",
-        "Mengelola media sosial HIMATEKKOM untuk publikasi kegiatan dan informasi penting.",
-        "Menjalin komunikasi dengan organisasi lain, sponsor, media partner, serta alumni.",
+        "Designed the event’s visual brand identity, including logo, banners, ID cards, lanyards, and long-feed Instagram posts.",
+        "Created engaging promotional posters that attracted a wide external audience, achieving a 99% attendance rate.",
+        "Operated professional cameras to capture high-quality event documentation.",
+        "Led a team of 4 staffs and supervised 2 interns in the Creative Media division.",
       ],
       description:
-        "Himpunan Mahasiswa Teknologi Komputer (HIMATEKKOM) merupakan organisasi mahasiswa di Universitas Teknologi Digital Indonesia.",
+        "Festival Rusia is the largest annual event of the Russian Studies, featuring performances and activities attended by both internal and external audiences.",
     },
     {
-      title: "Divisi HUMAS Hubungan & Masyarakat",
-      company: "Himpunan Mahasiswa Teknologi Komputer",
-      location: "Bantul, Daerah Istimewa Yogyakarta",
-      period: "Aug 2024 - Present",
+      title: "Vice Project Officer",
+      company: "Matrikulasi Intern Rusia",
+      location: "Bandung, Sumedang",
+      period: "May 2022 - Oct 2022",
       type: "Part-time",
       mode: "Onsite",
-      logo: "/assets/himatekkom-logo.png",
+      logo: "/assets/521851580_18392027272190952_5120733725427049205_n.jpg",
       responsibilities: [
-        "Menyusun dan mengirimkan surat kerja sama, undangan, dan proposal ke instansi eksternal.",
-        "Mengelola media sosial HIMATEKKOM untuk publikasi kegiatan dan informasi penting.",
-        "Menjalin komunikasi dengan organisasi lain, sponsor, media partner, serta alumni.",
+        "Supervised and coordinated over 40 committee members across multiple divisions to ensure smooth event execution.",
+        "Assisted each division in organizing and fulfilling their respective responsibilities.",
+        "Collaborated with the Creative Media division to create social media content, animated twibbons, and aftermovies.",
+        "Operated cameras for event documentation.",
       ],
       description:
-        "Himpunan Mahasiswa Teknologi Komputer (HIMATEKKOM) merupakan organisasi mahasiswa di Universitas Teknologi Digital Indonesia.",
+        "Matrikulasi Intern Rusia is an orientation event for new students of the Russian Studies Department, organized by the student committee.",
     },
   ];
 
@@ -134,75 +136,91 @@ export default function EducationExperience() {
                     >
                       {expandedEdu === index ? (
                         <>
-                          <ChevronUp size={16} />
+                          <ChevronUp
+                            size={16}
+                            className="transition-transform duration-500 rotate-180"
+                          />
                           Hide details
                         </>
                       ) : (
                         <>
-                          <ChevronDown size={16} />
+                          <ChevronDown
+                            size={16}
+                            className="transition-transform duration-500"
+                          />
                           Show details
                         </>
                       )}
                     </button>
 
                     {/* Expanded Content */}
-                    {expandedEdu === index && (
-                      <div className="mt-4 space-y-3 animate-in fade-in slide-in-from-top-2 duration-300">
-                        {edu.responsibilities && (
-                          <div>
-                            <p className="text-xs font-semibold text-indigo-400 mb-2">
-                              ACTIVITIES & RESPONSIBILITIES
-                            </p>
-                            <ul className="space-y-1.5 text-sm text-gray-400">
-                              {edu.responsibilities.map((res, idx) => (
-                                <li key={idx} className="flex gap-2">
-                                  <span className="text-indigo-500 mt-1">
-                                    •
-                                  </span>
-                                  <span>{res}</span>
-                                </li>
-                              ))}
-                            </ul>
-                          </div>
-                        )}
+                    <div
+                      className={`transition-all duration-700 ease-[cubic-bezier(0.22,1,0.36,1)] overflow-hidden ${
+                        expandedEdu === index
+                          ? "max-h-[1000px] opacity-100 translate-y-0"
+                          : "max-h-0 opacity-0 -translate-y-3"
+                      } mt-4`}
+                    >
+                      {edu.responsibilities && (
+                        <div>
+                          <p className="text-xs font-semibold text-indigo-400 mb-2">
+                            ACTIVITIES & RESPONSIBILITIES
+                          </p>
+                          <ul className="space-y-1.5 text-sm text-gray-400">
+                            {edu.responsibilities.map((res, idx) => (
+                              <li
+                                key={idx}
+                                className="flex gap-2 items-start transition-all duration-500 ease-out hover:translate-x-1"
+                                style={{ transitionDelay: `${idx * 50}ms` }}
+                              >
+                                <span className="text-indigo-500 mt-1">•</span>
+                                <span>{res}</span>
+                              </li>
+                            ))}
+                          </ul>
+                        </div>
+                      )}
 
-                        {edu.projects && (
-                          <div>
-                            <p className="text-xs font-semibold text-indigo-400 mb-2">
-                              PROJECTS
-                            </p>
-                            <ul className="space-y-1.5 text-sm text-gray-400">
-                              {edu.projects.map((project, idx) => (
-                                <li key={idx} className="flex gap-2">
-                                  <span className="text-indigo-500 mt-1">
-                                    •
-                                  </span>
-                                  <span>{project}</span>
-                                </li>
-                              ))}
-                            </ul>
-                          </div>
-                        )}
+                      {/* {edu.projects && (
+                        <div>
+                          <p className="text-xs font-semibold text-indigo-400 mb-2">
+                            PROJECTS
+                          </p>
+                          <ul className="space-y-1.5 text-sm text-gray-400">
+                            {edu.projects.map((project, idx) => (
+                              <li
+                                key={idx}
+                                className="flex gap-2 items-start transition-all duration-500 ease-out hover:translate-x-1"
+                                style={{ transitionDelay: `${idx * 50}ms` }}
+                              >
+                                <span className="text-indigo-500 mt-1">•</span>
+                                <span>{project}</span>
+                              </li>
+                            ))}
+                          </ul>
+                        </div>
+                      )}
 
-                        {edu.achievements && (
-                          <div>
-                            <p className="text-xs font-semibold text-indigo-400 mb-2">
-                              ACHIEVEMENTS
-                            </p>
-                            <ul className="space-y-1.5 text-sm text-gray-400">
-                              {edu.achievements.map((achievement, idx) => (
-                                <li key={idx} className="flex gap-2">
-                                  <span className="text-indigo-500 mt-1">
-                                    •
-                                  </span>
-                                  <span>{achievement}</span>
-                                </li>
-                              ))}
-                            </ul>
-                          </div>
-                        )}
-                      </div>
-                    )}
+                      {edu.achievements && (
+                        <div>
+                          <p className="text-xs font-semibold text-indigo-400 mb-2">
+                            ACHIEVEMENTS
+                          </p>
+                          <ul className="space-y-1.5 text-sm text-gray-400">
+                            {edu.achievements.map((achievement, idx) => (
+                              <li
+                                key={idx}
+                                className="flex gap-2 items-start transition-all duration-500 ease-out hover:translate-x-1"
+                                style={{ transitionDelay: `${idx * 50}ms` }}
+                              >
+                                <span className="text-indigo-500 mt-1">•</span>
+                                <span>{achievement}</span>
+                              </li>
+                            ))}
+                          </ul>
+                        </div>
+                      )} */}
+                    </div>
                   </div>
                 </div>
               </div>
@@ -232,7 +250,7 @@ export default function EducationExperience() {
             {careerExperiences.map((exp, index) => (
               <div
                 key={index}
-                className="border-indigo-400/20 border rounded-md p-5 hover:border-indigo-900/50 transition-all duration-300"
+                className="border-indigo-400/20 border rounded-md p-5 hover:border-indigo-900/50 transition-all duration-500"
               >
                 <div className="flex gap-4">
                   <div className="flex-shrink-0">
@@ -278,33 +296,51 @@ export default function EducationExperience() {
                     >
                       {expandedCareer === index ? (
                         <>
-                          <ChevronUp size={16} />
+                          <ChevronUp
+                            size={16}
+                            className="transition-transform duration-300"
+                          />
                           Hide responsibilities
                         </>
                       ) : (
                         <>
-                          <ChevronDown size={16} />
+                          <ChevronDown
+                            size={16}
+                            className="transition-transform duration-300"
+                          />
                           Show responsibilities
                         </>
                       )}
                     </button>
 
                     {/* Expanded Content */}
-                    {expandedCareer === index && exp.responsibilities && (
-                      <div className="mt-4 animate-in fade-in slide-in-from-top-2 duration-300">
-                        <p className="text-xs font-semibold text-indigo-400 mb-2">
-                          RESPONSIBILITIES
-                        </p>
-                        <ul className="space-y-1.5 text-sm text-gray-400">
-                          {exp.responsibilities.map((res, idx) => (
-                            <li key={idx} className="flex gap-2">
-                              <span className="text-indigo-500 mt-1">•</span>
-                              <span>{res}</span>
-                            </li>
-                          ))}
-                        </ul>
-                      </div>
-                    )}
+                    <div
+                      className={`overflow-hidden transition-all duration-500 ease-in-out ${
+                        expandedCareer === index
+                          ? "max-h-96 opacity-100 mt-4"
+                          : "max-h-0 opacity-0 mt-0"
+                      }`}
+                    >
+                      {exp.responsibilities && (
+                        <div className="transform transition-transform duration-300">
+                          <p className="text-xs font-semibold text-indigo-400 mb-2">
+                            RESPONSIBILITIES
+                          </p>
+                          <ul className="space-y-1.5 text-sm text-gray-400">
+                            {exp.responsibilities.map((res, idx) => (
+                              <li
+                                key={idx}
+                                className="flex gap-2 animate-in fade-in slide-in-from-left-2"
+                                style={{ animationDelay: `${idx * 50}ms` }}
+                              >
+                                <span className="text-indigo-500 mt-1">•</span>
+                                <span>{res}</span>
+                              </li>
+                            ))}
+                          </ul>
+                        </div>
+                      )}
+                    </div>
                   </div>
                 </div>
               </div>
