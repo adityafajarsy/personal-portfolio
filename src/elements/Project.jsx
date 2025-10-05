@@ -23,11 +23,11 @@ const Project = () => {
         >
           This Projects i made
         </p>
-        <div className="project-box mt-14 flex flex-wrap justify-center gap-6">
+        <div className="project-box mt-14 flex flex-wrap justify-center gap-6 ">
           {listProyek.map((project) => (
             <div
               key={project.id}
-              className="w-full sm:w-[45%] lg:w-[30%] p-4 bg-zinc-800 rounded-md"
+              className="w-full sm:w-[45%] lg:w-[30%] p-4 bg-zinc-800 rounded-md border border-indigo-400/20 "
               data-aos-delay={project.dad}
               data-aos="fade-up"
               data-aos-duration="1000"
@@ -37,6 +37,7 @@ const Project = () => {
               <div>
                 <h1 className="text-2xl font-bold my-4">{project.nama}</h1>
                 <p className="text-base/loose mb-4">{project.desk}</p>
+
                 <div className="flex flex-wrap gap-2">
                   {project.tools.map((tool, index) => (
                     <p
@@ -47,13 +48,25 @@ const Project = () => {
                     </p>
                   ))}
                 </div>
+
                 <div className="mt-8 text-center">
-                  <a
-                    href="#"
-                    className="bg-violet-700 p-3 rounded-lg block border-zinc-600 hover:bg-violet-600"
-                  >
-                    Lihat Website
-                  </a>
+                  {project.link ? (
+                    <a
+                      href={project.link}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="bg-indigo-700 p-3 rounded-lg block border-zinc-600 hover:bg-indigo-600 transition-all duration-200"
+                    >
+                      Open Website
+                    </a>
+                  ) : (
+                    <button
+                      disabled
+                      className="bg-indigo-900 text-indigo-400 p-3 rounded-lg w-full border border-indigo-800 cursor-not-allowed"
+                    >
+                      Not Deployed
+                    </button>
+                  )}
                 </div>
               </div>
             </div>
