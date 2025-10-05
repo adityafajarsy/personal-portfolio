@@ -27,11 +27,13 @@ const Contact = () => {
           your ideas to life.
         </p>
 
-        <div className="flex flex-col gap-4 text-sm opacity-80" data-aos-delay="1500"
-        data-aos="fade-up"
-        data-aos-duration="1000"
-        data-aos-once={true}>
-          
+        <div
+          className="flex flex-col gap-4 text-sm opacity-80"
+          data-aos-delay="1500"
+          data-aos="fade-up"
+          data-aos-duration="1000"
+          data-aos-once={true}
+        >
           <p>
             <span className="font-semibold">Email:</span>{" "}
             <a
@@ -44,7 +46,7 @@ const Contact = () => {
           <p>
             <span className="font-semibold">Phone:</span>{" "}
             <a href="tel:+6281234567890" className="hover:text-violet-500">
-              +62 881-8080-1448
+              +62 877-4158-3948
             </a>
           </p>
           <p>
@@ -56,8 +58,18 @@ const Contact = () => {
       <form
         className="border border-zinc-500/20 p-6 sm:p-10 sm:w-fit w-full rounded-md mr-26"
         autoComplete="off"
-        action="https://formsubmit.co/adityafajar.sy90@email.com"
-        method="POST"
+        onSubmit={(e) => {
+          e.preventDefault();
+          const name = e.target.nama.value;
+          const email = e.target.email.value;
+          const message = e.target.pesan.value;
+
+          const text = `Halo, saya ${name} (%20${email}%20)%0A%0A${message}`;
+          const phone = "6287741583948";
+
+          const url = `https://wa.me/${phone}?text=${text}`;
+          window.open(url, "_blank");
+        }}
         data-aos-delay="500"
         data-aos="fade-up"
         data-aos-duration="1000"
@@ -65,9 +77,9 @@ const Contact = () => {
       >
         <div className="flex flex-col gap-6">
           <div className="flex flex-col gap-2">
-            <label className="font-semibold">Nama* </label>
+            <label className="font-semibold">Nama*</label>
             <input
-              className="border border-zinc-500/10 p-2 rounded-md  placeholder:opacity-60"
+              className="border border-zinc-500/10 p-2 rounded-md placeholder:opacity-60"
               type="text"
               name="nama"
               placeholder="Your Name.."
@@ -75,9 +87,9 @@ const Contact = () => {
             />
           </div>
           <div className="flex flex-col gap-2">
-            <label className="font-semibold">Email* </label>
+            <label className="font-semibold">Email*</label>
             <input
-              className="border border-zinc-500/10 p-2 rounded-md  placeholder:opacity-60"
+              className="border border-zinc-500/10 p-2 rounded-md placeholder:opacity-60"
               type="email"
               name="email"
               placeholder="Your email.."
@@ -95,6 +107,7 @@ const Contact = () => {
               cols="45"
               rows="7"
               placeholder="Your Message.."
+              required
             ></textarea>
           </div>
           <div className="text-center">
@@ -102,7 +115,7 @@ const Contact = () => {
               type="submit"
               className="bg-stone-700 p-3 rounded-lg w-full cursor-pointer border-zinc-600 hover:bg-stone-800 transition-colors duration-200"
             >
-              Kirim Pesan
+              Send Message
             </button>
           </div>
         </div>

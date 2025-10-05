@@ -102,6 +102,36 @@ const About = () => {
 
         {/* Career */}
         <Career />
+        <div
+          className="flex justify-center mt-8"
+          data-aos="fade-up"
+          data-aos-duration="1400"
+          data-aos-once={true}
+          data-aos-delay="2000"
+        >
+          <a
+            href="https://www.linkedin.com/in/adityafajarsy" // ganti dengan link asli kamu
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-indigo-400 hover:text-indigo-300 text-sm font-medium transition-colors duration-200 flex items-center gap-2 "
+          >
+            <span>View full experience on LinkedIn</span>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              strokeWidth={1.5}
+              stroke="currentColor"
+              className="w-4 h-4"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                d="M13.5 6H21m0 0v7.5M21 6l-9 9m-9 3h3.75A2.25 2.25 0 009 15.75V12"
+              />
+            </svg>
+          </a>
+        </div>
         {/* Career */}
 
         {/* tools */}

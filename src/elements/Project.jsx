@@ -2,6 +2,7 @@ import React from "react";
 import { listProyek } from "../data";
 
 const Project = () => {
+  
   return (
     <div>
       {/* Project */}
@@ -55,14 +56,14 @@ const Project = () => {
                       href={project.link}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="bg-indigo-700 p-3 rounded-lg block border-zinc-600 hover:bg-indigo-600 transition-all duration-200"
+                      className="bg-indigo-900/80 p-3 rounded-lg block border border-indigo-900 hover:bg-indigo-600 transition-all duration-300 ease-linear"
                     >
                       Open Website
                     </a>
                   ) : (
                     <button
                       disabled
-                      className="bg-indigo-900 text-indigo-400 p-3 rounded-lg w-full border border-indigo-800 cursor-not-allowed"
+                      className="bg-zinc-900/30 text-indigo-400 p-3 rounded-lg w-full border border-indigo-800/30 cursor-not-allowed"
                     >
                       Not Deployed
                     </button>

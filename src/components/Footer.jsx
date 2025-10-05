@@ -20,13 +20,22 @@ const Footer = () => {
       </div>
 
       <div className="flex items-center gap-3">
-        <a href="#">
+        <a
+          href="https://github.com/adityafajarsy"
+          className="transition-transform duration-300 hover:-translate-y-2"
+        >
           <i className="ri-github-fill ri-2x"></i>
         </a>
-        <a href="#">
+        <a
+          href="https://instagram.com/adityafajarsyy"
+          className="transition-transform duration-300 hover:-translate-y-2"
+        >
           <i className="ri-instagram-fill ri-2x"></i>
         </a>
-        <a href="#">
+        <a
+          href="https://www.linkedin.com/in/adityafajarsy/"
+          className="transition-transform duration-300 hover:-translate-y-2"
+        >
           <i className="ri-linkedin-fill ri-2x"></i>
         </a>
       </div>
