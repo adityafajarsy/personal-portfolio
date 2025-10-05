@@ -31,21 +31,24 @@ const Home = () => {
             />
           </h1>
           <p className="text-base/loose mb-6 opacity-60">
-          A motivated web and application developer focused on building modern, efficient, and user friendly digital solutions. I enjoy working with AI and cloud computing to deliver impactful products that combine creativity with technical precision and efficiency.
+            A motivated web and application developer focused on building
+            modern, efficient, and user friendly digital solutions. I enjoy
+            working with AI and cloud computing to deliver impactful products
+            that combine creativity with technical precision and efficiency.
           </p>
           <div className="flex items-center  sm:gap-4 gap-2">
             <a
-              href="#"
-              className="border border-violet-500/40 hover:bg-black/20 p-4 rounded-2xl  transition-colors text-xs sm:text-base"
-              download="/assets/Aditya Fajar Satya Yudha-resume.pdf"
+              href="/assets/Aditya Fajar Satya Yudha-resume.pdf"
+              download="Aditya Fajar Satya Yudha - CV.pdf"
+              className="border border-violet-500/40 hover:bg-black/20 p-4 rounded-2xl transition-colors text-xs sm:text-base"
             >
               <ShinyText
-                    text={`Download CV`}
-                    disabled={false}
-                    speed={3}
-                    className="custom-class"
-                    type={"default"}
-                  />{" "}
+                text="Download CV"
+                disabled={false}
+                speed={3}
+                className="custom-class"
+                type="default"
+              />
               <i className="ri-download-line ri-lg"></i>
             </a>
             <a
@@ -72,11 +75,6 @@ const Home = () => {
               window.open("https://wa.me/6287741583948", "_blank");
             }}
           />
-          {/* <img
-            src={DataImage.HeroImage}
-            loading="lazy"
-            alt="Hero Img"
-          /> */}
         </div>
       </div>
     </div>
