@@ -1,5 +1,5 @@
 import React from "react";
-import {listProyek} from "../data"
+import { listProyek } from "../data";
 
 const Project = () => {
   return (
@@ -23,11 +23,11 @@ const Project = () => {
         >
           This Projects i made
         </p>
-        <div className="project-box mt-14 grid lg:grid-cols-3 sm:grid-cols-2 grid-cols-1 gap-4">
+        <div className="project-box mt-14 flex flex-wrap justify-center gap-6">
           {listProyek.map((project) => (
             <div
               key={project.id}
-              className="p-4 bg-zinc-800 rounded-md"
+              className="w-full sm:w-[45%] lg:w-[30%] p-4 bg-zinc-800 rounded-md"
               data-aos-delay={project.dad}
               data-aos="fade-up"
               data-aos-duration="1000"
@@ -50,7 +50,7 @@ const Project = () => {
                 <div className="mt-8 text-center">
                   <a
                     href="#"
-                    className="bg-violet-700 p-3 rounded-lg block border-zinc-600 hover:bg-violet-600 "
+                    className="bg-violet-700 p-3 rounded-lg block border-zinc-600 hover:bg-violet-600"
                   >
                     Lihat Website
                   </a>
