@@ -13,7 +13,7 @@ const Home = () => {
           <div className="flex items-center gap-3 mb-4 bg-zinc-800 w-fit p-3 sm:p-4 rounded-2xl text-xs sm:text-lg ">
             <div className="w-8 h-8 rounded-lg overflow-hidden">
               <img
-                src="/assets/BRI01432.JPG"
+                src="/assets/BRI01432.jpg"
                 alt="Hero Image"
                 className="w-full h-full object-cover scale-300 translate-x-[15%] object-[70%_70%]"
                 loading="lazy"
