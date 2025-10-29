@@ -36,22 +36,22 @@ const Navbar = () => {
         className={`menu flex sm:gap-10 gap-4 items-center md:static fixed left-1/2 -translate-x-1/2 md:-translate-x-0 md:opacity-100 md:top-0 bg-black/70 backdrop-blur-md p-4 rounded-br-2xl rounded-bl-2xl md:bg-transparent transition-all md:transition-none z-40 ${active ? "top-0 opacity-100" : "-top-10 opacity-0"}`}
       >
         <li>
-          <a href="#beranda" className="sm:text-lg text-base font-medium">
+          <a href="#beranda" className="sm:text-lg text-gray-300 hover:text-white transition-all text-base font-medium">
             Home
           </a>
         </li>
         <li>
-          <a href="#tentang" className="sm:text-lg text-base font-medium">
+          <a href="#tentang" className="sm:text-lg text-gray-300 hover:text-white transition-all  text-base font-medium">
             About
           </a>
         </li>
         <li>
-          <a href="#project" className="sm:text-lg text-base font-medium">
+          <a href="#project" className="sm:text-lg text-gray-300 hover:text-white transition-all  text-base font-medium">
             Project
           </a>
         </li>
         <li>
-          <a href="#kontak" className="sm:text-lg text-base font-medium">
+          <a href="#kontak" className="sm:text-lg text-gray-300 hover:text-white transition-all  text-base font-medium">
             Contact
           </a>
         </li>

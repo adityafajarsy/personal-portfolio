@@ -36,7 +36,7 @@ const Home = () => {
             working with AI and cloud computing to deliver impactful products
             that combine creativity with technical precision and efficiency.
           </p>
-          <div className="flex items-center  sm:gap-4 gap-2">
+          <div className="flex items-center sm:gap-4 gap-2">
             <a
               href="/assets/Aditya Fajar Satya Yudha - CV 1.pdf"
               download="Aditya Fajar Satya Yudha - CV.pdf"
