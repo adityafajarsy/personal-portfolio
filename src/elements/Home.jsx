@@ -31,10 +31,10 @@ const Home = () => {
             />
           </h1>
           <p className="text-base/loose mb-6 opacity-60">
-            A motivated web and application developer focused on building
-            modern, efficient, and user friendly digital solutions. I enjoy
-            working with AI and cloud computing to deliver impactful products
-            that combine creativity with technical precision and efficiency.
+            A motivated web and application developer focused on creating
+            modern, efficient, and user-friendly digital experiences. I love
+            combining creative design with AI and cloud-powered technologies to
+            deliver scalable and meaningful products.
           </p>
           <div className="flex items-center sm:gap-4 gap-2">
             <a
