@@ -103,7 +103,7 @@ import Proyek2 from "/public/assets/project/3.png";
 import Proyek3 from "/public/assets/project/2.png";
 import Proyek4 from "/public/assets/project/4.png";
 import Proyek5 from "/public/assets/project/6.png";
-import Proyek6 from "/assets/proyek/proyek6.webp";
+import Proyek6 from "/public/assets/project/7.png";
 
 export const listProyek = [
   {
@@ -113,7 +113,7 @@ export const listProyek = [
     desk: "My first portfolio website build. I took inspiration from Coding Mastery and combined several ideas I found on the internet based on my own preferences.",
     tools: ["Vite", "React", "Tailwind", "AOS", "Animate.style", "Responsive"],
     dad: "200",
-    link: "https://adxtya-personal-portfolio.netlify.app", // ✅ sudah dideploy
+    link: "https://adxtya-personal-portfolio.netlify.app", // ✅
   },
   {
     id: 2,
@@ -128,7 +128,8 @@ export const listProyek = [
       "MongoDB",
       "Firebase",
       "NodeJS",
-      "ExpressJs", "Responsive"
+      "ExpressJs",
+      "Responsive",
     ],
     dad: "300",
     link: "", // ❌ belum dideploy
@@ -147,17 +148,33 @@ export const listProyek = [
     gambar: Proyek4,
     nama: "Simple E-Commerce (The Hamburger)",
     desk: "My first dummy project based on my Hacktiv8 capstone task, featuring basic e-commerce functions, a self-made logo, custom dummy database, and planned visual identity.",
-    tools: ["Vite", "ReactJS", "Tailwind", "Axios", "React-router-dom", "Responsive"],
+    tools: [
+      "Vite",
+      "ReactJS",
+      "Tailwind",
+      "Axios",
+      "React-router-dom",
+      "Responsive",
+    ],
     dad: "500",
-    link: "https://thehamburger.netlify.app", // ❌ belum dideploy
+    link: "https://thehamburger.netlify.app", //✅
   },
   {
     id: 5,
     gambar: Proyek5,
     nama: "Dummy Project Showcase",
-    desk: "Honestly this is just random project i want to show in my portfolio, inspired by Dea Afrizal, i just like the reference!",
+    desk: "Web Design Dummy portfolio showcase to projects!",
     tools: ["Vite", "Tailwind", "React", "React-router"],
     dad: "600",
-    link: "", // ✅
+    link: "", //
+  },
+  {
+    id: 6,
+    gambar: Proyek6,
+    nama: "Ai Assistant Project Landing Page",
+    desk: "AI Assitant landing website, design website to implementing modern like design!",
+    tools: ["Vite", "Tailwind", "React", "CSS Animation"],
+    dad: "600",
+    link: "https://ai-assist-coding.vercel.app/", // ✅
   },
 ];
