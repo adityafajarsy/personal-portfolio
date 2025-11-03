@@ -19,7 +19,7 @@ const Home = () => {
                 loading="lazy"
               />
             </div>
-            <q>I Agree to myself to always keep improving.</q>
+            <q>For me, coding is problem solving..</q>
           </div>
           <h1 className="text-4xl/tight sm:text-4xl/tight md:text-4xl/tight lg:text-5xl/tight xl:text-6xl/tight font-black mb-6">
             <ShinyText
