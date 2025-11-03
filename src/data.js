@@ -173,7 +173,7 @@ export const listProyek = [
     gambar: Proyek6,
     nama: "Ai Assistant Project Landing Page",
     desk: "AI Assitant landing website, design website to implementing modern like design!",
-    tools: ["Vite", "Tailwind", "React", "CSS Animation"],
+    tools: ["Vite", "Tailwind", "React", "CSS Animation", "Vercel"],
     dad: "600",
     link: "https://ai-assist-coding.vercel.app/", // ✅
   },
