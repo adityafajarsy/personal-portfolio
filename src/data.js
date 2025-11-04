@@ -136,15 +136,6 @@ export const listProyek = [
   },
   {
     id: 3,
-    gambar: Proyek3,
-    nama: "Web Fetching API",
-    desk: "A website project I built during a 4-month bootcamp at Hacktiv8 as an assigment, where I use Axios for data fetching.",
-    tools: ["Vite", "ReactJS", "TailwindCSS", "AOS"],
-    dad: "400",
-    link: "",
-  },
-  {
-    id: 4,
     gambar: Proyek4,
     nama: "Simple E-Commerce (The Hamburger)",
     desk: "My first dummy project based on my Hacktiv8 capstone task, featuring basic e-commerce functions, a self-made logo, custom dummy database, and planned visual identity.",
@@ -160,7 +151,7 @@ export const listProyek = [
     link: "https://thehamburger.netlify.app", //✅
   },
   {
-    id: 5,
+    id: 4,
     gambar: Proyek5,
     nama: "Dummy Project Showcase",
     desk: "Web Design Dummy portfolio showcase to projects!",
@@ -169,7 +160,7 @@ export const listProyek = [
     link: "", //
   },
   {
-    id: 6,
+    id: 5,
     gambar: Proyek6,
     nama: "Ai Assistant Project Landing Page",
     desk: "AI Assitant landing website, design website to implementing modern like design!",
