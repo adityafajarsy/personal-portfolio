@@ -9,7 +9,7 @@ const Home = () => {
         className="hero grid md:grid-cols-2 grid-cols-1 pt-10 items-center xl:gap-0 gap-6 mt-5 sm:mt-18"
         id="beranda"
       >
-        <div className="animate__animated animate__fadeInUp animate__delay-3s">
+        <div className="animate__animated animate__fadeInUp animate__delay-4s animate_slow">
           <div className="flex items-center gap-3 mb-4 bg-zinc-800 w-fit p-3 sm:p-4 rounded-2xl text-xs sm:text-lg ">
             <div className="w-8 h-8 rounded-lg overflow-hidden">
               <img
