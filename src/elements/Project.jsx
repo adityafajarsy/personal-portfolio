@@ -2,7 +2,6 @@ import React from "react";
 import { listProyek } from "../data";
 
 const Project = () => {
-  
   return (
     <div>
       {/* Project */}
@@ -28,7 +27,7 @@ const Project = () => {
           {listProyek.map((project) => (
             <div
               key={project.id}
-              className="w-full sm:w-[45%] lg:w-[30%] p-4 bg-zinc-800 rounded-md border border-indigo-400/20 "
+              className="w-full sm:w-[45%] lg:w-[30%] p-4 bg-zinc-800 rounded-md border border-indigo-400/20 hover:border-indigo-600/50 transition-all duration-200 cursor-pointer "
               data-aos-delay={project.dad}
               data-aos="fade-up"
               data-aos-duration="1000"

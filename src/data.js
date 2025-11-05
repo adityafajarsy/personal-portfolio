@@ -102,7 +102,7 @@ import Proyek1 from "/public/assets/project/5.png";
 import Proyek2 from "/public/assets/project/3.png";
 import Proyek3 from "/public/assets/project/2.png";
 import Proyek4 from "/public/assets/project/4.png";
-import Proyek5 from "/public/assets/project/6.png";
+import Proyek5 from "/public/assets/project/8.png";
 import Proyek6 from "/public/assets/project/7.png";
 
 export const listProyek = [
@@ -153,11 +153,11 @@ export const listProyek = [
   {
     id: 4,
     gambar: Proyek5,
-    nama: "Dummy Project Showcase",
-    desk: "Web Design Dummy portfolio showcase to projects!",
-    tools: ["Vite", "Tailwind", "React", "React-router"],
+    nama: "Bar Website Landing (Leveldva)",
+    desk: "My first GSAP project, smooth, bar-inspired landing page that blends motion, light, and elegance into immersive experience!",
+    tools: ["Vite", "Tailwind", "React", "GSAP", "Animation", "Motion"],
     dad: "600",
-    link: "", //
+    link: "https://leveldvaditx.vercel.app/", //
   },
   {
     id: 5,
