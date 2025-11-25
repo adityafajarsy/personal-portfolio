@@ -1,4 +1,3 @@
-import React from "react";
 import ShinyText from "../components/ShinyText/ShinyText";
 import ProfileCard from "../components/ProfileCard/ProfileCard";
 
@@ -6,7 +5,7 @@ const Home = () => {
   return (
     <div>
       <div
-        className="hero grid md:grid-cols-2 grid-cols-1 pt-10 items-center xl:gap-0 gap-6 mt-5 sm:mt-18"
+        className="hero grid md:grid-cols-2 grid-cols-1 xl:mx-12 2xl:mx-0 mx-0 pt-10 items-center xl:gap-0 gap-6 mt-5 sm:mt-18"
         id="beranda"
       >
         <div className="animate__animated animate__fadeInUp animate__delay-4s animate_slow">
@@ -21,7 +20,7 @@ const Home = () => {
             </div>
             <q>For me, coding is problem solving..</q>
           </div>
-          <h1 className="text-4xl/tight sm:text-4xl/tight md:text-4xl/tight lg:text-5xl/tight xl:text-6xl/tight font-black mb-6">
+          <h1 className="text-4xl/tight sm:text-4xl/tight md:text-4xl/tight lg:text-5xl/tight xl:text-5xl/tight 2xl:text-6xl  font-black mb-6">
             <ShinyText
               text={`Hi I'm\nAditya Fajar Satya Y`}
               disabled={false}
