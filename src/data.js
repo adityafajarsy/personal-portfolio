@@ -105,17 +105,17 @@ import Proyek5 from "/assets/project/8.png";
 import Proyek6 from "/assets/project/7.png";
 
 export const listProyek = [
+  // {
+  //   id: 1,
+  //   gambar: Proyek1,
+  //   nama: "Website Portfolio",
+  //   desk: "My first portfolio website build. I took inspiration from Coding Mastery and combined several ideas I found on the internet based on my own preferences.",
+  //   tools: ["Vite", "React", "Tailwind", "AOS", "Animate.style", "Responsive"],
+  //   dad: "200",
+  //   link: "https://adxtya-personal-portfolio.netlify.app", // ✅
+  // },
   {
     id: 1,
-    gambar: Proyek1,
-    nama: "Website Portfolio",
-    desk: "My first portfolio website build. I took inspiration from Coding Mastery and combined several ideas I found on the internet based on my own preferences.",
-    tools: ["Vite", "React", "Tailwind", "AOS", "Animate.style", "Responsive"],
-    dad: "200",
-    link: "https://adxtya-personal-portfolio.netlify.app", // ✅
-  },
-  {
-    id: 2,
     gambar: Proyek2,
     nama: "Netflix Clone",
     desk: "My first full-stack course project, by a FastCampus course by Dea Afrizal. I learned both front-end and back-end development using Firebase, MongoDB, Express.js, and Node.js (MERN Stack).",
@@ -134,7 +134,7 @@ export const listProyek = [
     link: "", // ❌ belum dideploy
   },
   {
-    id: 3,
+    id: 2,
     gambar: Proyek4,
     nama: "Simple E-Commerce (The Hamburger)",
     desk: "My first dummy project based on my Hacktiv8 capstone task, featuring basic e-commerce functions, a self-made logo, custom dummy database, and planned visual identity.",
@@ -150,21 +150,21 @@ export const listProyek = [
     link: "https://thehamburger.netlify.app", //✅
   },
   {
-    id: 4,
+    id: 3,
     gambar: Proyek5,
-    nama: "Bar Website Landing (Leveldva)",
-    desk: "My first GSAP project, smooth, bar-inspired landing page that blends motion, light, and elegance into immersive experience!",
+    nama: "Bar Website (Leveldva)",
+    desk: "GSAP project, smooth, bar-inspired website page that blends motion, light, and elegance into immersive experience!",
     tools: ["Vite", "Tailwind", "React", "GSAP", "Animation", "Motion"],
     dad: "600",
-    link: "https://leveldvaditx.vercel.app/", //
+    link: "https://leveldva.vercel.app/", //
   },
-  {
-    id: 5,
-    gambar: Proyek6,
-    nama: "Ai Assistant Project Landing Page",
-    desk: "AI Assitant landing website, design website to implementing modern like design!",
-    tools: ["Vite", "Tailwind", "React", "CSS Animation", "Vercel"],
-    dad: "600",
-    link: "https://ai-assist-coding.vercel.app/", // ✅
-  },
+  // {
+  //   id: 5,
+  //   gambar: Proyek6,
+  //   nama: "Ai Assistant Project Landing Page",
+  //   desk: "AI Assitant landing website, design website to implementing modern like design!",
+  //   tools: ["Vite", "Tailwind", "React", "CSS Animation", "Vercel"],
+  //   dad: "600",
+  //   link: "https://ai-assist-coding.vercel.app/", // ✅
+  // },
 ];

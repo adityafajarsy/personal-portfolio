@@ -23,11 +23,11 @@ export default function Project() {
   const getProjectMeta = (id) => {
     switch (id) {
       case 1:
-        return { date: "2024", role: "Frontend Developer", category: "Personal Portfolio" };
+        return { date: "2025", role: "Full Stack Developer", category: "MERN Stack Clone" };
       case 2:
-        return { date: "2024", role: "Full Stack Developer", category: "MERN Stack Clone" };
+        return { date: "2025", role: "Frontend Developer", category: "E-Commerce Web" };
       case 3:
-        return { date: "2024", role: "Frontend Developer", category: "E-Commerce Web" };
+        return { date: "2025", role: "Frontend Developer", category: "GSAP" };
       case 4:
         return { date: "2025", role: "UI & Interaction Developer", category: "Creative Landing Page" };
       case 5:
@@ -74,7 +74,7 @@ export default function Project() {
           transition={{ repeat: Infinity, duration: 1.6, ease: "easeInOut" }}
         >
           <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M2 6h8M6.5 2.5L10 6l-3.5 3.5" stroke="#3B82F6" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+            <path d="M2 6h8M6.5 2.5L10 6l-3.5 3.5" stroke="#3B82F6" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
           </svg>
           Swipe
         </motion.div>
@@ -83,81 +83,81 @@ export default function Project() {
           className="flex overflow-x-auto gap-6 mt-4 pb-10 snap-x snap-mandatory scroll-smooth scrollbar-none w-full"
           variants={containerVariants}
         >
-        {listProyek.map((project) => {
-          const meta = getProjectMeta(project.id);
-          return (
-            <motion.div
-              key={project.id}
-              className="w-[85vw] sm:w-[480px] flex-shrink-0 snap-start group bg-[#0B0B0B] border border-white/5 rounded-[28px] overflow-hidden flex flex-col hover:border-[#3B82F6]/30 hover:shadow-[0_12px_30px_rgba(59,130,246,0.08)] transition-all duration-300 relative"
-              variants={itemVariants}
-              whileHover={{ y: -4 }}
-            >
-              {/* Image Container */}
-              <div className="w-full aspect-[16/10] overflow-hidden bg-zinc-900 border-b border-white/5 relative">
-                <img
-                  src={project.gambar}
-                  alt={project.nama}
-                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-                  loading="lazy"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-[#0B0B0B]/80 via-transparent to-transparent opacity-60 pointer-events-none" />
-              </div>
-
-              {/* Info Container */}
-              <div className="p-6 flex flex-col flex-1 gap-4">
-                {/* Meta details */}
-                <div className="flex flex-wrap items-center gap-2 text-[12px] text-[#8A8A8A] font-medium leading-none">
-                  <span>{meta.date}</span>
-                  <span>•</span>
-                  <span>{meta.role}</span>
-                  <span>•</span>
-                  <span className="text-[#3B82F6]">{meta.category}</span>
+          {listProyek.map((project) => {
+            const meta = getProjectMeta(project.id);
+            return (
+              <motion.div
+                key={project.id}
+                className="w-[85vw] sm:w-[480px] flex-shrink-0 snap-start group bg-[#0B0B0B] border border-white/5 rounded-[28px] overflow-hidden flex flex-col hover:border-[#3B82F6]/30 hover:shadow-[0_12px_30px_rgba(59,130,246,0.08)] transition-all duration-300 relative"
+                variants={itemVariants}
+                whileHover={{ y: -4 }}
+              >
+                {/* Image Container */}
+                <div className="w-full aspect-[16/10] overflow-hidden bg-zinc-900 border-b border-white/5 relative">
+                  <img
+                    src={project.gambar}
+                    alt={project.nama}
+                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                    loading="lazy"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-[#0B0B0B]/80 via-transparent to-transparent opacity-60 pointer-events-none" />
                 </div>
 
-                <div className="flex flex-col gap-2">
-                  <h3 className="text-[18px] font-bold text-white tracking-tight leading-snug group-hover:text-[#3B82F6] transition-colors duration-250">
-                    {project.nama}
-                  </h3>
-                  <p className="text-[14px] leading-relaxed text-[#8A8A8A] font-normal">
-                    {project.desk}
-                  </p>
-                </div>
+                {/* Info Container */}
+                <div className="p-6 flex flex-col flex-1 gap-4">
+                  {/* Meta details */}
+                  <div className="flex flex-wrap items-center gap-2 text-[12px] text-[#8A8A8A] font-medium leading-none">
+                    <span>{meta.date}</span>
+                    <span>•</span>
+                    <span>{meta.role}</span>
+                    <span>•</span>
+                    <span className="text-[#3B82F6]">{meta.category}</span>
+                  </div>
 
-                {/* Tech Pills */}
-                <div className="flex flex-wrap gap-1.5 mt-auto pt-2">
-                  {project.tools.map((tool, index) => (
-                    <span
-                      key={index}
-                      className="text-[11px] font-semibold text-white/60 bg-[#161616] border border-white/5 px-2 py-0.5 rounded-md"
-                    >
-                      {tool}
-                    </span>
-                  ))}
-                </div>
+                  <div className="flex flex-col gap-2">
+                    <h3 className="text-[18px] font-bold text-white tracking-tight leading-snug group-hover:text-[#3B82F6] transition-colors duration-250">
+                      {project.nama}
+                    </h3>
+                    <p className="text-[14px] leading-relaxed text-[#8A8A8A] font-normal">
+                      {project.desk}
+                    </p>
+                  </div>
 
-                {/* Bottom Link Action */}
-                <div className="mt-4 pt-4 border-t border-white/5">
-                  {project.link ? (
-                    <a
-                      href={project.link}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="inline-flex items-center justify-between w-full text-[13px] font-bold text-white bg-white/5 hover:bg-white/10 hover:text-white border border-white/5 rounded-xl px-4 py-2.5 transition-all duration-200"
-                    >
-                      <span>Launch Project</span>
-                      <ExternalLink size={14} className="text-[#3B82F6]" />
-                    </a>
-                  ) : (
-                    <div className="inline-flex items-center justify-between w-full text-[13px] font-medium text-[#8A8A8A] bg-white/0 border border-white/5 border-dashed rounded-xl px-4 py-2.5 cursor-not-allowed">
-                      <span>Not Deployed (Local Dev)</span>
-                      <Lock size={14} className="text-[#8A8A8A]" />
-                    </div>
-                  )}
+                  {/* Tech Pills */}
+                  <div className="flex flex-wrap gap-1.5 mt-auto pt-2">
+                    {project.tools.map((tool, index) => (
+                      <span
+                        key={index}
+                        className="text-[11px] font-semibold text-white/60 bg-[#161616] border border-white/5 px-2 py-0.5 rounded-md"
+                      >
+                        {tool}
+                      </span>
+                    ))}
+                  </div>
+
+                  {/* Bottom Link Action */}
+                  <div className="mt-4 pt-4 border-t border-white/5">
+                    {project.link ? (
+                      <a
+                        href={project.link}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-flex items-center justify-between w-full text-[13px] font-bold text-white bg-white/5 hover:bg-white/10 hover:text-white border border-white/5 rounded-xl px-4 py-2.5 transition-all duration-200"
+                      >
+                        <span>Launch Project</span>
+                        <ExternalLink size={14} className="text-[#3B82F6]" />
+                      </a>
+                    ) : (
+                      <div className="inline-flex items-center justify-between w-full text-[13px] font-medium text-[#8A8A8A] bg-white/0 border border-white/5 border-dashed rounded-xl px-4 py-2.5 cursor-not-allowed">
+                        <span>Not Deployed (Local Dev)</span>
+                        <Lock size={14} className="text-[#8A8A8A]" />
+                      </div>
+                    )}
+                  </div>
                 </div>
-              </div>
-            </motion.div>
-          );
-        })}
+              </motion.div>
+            );
+          })}
         </motion.div>
       </div>
     </motion.section>
