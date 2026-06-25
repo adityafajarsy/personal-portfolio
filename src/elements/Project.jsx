@@ -62,11 +62,27 @@ export default function Project() {
         </motion.h2>
       </div>
 
-      {/* Projects Horizontal Carousel */}
-      <motion.div
-        className="flex overflow-x-auto gap-6 mt-4 pb-6 snap-x snap-mandatory scroll-smooth scrollbar-none w-full"
-        variants={containerVariants}
-      >
+      {/* Projects Horizontal Carousel — with swipe hint on mobile */}
+      <div className="relative w-full">
+        {/* Swipe hint: right fade gradient (mobile only) */}
+        <div className="pointer-events-none absolute right-0 top-0 h-full w-16 bg-gradient-to-l from-[#050505] to-transparent z-10 lg:hidden" />
+
+        {/* Swipe pill indicator (mobile only) */}
+        <motion.div
+          className="absolute -bottom-2 left-1/2 -translate-x-1/2 z-20 lg:hidden flex items-center gap-1.5 bg-white/5 backdrop-blur border border-white/10 px-3 py-1 rounded-full text-[11px] text-[#8A8A8A] font-medium select-none"
+          animate={{ x: [0, 8, 0] }}
+          transition={{ repeat: Infinity, duration: 1.6, ease: "easeInOut" }}
+        >
+          <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M2 6h8M6.5 2.5L10 6l-3.5 3.5" stroke="#3B82F6" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+          </svg>
+          Swipe
+        </motion.div>
+
+        <motion.div
+          className="flex overflow-x-auto gap-6 mt-4 pb-10 snap-x snap-mandatory scroll-smooth scrollbar-none w-full"
+          variants={containerVariants}
+        >
         {listProyek.map((project) => {
           const meta = getProjectMeta(project.id);
           return (
@@ -142,7 +158,8 @@ export default function Project() {
             </motion.div>
           );
         })}
-      </motion.div>
+        </motion.div>
+      </div>
     </motion.section>
   );
 }

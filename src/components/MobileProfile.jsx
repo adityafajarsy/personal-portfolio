@@ -78,9 +78,7 @@ export default function MobileProfile() {
       <div className="flex flex-col gap-2">
         <h3 className="text-[11px] font-bold tracking-[0.15em] text-[#8A8A8A] uppercase">About</h3>
         <p className="text-[14px] leading-relaxed text-[#8A8A8A]">
-          A motivated web and application developer focused on creating modern,
-          efficient, and user-friendly digital experiences. I love combining
-          creative design with AI and cloud-powered technologies.
+          Jakarta-based product designer and developer, currently focused on frontend / fullstack MERN with +1 year of hands-on building web app.
         </p>
       </div>
 

@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useRef } from "react";
 import { User, Folder, GraduationCap, Mail } from "lucide-react";
 import { motion } from "framer-motion";
 
@@ -11,6 +11,13 @@ export default function FloatingNav() {
     { id: "education", label: "Education", icon: GraduationCap },
     { id: "kontak", label: "Contact", icon: Mail },
   ];
+
+  // Find the VISIBLE element among all elements with a given id
+  // (we have two DOM trees: desktop hidden + mobile visible, or vice-versa)
+  const getVisibleEl = (id) => {
+    const all = document.querySelectorAll(`[id="${id}"]`);
+    return Array.from(all).find((el) => el.offsetParent !== null) || null;
+  };
 
   useEffect(() => {
     const observerOptions = {
@@ -30,23 +37,41 @@ export default function FloatingNav() {
     const observer = new IntersectionObserver(handleIntersection, observerOptions);
 
     navItems.forEach((item) => {
-      const el = document.getElementById(item.id);
-      if (el) observer.observe(el);
+      // Observe all matching elements (both desktop and mobile trees)
+      document.querySelectorAll(`[id="${item.id}"]`).forEach((el) => {
+        observer.observe(el);
+      });
     });
 
     return () => observer.disconnect();
   }, []);
 
   const handleScroll = (id) => {
-    const el = document.getElementById(id);
-    if (el) {
-      el.scrollIntoView({ behavior: "smooth" });
-      setActiveSection(id);
+    setActiveSection(id);
+
+    // On desktop, the scrollable container is <main> inside the desktop div
+    const isDesktop = window.innerWidth >= 1024;
+
+    if (isDesktop) {
+      // Desktop: scroll inside the overflow-y-auto <main>
+      const desktopMain = document.querySelector(".hidden.lg\\:flex main, div.lg\\:flex main");
+      const target = document.querySelectorAll(`[id="${id}"]`)[0];
+      if (desktopMain && target) {
+        const offset = target.offsetTop - desktopMain.offsetTop;
+        desktopMain.scrollTo({ top: offset - 80, behavior: "smooth" });
+        return;
+      }
+    }
+
+    // Mobile: body/window scrolls, target the visible element
+    const visibleEl = getVisibleEl(id);
+    if (visibleEl) {
+      visibleEl.scrollIntoView({ behavior: "smooth", block: "start" });
     }
   };
 
   return (
-    <div className="fixed bottom-6 left-1/2 -translate-x-1/2 z-50 lg:hidden">
+    <div className="fixed bottom-6 left-1/2 lg:left-[calc(50%+205px)] -translate-x-1/2 z-50">
       <nav className="flex items-center gap-6 px-6 py-2 rounded-full bg-[#0F0F0FC0] backdrop-blur-xl border border-white/8 shadow-2xl relative">
         {navItems.map((item) => {
           const Icon = item.icon;
@@ -66,7 +91,7 @@ export default function FloatingNav() {
                   transition={{ type: "spring", stiffness: 380, damping: 30 }}
                 />
               )}
-              
+
               <Icon
                 size={18}
                 className={`relative z-10 transition-transform duration-300 group-hover:scale-110 ${
@@ -75,7 +100,7 @@ export default function FloatingNav() {
               />
 
               {/* Tooltip on Hover */}
-              <span className="absolute bottom-full mb-2 bg-[#0B0B0B] border border-white/5 text-white text-[11px] px-2 py-1 rounded-md opacity-0 translate-y-1 pointer-events-none group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-200 shadow-md">
+              <span className="absolute bottom-full mb-2 bg-[#0B0B0B] border border-white/5 text-white text-[11px] px-2 py-1 rounded-md opacity-0 translate-y-1 pointer-events-none group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-200 shadow-md whitespace-nowrap">
                 {item.label}
               </span>
             </button>
