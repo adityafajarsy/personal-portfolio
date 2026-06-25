@@ -98,12 +98,11 @@ export const listTools = [
   },
 ];
 
-import Proyek1 from "/public/assets/project/5.png";
-import Proyek2 from "/public/assets/project/3.png";
-import Proyek3 from "/public/assets/project/2.png";
-import Proyek4 from "/public/assets/project/4.png";
-import Proyek5 from "/public/assets/project/8.png";
-import Proyek6 from "/public/assets/project/7.png";
+import Proyek1 from "/assets/project/5.png";
+import Proyek2 from "/assets/project/3.png";
+import Proyek4 from "/assets/project/4.png";
+import Proyek5 from "/assets/project/8.png";
+import Proyek6 from "/assets/project/7.png";
 
 export const listProyek = [
   {

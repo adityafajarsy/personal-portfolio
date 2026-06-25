@@ -1,81 +1,148 @@
 import React from "react";
+import { ExternalLink, Lock } from "lucide-react";
+import { motion } from "framer-motion";
 import { listProyek } from "../data";
 
-const Project = () => {
-  return (
-    <div>
-      {/* Project */}
-      <div className="project mt-16 py-10" id="project">
-        <h1
-          className="text-center text-4xl font-bold mb-2"
-          data-aos="fade-up"
-          data-aos-duration="1000"
-          data-aos-once={true}
-        >
-          Project
-        </h1>
-        <p
-          className="text-base/loose text-center opacity-50"
-          data-aos-delay="300"
-          data-aos="fade-up"
-          data-aos-duration="1000"
-          data-aos-once={true}
-        >
-          This Projects i made
-        </p>
-        <div className="project-box mt-14 flex flex-wrap justify-center gap-6 ">
-          {listProyek.map((project) => (
-            <div
-              key={project.id}
-              className="w-full sm:w-[45%] lg:w-[30%] p-4 bg-zinc-800 rounded-md border border-indigo-400/20 hover:border-indigo-600/50 transition-all duration-200 cursor-pointer "
-              data-aos-delay={project.dad}
-              data-aos="fade-up"
-              data-aos-duration="1000"
-              data-aos-once={true}
-            >
-              <img src={project.gambar} alt={project.nama} loading="lazy" />
-              <div>
-                <h1 className="text-2xl font-bold my-4">{project.nama}</h1>
-                <p className="text-base/loose mb-4">{project.desk}</p>
+export default function Project() {
+  const containerVariants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.1,
+      },
+    },
+  };
 
-                <div className="flex flex-wrap gap-2">
+  const itemVariants = {
+    hidden: { opacity: 0, y: 25 },
+    visible: { opacity: 1, y: 0, transition: { duration: 0.4 } },
+  };
+
+  // Maps static project metadata based on description content
+  const getProjectMeta = (id) => {
+    switch (id) {
+      case 1:
+        return { date: "2024", role: "Frontend Developer", category: "Personal Portfolio" };
+      case 2:
+        return { date: "2024", role: "Full Stack Developer", category: "MERN Stack Clone" };
+      case 3:
+        return { date: "2024", role: "Frontend Developer", category: "E-Commerce Web" };
+      case 4:
+        return { date: "2025", role: "UI & Interaction Developer", category: "Creative Landing Page" };
+      case 5:
+        return { date: "2025", role: "Web Developer", category: "AI Landing Page" };
+      default:
+        return { date: "2024", role: "Developer", category: "Web App" };
+    }
+  };
+
+  return (
+    <motion.section
+      id="project"
+      className="scroll-mt-24 flex flex-col gap-6"
+      variants={containerVariants}
+      initial="hidden"
+      whileInView="visible"
+      viewport={{ once: true, margin: "-100px" }}
+    >
+      {/* Uppercase Section Header */}
+      <div className="flex flex-col gap-1">
+        <motion.span
+          className="text-[12px] font-bold tracking-[0.15em] text-[#8A8A8A] uppercase"
+          variants={itemVariants}
+        >
+          Projects
+        </motion.span>
+        <motion.h2
+          className="text-[32px] lg:text-[40px] font-bold text-white tracking-tight"
+          variants={itemVariants}
+        >
+          Selected Works
+        </motion.h2>
+      </div>
+
+      {/* Projects Horizontal Carousel */}
+      <motion.div
+        className="flex overflow-x-auto gap-6 mt-4 pb-6 snap-x snap-mandatory scroll-smooth scrollbar-none w-full"
+        variants={containerVariants}
+      >
+        {listProyek.map((project) => {
+          const meta = getProjectMeta(project.id);
+          return (
+            <motion.div
+              key={project.id}
+              className="w-[85vw] sm:w-[480px] flex-shrink-0 snap-start group bg-[#0B0B0B] border border-white/5 rounded-[28px] overflow-hidden flex flex-col hover:border-[#3B82F6]/30 hover:shadow-[0_12px_30px_rgba(59,130,246,0.08)] transition-all duration-300 relative"
+              variants={itemVariants}
+              whileHover={{ y: -4 }}
+            >
+              {/* Image Container */}
+              <div className="w-full aspect-[16/10] overflow-hidden bg-zinc-900 border-b border-white/5 relative">
+                <img
+                  src={project.gambar}
+                  alt={project.nama}
+                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                  loading="lazy"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-[#0B0B0B]/80 via-transparent to-transparent opacity-60 pointer-events-none" />
+              </div>
+
+              {/* Info Container */}
+              <div className="p-6 flex flex-col flex-1 gap-4">
+                {/* Meta details */}
+                <div className="flex flex-wrap items-center gap-2 text-[12px] text-[#8A8A8A] font-medium leading-none">
+                  <span>{meta.date}</span>
+                  <span>•</span>
+                  <span>{meta.role}</span>
+                  <span>•</span>
+                  <span className="text-[#3B82F6]">{meta.category}</span>
+                </div>
+
+                <div className="flex flex-col gap-2">
+                  <h3 className="text-[18px] font-bold text-white tracking-tight leading-snug group-hover:text-[#3B82F6] transition-colors duration-250">
+                    {project.nama}
+                  </h3>
+                  <p className="text-[14px] leading-relaxed text-[#8A8A8A] font-normal">
+                    {project.desk}
+                  </p>
+                </div>
+
+                {/* Tech Pills */}
+                <div className="flex flex-wrap gap-1.5 mt-auto pt-2">
                   {project.tools.map((tool, index) => (
-                    <p
+                    <span
                       key={index}
-                      className="py-1 px-3 border border-zinc-500 bg-zinc-600 rounded-md font-semibold"
+                      className="text-[11px] font-semibold text-white/60 bg-[#161616] border border-white/5 px-2 py-0.5 rounded-md"
                     >
                       {tool}
-                    </p>
+                    </span>
                   ))}
                 </div>
 
-                <div className="mt-8 text-center">
+                {/* Bottom Link Action */}
+                <div className="mt-4 pt-4 border-t border-white/5">
                   {project.link ? (
                     <a
                       href={project.link}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="bg-indigo-900/80 p-3 rounded-lg block border border-indigo-900 hover:bg-indigo-600 transition-all duration-300 ease-linear"
+                      className="inline-flex items-center justify-between w-full text-[13px] font-bold text-white bg-white/5 hover:bg-white/10 hover:text-white border border-white/5 rounded-xl px-4 py-2.5 transition-all duration-200"
                     >
-                      Open Website
+                      <span>Launch Project</span>
+                      <ExternalLink size={14} className="text-[#3B82F6]" />
                     </a>
                   ) : (
-                    <button
-                      disabled
-                      className="bg-zinc-900/30 text-indigo-400 p-3 rounded-lg w-full border border-indigo-800/30 cursor-not-allowed"
-                    >
-                      Not Deployed
-                    </button>
+                    <div className="inline-flex items-center justify-between w-full text-[13px] font-medium text-[#8A8A8A] bg-white/0 border border-white/5 border-dashed rounded-xl px-4 py-2.5 cursor-not-allowed">
+                      <span>Not Deployed (Local Dev)</span>
+                      <Lock size={14} className="text-[#8A8A8A]" />
+                    </div>
                   )}
                 </div>
               </div>
-            </div>
-          ))}
-        </div>
-      </div>
-      {/* Project */}
-    </div>
+            </motion.div>
+          );
+        })}
+      </motion.div>
+    </motion.section>
   );
-};
-
-export default Project;
+}
