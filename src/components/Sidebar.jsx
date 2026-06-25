@@ -70,9 +70,7 @@ export default function Sidebar() {
           About
         </h3>
         <p className="text-[14px] leading-relaxed text-[#8A8A8A] font-normal">
-          A motivated web and application developer focused on creating modern,
-          efficient, and user-friendly digital experiences. I love combining
-          creative design with AI and cloud-powered technologies.
+          Jakarta-based product designer and developer, currently focused on frontend / fullstack MERN with +1 year of hands-on building web app.
         </p>
       </div>
 
