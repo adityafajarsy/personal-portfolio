@@ -1,39 +1,353 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useRef } from "react";
 
-const PreLoader = () => {
-  const [loading, setLoading] = useState(true);
+const GLITCH_CHARS = "!<>-_\\/[]{}—=+*^?#@$%&ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
+const NAME = "ADITYA FAJAR SY";
+const TAGLINE = "PRODUCT ENGINEER · WEB DEVELOPER";
+
+function useGlitchText(target, duration = 900, startDelay = 0) {
+  const [text, setText] = useState(() => target.replace(/./g, " "));
+  const frame = useRef(null);
 
   useEffect(() => {
-    setTimeout(() => {
-      setLoading(false);
-    }, 3000);
+    let iteration = 0;
+    const totalFrames = 28;
+    let started = false;
+
+    const timeout = setTimeout(() => {
+      started = true;
+      const tick = () => {
+        iteration++;
+        setText(
+          target
+            .split("")
+            .map((char, i) => {
+              if (char === " ") return " ";
+              if (i < Math.floor((iteration / totalFrames) * target.length)) {
+                return target[i];
+              }
+              return GLITCH_CHARS[Math.floor(Math.random() * GLITCH_CHARS.length)];
+            })
+            .join("")
+        );
+        if (iteration < totalFrames) {
+          frame.current = requestAnimationFrame(tick);
+        } else {
+          setText(target);
+        }
+      };
+      frame.current = requestAnimationFrame(tick);
+    }, startDelay);
+
+    return () => {
+      clearTimeout(timeout);
+      if (frame.current) cancelAnimationFrame(frame.current);
+    };
+  }, [target, startDelay]);
+
+  return text;
+}
+
+export default function PreLoader() {
+  const [phase, setPhase] = useState("intro"); // intro | glitch | exit
+  const [scanLine, setScanLine] = useState(0);
+  const [showTagline, setShowTagline] = useState(false);
+  const [chromatic, setChromatic] = useState(false);
+
+  const nameText = useGlitchText(NAME, 900, 400);
+  const taglineText = useGlitchText(TAGLINE, 800, 1400);
+
+  // Scan line animation
+  useEffect(() => {
+    let raf;
+    const start = performance.now();
+    const animate = (now) => {
+      const elapsed = now - start;
+      setScanLine(((elapsed * 0.05) % 110));
+      raf = requestAnimationFrame(animate);
+    };
+    raf = requestAnimationFrame(animate);
+    return () => cancelAnimationFrame(raf);
   }, []);
 
+  // Show tagline
+  useEffect(() => {
+    const t = setTimeout(() => setShowTagline(true), 1200);
+    return () => clearTimeout(t);
+  }, []);
+
+  // Random chromatic glitch bursts
+  useEffect(() => {
+    const burst = () => {
+      setChromatic(true);
+      setTimeout(() => setChromatic(false), 80 + Math.random() * 120);
+    };
+    const times = [600, 1100, 1800, 2300, 2600];
+    const timers = times.map((t) => setTimeout(burst, t));
+    return () => timers.forEach(clearTimeout);
+  }, []);
+
+  // Trigger exit slide
+  useEffect(() => {
+    const t = setTimeout(() => setPhase("exit"), 3000);
+    return () => clearTimeout(t);
+  }, []);
+
+  // Unmount after exit
+  const [visible, setVisible] = useState(true);
+  useEffect(() => {
+    if (phase === "exit") {
+      const t = setTimeout(() => setVisible(false), 900);
+      return () => clearTimeout(t);
+    }
+  }, [phase]);
+
+  if (!visible) return null;
+
   return (
-    loading && (
-      <div className="w-screen h-screen flex fixed items-center justify-center bg-black z-50">
-        <div role="status">
-          <svg
-            aria-hidden="true"
-            className="inline w-14 h-14 text-gray-200 animate-spin dark:text-gray-600 fill-indigo-500"
-            viewBox="0 0 100 101"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              d="M100 50.5908C100 78.2051 77.6142 100.591 50 100.591C22.3858 100.591 0 78.2051 0 50.5908C0 22.9766 22.3858 0.59082 50 0.59082C77.6142 0.59082 100 22.9766 100 50.5908ZM9.08144 50.5908C9.08144 73.1895 27.4013 91.5094 50 91.5094C72.5987 91.5094 90.9186 73.1895 90.9186 50.5908C90.9186 27.9921 72.5987 9.67226 50 9.67226C27.4013 9.67226 9.08144 27.9921 9.08144 50.5908Z"
-              fill="currentColor"
-            />
-            <path
-              d="M93.9676 39.0409C96.393 38.4038 97.8624 35.9116 97.0079 33.5539C95.2932 28.8227 92.871 24.3692 89.8167 20.348C85.8452 15.1192 80.8826 10.7238 75.2124 7.41289C69.5422 4.10194 63.2754 1.94025 56.7698 1.05124C51.7666 0.367541 46.6976 0.446843 41.7345 1.27873C39.2613 1.69328 37.813 4.19778 38.4501 6.62326C39.0873 9.04874 41.5694 10.4717 44.0505 10.1071C47.8511 9.54855 51.7191 9.52689 55.5402 10.0491C60.8642 10.7766 65.9928 12.5457 70.6331 15.2552C75.2735 17.9648 79.3347 21.5619 82.5849 25.841C84.9175 28.9121 86.7997 32.2913 88.1811 35.8758C89.083 38.2158 91.5421 39.6781 93.9676 39.0409Z"
-              fill="currentFill"
-            />
-          </svg>
-          <span className="sr-only">Loading...</span>
+    <div
+      style={{
+        position: "fixed",
+        inset: 0,
+        zIndex: 9999,
+        background: "#030303",
+        display: "flex",
+        flexDirection: "column",
+        alignItems: "center",
+        justifyContent: "center",
+        overflow: "hidden",
+        transition: phase === "exit" ? "transform 0.85s cubic-bezier(0.77,0,0.18,1)" : "none",
+        transform: phase === "exit" ? "translateY(-100%)" : "translateY(0)",
+      }}
+    >
+      {/* ── Scan line overlay ── */}
+      <div
+        style={{
+          position: "absolute",
+          inset: 0,
+          pointerEvents: "none",
+          background:
+            "repeating-linear-gradient(0deg, transparent, transparent 2px, rgba(0,0,0,0.18) 2px, rgba(0,0,0,0.18) 4px)",
+          zIndex: 2,
+        }}
+      />
+
+      {/* ── Moving horizontal scan beam ── */}
+      <div
+        style={{
+          position: "absolute",
+          left: 0,
+          right: 0,
+          top: `${scanLine}%`,
+          height: "2px",
+          background: "linear-gradient(90deg, transparent, rgba(59,130,246,0.4), transparent)",
+          zIndex: 3,
+          pointerEvents: "none",
+        }}
+      />
+
+      {/* ── Chromatic aberration glitch ── */}
+      {chromatic && (
+        <>
+          <div
+            style={{
+              position: "absolute",
+              inset: 0,
+              background: "rgba(255,0,60,0.06)",
+              transform: "translateX(-4px)",
+              mixBlendMode: "screen",
+              zIndex: 4,
+              pointerEvents: "none",
+            }}
+          />
+          <div
+            style={{
+              position: "absolute",
+              inset: 0,
+              background: "rgba(0,200,255,0.06)",
+              transform: "translateX(4px)",
+              mixBlendMode: "screen",
+              zIndex: 4,
+              pointerEvents: "none",
+            }}
+          />
+          {/* horizontal tear */}
+          <div
+            style={{
+              position: "absolute",
+              left: 0,
+              right: 0,
+              top: `${30 + Math.random() * 40}%`,
+              height: `${2 + Math.random() * 8}px`,
+              background: "rgba(59,130,246,0.25)",
+              transform: `translateX(${(Math.random() - 0.5) * 24}px)`,
+              zIndex: 5,
+              pointerEvents: "none",
+            }}
+          />
+        </>
+      )}
+
+      {/* ── Corner brackets ── */}
+      {[
+        { top: 24, left: 24, borderTop: "2px solid", borderLeft: "2px solid", borderRight: "none", borderBottom: "none" },
+        { top: 24, right: 24, borderTop: "2px solid", borderRight: "2px solid", borderLeft: "none", borderBottom: "none" },
+        { bottom: 24, left: 24, borderBottom: "2px solid", borderLeft: "2px solid", borderTop: "none", borderRight: "none" },
+        { bottom: 24, right: 24, borderBottom: "2px solid", borderRight: "2px solid", borderTop: "none", borderLeft: "none" },
+      ].map((s, i) => (
+        <div
+          key={i}
+          style={{
+            position: "absolute",
+            width: 28,
+            height: 28,
+            borderColor: "rgba(59,130,246,0.5)",
+            ...s,
+            zIndex: 6,
+          }}
+        />
+      ))}
+
+      {/* ── STATUS label ── */}
+      <div
+        style={{
+          position: "absolute",
+          top: 32,
+          left: "50%",
+          transform: "translateX(-50%)",
+          fontSize: 10,
+          letterSpacing: "0.25em",
+          color: "rgba(59,130,246,0.6)",
+          fontFamily: "monospace",
+          zIndex: 6,
+          animation: "flicker 0.15s infinite",
+        }}
+      >
+        INITIALIZING SYSTEM...
+      </div>
+
+      {/* ── Main glitch text ── */}
+      <div style={{ position: "relative", zIndex: 6, textAlign: "center", userSelect: "none" }}>
+        {/* Red ghost */}
+        <div
+          style={{
+            position: "absolute",
+            inset: 0,
+            color: chromatic ? "rgba(255,40,80,0.35)" : "transparent",
+            fontFamily: "'Inter', monospace",
+            fontSize: "clamp(2rem, 8vw, 5rem)",
+            fontWeight: 900,
+            letterSpacing: "-0.02em",
+            transform: "translateX(-3px)",
+            pointerEvents: "none",
+            transition: "color 0.05s",
+            whiteSpace: "nowrap",
+          }}
+        >
+          {nameText}
+        </div>
+        {/* Cyan ghost */}
+        <div
+          style={{
+            position: "absolute",
+            inset: 0,
+            color: chromatic ? "rgba(0,210,255,0.35)" : "transparent",
+            fontFamily: "'Inter', monospace",
+            fontSize: "clamp(2rem, 8vw, 5rem)",
+            fontWeight: 900,
+            letterSpacing: "-0.02em",
+            transform: "translateX(3px)",
+            pointerEvents: "none",
+            transition: "color 0.05s",
+            whiteSpace: "nowrap",
+          }}
+        >
+          {nameText}
+        </div>
+        {/* Main text */}
+        <h1
+          style={{
+            fontFamily: "'Inter', monospace",
+            fontSize: "clamp(2rem, 8vw, 5rem)",
+            fontWeight: 900,
+            color: "#fff",
+            letterSpacing: "-0.02em",
+            margin: 0,
+            lineHeight: 1.1,
+            whiteSpace: "nowrap",
+            position: "relative",
+          }}
+        >
+          {nameText}
+        </h1>
+
+        {/* Tagline */}
+        <p
+          style={{
+            fontFamily: "monospace",
+            fontSize: "clamp(0.6rem, 1.8vw, 0.85rem)",
+            letterSpacing: "0.22em",
+            color: showTagline ? "rgba(59,130,246,0.8)" : "transparent",
+            marginTop: 16,
+            transition: "color 0.4s ease",
+            whiteSpace: "nowrap",
+          }}
+        >
+          {taglineText}
+        </p>
+
+        {/* Progress bar */}
+        <div
+          style={{
+            marginTop: 36,
+            height: 1,
+            width: "100%",
+            maxWidth: 360,
+            background: "rgba(255,255,255,0.06)",
+            borderRadius: 999,
+            overflow: "hidden",
+          }}
+        >
+          <div
+            style={{
+              height: "100%",
+              background: "linear-gradient(90deg, #3B82F6, #60A5FA)",
+              borderRadius: 999,
+              animation: "loadBar 2.6s cubic-bezier(0.4,0,0.2,1) forwards",
+            }}
+          />
         </div>
       </div>
-    )
-  );
-};
 
-export default PreLoader;
+      {/* ── Bottom status ── */}
+      <div
+        style={{
+          position: "absolute",
+          bottom: 32,
+          left: "50%",
+          transform: "translateX(-50%)",
+          fontSize: 9,
+          letterSpacing: "0.2em",
+          color: "rgba(255,255,255,0.2)",
+          fontFamily: "monospace",
+          zIndex: 6,
+          whiteSpace: "nowrap",
+        }}
+      >
+        PORTFOLIO v2.0 · BUILD 2025
+      </div>
+
+      <style>{`
+        @keyframes loadBar {
+          0%   { width: 0% }
+          60%  { width: 75% }
+          85%  { width: 90% }
+          100% { width: 100% }
+        }
+        @keyframes flicker {
+          0%, 100% { opacity: 1 }
+          50%       { opacity: 0.6 }
+        }
+      `}</style>
+    </div>
+  );
+}
