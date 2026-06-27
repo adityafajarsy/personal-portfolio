@@ -6,8 +6,8 @@ export default function Home() {
   const roles = [
     "Web Developer",
     "Product Engineer",
-    "UI/UX Developer",
-    "Fullstack MERN Developer"
+    "UI/UX Designer",
+    "Fullstack MERN Devs"
   ];
   const [roleIndex, setRoleIndex] = useState(0);
 
@@ -114,8 +114,8 @@ export default function Home() {
       {/* Action Buttons */}
       <motion.div className="flex flex-wrap items-center gap-4 mt-2" variants={itemVariants}>
         <a
-          href="/assets/Resume Terbaru.pdf"
-          download="Aditya Fajar Satya Yudha - CV.pdf"
+          href="/assets/Aditya Fajar Satya Yudha-CV.pdf"
+          download="Aditya's Latest CV.pdf"
           className="flex items-center gap-2 px-5 py-3 rounded-full bg-white text-black font-semibold text-[14px] hover:bg-white/90 transition-all active:scale-95 shadow-md shadow-white/5"
         >
           <Download size={16} />
