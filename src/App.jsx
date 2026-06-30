@@ -16,7 +16,7 @@ function App() {
       <div className="absolute bottom-[20%] right-[10%] ambient-glow pointer-events-none" style={{ animationDelay: "-5s" }} />
 
       {/* Sidebar - Desktop Only */}
-      <div className="hidden lg:block">
+      <div className="hidden lg:block lg:w-[35%] lg:flex-shrink-0">
         <Sidebar />
       </div>
 
