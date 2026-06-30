@@ -19,6 +19,20 @@ export default function Project() {
     visible: { opacity: 1, y: 0, transition: { duration: 0.4 } },
   };
 
+  const sloganVariants = {
+    hidden: { opacity: 0, y: 5, skewX: 0 },
+    visible: {
+      opacity: [0, 1, 0.35, 1, 0.6, 1],
+      y: 0,
+      skewX: [0, -10, 10, -5, 5, 0],
+      transition: {
+        delay: 0.8,
+        duration: 0.4,
+        ease: "linear",
+      }
+    }
+  };
+
   // Maps static project metadata based on description content
   const getProjectMeta = (id) => {
     switch (id) {
@@ -54,12 +68,21 @@ export default function Project() {
         >
           Projects
         </motion.span>
-        <motion.h2
-          className="text-[32px] lg:text-[40px] font-bold text-white tracking-tight"
-          variants={itemVariants}
-        >
-          Selected Works
-        </motion.h2>
+        <div className="relative mt-3">
+          <motion.span
+            variants={sloganVariants}
+            className="absolute top-[-16px] left-1 font-bold tracking-tighter text-[#3B82F6] select-none origin-left z-10"
+            style={{ fontFamily: "'Nothing You Could Do', cursive", fontSize: "clamp(1.1rem, 3vw, 1.7rem)" }}
+          >
+            crafting digital experiences
+          </motion.span>
+          <motion.h2
+            className="text-[32px] lg:text-[40px] font-bold text-white tracking-tight"
+            variants={itemVariants}
+          >
+            Selected Works
+          </motion.h2>
+        </div>
       </div>
 
       {/* Projects Horizontal Carousel — with swipe hint on mobile */}

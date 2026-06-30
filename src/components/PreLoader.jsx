@@ -1,8 +1,8 @@
 import React, { useEffect, useState, useRef } from "react";
 
 const GLITCH_CHARS = "!<>-_\\/[]{}—=+*^?#@$%&ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
-const NAME = "ADITYA FAJAR SY";
-const TAGLINE = "PRODUCT ENGINEER · WEB DEVELOPER";
+const NAME = "PORTFOLIO";
+const TAGLINE = "welcome to aditya's";
 
 function useGlitchText(target, duration = 900, startDelay = 0) {
   const [text, setText] = useState(() => target.replace(/./g, " "));
@@ -226,15 +226,32 @@ export default function PreLoader() {
       </div>
 
       {/* ── Main glitch text ── */}
-      <div style={{ position: "relative", zIndex: 6, textAlign: "center", userSelect: "none" }}>
+      <div style={{ position: "relative", zIndex: 6, display: "inline-block", textAlign: "left", userSelect: "none" }}>
+        {/* Tagline (Welcome) */}
+        <p
+          style={{
+            fontFamily: "'Nothing You Could Do', cursive",
+            fontSize: "clamp(1.1rem, 3.2vw, 1.7rem)",
+            color: showTagline ? "#3B82F6" : "transparent",
+            margin: "0 0 -8px 4px",
+            transition: "color 0.4s ease",
+            whiteSpace: "nowrap",
+            position: "relative",
+            zIndex: 7,
+          }}
+        >
+          {taglineText}
+        </p>
+
         {/* Red ghost */}
         <div
           style={{
             position: "absolute",
-            inset: 0,
+            left: 0,
+            right: 0,
             color: chromatic ? "rgba(255,40,80,0.35)" : "transparent",
             fontFamily: "'Inter', monospace",
-            fontSize: "clamp(2rem, 8vw, 5rem)",
+            fontSize: "clamp(2.5rem, 9.5vw, 6.2rem)",
             fontWeight: 900,
             letterSpacing: "-0.02em",
             transform: "translateX(-3px)",
@@ -249,10 +266,11 @@ export default function PreLoader() {
         <div
           style={{
             position: "absolute",
-            inset: 0,
+            left: 0,
+            right: 0,
             color: chromatic ? "rgba(0,210,255,0.35)" : "transparent",
             fontFamily: "'Inter', monospace",
-            fontSize: "clamp(2rem, 8vw, 5rem)",
+            fontSize: "clamp(2.5rem, 9.5vw, 6.2rem)",
             fontWeight: 900,
             letterSpacing: "-0.02em",
             transform: "translateX(3px)",
@@ -267,7 +285,7 @@ export default function PreLoader() {
         <h1
           style={{
             fontFamily: "'Inter', monospace",
-            fontSize: "clamp(2rem, 8vw, 5rem)",
+            fontSize: "clamp(2.5rem, 9.5vw, 6.2rem)",
             fontWeight: 900,
             color: "#fff",
             letterSpacing: "-0.02em",
@@ -280,28 +298,13 @@ export default function PreLoader() {
           {nameText}
         </h1>
 
-        {/* Tagline */}
-        <p
-          style={{
-            fontFamily: "monospace",
-            fontSize: "clamp(0.6rem, 1.8vw, 0.85rem)",
-            letterSpacing: "0.22em",
-            color: showTagline ? "rgba(59,130,246,0.8)" : "transparent",
-            marginTop: 16,
-            transition: "color 0.4s ease",
-            whiteSpace: "nowrap",
-          }}
-        >
-          {taglineText}
-        </p>
 
         {/* Progress bar */}
         <div
           style={{
-            marginTop: 36,
+            marginTop: 40,
             height: 1,
             width: "100%",
-            maxWidth: 360,
             background: "rgba(255,255,255,0.06)",
             borderRadius: 999,
             overflow: "hidden",

@@ -14,7 +14,6 @@ import Tools5 from "/assets/tools/bootstrap.png";
 import Tools6 from "/assets/tools/js.png";
 import Tools7 from "/assets/tools/nodejs.png";
 import Tools8 from "/assets/tools/github.png";
-import Tools9 from "/assets/tools/ai.png";
 import Tools10 from "/assets/tools/canva.png";
 import Tools11 from "/assets/tools/figma.png";
 
@@ -70,27 +69,69 @@ export const listTools = [
   },
   {
     id: 8,
+    gambar: "https://cdn.simpleicons.org/express/white",
+    nama: "Express JS",
+    ket: "Backend Framework",
+    dad: "750",
+  },
+  {
+    id: 9,
+    gambar: "https://cdn.simpleicons.org/docker/2496ED",
+    nama: "Docker",
+    ket: "Containerization",
+    dad: "820",
+  },
+  {
+    id: 10,
+    gambar: "https://cdn.simpleicons.org/ubuntu/E95420",
+    nama: "Ubuntu",
+    ket: "Linux Server OS",
+    dad: "830",
+  },
+  {
+    id: 11,
+    gambar: "https://cdn.simpleicons.org/vercel/white",
+    nama: "Vercel",
+    ket: "Cloud Deployment",
+    dad: "840",
+  },
+  {
+    id: 12,
+    gambar: "data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%2310B981' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'><circle cx='12' cy='12' r='9'/><path d='M12 16V8M9 11l3-3 3 3'/></svg>",
+    nama: "Antigravity",
+    ket: "AI Coding Assistant",
+    dad: "850",
+  },
+  {
+    id: 13,
+    gambar: "data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23D97706' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'><polyline points='4 17 10 11 4 5'/><line x1='12' y1='19' x2='20' y2='19'/></svg>",
+    nama: "Claude Code",
+    ket: "AI Terminal Agent",
+    dad: "860",
+  },
+  {
+    id: 15,
+    gambar: "data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23EC4899' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'><path d='M12 3v1M12 20v1M4 12H3M21 12h-1M18.36 5.64l-.7.7M6.34 17.66l-.7.7M5.64 5.64l.7.7M17.66 17.66l.7.7M9 12a3 3 0 1 1 6 0 3 3 0 0 1-6 0z'/></svg>",
+    nama: "AI Tools",
+    ket: "AI Workflows",
+    dad: "880",
+  },
+  {
+    id: 16,
     gambar: Tools8,
     nama: "Github",
     ket: "Repository",
     dad: "800",
   },
   {
-    id: 9,
-    gambar: Tools9,
-    nama: "Adobe Illustrator",
-    ket: "Design App",
-    dad: "900",
-  },
-  {
-    id: 10,
+    id: 17,
     gambar: Tools10,
     nama: "Canva",
     ket: "Design App",
     dad: "1000",
   },
   {
-    id: 11,
+    id: 18,
     gambar: Tools11,
     nama: "Figma",
     ket: "Design App",

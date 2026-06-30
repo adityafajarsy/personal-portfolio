@@ -81,11 +81,11 @@ export default function Sidebar() {
         </h3>
         <div className="flex flex-col gap-2.5 text-[14px] text-[#8A8A8A]">
           <a
-            href="mailto:adityafajar.sy90@email.com"
+            href="mailto:adityafajar.sy90@gmail.com"
             className="flex items-center gap-2.5 hover:text-white transition-colors duration-200"
           >
             <Mail size={16} className="text-[#8A8A8A]" />
-            <span className="truncate">adityafajar.sy90@email.com</span>
+            <span className="truncate">adityafajar.sy90@gmail.com</span>
           </a>
           <a
             href="https://github.com/adityafajarsy"
@@ -184,21 +184,22 @@ export default function Sidebar() {
           <i className="ri-instagram-line ri-xl"></i>
         </a>
         <a
-          href="#"
+          href="https://x.com/elonmusk"
+          target="_blank"
+          rel="noopener noreferrer"
           className="text-[#8A8A8A] hover:text-white/40 transition-colors duration-250 cursor-default"
           aria-label="X"
-          onClick={(e) => e.preventDefault()}
         >
           <i className="ri-twitter-x-fill ri-lg"></i>
         </a>
-        <a
+        {/* <a
           href="#"
           className="text-[#8A8A8A] hover:text-white/40 transition-colors duration-250 cursor-default"
           aria-label="Youtube"
           onClick={(e) => e.preventDefault()}
         >
           <i className="ri-youtube-fill ri-xl"></i>
-        </a>
+        </a> */}
       </div>
     </aside>
   );

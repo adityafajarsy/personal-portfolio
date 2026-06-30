@@ -34,6 +34,20 @@ export default function Home() {
     visible: { opacity: 1, y: 0, transition: { duration: 0.4 } },
   };
 
+  const sloganVariants = {
+    hidden: { opacity: 0, y: 5, skewX: 0 },
+    visible: {
+      opacity: [0, 1, 0.35, 1, 0.6, 1],
+      y: 0,
+      skewX: [0, -10, 10, -5, 5, 0],
+      transition: {
+        delay: 0.8,
+        duration: 0.4,
+        ease: "linear",
+      }
+    }
+  };
+
   return (
     <motion.section
       id="intro"

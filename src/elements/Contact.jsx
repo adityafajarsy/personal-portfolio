@@ -18,8 +18,22 @@ export default function Contact() {
     visible: { opacity: 1, y: 0, transition: { duration: 0.4 } },
   };
 
+  const sloganVariants = {
+    hidden: { opacity: 0, y: 5, skewX: 0 },
+    visible: {
+      opacity: [0, 1, 0.35, 1, 0.6, 1],
+      y: 0,
+      skewX: [0, -10, 10, -5, 5, 0],
+      transition: {
+        delay: 0.8,
+        duration: 0.4,
+        ease: "linear",
+      }
+    }
+  };
+
   const contactLinks = [
-    { label: "Email", value: "adityafajar.sy90@email.com", href: "mailto:adityafajar.sy90@email.com", icon: Mail },
+    { label: "Email", value: "adityafajar.sy90@gmail.com", href: "mailto:adityafajar.sy90@email.com", icon: Mail },
     { label: "Phone", value: "+62 877-4158-3948", href: "tel:+6287741583948", icon: Phone },
     { label: "LinkedIn", value: "linkedin.com/in/adityafajarsy", href: "https://www.linkedin.com/in/adityafajarsy/", icon: Linkedin },
     { label: "GitHub", value: "github.com/adityafajarsy", href: "https://github.com/adityafajarsy", icon: Globe },
@@ -43,12 +57,21 @@ export default function Contact() {
         >
           Contact
         </motion.span>
-        <motion.h2
-          className="text-[32px] lg:text-[40px] font-bold text-white tracking-tight"
-          variants={itemVariants}
-        >
-          Get in Touch
-        </motion.h2>
+        <div className="relative mt-3">
+          <motion.span
+            variants={sloganVariants}
+            className="absolute top-[-16px] left-1 font-bold tracking-tighter text-[#3B82F6] select-none origin-left z-10"
+            style={{ fontFamily: "'Nothing You Could Do', cursive", fontSize: "clamp(1.1rem, 3vw, 1.7rem)" }}
+          >
+            let's build together!
+          </motion.span>
+          <motion.h2
+            className="text-[32px] lg:text-[40px] font-bold text-white tracking-tight"
+            variants={itemVariants}
+          >
+            Get in Touch
+          </motion.h2>
+        </div>
         <motion.p
           className="text-[14px] text-[#8A8A8A] max-w-md mt-1"
           variants={itemVariants}
@@ -133,7 +156,7 @@ export default function Contact() {
                 required
               />
             </div>
-            
+
             <div className="flex flex-col gap-1.5">
               <label className="text-[12px] font-bold text-[#8A8A8A] uppercase">Email</label>
               <input

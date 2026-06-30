@@ -1,5 +1,4 @@
 import React from "react";
-import { Sparkles } from "lucide-react";
 import { motion } from "framer-motion";
 import { listTools } from "../data";
 
@@ -19,6 +18,68 @@ export default function About() {
     visible: { opacity: 1, y: 0, transition: { duration: 0.4 } },
   };
 
+  const toolsContainerVariants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.04,
+        delayChildren: 0.15
+      }
+    }
+  };
+
+  const toolsItemVariants = {
+    hidden: {
+      opacity: 0,
+      y: 30,
+      scale: 0.94,
+      rotateX: 12,
+      rotateY: -3,
+    },
+    visible: {
+      opacity: 1,
+      y: 0,
+      scale: 1,
+      rotateX: 0,
+      rotateY: 0,
+      transition: {
+        type: "spring",
+        stiffness: 90,
+        damping: 13,
+        mass: 0.65
+      }
+    }
+  };
+
+  const cardVariants = {
+    hidden: { opacity: 0, y: 40 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: {
+        type: "spring",
+        stiffness: 60,
+        damping: 14,
+        mass: 0.8
+      }
+    }
+  };
+
+  const sloganVariants = {
+    hidden: { opacity: 0, y: 5, skewX: 0 },
+    visible: {
+      opacity: [0, 1, 0.35, 1, 0.6, 1],
+      y: 0,
+      skewX: [0, -10, 10, -5, 5, 0],
+      transition: {
+        delay: 0.8,
+        duration: 0.4,
+        ease: "linear",
+      }
+    }
+  };
+
   return (
     <motion.section
       id="about"
@@ -26,66 +87,177 @@ export default function About() {
       variants={containerVariants}
       initial="hidden"
       whileInView="visible"
-      viewport={{ once: true, margin: "-100px" }}
+      viewport={{ once: true, margin: "-30px" }}
     >
-      {/* Bio / The Intersection Story Card */}
+
+      {/* Work Experience Section */}
       <div className="flex flex-col gap-6">
-        <motion.span
-          className="text-[12px] font-bold tracking-[0.15em] text-[#8A8A8A] uppercase"
-          variants={itemVariants}
-        >
-          My Story
-        </motion.span>
-
-        <motion.div
-          className="p-6 lg:p-8 rounded-[24px] bg-[#0B0B0B] border border-white/5 relative overflow-hidden group hover:border-[#3B82F6]/30 transition-all duration-300 shadow-xl"
-          variants={itemVariants}
-        >
-          {/* subtle glow top right */}
-          <div className="absolute -top-12 -right-12 w-24 h-24 bg-blue-500/10 rounded-full blur-2xl group-hover:bg-blue-500/20 transition-all duration-500" />
-          
-          <div className="flex items-center gap-3 mb-6">
-            <div className="p-2 bg-white/5 rounded-lg border border-white/5 flex items-center justify-center">
-              <Sparkles size={18} className="text-[#3B82F6]" />
-            </div>
-            <h3 className="text-[18px] font-bold text-white tracking-tight">The Intersection</h3>
+        <div className="flex flex-col gap-1">
+          <motion.span
+            className="text-[12px] font-bold tracking-[0.15em] text-[#8A8A8A] uppercase"
+            variants={itemVariants}
+          >
+            Experience
+          </motion.span>
+          <div className="relative mt-3">
+            <motion.span
+              variants={sloganVariants}
+              className="absolute top-[-16px] left-1 font-bold tracking-tighter text-[#3B82F6] select-none origin-left z-10"
+              style={{ fontFamily: "'Nothing You Could Do', cursive", fontSize: "clamp(1.1rem, 3vw, 1.7rem)" }}
+            >
+              professional journey
+            </motion.span>
+            <motion.h2
+              className="text-[32px] lg:text-[40px] font-bold text-white tracking-tight"
+              variants={itemVariants}
+            >
+              Career Journey
+            </motion.h2>
           </div>
+        </div>
 
-          <p className="text-[15px] leading-relaxed text-[#8A8A8A] font-normal mb-8">
-            I started my{" "}
-            <span className="text-white font-medium">journey in the creative field</span> during freshman college year, working on{" "}
-            <span className="text-white font-medium">Graphic Designs</span>, logos, banners, ID cards, lanyards, and{" "}
-            <span className="text-white font-medium">video productions</span>. My path in software development began in{" "}
-            <span className="text-[#3B82F6] font-medium">Sept 2024</span> through a four-month bootcamp{" "}
-            <span className="text-white font-semibold inline-flex items-center gap-1.5 bg-white/5 border border-white/5 px-2 py-0.5 rounded-md">
-              "Hacktiv8"
-              <img
-                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ5zv605IDYRA7f3I0IMFUy4BKP3ETSMleuJA&s"
-                alt="Hacktiv8 Logo"
-                className="w-4 h-4 rounded-sm object-cover"
-              />
-            </span>
-            . After a short break to finish my studies, I've been fully focused on self-learning since{" "}
-            <span className="text-[#3B82F6] font-medium">August 2025</span>, continuously grinding my skills as a{" "}
-            <span className="text-white font-semibold">developer</span>.
-          </p>
+        {/* Experience Cards Stack */}
+        <div className="flex flex-col gap-4">
+          {[
+            {
+              role: "Web Designer & Frontend Developer",
+              company: "Kementerian PANRB",
+              period: "Nov 2025 - May 2026",
+              location: "Jakarta, Indonesia",
+              color: "bg-[#1E293B] border border-slate-700/50", // Slate/Blue Tint
+              icon: (
+                <img
+                  src="/assets/Logo PanRB.png"
+                  alt="Kementerian PANRB Logo"
+                  className="w-7.5 h-7.5 object-contain rounded-md"
+                />
+              ),
+              desc: "Directed the complete UI/UX design, user flows, and agile/scrum planning for two portal web applications (PPID & SIPIPI). Collaborated in a two-person team via Git, building the frontend using Next.js, TypeScript, and Tailwind.",
+              descMobile: "Directed UI/UX design, user flows, and agile planning for two web portals (PPID & SIPIPI). Collaborated via Git to build the Next.js and TypeScript frontend.",
+            },
+            {
+              role: "Career Break (T-Shaped Upskilling)",
+              company: "Independent Learning",
+              period: "Jan 2025 - Nov 2025",
+              location: "Remote",
+              color: "bg-[#312E81] border border-indigo-700/50", // Indigo/Purple Tint
+              icon: (
+                <svg viewBox="0 0 24 24" className="w-5 h-5 text-indigo-200" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+                  <path d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z"></path>
+                  <circle cx="12" cy="12" r="3"></circle>
+                </svg>
+              ),
+              desc: "Built a T-shaped profile by researching cross-disciplinary skills, including AI workflows, product marketing, and advanced frontend paradigms, followed by intensive self-study in production-grade software engineering.",
+              descMobile: "Researched cross-disciplinary skills including AI workflows, product marketing, and advanced frontend paradigms to build a versatile T-shaped profile.",
+            },
+            {
+              role: "ReactJS for Frontend Developer Bootcamp",
+              company: "Hacktiv8 Indonesia",
+              period: "Aug 2024 - Dec 2024",
+              location: "Jakarta, Indonesia",
+              color: "bg-[#450A0A] border border-red-900/40", // Dark Red Tint
+              icon: (
+                <img
+                  src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ5zv605IDYRA7f3I0IMFUy4BKP3ETSMleuJA&s"
+                  alt="Hacktiv8 Logo"
+                  className="w-6 h-6 object-contain rounded-md"
+                />
+              ),
+              desc: "Transitioned from a creative/multimedia background to specialized frontend engineering, mastering modern React.js, modular component architectures, state management, and Git workflows.",
+              descMobile: "Mastered frontend engineering principles, modern React.js workflows, component-driven architectures, state management, and collaborative Git practices.",
+            },
+            {
+              role: "Creative Design & Multimedia Lead",
+              company: "Universitas Padjadjaran",
+              period: "2021 - 2025",
+              location: "Sumedang, Indonesia",
+              color: "bg-[#451A03] border border-amber-900/40", // Dark Amber/Gold Tint
+              icon: (
+                <img
+                  src="/assets/logo-unpad1.png"
+                  alt="Unpad Logo"
+                  className="w-7 h-7 object-contain rounded-md"
+                />
+              ),
+              desc: "Led visual design and multimedia production for various campus organizations and events, establishing strong foundational skills in UI/UX layout, graphic assets, and user workflows.",
+              descMobile: "Directed visual asset design and multimedia production for campus groups, establishing core skills in UI/UX layout and user flow architecture.",
+            },
+          ].map((exp, idx) => {
+            const CalendarIcon = () => (
+              <svg viewBox="0 0 24 24" className="w-3 h-3 sm:w-3.5 sm:h-3.5 text-[#8A8A8A]" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+                <line x1="16" y1="2" x2="16" y2="6"></line>
+                <line x1="8" y1="2" x2="8" y2="6"></line>
+                <line x1="3" y1="10" x2="21" y2="10"></line>
+              </svg>
+            );
 
-          {/* Stats Row */}
-          <div className="flex flex-wrap items-center gap-8 pt-6 border-t border-white/5">
-            <div>
-              <span className="text-[28px] font-black text-white tracking-tight leading-none">
-                6<span className="text-[#3B82F6]">+</span>
-              </span>
-              <p className="text-[12px] text-[#8A8A8A] mt-1 font-medium">Projects Done</p>
-            </div>
-            <div>
-              <span className="text-[28px] font-black text-white tracking-tight leading-none">
-                8<span className="text-[#3B82F6]">+</span>
-              </span>
-              <p className="text-[12px] text-[#8A8A8A] mt-1 font-medium">Months of Learning</p>
-            </div>
-          </div>
-        </motion.div>
+            const CompanyIcon = () => (
+              <svg viewBox="0 0 24 24" className="w-3 h-3 sm:w-3.5 sm:h-3.5 text-[#8A8A8A]" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+                <rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect>
+                <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path>
+              </svg>
+            );
+
+            const MapIcon = () => (
+              <svg viewBox="0 0 24 24" className="w-3 h-3 sm:w-3.5 sm:h-3.5 text-[#8A8A8A]" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                <circle cx="12" cy="10" r="3"></circle>
+              </svg>
+            );
+
+            return (
+              <motion.div
+                key={idx}
+                className="p-6 rounded-[16px] bg-[#0B0B0B] border border-white/5 hover:border-white/10 transition-all duration-300 flex flex-col sm:flex-row items-start gap-4 group"
+                variants={cardVariants}
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: true, margin: "-40px" }}
+              >
+                {/* Left Side: Circular Logo Container */}
+                <div className={`w-12 h-12 rounded-full ${exp.color} flex items-center justify-center flex-shrink-0 shadow-lg group-hover:scale-105 transition-transform duration-300`}>
+                  {exp.icon}
+                </div>
+
+                {/* Right Side: Details & Info */}
+                <div className="flex-1 min-w-0">
+                  <h3 className="text-[17px] font-bold text-white tracking-tight leading-snug">
+                    {exp.role}
+                  </h3>
+
+                  {/* Metadata Row */}
+                  <div className="flex flex-col gap-1.5 sm:flex-row sm:items-center sm:gap-x-4 mt-2 sm:mt-1.5 text-[11.5px] sm:text-[13px] text-[#8A8A8A] font-normal">
+                    <div className="flex flex-row flex-wrap items-center gap-x-2.5 gap-y-1">
+                      <span className="flex items-center gap-1">
+                        <CalendarIcon />
+                        {exp.period}
+                      </span>
+                      <span className="flex items-center gap-1">
+                        <CompanyIcon />
+                        {exp.company}
+                      </span>
+                    </div>
+                    <span className="flex items-center gap-1">
+                      <MapIcon />
+                      {exp.location}
+                    </span>
+                  </div>
+
+                  {/* Paragraph Description — Desktop */}
+                  <p className="hidden sm:block text-[14px] leading-relaxed text-[#8A8A8A] mt-3 font-normal">
+                    {exp.desc}
+                  </p>
+
+                  {/* Paragraph Description — Mobile */}
+                  <p className="block sm:hidden text-[13px] leading-relaxed text-[#8A8A8A] mt-2.5 font-normal">
+                    {exp.descMobile}
+                  </p>
+                </div>
+              </motion.div>
+            );
+          })}
+        </div>
       </div>
 
       {/* Tools Section */}
@@ -94,26 +266,43 @@ export default function About() {
           <span className="text-[12px] font-bold tracking-[0.15em] text-[#8A8A8A] uppercase">
             Tools
           </span>
-          <h2 className="text-[28px] lg:text-[32px] font-bold text-white tracking-tight">
-            Tech Stack & Workspace
-          </h2>
-          <p className="text-[14px] text-[#8A8A8A] max-w-md">
+          <div className="relative mt-3 w-fit">
+            <motion.span
+              variants={sloganVariants}
+              className="absolute top-[-10px] left-[52%] sm:left-[50%] font-bold tracking-tighter text-[#3B82F6] select-none origin-left z-10 whitespace-nowrap"
+              style={{ fontFamily: "'Nothing You Could Do', cursive", fontSize: "clamp(1.1rem, 3vw, 1.7rem)" }}
+            >
+              my daily arsenal
+            </motion.span>
+            <h2 className="text-[23px] min-[380px]:text-[25px] sm:text-[32px] lg:text-[36px] font-bold text-white tracking-tight whitespace-nowrap pr-2">
+              Tech Stack & Workspace
+            </h2>
+          </div>
+          <p className="text-[14px] text-[#8A8A8A] max-w-md mt-2">
             The software, frameworks, languages, and design applications that I leverage daily.
           </p>
         </motion.div>
 
         <motion.div
-          className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4"
-          variants={containerVariants}
+          className="grid grid-cols-3 sm:grid-cols-2 lg:grid-cols-3 gap-2.5 sm:gap-4 perspective-[900px]"
+          variants={toolsContainerVariants}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, margin: "-40px" }}
         >
           {listTools.map((tool) => (
             <motion.div
               key={tool.id}
-              className="flex items-center gap-4 p-4 rounded-[16px] bg-[#0B0B0B] border border-white/5 hover:border-[#3B82F6]/30 transition-all duration-300 group shadow-md"
-              variants={itemVariants}
-              whileHover={{ y: -2 }}
+              className="flex flex-col sm:flex-row items-center gap-2 sm:gap-4 p-2.5 sm:p-4 rounded-[12px] sm:rounded-[16px] bg-[#0B0B0B] border border-white/5 hover:border-[#3B82F6]/30 transition-all duration-300 group shadow-md text-center sm:text-left origin-center"
+              variants={toolsItemVariants}
+              whileHover={{ 
+                y: -4, 
+                scale: 1.03, 
+                transition: { type: "spring", stiffness: 300, damping: 14 } 
+              }}
             >
-              <div className="w-12 h-12 bg-white/5 rounded-xl border border-white/5 p-2 flex items-center justify-center group-hover:bg-white/10 transition-colors duration-300 flex-shrink-0">
+              {/* Icon Container */}
+              <div className="w-9 h-9 sm:w-12 sm:h-12 bg-white/5 rounded-lg sm:rounded-xl border border-white/5 p-1.5 sm:p-2 flex items-center justify-center group-hover:bg-white/10 transition-colors duration-300 flex-shrink-0">
                 <img
                   src={tool.gambar}
                   alt={tool.nama}
@@ -123,11 +312,13 @@ export default function About() {
                   }}
                 />
               </div>
-              <div className="min-w-0">
-                <h4 className="font-bold text-[14px] text-white truncate leading-snug group-hover:text-[#3B82F6] transition-colors duration-250">
+
+              {/* Text Container */}
+              <div className="min-w-0 w-full flex-1">
+                <h4 className="font-bold text-[10px] sm:text-[14px] text-white truncate leading-snug group-hover:text-[#3B82F6] transition-colors duration-250">
                   {tool.nama}
                 </h4>
-                <p className="text-[12px] text-[#8A8A8A] truncate">{tool.ket}</p>
+                <p className="hidden sm:block text-[12px] text-[#8A8A8A] truncate mt-0.5">{tool.ket}</p>
               </div>
             </motion.div>
           ))}
