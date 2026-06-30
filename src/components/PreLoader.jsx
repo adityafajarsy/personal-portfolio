@@ -2,7 +2,7 @@ import React, { useEffect, useState, useRef } from "react";
 
 const GLITCH_CHARS = "!<>-_\\/[]{}—=+*^?#@$%&ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
 const NAME = "PORTFOLIO";
-const TAGLINE = "welcome to aditya's";
+const TAGLINE = "Welcome to Aditya's";
 
 function useGlitchText(target, duration = 900, startDelay = 0) {
   const [text, setText] = useState(() => target.replace(/./g, " "));
@@ -231,13 +231,17 @@ export default function PreLoader() {
         <p
           style={{
             fontFamily: "'Nothing You Could Do', cursive",
-            fontSize: "clamp(1.1rem, 3.2vw, 1.7rem)",
+            fontSize: "clamp(1.3rem, 3.8vw, 2.2rem)",
+            fontWeight: "bold",
             color: showTagline ? "#3B82F6" : "transparent",
-            margin: "0 0 -8px 4px",
+            position: "absolute",
+            top: "calc(-12px - 1.2vw)",
+            left: "8px",
             transition: "color 0.4s ease",
             whiteSpace: "nowrap",
-            position: "relative",
             zIndex: 7,
+            textShadow: "0 0 12px rgba(59, 130, 246, 0.5)",
+            margin: 0,
           }}
         >
           {taglineText}
