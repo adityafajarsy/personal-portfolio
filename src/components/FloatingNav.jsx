@@ -2,22 +2,15 @@ import React, { useEffect, useState, useRef } from "react";
 import { User, Folder, GraduationCap, Mail } from "lucide-react";
 import { motion } from "framer-motion";
 
+const navItems = [
+  { id: "intro", label: "Profile", icon: User },
+  { id: "project", label: "Projects", icon: Folder },
+  { id: "education", label: "Education", icon: GraduationCap },
+  { id: "kontak", label: "Contact", icon: Mail },
+];
+
 export default function FloatingNav() {
   const [activeSection, setActiveSection] = useState("intro");
-
-  const navItems = [
-    { id: "intro", label: "Profile", icon: User },
-    { id: "project", label: "Projects", icon: Folder },
-    { id: "education", label: "Education", icon: GraduationCap },
-    { id: "kontak", label: "Contact", icon: Mail },
-  ];
-
-  // Find the VISIBLE element among all elements with a given id
-  // (we have two DOM trees: desktop hidden + mobile visible, or vice-versa)
-  const getVisibleEl = (id) => {
-    const all = document.querySelectorAll(`[id="${id}"]`);
-    return Array.from(all).find((el) => el.offsetParent !== null) || null;
-  };
 
   useEffect(() => {
     const observerOptions = {
@@ -37,10 +30,8 @@ export default function FloatingNav() {
     const observer = new IntersectionObserver(handleIntersection, observerOptions);
 
     navItems.forEach((item) => {
-      // Observe all matching elements (both desktop and mobile trees)
-      document.querySelectorAll(`[id="${item.id}"]`).forEach((el) => {
-        observer.observe(el);
-      });
+      const el = document.getElementById(item.id);
+      if (el) observer.observe(el);
     });
 
     return () => observer.disconnect();
@@ -49,13 +40,11 @@ export default function FloatingNav() {
   const handleScroll = (id) => {
     setActiveSection(id);
 
-    // On desktop, the scrollable container is <main> inside the desktop div
     const isDesktop = window.innerWidth >= 1024;
+    const target = document.getElementById(id);
 
     if (isDesktop) {
-      // Desktop: scroll inside the overflow-y-auto <main>
-      const desktopMain = document.querySelector(".hidden.lg\\:flex main, div.lg\\:flex main");
-      const target = document.querySelectorAll(`[id="${id}"]`)[0];
+      const desktopMain = document.querySelector("main");
       if (desktopMain && target) {
         const offset = target.offsetTop - desktopMain.offsetTop;
         desktopMain.scrollTo({ top: offset - 80, behavior: "smooth" });
@@ -63,10 +52,8 @@ export default function FloatingNav() {
       }
     }
 
-    // Mobile: body/window scrolls, target the visible element
-    const visibleEl = getVisibleEl(id);
-    if (visibleEl) {
-      visibleEl.scrollIntoView({ behavior: "smooth", block: "start" });
+    if (target) {
+      target.scrollIntoView({ behavior: "smooth", block: "start" });
     }
   };
 

@@ -2,52 +2,52 @@ import React, { useState } from "react";
 import { GraduationCap, ChevronDown, ChevronUp, MapPin, Calendar } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 
+const education = [
+  {
+    institution: "Universitas Padjadjaran",
+    degree: "Sarjana, Sastra Rusia · GPA 3.70/4.00",
+    period: "2021 - 2025",
+    location: "Bandung, Sumedang",
+    logo: "/assets/logo-unpad1.png",
+    responsibilities: [
+      "Actively participated in various campus organizations, including the Russian Studies Student Association and the Student Executive Board (BEM).",
+      "Engaged in self-development through seminars and workshops on Graphic Design, Video Editing, AI, Programming, Finance, and Investment.",
+      "Contributed directly to the Russian Studies Department by assisting in visual design and video editing for academic and promotional purposes.",
+    ],
+  },
+];
+
+const containerVariants = {
+  hidden: { opacity: 0 },
+  visible: {
+    opacity: 1,
+    transition: {
+      staggerChildren: 0.1,
+    },
+  },
+};
+
+const itemVariants = {
+  hidden: { opacity: 0, y: 20 },
+  visible: { opacity: 1, y: 0, transition: { duration: 0.4 } },
+};
+
+const sloganVariants = {
+  hidden: { opacity: 0, y: 5, skewX: 0 },
+  visible: {
+    opacity: [0, 1, 0.35, 1, 0.6, 1],
+    y: 0,
+    skewX: [0, -10, 10, -5, 5, 0],
+    transition: {
+      delay: 0.8,
+      duration: 0.4,
+      ease: "linear",
+    }
+  }
+};
+
 export default function EducationExperience() {
   const [expandedEdu, setExpandedEdu] = useState(null);
-
-  const education = [
-    {
-      institution: "Universitas Padjadjaran",
-      degree: "Sarjana, Sastra Rusia · GPA 3.70/4.00",
-      period: "2021 - 2025",
-      location: "Bandung, Sumedang",
-      logo: "/assets/logo-unpad1.png",
-      responsibilities: [
-        "Actively participated in various campus organizations, including the Russian Studies Student Association and the Student Executive Board (BEM).",
-        "Engaged in self-development through seminars and workshops on Graphic Design, Video Editing, AI, Programming, Finance, and Investment.",
-        "Contributed directly to the Russian Studies Department by assisting in visual design and video editing for academic and promotional purposes.",
-      ],
-    },
-  ];
-
-  const containerVariants = {
-    hidden: { opacity: 0 },
-    visible: {
-      opacity: 1,
-      transition: {
-        staggerChildren: 0.1,
-      },
-    },
-  };
-
-  const itemVariants = {
-    hidden: { opacity: 0, y: 20 },
-    visible: { opacity: 1, y: 0, transition: { duration: 0.4 } },
-  };
-
-  const sloganVariants = {
-    hidden: { opacity: 0, y: 5, skewX: 0 },
-    visible: {
-      opacity: [0, 1, 0.35, 1, 0.6, 1],
-      y: 0,
-      skewX: [0, -10, 10, -5, 5, 0],
-      transition: {
-        delay: 0.8,
-        duration: 0.4,
-        ease: "linear",
-      }
-    }
-  };
 
   return (
     <div className="flex flex-col gap-24">
@@ -102,6 +102,7 @@ export default function EducationExperience() {
                       src={edu.logo}
                       alt={edu.institution}
                       className="w-full h-full object-cover rounded-xl"
+                      loading="lazy"
                       onError={(e) => {
                         e.target.src = "/assets/icon.png";
                       }}

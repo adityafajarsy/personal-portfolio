@@ -1,20 +1,21 @@
 import React from "react";
 import { Mail, Globe, Phone, MapPin } from "lucide-react";
 
-export default function Sidebar() {
-  const techStack = {
-    frontend: ["React", "JavaScript", "TypeScript", "Tailwind", "Shadcn"],
-    backend: ["Node.js", "Express", "Python"],
-    database: ["MongoDB", "PostgreSQL", "Firebase"],
-    tools: ["Docker", "VS Code", "Antigravity", "Git"],
-    design: ["Figma", "Canva"],
-  };
+const techStack = {
+  frontend: ["React", "JavaScript", "TypeScript", "Tailwind", "Shadcn"],
+  backend: ["Node.js", "Express", "Python"],
+  database: ["MongoDB", "PostgreSQL", "Firebase"],
+  tools: ["Docker", "VS Code", "Antigravity", "Git"],
+  design: ["Figma", "Canva"],
+};
 
-  const languages = [
-    { name: "Indonesian", flag: "🇮🇩" },
-    { name: "English", flag: "🇬🇧" },
-    { name: "Russian", flag: "🇷🇺" },
-  ];
+const languages = [
+  { name: "Indonesian", flag: "🇮🇩" },
+  { name: "English", flag: "🇬🇧" },
+  { name: "Russian", flag: "🇷🇺" },
+];
+
+export default function Sidebar() {
 
   return (
     <aside className="w-[410px] h-screen flex-shrink-0 border-r border-white/5 bg-transparent overflow-y-auto px-[48px] pt-[80px] pb-[48px] flex flex-col gap-[32px] select-none scrollbar-none">

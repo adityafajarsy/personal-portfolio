@@ -3,53 +3,54 @@ import { ExternalLink, Lock } from "lucide-react";
 import { motion } from "framer-motion";
 import { listProyek } from "../data";
 
-export default function Project() {
-  const containerVariants = {
-    hidden: { opacity: 0 },
-    visible: {
-      opacity: 1,
-      transition: {
-        staggerChildren: 0.1,
-      },
+const containerVariants = {
+  hidden: { opacity: 0 },
+  visible: {
+    opacity: 1,
+    transition: {
+      staggerChildren: 0.1,
     },
-  };
+  },
+};
 
-  const itemVariants = {
-    hidden: { opacity: 0, y: 25 },
-    visible: { opacity: 1, y: 0, transition: { duration: 0.4 } },
-  };
+const itemVariants = {
+  hidden: { opacity: 0, y: 25 },
+  visible: { opacity: 1, y: 0, transition: { duration: 0.4 } },
+};
 
-  const sloganVariants = {
-    hidden: { opacity: 0, y: 5, skewX: 0 },
-    visible: {
-      opacity: [0, 1, 0.35, 1, 0.6, 1],
-      y: 0,
-      skewX: [0, -10, 10, -5, 5, 0],
-      transition: {
-        delay: 0.8,
-        duration: 0.4,
-        ease: "linear",
-      }
+const sloganVariants = {
+  hidden: { opacity: 0, y: 5, skewX: 0 },
+  visible: {
+    opacity: [0, 1, 0.35, 1, 0.6, 1],
+    y: 0,
+    skewX: [0, -10, 10, -5, 5, 0],
+    transition: {
+      delay: 0.8,
+      duration: 0.4,
+      ease: "linear",
     }
-  };
+  }
+};
 
-  // Maps static project metadata based on description content
-  const getProjectMeta = (id) => {
-    switch (id) {
-      case 1:
-        return { date: "2025", role: "Full Stack Developer", category: "MERN Stack Clone" };
-      case 2:
-        return { date: "2025", role: "Frontend Developer", category: "E-Commerce Web" };
-      case 3:
-        return { date: "2025", role: "Frontend Developer", category: "GSAP" };
-      case 4:
-        return { date: "2025", role: "UI & Interaction Developer", category: "Creative Landing Page" };
-      case 5:
-        return { date: "2025", role: "Web Developer", category: "AI Landing Page" };
-      default:
-        return { date: "2024", role: "Developer", category: "Web App" };
-    }
-  };
+// Maps static project metadata based on description content
+const getProjectMeta = (id) => {
+  switch (id) {
+    case 1:
+      return { date: "2025", role: "Full Stack Developer", category: "MERN Stack Clone" };
+    case 2:
+      return { date: "2025", role: "Frontend Developer", category: "E-Commerce Web" };
+    case 3:
+      return { date: "2025", role: "Frontend Developer", category: "GSAP" };
+    case 4:
+      return { date: "2025", role: "UI & Interaction Developer", category: "Creative Landing Page" };
+    case 5:
+      return { date: "2025", role: "Web Developer", category: "AI Landing Page" };
+    default:
+      return { date: "2024", role: "Developer", category: "Web App" };
+  }
+};
+
+export default function Project() {
 
   return (
     <motion.section

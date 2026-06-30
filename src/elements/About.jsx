@@ -2,84 +2,176 @@ import React from "react";
 import { motion } from "framer-motion";
 import { listTools } from "../data";
 
+const containerVariants = {
+  hidden: { opacity: 0 },
+  visible: {
+    opacity: 1,
+    transition: {
+      staggerChildren: 0.1,
+    },
+  },
+};
+
+const itemVariants = {
+  hidden: { opacity: 0, y: 20 },
+  visible: { opacity: 1, y: 0, transition: { duration: 0.4 } },
+};
+
+const toolsContainerVariants = {
+  hidden: { opacity: 0 },
+  visible: {
+    opacity: 1,
+    transition: {
+      staggerChildren: 0.04,
+      delayChildren: 0.15
+    }
+  }
+};
+
+const toolsItemVariants = {
+  hidden: {
+    opacity: 0,
+    y: 30,
+    scale: 0.94,
+    rotateX: 12,
+    rotateY: -3,
+  },
+  visible: {
+    opacity: 1,
+    y: 0,
+    scale: 1,
+    rotateX: 0,
+    rotateY: 0,
+    transition: {
+      type: "spring",
+      stiffness: 90,
+      damping: 13,
+      mass: 0.65
+    }
+  }
+};
+
+const cardVariants = {
+  hidden: { opacity: 0, y: 40 },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: {
+      type: "spring",
+      stiffness: 60,
+      damping: 14,
+      mass: 0.8
+    }
+  }
+};
+
+const sloganVariants = {
+  hidden: { opacity: 0, y: 5, skewX: 0 },
+  visible: {
+    opacity: [0, 1, 0.35, 1, 0.6, 1],
+    y: 0,
+    skewX: [0, -10, 10, -5, 5, 0],
+    transition: {
+      delay: 0.8,
+      duration: 0.4,
+      ease: "linear",
+    }
+  }
+};
+
+const experiences = [
+  {
+    role: "Web Designer & Frontend Developer",
+    company: "Kementerian PANRB",
+    period: "Nov 2025 - May 2026",
+    location: "Jakarta, Indonesia",
+    color: "bg-[#1E293B] border border-slate-700/50",
+    icon: (
+      <img
+        src="/assets/Logo PanRB.png"
+        alt="Kementerian PANRB Logo"
+        className="w-7.5 h-7.5 object-contain rounded-md"
+        loading="lazy"
+      />
+    ),
+    desc: "Directed the complete UI/UX design, user flows, and agile/scrum planning for two portal web applications (PPID & SIPIPI). Collaborated in a two-person team via Git, building the frontend using Next.js, TypeScript, and Tailwind.",
+    descMobile: "Directed UI/UX design, user flows, and agile planning for two web portals (PPID & SIPIPI). Collaborated via Git to build the Next.js and TypeScript frontend.",
+  },
+  {
+    role: "Career Break (T-Shaped Upskilling)",
+    company: "Independent Learning",
+    period: "Jan 2025 - Nov 2025",
+    location: "Remote",
+    color: "bg-[#312E81] border border-indigo-700/50",
+    icon: (
+      <svg viewBox="0 0 24 24" className="w-5 h-5 text-indigo-200" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+        <path d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z"></path>
+        <circle cx="12" cy="12" r="3"></circle>
+      </svg>
+    ),
+    desc: "Built a T-shaped profile by researching cross-disciplinary skills, including AI workflows, product marketing, and advanced frontend paradigms, followed by intensive self-study in production-grade software engineering.",
+    descMobile: "Researched cross-disciplinary skills including AI workflows, product marketing, and advanced frontend paradigms to build a versatile T-shaped profile.",
+  },
+  {
+    role: "ReactJS for Frontend Developer Bootcamp",
+    company: "Hacktiv8 Indonesia",
+    period: "Aug 2024 - Dec 2024",
+    location: "Jakarta, Indonesia",
+    color: "bg-[#450A0A] border border-red-900/40",
+    icon: (
+      <img
+        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ5zv605IDYRA7f3I0IMFUy4BKP3ETSMleuJA&s"
+        alt="Hacktiv8 Logo"
+        className="w-6 h-6 object-contain rounded-md"
+        loading="lazy"
+      />
+    ),
+    desc: "Transitioned from a creative/multimedia background to specialized frontend engineering, mastering modern React.js, modular component architectures, state management, and Git workflows.",
+    descMobile: "Mastered frontend engineering principles, modern React.js workflows, component-driven architectures, state management, and collaborative Git practices.",
+  },
+  {
+    role: "Creative Design & Multimedia Lead",
+    company: "Universitas Padjadjaran",
+    period: "2021 - 2025",
+    location: "Sumedang, Indonesia",
+    color: "bg-[#451A03] border border-amber-900/40",
+    icon: (
+      <img
+        src="/assets/logo-unpad1.png"
+        alt="Unpad Logo"
+        className="w-7 h-7 object-contain rounded-md"
+        loading="lazy"
+      />
+    ),
+    desc: "Led visual design and multimedia production for various campus organizations and events, establishing strong foundational skills in UI/UX layout, graphic assets, and user workflows.",
+    descMobile: "Directed visual asset design and multimedia production for campus groups, establishing core skills in UI/UX layout and user flow architecture.",
+  },
+];
+
+const CalendarIcon = () => (
+  <svg viewBox="0 0 24 24" className="w-3 h-3 sm:w-3.5 sm:h-3.5 text-[#8A8A8A]" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+    <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+    <line x1="16" y1="2" x2="16" y2="6"></line>
+    <line x1="8" y1="2" x2="8" y2="6"></line>
+    <line x1="3" y1="10" x2="21" y2="10"></line>
+  </svg>
+);
+
+const CompanyIcon = () => (
+  <svg viewBox="0 0 24 24" className="w-3 h-3 sm:w-3.5 sm:h-3.5 text-[#8A8A8A]" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+    <rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect>
+    <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path>
+  </svg>
+);
+
+const MapIcon = () => (
+  <svg viewBox="0 0 24 24" className="w-3 h-3 sm:w-3.5 sm:h-3.5 text-[#8A8A8A]" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+    <circle cx="12" cy="10" r="3"></circle>
+  </svg>
+);
+
 export default function About() {
-  const containerVariants = {
-    hidden: { opacity: 0 },
-    visible: {
-      opacity: 1,
-      transition: {
-        staggerChildren: 0.1,
-      },
-    },
-  };
-
-  const itemVariants = {
-    hidden: { opacity: 0, y: 20 },
-    visible: { opacity: 1, y: 0, transition: { duration: 0.4 } },
-  };
-
-  const toolsContainerVariants = {
-    hidden: { opacity: 0 },
-    visible: {
-      opacity: 1,
-      transition: {
-        staggerChildren: 0.04,
-        delayChildren: 0.15
-      }
-    }
-  };
-
-  const toolsItemVariants = {
-    hidden: {
-      opacity: 0,
-      y: 30,
-      scale: 0.94,
-      rotateX: 12,
-      rotateY: -3,
-    },
-    visible: {
-      opacity: 1,
-      y: 0,
-      scale: 1,
-      rotateX: 0,
-      rotateY: 0,
-      transition: {
-        type: "spring",
-        stiffness: 90,
-        damping: 13,
-        mass: 0.65
-      }
-    }
-  };
-
-  const cardVariants = {
-    hidden: { opacity: 0, y: 40 },
-    visible: {
-      opacity: 1,
-      y: 0,
-      transition: {
-        type: "spring",
-        stiffness: 60,
-        damping: 14,
-        mass: 0.8
-      }
-    }
-  };
-
-  const sloganVariants = {
-    hidden: { opacity: 0, y: 5, skewX: 0 },
-    visible: {
-      opacity: [0, 1, 0.35, 1, 0.6, 1],
-      y: 0,
-      skewX: [0, -10, 10, -5, 5, 0],
-      transition: {
-        delay: 0.8,
-        duration: 0.4,
-        ease: "linear",
-      }
-    }
-  };
-
   return (
     <motion.section
       id="about"
@@ -118,94 +210,7 @@ export default function About() {
 
         {/* Experience Cards Stack */}
         <div className="flex flex-col gap-4">
-          {[
-            {
-              role: "Web Designer & Frontend Developer",
-              company: "Kementerian PANRB",
-              period: "Nov 2025 - May 2026",
-              location: "Jakarta, Indonesia",
-              color: "bg-[#1E293B] border border-slate-700/50", // Slate/Blue Tint
-              icon: (
-                <img
-                  src="/assets/Logo PanRB.png"
-                  alt="Kementerian PANRB Logo"
-                  className="w-7.5 h-7.5 object-contain rounded-md"
-                />
-              ),
-              desc: "Directed the complete UI/UX design, user flows, and agile/scrum planning for two portal web applications (PPID & SIPIPI). Collaborated in a two-person team via Git, building the frontend using Next.js, TypeScript, and Tailwind.",
-              descMobile: "Directed UI/UX design, user flows, and agile planning for two web portals (PPID & SIPIPI). Collaborated via Git to build the Next.js and TypeScript frontend.",
-            },
-            {
-              role: "Career Break (T-Shaped Upskilling)",
-              company: "Independent Learning",
-              period: "Jan 2025 - Nov 2025",
-              location: "Remote",
-              color: "bg-[#312E81] border border-indigo-700/50", // Indigo/Purple Tint
-              icon: (
-                <svg viewBox="0 0 24 24" className="w-5 h-5 text-indigo-200" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
-                  <path d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z"></path>
-                  <circle cx="12" cy="12" r="3"></circle>
-                </svg>
-              ),
-              desc: "Built a T-shaped profile by researching cross-disciplinary skills, including AI workflows, product marketing, and advanced frontend paradigms, followed by intensive self-study in production-grade software engineering.",
-              descMobile: "Researched cross-disciplinary skills including AI workflows, product marketing, and advanced frontend paradigms to build a versatile T-shaped profile.",
-            },
-            {
-              role: "ReactJS for Frontend Developer Bootcamp",
-              company: "Hacktiv8 Indonesia",
-              period: "Aug 2024 - Dec 2024",
-              location: "Jakarta, Indonesia",
-              color: "bg-[#450A0A] border border-red-900/40", // Dark Red Tint
-              icon: (
-                <img
-                  src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ5zv605IDYRA7f3I0IMFUy4BKP3ETSMleuJA&s"
-                  alt="Hacktiv8 Logo"
-                  className="w-6 h-6 object-contain rounded-md"
-                />
-              ),
-              desc: "Transitioned from a creative/multimedia background to specialized frontend engineering, mastering modern React.js, modular component architectures, state management, and Git workflows.",
-              descMobile: "Mastered frontend engineering principles, modern React.js workflows, component-driven architectures, state management, and collaborative Git practices.",
-            },
-            {
-              role: "Creative Design & Multimedia Lead",
-              company: "Universitas Padjadjaran",
-              period: "2021 - 2025",
-              location: "Sumedang, Indonesia",
-              color: "bg-[#451A03] border border-amber-900/40", // Dark Amber/Gold Tint
-              icon: (
-                <img
-                  src="/assets/logo-unpad1.png"
-                  alt="Unpad Logo"
-                  className="w-7 h-7 object-contain rounded-md"
-                />
-              ),
-              desc: "Led visual design and multimedia production for various campus organizations and events, establishing strong foundational skills in UI/UX layout, graphic assets, and user workflows.",
-              descMobile: "Directed visual asset design and multimedia production for campus groups, establishing core skills in UI/UX layout and user flow architecture.",
-            },
-          ].map((exp, idx) => {
-            const CalendarIcon = () => (
-              <svg viewBox="0 0 24 24" className="w-3 h-3 sm:w-3.5 sm:h-3.5 text-[#8A8A8A]" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
-                <line x1="16" y1="2" x2="16" y2="6"></line>
-                <line x1="8" y1="2" x2="8" y2="6"></line>
-                <line x1="3" y1="10" x2="21" y2="10"></line>
-              </svg>
-            );
-
-            const CompanyIcon = () => (
-              <svg viewBox="0 0 24 24" className="w-3 h-3 sm:w-3.5 sm:h-3.5 text-[#8A8A8A]" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
-                <rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect>
-                <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path>
-              </svg>
-            );
-
-            const MapIcon = () => (
-              <svg viewBox="0 0 24 24" className="w-3 h-3 sm:w-3.5 sm:h-3.5 text-[#8A8A8A]" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
-                <circle cx="12" cy="10" r="3"></circle>
-              </svg>
-            );
-
+          {experiences.map((exp, idx) => {
             return (
               <motion.div
                 key={idx}
@@ -307,6 +312,7 @@ export default function About() {
                   src={tool.gambar}
                   alt={tool.nama}
                   className="w-full h-full object-contain filter grayscale group-hover:grayscale-0 transition-all duration-300"
+                  loading="lazy"
                   onError={(e) => {
                     e.target.style.display = "none";
                   }}

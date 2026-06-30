@@ -2,43 +2,44 @@ import React from "react";
 import { Send, Mail, Phone, Globe, Linkedin, Instagram } from "lucide-react";
 import { motion } from "framer-motion";
 
-export default function Contact() {
-  const containerVariants = {
-    hidden: { opacity: 0 },
-    visible: {
-      opacity: 1,
-      transition: {
-        staggerChildren: 0.1,
-      },
+const containerVariants = {
+  hidden: { opacity: 0 },
+  visible: {
+    opacity: 1,
+    transition: {
+      staggerChildren: 0.1,
     },
-  };
+  },
+};
 
-  const itemVariants = {
-    hidden: { opacity: 0, y: 20 },
-    visible: { opacity: 1, y: 0, transition: { duration: 0.4 } },
-  };
+const itemVariants = {
+  hidden: { opacity: 0, y: 20 },
+  visible: { opacity: 1, y: 0, transition: { duration: 0.4 } },
+};
 
-  const sloganVariants = {
-    hidden: { opacity: 0, y: 5, skewX: 0 },
-    visible: {
-      opacity: [0, 1, 0.35, 1, 0.6, 1],
-      y: 0,
-      skewX: [0, -10, 10, -5, 5, 0],
-      transition: {
-        delay: 0.8,
-        duration: 0.4,
-        ease: "linear",
-      }
+const sloganVariants = {
+  hidden: { opacity: 0, y: 5, skewX: 0 },
+  visible: {
+    opacity: [0, 1, 0.35, 1, 0.6, 1],
+    y: 0,
+    skewX: [0, -10, 10, -5, 5, 0],
+    transition: {
+      delay: 0.8,
+      duration: 0.4,
+      ease: "linear",
     }
-  };
+  }
+};
 
-  const contactLinks = [
-    { label: "Email", value: "adityafajar.sy90@gmail.com", href: "mailto:adityafajar.sy90@email.com", icon: Mail },
-    { label: "Phone", value: "+62 877-4158-3948", href: "tel:+6287741583948", icon: Phone },
-    { label: "LinkedIn", value: "linkedin.com/in/adityafajarsy", href: "https://www.linkedin.com/in/adityafajarsy/", icon: Linkedin },
-    { label: "GitHub", value: "github.com/adityafajarsy", href: "https://github.com/adityafajarsy", icon: Globe },
-    { label: "Instagram", value: "instagram.com/adityafajarsyy", href: "https://instagram.com/adityafajarsyy", icon: Instagram },
-  ];
+const contactLinks = [
+  { label: "Email", value: "adityafajar.sy90@gmail.com", href: "mailto:adityafajar.sy90@email.com", icon: Mail },
+  { label: "Phone", value: "+62 877-4158-3948", href: "tel:+6287741583948", icon: Phone },
+  { label: "LinkedIn", value: "linkedin.com/in/adityafajarsy", href: "https://www.linkedin.com/in/adityafajarsy/", icon: Linkedin },
+  { label: "GitHub", value: "github.com/adityafajarsy", href: "https://github.com/adityafajarsy", icon: Globe },
+  { label: "Instagram", value: "instagram.com/adityafajarsyy", href: "https://instagram.com/adityafajarsyy", icon: Instagram },
+];
+
+export default function Contact() {
 
   return (
     <motion.section

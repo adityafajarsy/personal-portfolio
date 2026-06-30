@@ -2,13 +2,45 @@ import React, { useState, useEffect } from "react";
 import { Download, Linkedin } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 
+const roles = [
+  "Web Developer",
+  "Product Engineer",
+  "UI/UX Designer",
+  "Fullstack MERN Devs"
+];
+
+const containerVariants = {
+  hidden: { opacity: 0, y: 20 },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: {
+      duration: 0.4,
+      staggerChildren: 0.1,
+    },
+  },
+};
+
+const itemVariants = {
+  hidden: { opacity: 0, y: 15 },
+  visible: { opacity: 1, y: 0, transition: { duration: 0.4 } },
+};
+
+const sloganVariants = {
+  hidden: { opacity: 0, y: 5, skewX: 0 },
+  visible: {
+    opacity: [0, 1, 0.35, 1, 0.6, 1],
+    y: 0,
+    skewX: [0, -10, 10, -5, 5, 0],
+    transition: {
+      delay: 0.8,
+      duration: 0.4,
+      ease: "linear",
+    }
+  }
+};
+
 export default function Home() {
-  const roles = [
-    "Web Developer",
-    "Product Engineer",
-    "UI/UX Designer",
-    "Fullstack MERN Devs"
-  ];
   const [roleIndex, setRoleIndex] = useState(0);
 
   useEffect(() => {
@@ -17,36 +49,6 @@ export default function Home() {
     }, 2000);
     return () => clearInterval(interval);
   }, []);
-  const containerVariants = {
-    hidden: { opacity: 0, y: 20 },
-    visible: {
-      opacity: 1,
-      y: 0,
-      transition: {
-        duration: 0.4,
-        staggerChildren: 0.1,
-      },
-    },
-  };
-
-  const itemVariants = {
-    hidden: { opacity: 0, y: 15 },
-    visible: { opacity: 1, y: 0, transition: { duration: 0.4 } },
-  };
-
-  const sloganVariants = {
-    hidden: { opacity: 0, y: 5, skewX: 0 },
-    visible: {
-      opacity: [0, 1, 0.35, 1, 0.6, 1],
-      y: 0,
-      skewX: [0, -10, 10, -5, 5, 0],
-      transition: {
-        delay: 0.8,
-        duration: 0.4,
-        ease: "linear",
-      }
-    }
-  };
 
   return (
     <motion.section
@@ -75,6 +77,7 @@ export default function Home() {
             src="/assets/icon aditya.png"
             alt="Aditya Fajar SY"
             className="w-full h-full object-cover"
+            loading="lazy"
             onError={(e) => {
               e.target.src = "/assets/adityafajarsy.png";
             }}

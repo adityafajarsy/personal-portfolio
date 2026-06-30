@@ -139,11 +139,9 @@ export const listTools = [
   },
 ];
 
-import Proyek1 from "/assets/project/5.png";
 import Proyek2 from "/assets/project/3.png";
 import Proyek4 from "/assets/project/4.png";
 import Proyek5 from "/assets/project/8.png";
-import Proyek6 from "/assets/project/7.png";
 
 export const listProyek = [
   // {
@@ -177,7 +175,7 @@ export const listProyek = [
   {
     id: 2,
     gambar: Proyek4,
-    nama: "Simple E-Commerce (The Hamburger)",
+    nama: "E-Commerce (The Hamburger)",
     desk: "My first dummy project based on my Hacktiv8 capstone task, featuring basic e-commerce functions, a self-made logo, custom dummy database, and planned visual identity.",
     tools: [
       "Vite",
@@ -193,8 +191,8 @@ export const listProyek = [
   {
     id: 3,
     gambar: Proyek5,
-    nama: "Bar Website (Leveldva)",
-    desk: "GSAP project, smooth, bar-inspired website page that blends motion, light, and elegance into immersive experience!",
+    nama: "Website Company (Leveldva)",
+    desk: "A modern, elegant company website project designed with GSAP and Tailwind CSS. The site features smooth scrolling, dynamic animations, and a premium user interface, perfect for professional portfolios or company branding.",
     tools: ["Vite", "Tailwind", "React", "GSAP", "Animation", "Motion"],
     dad: "600",
     link: "https://leveldva.vercel.app/", //

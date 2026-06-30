@@ -1,20 +1,21 @@
 import React from "react";
 import { Mail, Globe, Phone, MapPin } from "lucide-react";
 
-export default function MobileProfile() {
-  const techStack = {
-    frontend: ["React", "JavaScript", "TypeScript", "Tailwind", "Shadcn"],
-    backend: ["Node.js", "Express", "Python"],
-    database: ["MongoDB", "PostgreSQL", "Firebase"],
-    tools: ["Docker", "VS Code", "Antigravity", "Git"],
-    design: ["Figma", "Canva"],
-  };
+const techStack = {
+  frontend: ["React", "JavaScript", "TypeScript", "Tailwind", "Shadcn"],
+  backend: ["Node.js", "Express", "Python"],
+  database: ["MongoDB", "PostgreSQL", "Firebase"],
+  tools: ["Docker", "VS Code", "Antigravity", "Git"],
+  design: ["Figma", "Canva"],
+};
 
-  const languages = [
-    { name: "Indonesian", flag: "🇮🇩" },
-    { name: "English", flag: "🇬🇧" },
-    { name: "Russian", flag: "🇷🇺" },
-  ];
+const languages = [
+  { name: "Indonesian", flag: "🇮🇩" },
+  { name: "English", flag: "🇬🇧" },
+  { name: "Russian", flag: "🇷🇺" },
+];
+
+export default function MobileProfile() {
 
   return (
     <div className="flex flex-col gap-8 lg:hidden w-full pb-4">
