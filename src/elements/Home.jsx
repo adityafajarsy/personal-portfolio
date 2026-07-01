@@ -1,12 +1,22 @@
 import React, { useState, useEffect } from "react";
 import { Download, Linkedin } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
+import { useLanguage } from "../context/LanguageContext";
 
-const roles = [
+const rolesEn = [
   "Web Developer",
   "Product Engineer",
   "UI/UX Designer",
-  "Fullstack MERN Devs"
+  "Fullstack MERN Devs",
+  "Value Translator"
+];
+
+const rolesId = [
+  "Pengembang Web",
+  "Product Engineer",
+  "UI/UX Desainer",
+  "Fullstack MERN Devs",
+  "Value Translator"
 ];
 
 const containerVariants = {
@@ -41,14 +51,16 @@ const sloganVariants = {
 };
 
 export default function Home() {
+  const { lang, t } = useLanguage();
   const [roleIndex, setRoleIndex] = useState(0);
+  const roles = rolesEn;
 
   useEffect(() => {
     const interval = setInterval(() => {
       setRoleIndex((prevIndex) => (prevIndex + 1) % roles.length);
     }, 2000);
     return () => clearInterval(interval);
-  }, []);
+  }, [roles.length]);
 
   return (
     <motion.section
@@ -64,7 +76,7 @@ export default function Home() {
         className="text-[12px] font-bold tracking-[0.15em] text-[#8A8A8A] uppercase"
         variants={itemVariants}
       >
-        Intro
+        {t("home.intro")}
       </motion.span>
 
       {/* Quote Banner */}
@@ -83,13 +95,13 @@ export default function Home() {
             }}
           />
         </div>
-        <q className="italic">For me, coding is problem solving..</q>
+        <q className="italic">{t("home.quote")}</q>
       </motion.div>
 
       {/* Main Title */}
       <motion.div className="flex flex-col gap-1" variants={itemVariants}>
         <h2 className="text-[36px] lg:text-[44px] font-black tracking-tight leading-none text-white">
-          Hi, I'm Aditya Fajar SY
+          {t("home.title")}
         </h2>
         <div className="h-[44px] lg:h-[54px] overflow-visible relative -mt-1 lg:-mt-1.5">
           <AnimatePresence mode="wait">
@@ -125,7 +137,7 @@ export default function Home() {
         className="text-[16px] lg:text-[18px] leading-relaxed text-[#8A8A8A] max-w-2xl font-normal"
         variants={itemVariants}
       >
-        A Front-End Developer with a background in Language Literature, Graphic Design and Creative Media. I build user pov websites where proper design meets seamless functionality. Balancing technical execution with strategic business goals, my focus is always on engineering web solutions that effectively solve real company problems.
+        {t("home.bio")}
       </motion.p>
 
       {/* Action Buttons */}
@@ -136,7 +148,7 @@ export default function Home() {
           className="flex items-center gap-2 px-5 py-3 rounded-full bg-white text-black font-semibold text-[14px] hover:bg-white/90 transition-all active:scale-95 shadow-md shadow-white/5"
         >
           <Download size={16} />
-          <span>Download CV</span>
+          <span>{t("home.downloadCv")}</span>
         </a>
 
         <a
@@ -146,7 +158,7 @@ export default function Home() {
           className="flex items-center gap-2 px-5 py-3 rounded-full bg-[#0B0B0B] border border-white/5 text-white font-medium text-[14px] hover:border-[#3B82F6]/50 hover:bg-[#0F0F0F] transition-all active:scale-95 shadow-lg"
         >
           <Linkedin size={16} className="text-[#3B82F6]" />
-          <span>Connect with me</span>
+          <span>{t("home.connectMe")}</span>
         </a>
       </motion.div>
     </motion.section>

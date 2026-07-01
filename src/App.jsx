@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import Sidebar from "./components/Sidebar";
 import MobileProfile from "./components/MobileProfile";
 import FloatingNav from "./components/FloatingNav";
@@ -6,14 +6,24 @@ import Home from "./elements/Home";
 import Project from "./elements/Project";
 import Career from "./elements/Career";
 import About from "./elements/About";
+import Article from "./elements/Article";
 import Contact from "./elements/Contact";
+import ArticleDetail from "./components/ArticleDetail";
+import ProjectDetail from "./components/ProjectDetail";
+import LanguageSwitcher from "./components/LanguageSwitcher";
 
 function App() {
+  const [activeArticle, setActiveArticle] = useState(null);
+  const [activeProject, setActiveProject] = useState(null);
+
   return (
     <div className="bg-[#050505] text-white relative min-h-screen overflow-x-hidden flex flex-col lg:flex-row lg:h-screen lg:overflow-hidden">
       {/* Background ambient glow effect */}
       <div className="absolute top-[10%] left-[20%] ambient-glow pointer-events-none" />
       <div className="absolute bottom-[20%] right-[10%] ambient-glow pointer-events-none" style={{ animationDelay: "-5s" }} />
+
+      {/* Language Switcher */}
+      <LanguageSwitcher />
 
       {/* Sidebar - Desktop Only */}
       <div className="hidden lg:block lg:w-[35%] lg:flex-shrink-0">
@@ -28,15 +38,24 @@ function App() {
         </div>
 
         {/* Content Sections */}
-        <Home />
-        <Project />
-        <Career />
-        <About />
-        <Contact />
+        {activeArticle ? (
+          <ArticleDetail article={activeArticle} onClose={() => setActiveArticle(null)} />
+        ) : activeProject ? (
+          <ProjectDetail project={activeProject} onClose={() => setActiveProject(null)} />
+        ) : (
+          <>
+            <Home />
+            <Project onSelectProject={setActiveProject} />
+            <Career />
+            <About />
+            <Article onSelectArticle={setActiveArticle} />
+            <Contact />
+          </>
+        )}
       </main>
 
       {/* Bottom Floating Nav — mobile only */}
-      <FloatingNav />
+      {!activeArticle && !activeProject && <FloatingNav />}
     </div>
   );
 }

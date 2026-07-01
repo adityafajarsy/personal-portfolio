@@ -1,21 +1,7 @@
 import React, { useState } from "react";
 import { GraduationCap, ChevronDown, ChevronUp, MapPin, Calendar } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
-
-const education = [
-  {
-    institution: "Universitas Padjadjaran",
-    degree: "Sarjana, Sastra Rusia · GPA 3.70/4.00",
-    period: "2021 - 2025",
-    location: "Bandung, Sumedang",
-    logo: "/assets/logo-unpad1.png",
-    responsibilities: [
-      "Actively participated in various campus organizations, including the Russian Studies Student Association and the Student Executive Board (BEM).",
-      "Engaged in self-development through seminars and workshops on Graphic Design, Video Editing, AI, Programming, Finance, and Investment.",
-      "Contributed directly to the Russian Studies Department by assisting in visual design and video editing for academic and promotional purposes.",
-    ],
-  },
-];
+import { useLanguage } from "../context/LanguageContext";
 
 const containerVariants = {
   hidden: { opacity: 0 },
@@ -47,7 +33,9 @@ const sloganVariants = {
 };
 
 export default function EducationExperience() {
+  const { t } = useLanguage();
   const [expandedEdu, setExpandedEdu] = useState(null);
+  const education = t("education.list") || [];
 
   return (
     <div className="flex flex-col gap-24">
@@ -67,7 +55,7 @@ export default function EducationExperience() {
             variants={itemVariants}
           >
             <GraduationCap size={12} className="text-[#3B82F6]" />
-            Education
+            {t("education.label")}
           </motion.span>
           <div className="relative mt-3">
             <motion.span
@@ -75,13 +63,13 @@ export default function EducationExperience() {
               className="absolute top-[-16px] left-1 font-bold tracking-tighter text-[#3B82F6] select-none origin-left z-10"
               style={{ fontFamily: "'Nothing You Could Do', cursive", fontSize: "clamp(1.1rem, 3vw, 1.7rem)" }}
             >
-              never stop learning
+              {t("education.slogan")}
             </motion.span>
             <motion.h2
               className="text-[32px] lg:text-[40px] font-bold text-white tracking-tight"
               variants={itemVariants}
             >
-              Academic Path
+              {t("education.title")}
             </motion.h2>
           </div>
         </div>
@@ -138,12 +126,12 @@ export default function EducationExperience() {
                       {isExpanded ? (
                         <>
                           <ChevronUp size={14} />
-                          <span>Hide details</span>
+                          <span>{t("education.hideDetails")}</span>
                         </>
                       ) : (
                         <>
                           <ChevronDown size={14} />
-                          <span>Show details</span>
+                          <span>{t("education.showDetails")}</span>
                         </>
                       )}
                     </button>
@@ -160,7 +148,7 @@ export default function EducationExperience() {
                         >
                           <div className="pt-4 mt-4 border-t border-white/5">
                             <span className="text-[11px] font-bold tracking-wider text-[#8A8A8A] uppercase block mb-2.5">
-                              Campus Activities & Responsibilities
+                              {t("education.activities")}
                             </span>
                             <ul className="space-y-2">
                               {edu.responsibilities.map((res, idx) => (

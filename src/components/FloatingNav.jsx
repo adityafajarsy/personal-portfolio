@@ -1,16 +1,20 @@
 import React, { useEffect, useState, useRef } from "react";
-import { User, Folder, GraduationCap, Mail } from "lucide-react";
+import { User, Folder, Briefcase, GraduationCap, BookOpen, Mail } from "lucide-react";
 import { motion } from "framer-motion";
-
-const navItems = [
-  { id: "intro", label: "Profile", icon: User },
-  { id: "project", label: "Projects", icon: Folder },
-  { id: "education", label: "Education", icon: GraduationCap },
-  { id: "kontak", label: "Contact", icon: Mail },
-];
+import { useLanguage } from "../context/LanguageContext";
 
 export default function FloatingNav() {
+  const { t } = useLanguage();
   const [activeSection, setActiveSection] = useState("intro");
+
+  const navItems = [
+    { id: "intro", label: t("home.intro"), icon: User },
+    { id: "project", label: t("projects.label"), icon: Folder },
+    { id: "education", label: t("education.label"), icon: GraduationCap },
+    { id: "about", label: t("about.expLabel"), icon: Briefcase },
+    { id: "articles", label: t("articles.label"), icon: BookOpen },
+    { id: "kontak", label: t("contact.label"), icon: Mail },
+  ];
 
   useEffect(() => {
     const observerOptions = {
@@ -29,8 +33,9 @@ export default function FloatingNav() {
 
     const observer = new IntersectionObserver(handleIntersection, observerOptions);
 
-    navItems.forEach((item) => {
-      const el = document.getElementById(item.id);
+    const ids = ["intro", "project", "education", "about", "articles", "kontak"];
+    ids.forEach((id) => {
+      const el = document.getElementById(id);
       if (el) observer.observe(el);
     });
 

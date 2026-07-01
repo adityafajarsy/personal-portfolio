@@ -1,6 +1,7 @@
 import React from "react";
 import { Send, Mail, Phone, Globe, Linkedin, Instagram } from "lucide-react";
 import { motion } from "framer-motion";
+import { useLanguage } from "../context/LanguageContext";
 
 const containerVariants = {
   hidden: { opacity: 0 },
@@ -40,6 +41,7 @@ const contactLinks = [
 ];
 
 export default function Contact() {
+  const { lang, t } = useLanguage();
 
   return (
     <motion.section
@@ -56,7 +58,7 @@ export default function Contact() {
           className="text-[12px] font-bold tracking-[0.15em] text-[#8A8A8A] uppercase"
           variants={itemVariants}
         >
-          Contact
+          {t("contact.label")}
         </motion.span>
         <div className="relative mt-3">
           <motion.span
@@ -64,20 +66,20 @@ export default function Contact() {
             className="absolute top-[-16px] left-1 font-bold tracking-tighter text-[#3B82F6] select-none origin-left z-10"
             style={{ fontFamily: "'Nothing You Could Do', cursive", fontSize: "clamp(1.1rem, 3vw, 1.7rem)" }}
           >
-            let's build together!
+            {t("contact.slogan")}
           </motion.span>
           <motion.h2
             className="text-[32px] lg:text-[40px] font-bold text-white tracking-tight"
             variants={itemVariants}
           >
-            Get in Touch
+            {t("contact.title")}
           </motion.h2>
         </div>
         <motion.p
           className="text-[14px] text-[#8A8A8A] max-w-md mt-1"
           variants={itemVariants}
         >
-          Ready to work on your next project? Let's connect and build something together.
+          {t("contact.desc")}
         </motion.p>
       </div>
 
@@ -89,11 +91,12 @@ export default function Contact() {
         >
           <div className="flex flex-col">
             <span className="text-[11px] font-bold tracking-wider text-[#8A8A8A] uppercase mb-4 block">
-              Contact Channels
+              {t("contact.channels")}
             </span>
             <div className="flex flex-col">
               {contactLinks.map((link, idx) => {
                 const Icon = link.icon;
+                const localizedLabel = link.label === "Phone" ? (lang === "id" ? "Telepon" : "Phone") : link.label;
                 return (
                   <div
                     key={idx}
@@ -101,7 +104,7 @@ export default function Contact() {
                   >
                     <span className="text-[13px] text-[#8A8A8A] font-medium flex items-center gap-2">
                       <Icon size={14} className="text-white/40" />
-                      {link.label}
+                      {localizedLabel}
                     </span>
                     <a
                       href={link.href}
@@ -119,7 +122,7 @@ export default function Contact() {
 
           <div className="mt-8 text-[12px] text-[#8A8A8A] font-medium flex items-center gap-1.5 p-3.5 bg-white/2 rounded-xl border border-white/5">
             <span className="w-1.5 h-1.5 rounded-full bg-[#10B981] animate-pulse" />
-            <span>Available for freelance opportunities & remote roles.</span>
+            <span>{t("contact.availableText")}</span>
           </div>
         </motion.div>
 
@@ -129,7 +132,7 @@ export default function Contact() {
           variants={itemVariants}
         >
           <span className="text-[11px] font-bold tracking-wider text-[#8A8A8A] uppercase mb-5 block">
-            Send WhatsApp Message
+            {t("contact.sendWa")}
           </span>
           <form
             className="flex flex-col gap-4"
@@ -148,37 +151,37 @@ export default function Contact() {
             }}
           >
             <div className="flex flex-col gap-1.5">
-              <label className="text-[12px] font-bold text-[#8A8A8A] uppercase">Name</label>
+              <label className="text-[12px] font-bold text-[#8A8A8A] uppercase">{t("contact.name")}</label>
               <input
                 className="bg-[#121212] border border-white/5 rounded-xl px-4 py-3 text-[14px] text-white placeholder-white/20 focus:outline-none focus:border-[#3B82F6]/50 focus:bg-[#161616] transition-all duration-200"
                 type="text"
                 name="nama"
-                placeholder="John Doe"
+                placeholder={t("contact.placeholderName")}
                 required
               />
             </div>
 
             <div className="flex flex-col gap-1.5">
-              <label className="text-[12px] font-bold text-[#8A8A8A] uppercase">Email</label>
+              <label className="text-[12px] font-bold text-[#8A8A8A] uppercase">{t("contact.email")}</label>
               <input
                 className="bg-[#121212] border border-white/5 rounded-xl px-4 py-3 text-[14px] text-white placeholder-white/20 focus:outline-none focus:border-[#3B82F6]/50 focus:bg-[#161616] transition-all duration-200"
                 type="email"
                 name="email"
-                placeholder="john@example.com"
+                placeholder={t("contact.placeholderEmail")}
                 required
               />
             </div>
 
             <div className="flex flex-col gap-1.5">
               <label htmlFor="pesan" className="text-[12px] font-bold text-[#8A8A8A] uppercase">
-                Message
+                {t("contact.message")}
               </label>
               <textarea
                 className="bg-[#121212] border border-white/5 rounded-xl px-4 py-3 text-[14px] text-white placeholder-white/20 focus:outline-none focus:border-[#3B82F6]/50 focus:bg-[#161616] transition-all duration-200 resize-none"
                 name="pesan"
                 id="pesan"
                 rows="4"
-                placeholder="Tell me about your project..."
+                placeholder={t("contact.placeholderMsg")}
                 required
               ></textarea>
             </div>
@@ -188,7 +191,7 @@ export default function Contact() {
               className="mt-2 inline-flex items-center justify-center gap-2 w-full px-5 py-3 rounded-xl bg-white hover:bg-white/90 text-black text-[14px] font-bold transition-all duration-250 cursor-pointer active:scale-[0.98]"
             >
               <Send size={14} />
-              <span>Send Message</span>
+              <span>{t("contact.sendBtn")}</span>
             </button>
           </form>
         </motion.div>

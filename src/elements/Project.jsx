@@ -1,15 +1,12 @@
 import React from "react";
-import { ExternalLink, Lock } from "lucide-react";
 import { motion } from "framer-motion";
-import { listProyek } from "../data";
+import { useLanguage } from "../context/LanguageContext";
 
 const containerVariants = {
   hidden: { opacity: 0 },
   visible: {
     opacity: 1,
-    transition: {
-      staggerChildren: 0.1,
-    },
+    transition: { staggerChildren: 0.1 },
   },
 };
 
@@ -24,33 +21,13 @@ const sloganVariants = {
     opacity: [0, 1, 0.35, 1, 0.6, 1],
     y: 0,
     skewX: [0, -10, 10, -5, 5, 0],
-    transition: {
-      delay: 0.8,
-      duration: 0.4,
-      ease: "linear",
-    }
-  }
+    transition: { delay: 0.8, duration: 0.4, ease: "linear" },
+  },
 };
 
-// Maps static project metadata based on description content
-const getProjectMeta = (id) => {
-  switch (id) {
-    case 1:
-      return { date: "2025", role: "Full Stack Developer", category: "MERN Stack Clone" };
-    case 2:
-      return { date: "2025", role: "Frontend Developer", category: "E-Commerce Web" };
-    case 3:
-      return { date: "2025", role: "Frontend Developer", category: "GSAP" };
-    case 4:
-      return { date: "2025", role: "UI & Interaction Developer", category: "Creative Landing Page" };
-    case 5:
-      return { date: "2025", role: "Web Developer", category: "AI Landing Page" };
-    default:
-      return { date: "2024", role: "Developer", category: "Web App" };
-  }
-};
-
-export default function Project() {
+export default function Project({ onSelectProject }) {
+  const { t } = useLanguage();
+  const listProyek = t("projects.list") || [];
 
   return (
     <motion.section
@@ -61,127 +38,94 @@ export default function Project() {
       whileInView="visible"
       viewport={{ once: true, margin: "-100px" }}
     >
-      {/* Uppercase Section Header */}
+      {/* Section Header */}
       <div className="flex flex-col gap-1">
         <motion.span
           className="text-[12px] font-bold tracking-[0.15em] text-[#8A8A8A] uppercase"
           variants={itemVariants}
         >
-          Projects
+          {t("projects.label")}
         </motion.span>
         <div className="relative mt-3">
           <motion.span
             variants={sloganVariants}
             className="absolute top-[-16px] left-1 font-bold tracking-tighter text-[#3B82F6] select-none origin-left z-10"
-            style={{ fontFamily: "'Nothing You Could Do', cursive", fontSize: "clamp(1.1rem, 3vw, 1.7rem)" }}
+            style={{
+              fontFamily: "'Nothing You Could Do', cursive",
+              fontSize: "clamp(1.1rem, 3vw, 1.7rem)",
+            }}
           >
-            crafting digital experiences
+            {t("projects.slogan")}
           </motion.span>
           <motion.h2
             className="text-[32px] lg:text-[40px] font-bold text-white tracking-tight"
             variants={itemVariants}
           >
-            Selected Works
+            {t("projects.title")}
           </motion.h2>
         </div>
       </div>
 
-      {/* Projects Horizontal Carousel — with swipe hint on mobile */}
+      {/* Horizontal Carousel */}
       <div className="relative w-full">
-        {/* Swipe hint: right fade gradient (mobile only) */}
-        <div className="pointer-events-none absolute right-0 top-0 h-full w-16 bg-gradient-to-l from-[#050505] to-transparent z-10 lg:hidden" />
-
-        {/* Swipe pill indicator (mobile only) */}
-        <motion.div
-          className="absolute -bottom-2 left-1/2 -translate-x-1/2 z-20 lg:hidden flex items-center gap-1.5 bg-white/5 backdrop-blur border border-white/10 px-3 py-1 rounded-full text-[11px] text-[#8A8A8A] font-medium select-none"
-          animate={{ x: [0, 8, 0] }}
-          transition={{ repeat: Infinity, duration: 1.6, ease: "easeInOut" }}
-        >
-          <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M2 6h8M6.5 2.5L10 6l-3.5 3.5" stroke="#3B82F6" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
-          </svg>
-          Swipe
-        </motion.div>
+        {/* Right edge fade */}
+        <div className="pointer-events-none absolute right-0 top-0 h-full w-20 bg-gradient-to-l from-[#050505] to-transparent z-10" />
 
         <motion.div
-          className="flex overflow-x-auto gap-6 mt-4 pb-10 snap-x snap-mandatory scroll-smooth scrollbar-none w-full"
+          className="flex overflow-x-auto gap-5 pb-4 snap-x snap-mandatory scroll-smooth scrollbar-none"
           variants={containerVariants}
         >
-          {listProyek.map((project) => {
-            const meta = getProjectMeta(project.id);
-            return (
-              <motion.div
-                key={project.id}
-                className="w-[85vw] sm:w-[480px] flex-shrink-0 snap-start group bg-[#0B0B0B] border border-white/5 rounded-[28px] overflow-hidden flex flex-col hover:border-[#3B82F6]/30 hover:shadow-[0_12px_30px_rgba(59,130,246,0.08)] transition-all duration-300 relative"
-                variants={itemVariants}
-                whileHover={{ y: -4 }}
+          {listProyek.map((project) => (
+            <motion.div
+              key={project.id}
+              className="w-[88vw] sm:w-[72%] lg:w-[68%] flex-shrink-0 snap-start group bg-[#0B0B0B] border border-white/5 rounded-[24px] overflow-hidden hover:border-white/10 hover:shadow-[0_12px_40px_rgba(0,0,0,0.4)] transition-all duration-300"
+              variants={itemVariants}
+              whileHover={{ scale: 1.015, transition: { duration: 0.2, ease: "easeOut" } }}
+            >
+              {/* Clickable Thumbnail — big */}
+              <button
+                className="relative w-full aspect-[16/10] overflow-hidden bg-zinc-900 block cursor-pointer focus:outline-none"
+                onClick={() => onSelectProject && onSelectProject(project)}
+                aria-label={`View ${project.nama} project`}
               >
-                {/* Image Container */}
-                <div className="w-full aspect-[16/10] overflow-hidden bg-zinc-900 border-b border-white/5 relative">
-                  <img
-                    src={project.gambar}
-                    alt={project.nama}
-                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-                    loading="lazy"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-[#0B0B0B]/80 via-transparent to-transparent opacity-60 pointer-events-none" />
-                </div>
+                <img
+                  src={project.gambar}
+                  alt={project.nama}
+                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                  loading="lazy"
+                />
+                {/* Gradient overlay */}
+                <div className="absolute inset-0 bg-gradient-to-t from-[#0B0B0B]/80 via-[#0B0B0B]/10 to-transparent opacity-60 group-hover:opacity-75 transition-opacity duration-300 pointer-events-none" />
 
-                {/* Info Container */}
-                <div className="p-6 flex flex-col flex-1 gap-4">
-                  {/* Meta details */}
-                  <div className="flex flex-wrap items-center gap-2 text-[12px] text-[#8A8A8A] font-medium leading-none">
-                    <span>{meta.date}</span>
-                    <span>•</span>
-                    <span>{meta.role}</span>
-                    <span>•</span>
-                    <span className="text-[#3B82F6]">{meta.category}</span>
-                  </div>
-
-                  <div className="flex flex-col gap-2">
-                    <h3 className="text-[18px] font-bold text-white tracking-tight leading-snug group-hover:text-[#3B82F6] transition-colors duration-250">
-                      {project.nama}
-                    </h3>
-                    <p className="text-[14px] leading-relaxed text-[#8A8A8A] font-normal">
-                      {project.desk}
-                    </p>
-                  </div>
-
-                  {/* Tech Pills */}
-                  <div className="flex flex-wrap gap-1.5 mt-auto pt-2">
-                    {project.tools.map((tool, index) => (
-                      <span
-                        key={index}
-                        className="text-[11px] font-semibold text-white/60 bg-[#161616] border border-white/5 px-2 py-0.5 rounded-md"
-                      >
-                        {tool}
-                      </span>
-                    ))}
-                  </div>
-
-                  {/* Bottom Link Action */}
-                  <div className="mt-4 pt-4 border-t border-white/5">
-                    {project.link ? (
-                      <a
-                        href={project.link}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="inline-flex items-center justify-between w-full text-[13px] font-bold text-white bg-white/5 hover:bg-white/10 hover:text-white border border-white/5 rounded-xl px-4 py-2.5 transition-all duration-200"
-                      >
-                        <span>Launch Project</span>
-                        <ExternalLink size={14} className="text-[#3B82F6]" />
-                      </a>
-                    ) : (
-                      <div className="inline-flex items-center justify-between w-full text-[13px] font-medium text-[#8A8A8A] bg-white/0 border border-white/5 border-dashed rounded-xl px-4 py-2.5 cursor-not-allowed">
-                        <span>Not Deployed (Local Dev)</span>
-                        <Lock size={14} className="text-[#8A8A8A]" />
-                      </div>
-                    )}
+                {/* Hover pill */}
+                <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-250 pointer-events-none">
+                  <div className="bg-black/40 backdrop-blur-md border border-white/15 rounded-full px-5 py-2.5 text-[13px] font-bold text-white flex items-center gap-2">
+                    <svg width="13" height="13" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M2 6h8M6.5 2.5L10 6l-3.5 3.5" stroke="#3B82F6" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+                    </svg>
+                    View Project
                   </div>
                 </div>
-              </motion.div>
-            );
-          })}
+              </button>
+
+              {/* Name + Tech Pills */}
+              <div className="px-5 py-4 flex flex-col gap-3">
+                <h3 className="text-[17px] font-bold text-white tracking-tight leading-snug">
+                  {project.nama}
+                </h3>
+                <div className="flex flex-wrap gap-1.5">
+                  {project.tools.map((tool, index) => (
+                    <span
+                      key={index}
+                      className="text-[11px] font-semibold text-white/50 bg-white/5 border border-white/5 px-2.5 py-0.5 rounded-md leading-none"
+                    >
+                      {tool}
+                    </span>
+                  ))}
+                </div>
+              </div>
+            </motion.div>
+          ))}
         </motion.div>
       </div>
     </motion.section>

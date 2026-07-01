@@ -1,5 +1,6 @@
 import React from "react";
 import { Mail, Globe, Phone, MapPin } from "lucide-react";
+import { useLanguage } from "../context/LanguageContext";
 
 const techStack = {
   frontend: ["React", "JavaScript", "TypeScript", "Tailwind", "Shadcn"],
@@ -9,13 +10,9 @@ const techStack = {
   design: ["Figma", "Canva"],
 };
 
-const languages = [
-  { name: "Indonesian", flag: "🇮🇩" },
-  { name: "English", flag: "🇬🇧" },
-  { name: "Russian", flag: "🇷🇺" },
-];
-
 export default function Sidebar() {
+  const { t } = useLanguage();
+  const langList = t("sidebar.langList") || [];
 
   return (
     <aside className="w-full h-screen border-r border-white/5 bg-transparent overflow-y-auto px-[48px] pt-[80px] pb-[48px] flex flex-col gap-[32px] select-none scrollbar-none">
@@ -60,7 +57,7 @@ export default function Sidebar() {
             </svg>
           </div>
           <span className="text-[14px] text-[#8A8A8A] font-medium mt-1 inline-block">
-            he/him
+            {t("sidebar.role")}
           </span>
         </div>
       </div>
@@ -68,17 +65,17 @@ export default function Sidebar() {
       {/* About / Bio */}
       <div className="flex flex-col gap-2">
         <h3 className="text-[12px] font-bold tracking-[0.15em] text-[#8A8A8A] uppercase">
-          About
+          {t("sidebar.aboutTitle")}
         </h3>
         <p className="text-[14px] leading-relaxed text-[#8A8A8A] font-normal">
-          Jakarta-based product designer and developer, currently focused on frontend / fullstack MERN with +1 year of hands-on building web app.
+          {t("sidebar.aboutText")}
         </p>
       </div>
 
       {/* Contact Section */}
       <div className="flex flex-col gap-3">
         <h3 className="text-[12px] font-bold tracking-[0.15em] text-[#8A8A8A] uppercase">
-          Contact
+          {t("sidebar.contactTitle")}
         </h3>
         <div className="flex flex-col gap-2.5 text-[14px] text-[#8A8A8A]">
           <a
@@ -114,7 +111,7 @@ export default function Sidebar() {
       {/* Tech Stack Section */}
       <div className="flex flex-col gap-3">
         <h3 className="text-[12px] font-bold tracking-[0.15em] text-[#8A8A8A] uppercase">
-          Tech Stack
+          {t("sidebar.techTitle")}
         </h3>
         <div className="flex flex-col gap-3">
           {Object.entries(techStack).map(([category, items]) => (
@@ -140,10 +137,10 @@ export default function Sidebar() {
       {/* Languages Section */}
       <div className="flex flex-col gap-3">
         <h3 className="text-[12px] font-bold tracking-[0.15em] text-[#8A8A8A] uppercase">
-          Languages
+          {t("sidebar.langTitle")}
         </h3>
         <div className="flex flex-wrap gap-1.5">
-          {languages.map((lang) => (
+          {langList.map((lang) => (
             <span
               key={lang.name}
               className="flex items-center gap-1.5 text-[12px] font-medium text-white px-2.5 py-1 bg-[#0B0B0B] border border-white/5 rounded-full"
@@ -193,14 +190,6 @@ export default function Sidebar() {
         >
           <i className="ri-twitter-x-fill ri-lg"></i>
         </a>
-        {/* <a
-          href="#"
-          className="text-[#8A8A8A] hover:text-white/40 transition-colors duration-250 cursor-default"
-          aria-label="Youtube"
-          onClick={(e) => e.preventDefault()}
-        >
-          <i className="ri-youtube-fill ri-xl"></i>
-        </a> */}
       </div>
     </aside>
   );

@@ -1,5 +1,6 @@
 import React from "react";
 import { Mail, Globe, Phone, MapPin } from "lucide-react";
+import { useLanguage } from "../context/LanguageContext";
 
 const techStack = {
   frontend: ["React", "JavaScript", "TypeScript", "Tailwind", "Shadcn"],
@@ -9,13 +10,9 @@ const techStack = {
   design: ["Figma", "Canva"],
 };
 
-const languages = [
-  { name: "Indonesian", flag: "🇮🇩" },
-  { name: "English", flag: "🇬🇧" },
-  { name: "Russian", flag: "🇷🇺" },
-];
-
 export default function MobileProfile() {
+  const { t } = useLanguage();
+  const langList = t("sidebar.langList") || [];
 
   return (
     <div className="flex flex-col gap-8 lg:hidden w-full pb-4">
@@ -52,7 +49,7 @@ export default function MobileProfile() {
               />
             </svg>
           </div>
-          <span className="text-[13px] text-[#8A8A8A] mt-1">he/him</span>
+          <span className="text-[13px] text-[#8A8A8A] mt-1">{t("sidebar.role")}</span>
         </div>
       </div>
 
@@ -67,25 +64,22 @@ export default function MobileProfile() {
         <a href="https://instagram.com/adityafajarsyy" target="_blank" rel="noopener noreferrer" className="text-[#8A8A8A] hover:text-white transition-colors duration-200" aria-label="Instagram">
           <i className="ri-instagram-line ri-xl"></i>
         </a>
-        <a href="#" className="text-[#8A8A8A] hover:text-white/40 transition-colors duration-200 cursor-default" aria-label="X" onClick={(e) => e.preventDefault()}>
+        <a href="https://x.com/elonmusk" target="_blank" rel="noopener noreferrer" className="text-[#8A8A8A] hover:text-white/40 transition-colors duration-200 cursor-default" aria-label="X" onClick={(e) => e.preventDefault()}>
           <i className="ri-twitter-x-fill ri-lg"></i>
-        </a>
-        <a href="#" className="text-[#8A8A8A] hover:text-white/40 transition-colors duration-200 cursor-default" aria-label="Youtube" onClick={(e) => e.preventDefault()}>
-          <i className="ri-youtube-fill ri-xl"></i>
         </a>
       </div>
 
       {/* About */}
       <div className="flex flex-col gap-2">
-        <h3 className="text-[11px] font-bold tracking-[0.15em] text-[#8A8A8A] uppercase">About</h3>
+        <h3 className="text-[11px] font-bold tracking-[0.15em] text-[#8A8A8A] uppercase">{t("sidebar.aboutTitle")}</h3>
         <p className="text-[14px] leading-relaxed text-[#8A8A8A]">
-          Jakarta-based product designer and developer, currently focused on frontend / fullstack MERN with +1 year of hands-on building web app.
+          {t("sidebar.aboutText")}
         </p>
       </div>
 
       {/* Contact */}
       <div className="flex flex-col gap-2">
-        <h3 className="text-[11px] font-bold tracking-[0.15em] text-[#8A8A8A] uppercase">Contact</h3>
+        <h3 className="text-[11px] font-bold tracking-[0.15em] text-[#8A8A8A] uppercase">{t("sidebar.contactTitle")}</h3>
         <div className="flex flex-col gap-2 text-[13px] text-[#8A8A8A]">
           <a href="mailto:adityafajar.sy90@email.com" className="flex items-center gap-2.5 hover:text-white transition-colors duration-200">
             <Mail size={14} /> <span>adityafajar.sy90@email.com</span>
@@ -104,7 +98,7 @@ export default function MobileProfile() {
 
       {/* Tech Stack */}
       <div className="flex flex-col gap-2">
-        <h3 className="text-[11px] font-bold tracking-[0.15em] text-[#8A8A8A] uppercase">Tech Stack</h3>
+        <h3 className="text-[11px] font-bold tracking-[0.15em] text-[#8A8A8A] uppercase">{t("sidebar.techTitle")}</h3>
         <div className="flex flex-col gap-2">
           {Object.entries(techStack).map(([category, items]) => (
             <div key={category} className="flex flex-col gap-1">
@@ -123,9 +117,9 @@ export default function MobileProfile() {
 
       {/* Languages */}
       <div className="flex flex-col gap-2">
-        <h3 className="text-[11px] font-bold tracking-[0.15em] text-[#8A8A8A] uppercase">Languages</h3>
+        <h3 className="text-[11px] font-bold tracking-[0.15em] text-[#8A8A8A] uppercase">{t("sidebar.langTitle")}</h3>
         <div className="flex flex-wrap gap-1.5">
-          {languages.map((lang) => (
+          {langList.map((lang) => (
             <span key={lang.name} className="flex items-center gap-1.5 text-[12px] font-medium text-white px-2.5 py-1 bg-[#0B0B0B] border border-white/5 rounded-full">
               <span>{lang.flag}</span>
               <span>{lang.name}</span>

@@ -1,8 +1,8 @@
 import React, { useEffect, useState, useRef } from "react";
+import { useLanguage } from "../context/LanguageContext";
 
 const GLITCH_CHARS = "!<>-_\\/[]{}—=+*^?#@$%&ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
 const NAME = "PORTFOLIO";
-const TAGLINE = "Welcome to Aditya's";
 
 function useGlitchText(target, duration = 900, startDelay = 0) {
   const [text, setText] = useState(() => target.replace(/./g, " "));
@@ -48,13 +48,14 @@ function useGlitchText(target, duration = 900, startDelay = 0) {
 }
 
 export default function PreLoader() {
+  const { t } = useLanguage();
   const [phase, setPhase] = useState("intro"); // intro | glitch | exit
   const [scanLine, setScanLine] = useState(0);
   const [showTagline, setShowTagline] = useState(false);
   const [chromatic, setChromatic] = useState(false);
 
   const nameText = useGlitchText(NAME, 900, 400);
-  const taglineText = useGlitchText(TAGLINE, 800, 1400);
+  const taglineText = useGlitchText(t("preloader.tagline"), 800, 1400);
 
   // Scan line animation
   useEffect(() => {

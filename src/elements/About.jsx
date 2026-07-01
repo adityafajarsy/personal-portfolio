@@ -1,6 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
-import { listTools } from "../data";
+import { useLanguage } from "../context/LanguageContext";
 
 const containerVariants = {
   hidden: { opacity: 0 },
@@ -79,75 +79,6 @@ const sloganVariants = {
   }
 };
 
-const experiences = [
-  {
-    role: "Web Designer & Frontend Developer",
-    company: "Kementerian PANRB",
-    period: "Nov 2025 - May 2026",
-    location: "Jakarta, Indonesia",
-    color: "bg-[#1E293B] border border-slate-700/50",
-    icon: (
-      <img
-        src="/assets/Logo PanRB.png"
-        alt="Kementerian PANRB Logo"
-        className="w-7.5 h-7.5 object-contain rounded-md"
-        loading="lazy"
-      />
-    ),
-    desc: "Directed the complete UI/UX design, user flows, and agile/scrum planning for two portal web applications (PPID & SIPIPI). Collaborated in a two-person team via Git, building the frontend using Next.js, TypeScript, and Tailwind.",
-    descMobile: "Directed UI/UX design, user flows, and agile planning for two web portals (PPID & SIPIPI). Collaborated via Git to build the Next.js and TypeScript frontend.",
-  },
-  {
-    role: "Career Break (T-Shaped Upskilling)",
-    company: "Independent Learning",
-    period: "Jan 2025 - Nov 2025",
-    location: "Remote",
-    color: "bg-[#312E81] border border-indigo-700/50",
-    icon: (
-      <svg viewBox="0 0 24 24" className="w-5 h-5 text-indigo-200" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
-        <path d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z"></path>
-        <circle cx="12" cy="12" r="3"></circle>
-      </svg>
-    ),
-    desc: "Built a T-shaped profile by researching cross-disciplinary skills, including AI workflows, product marketing, and advanced frontend paradigms, followed by intensive self-study in production-grade software engineering.",
-    descMobile: "Researched cross-disciplinary skills including AI workflows, product marketing, and advanced frontend paradigms to build a versatile T-shaped profile.",
-  },
-  {
-    role: "ReactJS for Frontend Developer Bootcamp",
-    company: "Hacktiv8 Indonesia",
-    period: "Aug 2024 - Dec 2024",
-    location: "Jakarta, Indonesia",
-    color: "bg-[#450A0A] border border-red-900/40",
-    icon: (
-      <img
-        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ5zv605IDYRA7f3I0IMFUy4BKP3ETSMleuJA&s"
-        alt="Hacktiv8 Logo"
-        className="w-6 h-6 object-contain rounded-md"
-        loading="lazy"
-      />
-    ),
-    desc: "Transitioned from a creative/multimedia background to specialized frontend engineering, mastering modern React.js, modular component architectures, state management, and Git workflows.",
-    descMobile: "Mastered frontend engineering principles, modern React.js workflows, component-driven architectures, state management, and collaborative Git practices.",
-  },
-  {
-    role: "Creative Design & Multimedia Lead",
-    company: "Universitas Padjadjaran",
-    period: "2021 - 2025",
-    location: "Sumedang, Indonesia",
-    color: "bg-[#451A03] border border-amber-900/40",
-    icon: (
-      <img
-        src="/assets/logo-unpad1.png"
-        alt="Unpad Logo"
-        className="w-7 h-7 object-contain rounded-md"
-        loading="lazy"
-      />
-    ),
-    desc: "Led visual design and multimedia production for various campus organizations and events, establishing strong foundational skills in UI/UX layout, graphic assets, and user workflows.",
-    descMobile: "Directed visual asset design and multimedia production for campus groups, establishing core skills in UI/UX layout and user flow architecture.",
-  },
-];
-
 const CalendarIcon = () => (
   <svg viewBox="0 0 24 24" className="w-3 h-3 sm:w-3.5 sm:h-3.5 text-[#8A8A8A]" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
     <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
@@ -172,6 +103,41 @@ const MapIcon = () => (
 );
 
 export default function About() {
+  const { t } = useLanguage();
+  const listTools = t("about.listTools") || [];
+  const expTranslations = t("about.experiences") || [];
+
+  const experiences = expTranslations.map((exp, idx) => {
+    const icons = [
+      <img
+        src="/assets/Logo PanRB.png"
+        alt="Kementerian PANRB Logo"
+        className="w-7.5 h-7.5 object-contain rounded-md"
+        loading="lazy"
+      />,
+      <svg viewBox="0 0 24 24" className="w-5 h-5 text-indigo-200" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+        <path d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z"></path>
+        <circle cx="12" cy="12" r="3"></circle>
+      </svg>,
+      <img
+        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ5zv605IDYRA7f3I0IMFUy4BKP3ETSMleuJA&s"
+        alt="Hacktiv8 Logo"
+        className="w-6 h-6 object-contain rounded-md"
+        loading="lazy"
+      />,
+      <img
+        src="/assets/logo-unpad1.png"
+        alt="Unpad Logo"
+        className="w-7 h-7 object-contain rounded-md"
+        loading="lazy"
+      />
+    ];
+    return {
+      ...exp,
+      icon: icons[idx] || null
+    };
+  });
+
   return (
     <motion.section
       id="about"
@@ -189,7 +155,7 @@ export default function About() {
             className="text-[12px] font-bold tracking-[0.15em] text-[#8A8A8A] uppercase"
             variants={itemVariants}
           >
-            Experience
+            {t("about.expLabel")}
           </motion.span>
           <div className="relative mt-3">
             <motion.span
@@ -197,13 +163,13 @@ export default function About() {
               className="absolute top-[-16px] left-1 font-bold tracking-tighter text-[#3B82F6] select-none origin-left z-10"
               style={{ fontFamily: "'Nothing You Could Do', cursive", fontSize: "clamp(1.1rem, 3vw, 1.7rem)" }}
             >
-              professional journey
+              {t("about.expSlogan")}
             </motion.span>
             <motion.h2
               className="text-[32px] lg:text-[40px] font-bold text-white tracking-tight"
               variants={itemVariants}
             >
-              Career Journey
+              {t("about.expTitle")}
             </motion.h2>
           </div>
         </div>
@@ -269,7 +235,7 @@ export default function About() {
       <div className="flex flex-col gap-6">
         <motion.div className="flex flex-col gap-1" variants={itemVariants}>
           <span className="text-[12px] font-bold tracking-[0.15em] text-[#8A8A8A] uppercase">
-            Tools
+            {t("about.toolsLabel")}
           </span>
           <div className="relative mt-3 w-fit">
             <motion.span
@@ -277,14 +243,14 @@ export default function About() {
               className="absolute top-[-10px] left-[52%] sm:left-[50%] font-bold tracking-tighter text-[#3B82F6] select-none origin-left z-10 whitespace-nowrap"
               style={{ fontFamily: "'Nothing You Could Do', cursive", fontSize: "clamp(1.1rem, 3vw, 1.7rem)" }}
             >
-              my daily arsenal
+              {t("about.toolsSlogan")}
             </motion.span>
             <h2 className="text-[23px] min-[380px]:text-[25px] sm:text-[32px] lg:text-[36px] font-bold text-white tracking-tight whitespace-nowrap pr-2">
-              Tech Stack & Workspace
+              {t("about.toolsTitle")}
             </h2>
           </div>
           <p className="text-[14px] text-[#8A8A8A] max-w-md mt-2">
-            The software, frameworks, languages, and design applications that I leverage daily.
+            {t("about.toolsDesc")}
           </p>
         </motion.div>
 
