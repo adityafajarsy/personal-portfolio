@@ -17,14 +17,34 @@ export default function ProjectDetail({ project, onClose }) {
   const images = project.images || [];
   const hasImages = images.length > 0;
 
-  // Scroll to top on open
+  // Scroll so that the detail project starts at the top of the viewport
   useEffect(() => {
     const mainEl = document.querySelector("main");
-    if (mainEl) mainEl.scrollTo({ top: 0, behavior: "instant" });
+    if (mainEl) {
+      // For desktop, scroll main container to top
+      mainEl.scrollTo({ top: 0, behavior: "instant" });
+    }
+    
+    // For mobile, scroll directly to the top of this project detail view
+    const detailEl = document.getElementById("project-detail");
+    if (detailEl) {
+      detailEl.scrollIntoView({ behavior: "instant", block: "start" });
+    }
   }, [project]);
+
+  const handleBack = () => {
+    onClose();
+    setTimeout(() => {
+      const projectSection = document.getElementById("project");
+      if (projectSection) {
+        projectSection.scrollIntoView({ behavior: "smooth", block: "start" });
+      }
+    }, 100);
+  };
 
   return (
     <motion.div
+      id="project-detail"
       initial={{ opacity: 0, y: 18 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.35, ease: "easeOut" }}
@@ -33,7 +53,7 @@ export default function ProjectDetail({ project, onClose }) {
       {/* ── Back button ── */}
       <div>
         <button
-          onClick={onClose}
+          onClick={handleBack}
           className="inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-white/5 border border-white/5 text-[13px] font-bold text-white hover:bg-white/10 transition-all duration-200 cursor-pointer active:scale-95"
         >
           <ArrowLeft size={14} className="text-[#3B82F6]" />
@@ -211,7 +231,7 @@ export default function ProjectDetail({ project, onClose }) {
       {/* ── Footer back button ── */}
       <div className="border-t border-white/5 pt-6">
         <button
-          onClick={onClose}
+          onClick={handleBack}
           className="inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-white/5 border border-white/5 text-[13px] font-bold text-white hover:bg-white/10 transition-all duration-200 cursor-pointer active:scale-95"
         >
           <ArrowLeft size={14} className="text-[#3B82F6]" />

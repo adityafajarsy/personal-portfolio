@@ -62,15 +62,31 @@ export default function ArticleDetail({ article: initialArticle, onClose }) {
   const articlesList = t("articles.list") || [];
   const article = articlesList.find((a) => a.id === initialArticle.id) || initialArticle;
 
-  // Scroll to top of content container when mounted
+  // Scroll so that the detail article starts at the top of the viewport
   useEffect(() => {
+    // For desktop (scrollable main container)
     const mainEl = document.querySelector("main");
     if (mainEl) {
-      mainEl.scrollTo({ top: 0 });
-    } else {
-      window.scrollTo({ top: 0 });
+      mainEl.scrollTo({ top: 0, behavior: "instant" });
+    }
+    
+    // For mobile (scrollable window), scroll directly to the top of this article detail view
+    const detailEl = document.querySelector("article");
+    if (detailEl) {
+      detailEl.scrollIntoView({ behavior: "instant", block: "start" });
     }
   }, [article]);
+
+  const handleBack = () => {
+    onClose();
+    // After state changes back to list view, scroll back to the articles section
+    setTimeout(() => {
+      const articleSection = document.getElementById("articles");
+      if (articleSection) {
+        articleSection.scrollIntoView({ behavior: "smooth", block: "start" });
+      }
+    }, 100);
+  };
 
   return (
     <motion.article
@@ -83,7 +99,7 @@ export default function ArticleDetail({ article: initialArticle, onClose }) {
       {/* Back Button */}
       <div>
         <button
-          onClick={onClose}
+          onClick={handleBack}
           className="inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-white/5 border border-white/5 text-[13px] font-bold text-white hover:bg-white/10 transition-all duration-200 cursor-pointer active:scale-95"
         >
           <ArrowLeft size={14} className="text-[#3B82F6]" />
@@ -127,7 +143,7 @@ export default function ArticleDetail({ article: initialArticle, onClose }) {
       {/* Footer separator line */}
       <div className="border-t border-white/5 pt-8 mt-6">
         <button
-          onClick={onClose}
+          onClick={handleBack}
           className="inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-white/5 border border-white/5 text-[13px] font-bold text-white hover:bg-white/10 transition-all duration-200 cursor-pointer active:scale-95"
         >
           <ArrowLeft size={14} className="text-[#3B82F6]" />

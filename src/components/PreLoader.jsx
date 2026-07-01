@@ -341,7 +341,7 @@ export default function PreLoader() {
           whiteSpace: "nowrap",
         }}
       >
-        PORTFOLIO v2.0 · BUILD 2025
+        PORTFOLIO v2.0 · BUILD 2026
       </div>
 
       <style>{`
