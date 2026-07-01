@@ -160,8 +160,8 @@ export default function About() {
           <div className="relative mt-3">
             <motion.span
               variants={sloganVariants}
-              className="absolute top-[-16px] left-1 font-bold tracking-tighter text-[#3B82F6] select-none origin-left z-10"
-              style={{ fontFamily: "'Nothing You Could Do', cursive", fontSize: "clamp(1.1rem, 3vw, 1.7rem)" }}
+              className="absolute top-[-8px] sm:top-[-16px] left-1 font-bold tracking-tighter text-[#3B82F6] select-none origin-left z-10 text-[1.35rem] sm:text-[clamp(1.1rem,3vw,1.7rem)]"
+              style={{ fontFamily: "'Nothing You Could Do', cursive" }}
             >
               {t("about.expSlogan")}
             </motion.span>
@@ -175,54 +175,54 @@ export default function About() {
         </div>
 
         {/* Experience Cards Stack */}
-        <div className="flex flex-col gap-4">
+        <div className="relative pl-4 sm:pl-0 border-l border-white/10 sm:border-l-0 flex flex-col gap-5">
           {experiences.map((exp, idx) => {
             return (
               <motion.div
                 key={idx}
-                className="p-6 rounded-[16px] bg-[#0B0B0B] border border-white/5 hover:border-white/10 transition-all duration-300 flex flex-col sm:flex-row items-start gap-4 group"
+                className="relative p-4 sm:p-5 rounded-[16px] bg-[#0B0B0B] border border-white/5 hover:border-white/10 transition-all duration-300 flex flex-col sm:flex-row items-start gap-4 group"
                 variants={cardVariants}
                 initial="hidden"
                 whileInView="visible"
                 viewport={{ once: true, margin: "-40px" }}
               >
+                {/* Timeline Bullet Point (Mobile Only) */}
+                <div className="absolute left-[-22px] top-[26px] w-2.5 h-2.5 rounded-full bg-[#3B82F6] border-2 border-[#050505] sm:hidden z-10" />
+
                 {/* Left Side: Circular Logo Container */}
-                <div className={`w-12 h-12 rounded-full ${exp.color} flex items-center justify-center flex-shrink-0 shadow-lg group-hover:scale-105 transition-transform duration-300`}>
-                  {exp.icon}
+                <div className={`w-10 h-10 rounded-full ${exp.color} flex items-center justify-center flex-shrink-0 shadow-md group-hover:scale-105 transition-transform duration-300`}>
+                  <div className="scale-90 flex items-center justify-center">
+                    {exp.icon}
+                  </div>
                 </div>
 
                 {/* Right Side: Details & Info */}
                 <div className="flex-1 min-w-0">
-                  <h3 className="text-[17px] font-bold text-white tracking-tight leading-snug">
-                    {exp.role}
-                  </h3>
+                  <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-1">
+                    <h3 className="text-[16px] font-bold text-white tracking-tight leading-snug">
+                      {exp.role}
+                    </h3>
+                    <span className="text-[11px] text-[#8A8A8A] font-medium whitespace-nowrap">
+                      {exp.period}
+                    </span>
+                  </div>
 
                   {/* Metadata Row */}
-                  <div className="flex flex-col gap-1.5 sm:flex-row sm:items-center sm:gap-x-4 mt-2 sm:mt-1.5 text-[11.5px] sm:text-[13px] text-[#8A8A8A] font-normal">
-                    <div className="flex flex-row flex-wrap items-center gap-x-2.5 gap-y-1">
-                      <span className="flex items-center gap-1">
-                        <CalendarIcon />
-                        {exp.period}
-                      </span>
-                      <span className="flex items-center gap-1">
-                        <CompanyIcon />
-                        {exp.company}
-                      </span>
-                    </div>
+                  <div className="flex flex-wrap items-center gap-x-3 gap-y-1 mt-1 text-[12px] text-[#8A8A8A] font-normal">
+                    <span className="flex items-center gap-1">
+                      <CompanyIcon />
+                      {exp.company}
+                    </span>
+                    <span className="text-white/10">•</span>
                     <span className="flex items-center gap-1">
                       <MapIcon />
                       {exp.location}
                     </span>
                   </div>
 
-                  {/* Paragraph Description — Desktop */}
-                  <p className="hidden sm:block text-[14px] leading-relaxed text-[#8A8A8A] mt-3 font-normal">
+                  {/* Paragraph Description ─ Desktop & Mobile */}
+                  <p className="text-[13px] sm:text-[13.5px] leading-relaxed text-[#8A8A8A] mt-2.5 font-normal">
                     {exp.desc}
-                  </p>
-
-                  {/* Paragraph Description — Mobile */}
-                  <p className="block sm:hidden text-[13px] leading-relaxed text-[#8A8A8A] mt-2.5 font-normal">
-                    {exp.descMobile}
                   </p>
                 </div>
               </motion.div>
@@ -240,8 +240,8 @@ export default function About() {
           <div className="relative mt-3 w-fit">
             <motion.span
               variants={sloganVariants}
-              className="absolute top-[-10px] left-[52%] sm:left-[50%] font-bold tracking-tighter text-[#3B82F6] select-none origin-left z-10 whitespace-nowrap"
-              style={{ fontFamily: "'Nothing You Could Do', cursive", fontSize: "clamp(1.1rem, 3vw, 1.7rem)" }}
+              className="absolute top-[-8px] sm:top-[-10px] left-[45%] sm:left-[50%] font-bold tracking-tighter text-[#3B82F6] select-none origin-left z-10 whitespace-nowrap text-[1.35rem] sm:text-[clamp(1.1rem,3vw,1.7rem)]"
+              style={{ fontFamily: "'Nothing You Could Do', cursive" }}
             >
               {t("about.toolsSlogan")}
             </motion.span>

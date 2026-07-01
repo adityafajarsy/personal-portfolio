@@ -60,8 +60,8 @@ export default function EducationExperience() {
           <div className="relative mt-3">
             <motion.span
               variants={sloganVariants}
-              className="absolute top-[-16px] left-1 font-bold tracking-tighter text-[#3B82F6] select-none origin-left z-10"
-              style={{ fontFamily: "'Nothing You Could Do', cursive", fontSize: "clamp(1.1rem, 3vw, 1.7rem)" }}
+              className="absolute top-[-8px] sm:top-[-16px] left-1 font-bold tracking-tighter text-[#3B82F6] select-none origin-left z-10 text-[1.35rem] sm:text-[clamp(1.1rem,3vw,1.7rem)]"
+              style={{ fontFamily: "'Nothing You Could Do', cursive" }}
             >
               {t("education.slogan")}
             </motion.span>

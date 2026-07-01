@@ -72,7 +72,7 @@ export const translations = {
       intro: "Intro",
       quote: "For me, coding is problem solving..",
       title: "Hi, I'm Aditya Fajar SY",
-      bio: "A Front-End Developer with a background in Language Literature, Graphic Design and Creative Media. I build user pov websites where proper design meets seamless functionality. Balancing technical execution with strategic business goals, my focus is always on engineering web solutions that effectively solve real company problems.",
+      bio: "A Fullstack MERN Developer with a background in Language Literature, Graphic Design and Creative Media. I build user pov websites where proper design meets seamless functionality. Balancing technical execution with strategic business goals, my focus is always on engineering web solutions that effectively solve real company problems.",
       downloadCv: "Download CV",
       connectMe: "Connect with me",
     },
@@ -122,7 +122,7 @@ export const translations = {
     },
     education: {
       label: "Education",
-      slogan: "never stop learning",
+      slogan: "education is key",
       title: "Academic Path",
       showDetails: "Show details",
       hideDetails: "Hide details",
@@ -313,7 +313,7 @@ Being a developer with a background in humanities is not a setback; it is an adv
     sidebar: {
       role: "he/him",
       aboutTitle: "ABOUT",
-      aboutText: "Product designer dan web developer yang berbasis di Jakarta, saat ini fokus pada frontend / fullstack MERN dengan pengalaman praktis +1 tahun membangun aplikasi web.",
+      aboutText: "Product Designer dan Web Developer yang berdomisili di Jakarta, saat ini fokus pada Frontend / Fullstack MERN dengan pengalaman lebih dari 1 tahun dalam membangun aplikasi web.",
       contactTitle: "CONTACT",
       techTitle: "TECH STACK",
       langTitle: "LANGUAGES",
@@ -327,7 +327,7 @@ Being a developer with a background in humanities is not a setback; it is an adv
       intro: "Intro",
       quote: "For me, coding is problem solving..",
       title: "Hi, I'm Aditya Fajar SY",
-      bio: "Seorang Front-End Developer dengan latar belakang Sastra Bahasa, Desain Grafis, dan Media Kreatif. Saya membangun situs web dari sudut pandang pengguna di mana desain yang tepat berpadu dengan fungsionalitas yang mulus. Menyeimbangkan eksekusi teknis dengan tujuan bisnis strategis, fokus saya adalah merekayasa solusi web yang memecahkan masalah nyata perusahaan secara efektif.",
+      bio: "Seorang Developer dengan latar belakang Bahasa, Desain Grafis, dan Kreatif Multimedia. Saya membangun situs web dari sudut pandang masalah pengguna di mana desain yang proper berpadu dengan fungsionalitas yang smooth. Menyeimbangkan teknis dengan tujuan bisnis, saya berfokus membuat solusi web yang memecahkan masalah nyata perusahaan secara efektif.",
       downloadCv: "Unduh CV",
       connectMe: "Hubungkan dengan saya",
     },
@@ -378,7 +378,7 @@ Being a developer with a background in humanities is not a setback; it is an adv
     },
     education: {
       label: "Education",
-      slogan: "never stop learning",
+      slogan: "education is key",
       title: "Academic Path",
       showDetails: "Tampilkan detail",
       hideDetails: "Sembunyikan detail",
@@ -393,7 +393,7 @@ Being a developer with a background in humanities is not a setback; it is an adv
           responsibilities: [
             "Berpartisipasi aktif dalam berbagai organisasi kampus, termasuk Himpunan Mahasiswa Studi Rusia dan Badan Eksekutif Mahasiswa (BEM).",
             "Terlibat dalam pengembangan diri melalui seminar dan lokakarya tentang Desain Grafis, Pengeditan Video, AI, Pemrograman, Keuangan, dan Investasi.",
-            "Berkontribusi langsung ke Departemen Studi Rusia dengan membantu dalam desain visual dan pengeditan video untuk tujuan akademis dan promosi.",
+            "Berkontribusi langsung ke Program Studi Rusia dengan kontribusi dalam desain visual dan pengeditan video untuk kebutuhan akademis dan promosi.",
           ],
         }
       ]
@@ -405,7 +405,7 @@ Being a developer with a background in humanities is not a setback; it is an adv
       toolsLabel: "Tools",
       toolsSlogan: "my daily arsenal",
       toolsTitle: "Tech Stack & Workspace",
-      toolsDesc: "Perangkat lunak, framework, bahasa pemrograman, dan aplikasi desain yang saya gunakan setiap hari.",
+      toolsDesc: "Software, framework, library, bahasa pemrograman, dan aplikasi design yang saya gunakan sehari-hari.",
       listTools: listToolsStaticEn,
       experiences: [
         {
@@ -414,8 +414,8 @@ Being a developer with a background in humanities is not a setback; it is an adv
           period: "Nov 2025 - May 2026",
           location: "Jakarta, Indonesia",
           color: "bg-[#1E293B] border border-slate-700/50",
-          desc: "Mengarahkan desain UI/UX lengkap, alur pengguna, dan perencanaan lincah (agile/scrum) untuk dua aplikasi web portal (PPID & SIPIPI). Berkolaborasi dalam tim dua orang melalui Git, membangun frontend menggunakan Next.js, TypeScript, dan Tailwind.",
-          descMobile: "Mengarahkan desain UI/UX, alur pengguna, dan perencanaan lincah untuk dua portal web (PPID & SIPIPI). Berkolaborasi melalui Git untuk membangun frontend Next.js dan TypeScript.",
+          desc: "Membuat desain UI/UX lengkap, alur user, pengunjung website, dan perencanaan (agile/scrum) untuk dua aplikasi web portal (PPID & SIPIPI). Berkolaborasi dalam tim dua orang melalui Git, membangun Frontend menggunakan Next.js, TypeScript, Tailwind dan Shadcn UI.",
+          descMobile: "Membuat desain UI/UX, alur user, pengunjung website, dan perencanaan (agile/scrum) untuk dua aplikasi web portal (PPID & SIPIPI). Berkolaborasi melalui Git untuk membangun frontend Next.js, TypeScript, Tailwind dan Shadcn UI.",
         },
         {
           role: "Career Break (T-Shaped Upskilling)",
@@ -423,8 +423,8 @@ Being a developer with a background in humanities is not a setback; it is an adv
           period: "Jan 2025 - Nov 2025",
           location: "Remote",
           color: "bg-[#312E81] border border-indigo-700/50",
-          desc: "Membangun profil T-shaped dengan meneliti keterampilan lintas disiplin, termasuk alur kerja AI, pemasaran produk, dan paradigma frontend lanjutan, diikuti oleh studi mandiri intensif dalam rekayasa perangkat lunak tingkat produksi.",
-          descMobile: "Meneliti keterampilan lintas disiplin termasuk alur kerja AI, pemasaran produk, dan paradigma frontend lanjutan untuk membangun profil T-shaped yang serbaguna.",
+          desc: "Melatih profil T-shaped dengan meneliti keterampilan lintas disiplin ilmu, termasuk automasi AI, product led growth (PLG), dan frontend lanjutan, diikuti oleh studi mandiri intensif dalam software development.",
+          descMobile: "Melatih profil T-shaped dengan meneliti keterampilan lintas disiplin ilmu, termasuk automasi AI, product led growth (PLG), dan frontend lanjutan, lalu melanjutkan studi mandiri intensif dalam software development.",
         },
         {
           role: "ReactJS for Frontend Developer Bootcamp",
@@ -432,8 +432,8 @@ Being a developer with a background in humanities is not a setback; it is an adv
           period: "Aug 2024 - Dec 2024",
           location: "Jakarta, Indonesia",
           color: "bg-[#450A0A] border border-red-900/40",
-          desc: "Beralih dari latar belakang kreatif/multimedia ke frontend engineering khusus, menguasai React.js modern, arsitektur komponen modular, manajemen state, dan alur kerja Git.",
-          descMobile: "Menguasai prinsip frontend engineering, alur kerja React.js modern, arsitektur berbasis komponen, manajemen state, dan praktik Git kolaboratif.",
+          desc: "Transisi dari latar belakang kreatif/multimedia ke web development, membangun keahlian dalam React Frontend, arsitektur komponen, manajemen state, dan alur kerja kolaboratif Git/GitHub.",
+          descMobile: "Transisi dari latar belakang kreatif/multimedia ke web dev, membangun keahlian dalam React Frontend, arsitektur komponen, manajemen state, dan alur kerja kolaboratif Git/GitHub.",
         },
         {
           role: "Creative Design & Multimedia Lead",
@@ -441,7 +441,7 @@ Being a developer with a background in humanities is not a setback; it is an adv
           period: "2021 - 2025",
           location: "Sumedang, Indonesia",
           color: "bg-[#451A03] border border-amber-900/40",
-          desc: "Memimpin desain visual dan produksi multimedia untuk berbagai organisasi dan acara kampus, membangun keterampilan dasar yang kuat dalam tata letak UI/UX, aset grafis, dan alur kerja pengguna.",
+          desc: "Memimpin perencanaan desain visual dan produksi multimedia untuk berbagai organisasi dan acara kampus, membangun keterampilan dasar yang kuat dalam tata letak UI/UX, aset grafis, dan alur kerja pengguna.",
           descMobile: "Mengarahkan desain aset visual dan produksi multimedia untuk kelompok kampus, membangun keterampilan inti dalam tata letak UI/UX dan arsitektur alur pengguna.",
         },
       ]
@@ -549,7 +549,7 @@ Menjadi pengembang dengan latar belakang humaniora bukanlah kemunduran; itu adal
       label: "Contact",
       slogan: "let's build together!",
       title: "Get in Touch",
-      desc: "Siap bekerja sama untuk proyek Anda berikutnya? Mari terhubung dan bangun sesuatu bersama.",
+      desc: "Memiliki visi untuk membuat projek? Mari terhubung dan bangun sesuatu bersama.",
       channels: "Contact Channels",
       availableText: "Tersedia untuk kesempatan freelance & peran remote.",
       sendWa: "Kirim Pesan WhatsApp",
@@ -559,7 +559,7 @@ Menjadi pengembang dengan latar belakang humaniora bukanlah kemunduran; itu adal
       sendBtn: "Kirim Pesan",
       placeholderName: "John Doe",
       placeholderEmail: "john@example.com",
-      placeholderMsg: "Ceritakan tentang proyek Anda...",
+      placeholderMsg: "Saya ingin hire anda...",
     }
   }
 };
