@@ -9,9 +9,9 @@ import GithubImg from "/assets/tools/github.png";
 import CanvaImg from "/assets/tools/canva.png";
 import FigmaImg from "/assets/tools/figma.png";
 
-import ProjectNetflixImg from "/assets/project/3.png";
-import ProjectEcomImg from "/assets/project/4.png";
-import ProjectCompanyImg from "/assets/project/8.png";
+const ProjectNetflixImg = "https://res.cloudinary.com/bj8jhjaq/image/upload/v1782900697/3_ydl3cu.png";
+const ProjectEcomImg = "https://res.cloudinary.com/bj8jhjaq/image/upload/v1782901544/4_mhe30x.webp";
+const ProjectCompanyImg = "https://res.cloudinary.com/bj8jhjaq/image/upload/v1782901551/8_qjicam.webp";
 
 const listToolsStatic = [
   { id: 1, gambar: VSCodeImg, nama: "Visual Studio Code" },
