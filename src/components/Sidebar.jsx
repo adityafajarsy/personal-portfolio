@@ -1,6 +1,7 @@
 import React from "react";
 import { Mail, Globe, Phone, MapPin } from "lucide-react";
 import { useLanguage } from "../context/LanguageContext";
+import { m } from "framer-motion";
 
 const techStack = {
   frontend: ["React", "JavaScript", "TypeScript", "Tailwind", "Shadcn"],
@@ -17,49 +18,70 @@ export default function Sidebar() {
   return (
     <aside className="w-full h-screen border-r border-white/5 bg-transparent overflow-y-auto px-[48px] pt-[80px] pb-[48px] flex flex-col gap-[32px] select-none">
       {/* Profile Header */}
-      <div className="flex flex-col gap-4">
-        <div className="w-[80px] h-[80px] rounded-full overflow-hidden border-2 border-white/10 shadow-lg relative group">
-          <img
-            src="/assets/adityafajarsy.webp"
-            alt="Aditya Fajar SY"
-            className="w-full h-full object-cover object-[center_15%]"
-            onError={(e) => {
-              e.target.src = "/assets/hero-img.webp"; // fallback if main photo fails
-            }}
-          />
-          <div className="absolute inset-0 bg-blue-500/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none" />
-        </div>
-        <div>
-          <div className="flex items-center gap-2">
-            <h1 className="text-[24px] font-bold text-white tracking-tight leading-none">
-              Aditya Fajar SY
-            </h1>
-            {/* Custom blue verification checkmark */}
-            <svg
-              viewBox="0 0 24 24"
-              className="w-[18px] h-[18px] flex-shrink-0"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              {/* Badge Background */}
-              <path
-                d="M22.5 12.5c0-1.58-.875-2.95-2.148-3.6.154-.435.238-.905.238-1.4 0-2.21-1.71-3.99-3.818-3.99-.48 0-.927.1-1.34.28C14.843 2.5 13.518 1.5 12 1.5s-2.843 1-3.43 2.29c-.413-.18-.86-.28-1.34-.28-2.11 0-3.82 1.78-3.82 3.99 0 .495.084.965.238 1.4-1.273.65-2.148 2.02-2.148 3.6 0 1.58.875 2.95 2.148 3.6-.154.435-.238.905-.238 1.4 0 2.21 1.71 3.99 3.818 3.99.48 0 .927-.1 1.34-.28.587 1.29 1.912 2.29 3.43 2.29s2.843-1 3.43-2.29c.413.18.86.28 1.34.28 2.11 0 3.82-1.78 3.82-3.99 0-.495-.084-.965-.238-1.4 1.273-.65 2.148-2.02 2.148-3.6z"
-                fill="#3B82F6"
-              />
-              {/* Thick rounded checkmark */}
-              <path
-                d="M8.3 12.3l2.7 2.7 5.7-5.7"
-                stroke="white"
-                strokeWidth="2.8"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                fill="none"
-              />
-            </svg>
+      <div className="flex items-center justify-between gap-4">
+        {/* Left Side: Avatar + Details */}
+        <div className="flex flex-col gap-4">
+          <div className="w-[80px] h-[80px] rounded-full overflow-hidden border-2 border-white/10 shadow-lg relative group flex-shrink-0">
+            <img
+              src="/assets/adityafajarsy.webp"
+              alt="Aditya Fajar SY"
+              className="w-full h-full object-cover object-[center_15%]"
+              onError={(e) => {
+                e.target.src = "/assets/hero-img.webp"; // fallback if main photo fails
+              }}
+            />
+            <div className="absolute inset-0 bg-blue-500/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none" />
           </div>
-          <span className="text-[14px] text-[#8A8A8A] font-medium mt-1 inline-block">
-            {t("sidebar.role")}
-          </span>
+          <div>
+            <div className="flex items-center gap-2">
+              <h1 className="text-[24px] font-bold text-white tracking-tight leading-none">
+                Aditya Fajar SY
+              </h1>
+              {/* Custom blue verification checkmark */}
+              <svg
+                viewBox="0 0 24 24"
+                className="w-[18px] h-[18px] flex-shrink-0"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                {/* Badge Background */}
+                <path
+                  d="M22.5 12.5c0-1.58-.875-2.95-2.148-3.6.154-.435.238-.905.238-1.4 0-2.21-1.71-3.99-3.818-3.99-.48 0-.927.1-1.34.28C14.843 2.5 13.518 1.5 12 1.5s-2.843 1-3.43 2.29c-.413-.18-.86-.28-1.34-.28-2.11 0-3.82 1.78-3.82 3.99 0 .495.084.965.238 1.4-1.273.65-2.148 2.02-2.148 3.6 0 1.58.875 2.95 2.148 3.6-.154.435-.238.905-.238 1.4 0 2.21 1.71 3.99 3.818 3.99.48 0 .927-.1 1.34-.28.587 1.29 1.912 2.29 3.43 2.29s2.843-1 3.43-2.29c.413.18.86.28 1.34.28 2.11 0 3.82-1.78 3.82-3.99 0-.495-.084-.965-.238-1.4 1.273-.65 2.148-2.02 2.148-3.6z"
+                  fill="#3B82F6"
+                />
+                {/* Thick rounded checkmark */}
+                <path
+                  d="M8.3 12.3l2.7 2.7 5.7-5.7"
+                  stroke="white"
+                  strokeWidth="2.8"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  fill="none"
+                />
+              </svg>
+            </div>
+            <span className="text-[14px] text-[#8A8A8A] font-medium mt-1 inline-block">
+              {t("sidebar.role")}
+            </span>
+          </div>
         </div>
+
+        {/* Right Side: Large Rose decoration (Vertically Centered with Draw/Paint Animation) */}
+        <m.div
+          initial={{ clipPath: "inset(100% 0% 0% 0%)", opacity: 0, scale: 0.95 }}
+          animate={{ clipPath: "inset(0% 0% 0% 0%)", opacity: 1, scale: 1 }}
+          transition={{
+            duration: 1.8,
+            delay: 3.1,
+            ease: [0.25, 1, 0.5, 1]
+          }}
+          className="w-[116px] h-[116px] relative flex items-center justify-center flex-shrink-0"
+        >
+          <img
+            src="/assets/rose.webp"
+            alt="Rose decoration"
+            className="w-full h-full object-contain"
+          />
+        </m.div>
       </div>
 
       {/* About / Bio */}

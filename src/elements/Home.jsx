@@ -12,7 +12,7 @@ const rolesEn = [
 ];
 
 const rolesId = [
-  "Pengembang Web",
+  "Web Developer",
   "Product Engineer",
   "UI/UX Desainer",
   "Fullstack MERN Devs",
