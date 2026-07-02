@@ -121,4 +121,5 @@
   pointer-events: none;
   z-index: 0;
   animation: pulseGlow 10s ease-in-out infinite;
+  will-change: transform; /* Hardware accelerate slowly animating background graphics */
 }
