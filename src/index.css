@@ -32,23 +32,24 @@
     letter-spacing: -0.015em;
   }
 
-  /* Thin premium scrollbar */
+  /* Thin premium scrollbar - custom minimal UI */
   ::-webkit-scrollbar {
-    width: 6px;
-    height: 6px;
+    width: 3px;
+    height: 3px;
   }
   
   ::-webkit-scrollbar-track {
-    background: #050505;
+    background: transparent;
   }
   
   ::-webkit-scrollbar-thumb {
-    background: #1A1A1A;
-    border-radius: 999px;
+    background: rgba(255, 255, 255, 0.08);
+    border-radius: 99px;
+    transition: background 0.3s ease;
   }
   
   ::-webkit-scrollbar-thumb:hover {
-    background: #2A2A2A;
+    background: linear-gradient(to bottom, #3b82f6, #8b5cf6);
   }
 }
 
@@ -59,6 +60,11 @@
 }
 .scrollbar-none::-webkit-scrollbar {
   display: none; /* Chrome, Safari and Opera */
+}
+
+/* Medium-like reading font style */
+.font-charter {
+  font-family: 'Charter', 'Bitstream Charter', 'Newsreader', 'Lora', 'Georgia', 'Source Serif Pro', serif;
 }
 
 /* Glassmorphism helpers */

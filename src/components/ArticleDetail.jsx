@@ -6,14 +6,14 @@ import { useLanguage } from "../context/LanguageContext";
 const renderMarkdown = (text) => {
   return text.split("\n").map((line, idx) => {
     const trimmed = line.trim();
-    if (!trimmed) return <div key={idx} className="h-4" />;
+    if (!trimmed) return <div key={idx} className="h-5" />;
 
     // Headings
     if (trimmed.startsWith("## ")) {
       return (
         <h2
           key={idx}
-          className="text-[22px] sm:text-[26px] font-bold text-white tracking-tight mt-8 mb-4 border-b border-white/5 pb-2"
+          className="text-[20px] sm:text-[23px] font-bold text-white tracking-tight mt-10 mb-4 font-sans border-b border-white/5 pb-2.5"
         >
           {trimmed.replace("## ", "")}
         </h2>
@@ -25,7 +25,7 @@ const renderMarkdown = (text) => {
       return (
         <blockquote
           key={idx}
-          className="border-l-4 border-[#3B82F6] pl-4 italic text-[#8A8A8A] text-[15px] sm:text-[16px] my-6 font-medium bg-white/2 py-3 pr-4 rounded-r-xl"
+          className="border-l-[3px] border-[#3B82F6] pl-5 italic text-[#A3A3A3] text-[16px] sm:text-[18px] my-8 font-charter leading-relaxed bg-white/[0.01] py-3 pr-4 rounded-r-xl"
         >
           {trimmed.replace("> ", "").replace(/"/g, "")}
         </blockquote>
@@ -37,21 +37,27 @@ const renderMarkdown = (text) => {
       return (
         <li
           key={idx}
-          className="list-none flex items-start gap-2.5 text-[#8A8A8A] text-[14px] sm:text-[15px] leading-relaxed my-2"
+          className="list-none flex items-start gap-3 text-[#D1D5DB] text-[15px] sm:text-[17px] leading-relaxed my-3 font-charter"
         >
-          <span className="text-[#3B82F6] font-bold mt-0.5">•</span>
+          <span className="text-[#3B82F6] font-bold mt-1.5 text-[10px]">•</span>
           <span>{trimmed.replace("- ", "")}</span>
         </li>
       );
+    }
+
+    // Bold inline markdown helper (simple bold check)
+    let content = trimmed;
+    if (trimmed.startsWith("*") && trimmed.endsWith("*")) {
+      content = <em className="italic">{trimmed.replace(/\*/g, "")}</em>;
     }
 
     // Default Paragraph
     return (
       <p
         key={idx}
-        className="text-[#8A8A8A] text-[14px] sm:text-[15px] leading-relaxed my-4 font-normal"
+        className="text-[#D1D5DB] text-[15.5px] sm:text-[17.5px] leading-[1.8] my-5 font-charter font-normal"
       >
-        {trimmed}
+        {content}
       </p>
     );
   });
@@ -123,6 +129,11 @@ export default function ArticleDetail({ article: initialArticle, onClose }) {
         <h1 className="text-[28px] sm:text-[36px] lg:text-[44px] font-black text-white tracking-tight leading-tight">
           {article.nama}
         </h1>
+        {article.desk && (
+          <p className="text-[14.5px] sm:text-[16px] text-[#8A8A8A] font-normal leading-relaxed mt-2.5 font-sans">
+            {article.desk}
+          </p>
+        )}
       </div>
 
       {/* Hero Image */}

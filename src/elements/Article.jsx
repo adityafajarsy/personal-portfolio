@@ -1,8 +1,6 @@
 import React from "react";
-import { ArrowRight } from "lucide-react";
 import { motion } from "framer-motion";
 import { useLanguage } from "../context/LanguageContext";
-import { translations } from "../data/translations";
 
 const containerVariants = {
   hidden: { opacity: 0 },
@@ -35,7 +33,7 @@ const sloganVariants = {
 
 export default function Article({ onSelectArticle }) {
   const { t } = useLanguage();
-  const listArticles = translations.en.articles.list || [];
+  const listArticles = t("articles.list") || [];
 
   return (
     <motion.section
@@ -78,9 +76,8 @@ export default function Article({ onSelectArticle }) {
           return (
             <motion.div
               key={article.id}
-              className={`group bg-[#0B0B0B] border border-white/5 rounded-[20px] overflow-hidden flex flex-col hover:border-[#3B82F6]/30 hover:shadow-[0_12px_30px_rgba(59,130,246,0.06)] transition-all duration-300 cursor-pointer ${
-                isLastOdd ? "col-span-2 justify-self-center w-full max-w-[calc(50%-8px)] lg:col-span-1 lg:max-w-none" : ""
-              }`}
+              className={`group bg-[#0B0B0B] border border-white/5 rounded-[20px] overflow-hidden flex flex-col hover:border-[#3B82F6]/30 hover:shadow-[0_12px_30px_rgba(59,130,246,0.06)] transition-all duration-300 cursor-pointer ${isLastOdd ? "col-span-2 justify-self-center w-full max-w-[calc(50%-8px)] lg:col-span-1 lg:max-w-none" : ""
+                }`}
               variants={itemVariants}
               whileHover={{ scale: 1.03 }}
               onClick={() => onSelectArticle(article)}

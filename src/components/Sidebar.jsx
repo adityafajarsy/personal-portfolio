@@ -15,7 +15,7 @@ export default function Sidebar() {
   const langList = t("sidebar.langList") || [];
 
   return (
-    <aside className="w-full h-screen border-r border-white/5 bg-transparent overflow-y-auto px-[48px] pt-[80px] pb-[48px] flex flex-col gap-[32px] select-none scrollbar-none">
+    <aside className="w-full h-screen border-r border-white/5 bg-transparent overflow-y-auto px-[48px] pt-[80px] pb-[48px] flex flex-col gap-[32px] select-none">
       {/* Profile Header */}
       <div className="flex flex-col gap-4">
         <div className="w-[80px] h-[80px] rounded-full overflow-hidden border-2 border-white/10 shadow-lg relative group">

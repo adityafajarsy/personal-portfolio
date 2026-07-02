@@ -11,6 +11,7 @@ import Contact from "./elements/Contact";
 import ArticleDetail from "./components/ArticleDetail";
 import ProjectDetail from "./components/ProjectDetail";
 import LanguageSwitcher from "./components/LanguageSwitcher";
+import CustomCursor from "./components/CustomCursor";
 
 function App() {
   const [activeArticle, setActiveArticle] = useState(null);
@@ -56,6 +57,9 @@ function App() {
 
       {/* Bottom Floating Nav — mobile only */}
       {!activeArticle && !activeProject && <FloatingNav />}
+
+      {/* Custom Desktop Cursor */}
+      <CustomCursor />
     </div>
   );
 }

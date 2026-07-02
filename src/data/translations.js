@@ -1,26 +1,15 @@
-import VSCodeImg from "/assets/tools/vscode.png";
-import ReactImg from "/assets/tools/reactjs.png";
-import NextImg from "/assets/tools/nextjs.png";
-import TailwindImg from "/assets/tools/tailwind.png";
-import BootstrapImg from "/assets/tools/bootstrap.png";
-import JSImg from "/assets/tools/js.png";
-import NodeImg from "/assets/tools/nodejs.png";
-import GithubImg from "/assets/tools/github.png";
-import CanvaImg from "/assets/tools/canva.png";
-import FigmaImg from "/assets/tools/figma.png";
-
 const ProjectNetflixImg = "https://res.cloudinary.com/bj8jhjaq/image/upload/v1782900697/3_ydl3cu.png";
 const ProjectEcomImg = "https://res.cloudinary.com/bj8jhjaq/image/upload/v1782901544/4_mhe30x.webp";
 const ProjectCompanyImg = "https://res.cloudinary.com/bj8jhjaq/image/upload/v1782901551/8_qjicam.webp";
 
 const listToolsStatic = [
-  { id: 1, gambar: VSCodeImg, nama: "Visual Studio Code" },
-  { id: 2, gambar: ReactImg, nama: "React JS" },
-  { id: 3, gambar: NextImg, nama: "Next JS" },
-  { id: 4, gambar: TailwindImg, nama: "Tailwind CSS" },
-  { id: 5, gambar: BootstrapImg, nama: "Bootstrap" },
-  { id: 6, gambar: JSImg, nama: "Javascript" },
-  { id: 7, gambar: NodeImg, nama: "Node JS" },
+  { id: 1, gambar: "https://cdn.simpleicons.org/visualstudiocode/007ACC", nama: "Visual Studio Code" },
+  { id: 2, gambar: "https://cdn.simpleicons.org/react/61DAFB", nama: "React JS" },
+  { id: 3, gambar: "https://cdn.simpleicons.org/nextdotjs/white", nama: "Next JS" },
+  { id: 4, gambar: "https://cdn.simpleicons.org/tailwindcss/06B6D4", nama: "Tailwind CSS" },
+  { id: 5, gambar: "https://cdn.simpleicons.org/bootstrap/7952B3", nama: "Bootstrap" },
+  { id: 6, gambar: "https://cdn.simpleicons.org/javascript/F7DF1E", nama: "Javascript" },
+  { id: 7, gambar: "https://cdn.simpleicons.org/nodedotjs/339933", nama: "Node JS" },
   { id: 8, gambar: "https://cdn.simpleicons.org/express/white", nama: "Express JS" },
   { id: 9, gambar: "https://cdn.simpleicons.org/docker/2496ED", nama: "Docker" },
   { id: 10, gambar: "https://cdn.simpleicons.org/ubuntu/E95420", nama: "Ubuntu" },
@@ -28,9 +17,9 @@ const listToolsStatic = [
   { id: 12, gambar: "data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%2310B981' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'><circle cx='12' cy='12' r='9'/><path d='M12 16V8M9 11l3-3 3 3'/></svg>", nama: "Antigravity" },
   { id: 13, gambar: "data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23D97706' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'><polyline points='4 17 10 11 4 5'/><line x1='12' y1='19' x2='20' y2='19'/></svg>", nama: "Claude Code" },
   { id: 15, gambar: "data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23EC4899' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'><path d='M12 3v1M12 20v1M4 12H3M21 12h-1M18.36 5.64l-.7.7M6.34 17.66l-.7.7M5.64 5.64l.7.7M17.66 17.66l.7.7M9 12a3 3 0 1 1 6 0 3 3 0 0 1-6 0z'/></svg>", nama: "AI Tools" },
-  { id: 16, gambar: GithubImg, nama: "Github" },
-  { id: 17, gambar: CanvaImg, nama: "Canva" },
-  { id: 18, gambar: FigmaImg, nama: "Figma" },
+  { id: 16, gambar: "https://cdn.simpleicons.org/github/white", nama: "Github" },
+  { id: 17, gambar: "https://cdn.simpleicons.org/canva/00C4CC", nama: "Canva" },
+  { id: 18, gambar: "https://cdn.simpleicons.org/figma/F24E1B", nama: "Figma" },
 ];
 
 const listToolsStaticEn = listToolsStatic.map(t => {
@@ -203,31 +192,84 @@ export const translations = {
           kategori: "UI/UX & AI",
           tanggal: "June 28, 2026",
           baca: "5 min read",
-          nama: "Designing for the Next Web: The Convergence of UI & AI",
-          desk: "How generative interfaces and context-aware design systems are redefining how humans interact with digital applications.",
+          nama: "AI Can Create Beautiful Websites. But It Still Can't Understand Users.",
+          desk: "AI can generate modern, automated landing pages instantly. But visual beauty doesn't guarantee a successful product that truly solves human problems.",
           isi: `
-## Introduction
+A few years ago, building a website took weeks. Today, with just a few prompt lines, AI can generate a modern-looking landing page, complete with animations, dark mode, and professional-looking components.
+At first glance, it all looks impressive.
+But there is one question that is rarely asked.
+If the website looks good, does that mean it actually succeeds?
+Not necessarily.
+Because in the end, users don't come to admire our design. They come to get something done.
 
-Artificial Intelligence is no longer just a backend utility. Today, we are witnessing the emergence of generative interfaces—UIs that adapt, morph, and customize themselves in real-time based on user behavior and intent. This convergence of User Interface (UI) design and Artificial Intelligence (AI) is transforming the web.
+## Websites Are Tools, Not Paintings
 
-## The Shift to Generative UIs
+Advances in AI have changed how we build applications. Now, almost anyone can create a website or mobile app without having to write thousands of lines of code from scratch.
+This is an amazing development.
+However, this ease also gives birth to a new misunderstanding: many people begin to assume that an attractive design is the ultimate goal of a digital product.
+In fact, design is only a medium.
+The real goal is to help users achieve what they want with minimal effort.
+A beautiful website is indeed pleasant to look at. But if users struggle to find the buttons they need, get confused at checkout, or have to wait too long for heavy animations, then the design has failed to perform its function.
 
-Traditional web design relies on static layouts. We predict user flows, create wireframes, and code fixed containers. With context-aware AI models directly integrated into the client, interfaces can now generate layout modules on the fly. 
+## Users Come with a Goal, Not to Admire the UI
 
-Imagine a dashboards where:
-- The sidebar adapts its priority elements based on your current task.
-- Widgets dynamically resize to focus on anomalous data.
-- Color palettes and spacing respond to the user's focus metrics.
+Think about how we use an e-commerce platform.
+When opening the app, we are not looking for design inspiration.
+We don't think, "Wow, the button color combination is cool."
+What we think is much simpler.
+"I want to find a product."
+"I want to buy it."
+"I want the payment process to be fast."
+Done.
+The fewer obstacles to that goal, the better the user experience.
+This is why many of the best digital products actually feel simple. Not because they can't make complex layouts, but because they understand that every extra element comes with a cost.
+The cost of attention.
+The cost of time.
+And sometimes, the cost of performance.
 
-## Engineering the Synergy
+## Aesthetics Still Matter. As Long as They Help the User.
 
-To build these next-generation experiences, developers need to think beyond traditional component trees. The code itself must be modular and resilient. Leveraging tools like React Server Components, Tailwind CSS, and lightweight local transformers, we can build UIs that are both highly performant and contextually intelligent.
+Many people misinterpret this discussion as if beautiful design isn't important.
+That is not the case.
+Aesthetics still play a huge role. Good design builds trust, creates a professional impression, and makes products feel more comfortable to use.
+However, aesthetics should support the user experience, not steal the spotlight.
+Take animations, for example.
+Good animation can help users understand that a button is processing a request, provide smoother transitions when changing pages, or show that an action was successful.
+All of this makes the interaction feel more natural.
+On the contrary, animations that are too long just keep users waiting for something that could actually be completed in seconds.
+Another example is microinteractions.
+A small effect when a button is touched, a clear loading indicator, or a progress bar when filling out a form are not just visual candy. They provide feedback that makes users feel confident that the system is working.
+This is where aesthetics truly deliver value.
+Not because it looks cool, but because it helps users move faster and with more confidence.
 
-> "The best interface is the one that adjusts to your thoughts, not the one that forces you to adjust to its structure."
+## AI Can Create Interfaces. But It Cannot Understand Humans Yet.
 
-## What's Next?
+AI is great at generating layouts.
+AI can mimic design styles.
+AI can make consistent components.
+AI can even produce websites that visually look like products built by tech giants.
+However, there is one thing that still requires humans.
+Understanding humans.
+AI doesn't really know why users abandon a checkout page.
+AI can't feel the frustration of someone who has to fill out an excessively long form.
+AI also doesn't understand the business context, user behavior, or specific needs of the target audience without clear data and guidance.
+All of these decisions still require the thinking process of a product designer, UX designer, engineer, or product manager.
+Because building a digital product is not just about making something look good.
+It's about understanding what problems users are experiencing, and then finding the simplest way to solve them.
 
-As we move forward, the role of the frontend developer will shift from writing rigid layouts to crafting design systems that act as flexible rulesets for AI-driven layout engines. The future of the web is personalized, dynamic, and fluid.
+## The Best Design is the One You Don't Feel
+
+The rapid growth of AI will make the website building process faster and faster.
+Most likely, in the next few years, creating an application will be much easier than it is today.
+Because of that, the skill that will become increasingly valuable is not just making beautiful layouts.
+But the ability to understand humans.
+Understanding how they think.
+How they make decisions.
+How they get confused.
+And how to help them reach their goals without having to think too hard.
+Because in the end, users won't remember how cool our animations were.
+They will remember one thing that is far more important.
+*The website helped me finish what I needed.*
           `
         },
         {
@@ -265,26 +307,32 @@ A beautiful interface is useless if users leave before it finishes loading. Prio
         {
           id: 3,
           gambar: "/assets/article_lang_code.png",
-          kategori: "Software Engineering",
+          kategori: "Technology & Skills",
           tanggal: "April 02, 2026",
-          baca: "6 min read",
-          nama: "Language & Code: Translating Semantics into Software",
-          desk: "How a background in linguistics and literature builds a unique perspective on writing clean, maintainable code.",
+          baca: "5 min read",
+          nama: "In the AI Era, the Most Valuable Skill is Not Coding or Design",
+          desk: "As AI tools make software building incredibly easy, the human value shifts away from technical execution to experience, perspective, and taste.",
           isi: `
-## Language is code, Code is language
-
-At their core, both human languages and programming languages are systems of symbols, rules, and syntax designed to transfer meaning. While Russian literature relies on complex grammar rules and semantic nuances, JavaScript relies on lexical scope, operators, and functions.
-
-## The Linguistic Approach to Architecture
-
-Studying linguistics teaches you to analyze systems. You learn how words combine to form phrases, and how context changes meaning. When applied to software engineering, this perspective offers unique benefits:
-- **Clean Naming Conventions**: Choosing variable and function names that are clear, descriptive, and structurally consistent.
-- **Semantic HTML**: Structuring documents so their elements convey proper meaning to both search engines and accessibility tools.
-- **Deconstructive Debugging**: Breaking complex algorithmic problems down into their core semantic blocks, much like analyzing sentence structure.
-
-## Bridging the Gap
-
-Being a developer with a background in humanities is not a setback; it is an advantage. It allows you to translate complex human requirements into logical, well-structured software architectures. After all, writing code is just another form of translation.
+A few years ago, building a website required a whole team, time, and serious technical skills. 
+Today, a single prompt can generate an entire application. UIs are created in seconds, code runs instantly, illustrations are generated on the fly, videos are starting to be automated, and AI agents are beginning to manage schedules and tasks. This is just a few years into generative AI, making it hard to imagine what will be possible in five or ten years.
+## This leads to a question I often hear: if AI is getting so smart, what skills are still worth learning?
+In my opinion, the answer is not a specific technical skill. 
+The things that will become most valuable are those that cannot be downloaded into an AI model.
+## Experience Shapes Perspective
+I work across several creative fields, from graphic design and web development to video editing. All the tools I use are now assisted by AI, but the final output still depends on one thing: my own experience.
+Take video editing, for example. I do not just cut clips or add transitions. I choose the exact moment to make the audience laugh, set the visual rhythm, and build emotion through storytelling. These decisions do not come from software. They are shaped by past projects, videos I have watched, mistakes I have made, and my interactions with people. 
+AI can assist the process, but experience remains the source of that creative decision.
+## Creativity is More Than Generating New Things
+Many people think AI is creative because it can generate beautiful posters, illustrations, or videos. I agree that AI is excellent at producing variations. But human creativity works a bit differently.
+We connect experiences that seem completely unrelated—conversations with friends, jokes heard while hanging out, films we have watched, books we have read, and personal problems we have faced. All these references blend into a unique perspective. 
+Two people can use the exact same AI tool and prompts, but produce completely different works because they bring different life experiences to the table. AI helps build the piece, but humans give it character.
+## References Build Taste
+One of the hardest things to learn is taste—the ability to distinguish between what is average and what is truly exceptional. Taste does not come from a single prompt. It is built by regularly observing good design, trying different products, reading, discussing, receiving feedback, and constantly evaluating one's own work. 
+The broader your references, the better decisions you make. That decision-making is something automation cannot replace.
+## AI is a Tool, Not a Replacement for Perspective
+I believe AI will continue to take over repetitive and technical tasks. This is not something to fear. Instead, it gives us more time to focus on what is truly valuable: thinking, understanding people, building concepts, and making better decisions.
+Since in the end, AI can generate thousands of possibilities, but humans must decide which possibility is worth bringing to life. 
+As AI evolves, it becomes clear that human value lies not just in what we can build, but in the experience, perspective, creativity, and judgment we bring to every creation.
           `
         }
       ]
@@ -328,8 +376,8 @@ Being a developer with a background in humanities is not a setback; it is an adv
       quote: "For me, coding is problem solving..",
       title: "Hi, I'm Aditya Fajar SY",
       bio: "Seorang Developer dengan latar belakang Bahasa, Desain Grafis, dan Kreatif Multimedia. Saya membangun situs web dari sudut pandang masalah pengguna di mana desain yang proper berpadu dengan fungsionalitas yang smooth. Menyeimbangkan teknis dengan tujuan bisnis, saya berfokus membuat solusi web yang memecahkan masalah nyata perusahaan secara efektif.",
-      downloadCv: "Unduh CV",
-      connectMe: "Hubungkan dengan saya",
+      downloadCv: "Download CV",
+      connectMe: "Connect with me",
     },
     projects: {
       label: "Projects",
@@ -459,88 +507,108 @@ Being a developer with a background in humanities is not a setback; it is an adv
           kategori: "UI/UX & AI",
           tanggal: "28 Juni 2026",
           baca: "5 menit baca",
-          nama: "Merancang untuk Web Masa Depan: Konvergensi UI & AI",
-          desk: "Bagaimana antarmuka generatif dan sistem desain sadar konteks mendefinisikan kembali cara manusia berinteraksi dengan aplikasi digital.",
+          nama: "AI Bisa Membuat Web Cantik, Tapi tetep Belum Paham Pengguna.",
+          desk: "AI bisa menghasilkan landing page otomatis yang modern dengan instan. Namun, keindahan visual tidak menjamin produk yang sukses memecahkan masalah manusia.",
           isi: `
-## Pendahuluan
+"Website yang bagus bukanlah website yang paling cantik. Website yang bagus adalah website yang membuat orang cepat menyelesaikan apa yang mereka datang untuk lakukan."
+## Beberapa tahun lalu, bikin website itu butuh waktu berminggu-minggu. Sekarang, cukup dengan beberapa kalimat prompt, AI bisa menghasilkan landing page modern, lengkap dengan animasi, dark mode, dan komponen yang kelihatan profesional. 
+Sekilas semuanya terlihat mengesankan, tapi ada satu pertanyaan yang jarang ditanyakan: kalau website itu kelihatan bagus, apakah itu berarti website tersebut benar-benar berhasil? Belum tentu. 
+Karena pada akhirnya, pengguna nggak datang untuk mengagumi desain kita, mereka datang untuk menyelesaikan sesuatu.
+## Website Bukan Lukisan, Tapi Alat
+Kemajuan AI sudah mengubah cara kita membangun aplikasi. Sekarang hampir siapa aja bisa bikin website atau mobile app tanpa harus menulis ribuan baris kode dari nol, dan ini perkembangan yang luar biasa. 
+Tapi kemudahan itu juga melahirkan kesalahpahaman baru, banyak orang mulai menganggap desain yang menarik adalah tujuan utama dari sebuah produk digital. Padahal desain cuma media. 
+## Tujuan sebenarnya adalah membantu user mencapai apa yang mereka inginkan dengan usaha seminimal mungkin.
+Website yang indah memang enak dilihat, tapi kalau user kesulitan menemukan tombol yang mereka butuhkan, bingung saat checkout, atau harus nunggu animasi yang kelamaan, ya desain itu udah gagal menjalankan fungsinya.
+## Pengguna Datang untuk Tujuan, Bukan untuk Mengagumi UI
+Coba pikirkan gimana kita pakai e-commerce. Saat buka aplikasi, kita nggak sedang cari inspirasi desain. Kita nggak mikir "wah, kombinasi warna tombolnya keren ya." Yang kita pikirkan justru jauh lebih sederhana: saya ingin mencari produk, saya ingin membelinya, saya ingin proses pembayarannya cepat. Selesai.
+Makin sedikit hambatan menuju tujuan itu, makin baik experience yang dirasakan user. Ini juga alasan kenapa banyak produk digital terbaik justru terlihat sederhana, contohnya Amazon. Bukan karena mereka nggak mampu bikin tampilan yang rumit, tapi karena mereka paham bahwa setiap elemen tambahan punya biaya: biaya perhatian, biaya waktu, dan kadang biaya performa.
+## Estetika Tetap Penting, Asalkan Membantu User
+Banyak orang salah mengartikan pembahasan ini seolah-olah desain yang indah itu nggak penting. Padahal bukan itu maksudnya. Estetika tetap punya peran yang sangat besar, desain yang baik mampu membangun kepercayaan, menciptakan kesan profesional, dan bikin produk terasa lebih nyaman dipakai. Cuma, estetika seharusnya jadi pendukung experience user, bukan pusat perhatian.
+Ambil contoh animasi. Animasi yang baik bisa bantu user paham bahwa sebuah tombol sedang memproses permintaan, kasih transisi yang lebih halus saat pindah halaman, atau nunjukin bahwa sebuah aksi berhasil dilakukan. Semua itu bikin interaksi terasa lebih natural. 
+## Sebaliknya, animasi yang kepanjangan cuma bikin user nunggu lebih lama untuk hal yang sebenarnya bisa selesai dalam hitungan detik.
+Contoh lainnya microinteraction. Efek kecil saat tombol disentuh, indikator loading yang jelas, atau progress bar ketika mengisi formulir, itu bukan sekadar pemanis visual. Semuanya kasih umpan balik yang bikin user yakin bahwa sistem sedang bekerja. 
+Di sinilah estetika benar-benar kasih nilai, bukan karena tampilannya keren, tapi karena membantu pengguna menyelesaikan pekerjaan lebih cepat dan lebih yakin.
+## AI Bisa Membuat Interface, Tapi Belum Bisa Memahami Manusia
+AI memang jago bikin layout, bisa meniru gaya desain, bisa bikin komponen yang konsisten, bahkan bisa menghasilkan website yang secara visual kelihatan seperti produk buatan perusahaan besar. 
+Tapi ada satu hal yang masih butuh manusia, yaitu memahami manusia itu sendiri.
+## AI nggak benar-benar tahu kenapa pengguna meninggalkan halaman checkout.
+AI nggak bisa merasakan frustrasi seseorang yang harus ngisi formulir kepanjangan. AI juga nggak paham konteks bisnis, perilaku user, atau kebutuhan spesifik dari target audiens tanpa data dan arahan yang jelas. 
+Semua keputusan itu tetap butuh cara berpikir seorang product designer, UX designer, engineer, atau product manager. Karena membangun produk digital bukan cuma soal bikin sesuatu yang kelihatan bagus, melainkan memahami masalah apa yang sedang dialami user, lalu mencari cara paling sederhana untuk menyelesaikannya.
+## Desain Terbaik Adalah Desain yang Smooth
+Semakin berkembangnya AI, proses bikin website juga bakal makin cepat. Kemungkinan besar, beberapa tahun ke depan, bikin aplikasi bakal jauh lebih gampang dibanding hari ini. Justru karena itu, kemampuan fundamental bakal makin bernilai, bukan sekadar bikin tampilan yang indah, melainkan kemampuan memahami manusia: bagaimana mereka berpikir, bagaimana mereka mengambil keputusan, bagaimana mereka merasa bingung, dan bagaimana membantu mereka mencapai tujuan tanpa harus mikir terlalu keras.
+Karena pada akhirnya, pengguna nggak akan ingat seberapa keren animasi yang kita buat. 
 
-Kecerdasan Buatan (AI) bukan lagi sekadar alat bantu backend. Hari ini, kita menyaksikan munculnya antarmuka generatif—UI yang beradaptasi, berubah bentuk, dan menyesuaikan diri secara real-time berdasarkan perilaku dan niat pengguna. Konvergensi desain User Interface (UI) dan Artificial Intelligence (AI) ini mengubah web secara mendasar.
-
-## Pergeseran ke UI Generatif
-
-Desain web tradisional bergantung pada tata letak statis. Kita memprediksi alur pengguna, membuat wireframe, dan mengode kontainer tetap. Dengan model AI sadar konteks yang terintegrasi langsung di sisi klien, antarmuka sekarang dapat menghasilkan modul tata letak dengan cepat.
-
-Bayangkan sebuah dashboard di mana:
-- Sidebar menyesuaikan elemen prioritasnya berdasarkan tugas Anda saat ini.
-- Widget diubah ukurannya secara dinamis untuk fokus pada anomali data.
-- Palet warna dan spasi merespons metrik fokus pengguna.
-
-## Merekayasa Sinergi
-
-Untuk membangun pengalaman generasi berikutnya ini, pengembang perlu berpikir di luar pohon komponen tradisional. Kode itu sendiri harus modular dan tangguh. Memanfaatkan alat-alat seperti React Server Components, Tailwind CSS, dan model lokal yang ringan, kita dapat membangun UI yang berkinerja tinggi sekaligus cerdas secara kontekstual.
-
-> "Antarmuka terbaik adalah yang menyesuaikan dengan pikiran Anda, bukan yang memaksa Anda menyesuaikan diri dengan strukturnya."
-
-## Apa Selanjutnya?
-
-Ke depan, peran pengembang frontend akan bergeser dari menulis tata letak kaku menjadi merancang sistem desain yang bertindak sebagai aturan fleksibel untuk mesin tata letak bertenaga AI. Masa depan web bersifat pribadi, dinamis, dan cair.
+Mereka akan ingat satu hal yang jauh lebih penting: *website itu membantu saya menyelesaikan pekerjaan dengan mudah.*
           `
         },
         {
           id: 2,
           gambar: "/assets/article_speed_ux.png",
-          kategori: "Kinerja Web",
+          kategori: "UI/UX Design",
           tanggal: "14 Mei 2026",
           baca: "4 menit baca",
-          nama: "Mengapa Performa adalah Metrik UX Tertinggi",
-          desk: "Pembahasan mendalam tentang ukuran bundel, node DOM, dan mengapa waktu muat yang cepat mengalahkan transisi mewah setiap saat.",
+          nama: "Jangan Bikin Desain Website yang Generik",
+          desk: "Banyak banget Design website yang mirip semua akhir akhir ini.",
           isi: `
-## Psikologi Kecepatan
+Saya biasanya cuma butuh beberapa detik untuk menebak apakah sebuah website dibuat pakai AI atau tidak. Bukan karena saya anti-AI, justru sebaliknya, saya pakai AI hampir tiap hari untuk bantu proses desain dan development. 
+Yang bikin sebuah website gampang dikenali itu bukan karena AI-nya, tapi karena semua keputusan desainnya kok rasanya mirip semua. Hero section sama, layout sama, card dengan bayangan yang itu-itu lagi, gradien ungu-biru yang sama, animasi yang identik, bahkan urutan kontennya pun nyaris nggak pernah berubah. 
+Hasilnya sih emang kelihatan modern, tapi juga rasanya kayak website ke-100 yang saya lihat minggu itu.
+## AI Bikin Mendesain Jadi Gampang. Terlalu Gampang, Malah..
+Nggak bisa dipungkiri, AI sudah mengubah cara kita bikin produk digital. Sekarang, siapa aja bisa bikin landing page cuma dengan beberapa kalimat prompt, dan seringnya hasilnya udah cukup rapi buat langsung dipublikasikan. Ini kemajuan yang luar biasa.
+Masalahnya baru muncul ketika AI dipakai sebagai pengganti proses berpikir. Banyak orang cuma ngetik "buatkan landing page SaaS yang modern", lalu langsung menerima hasil pertama tanpa bertanya lebih jauh: apakah desain ini benar-benar cocok dengan produk saya? Apakah pengguna saya memang butuh tampilan seperti ini? Apakah website ini punya identitas sendiri? 
+## Kalau semua orang pakai prompt yang sama, ya jangan heran kalau hasilnya juga kelihatan sama.
+## Desain yang Bagus Selalu Dimulai dari Referensi, Bukan Generasi
+Setiap kali mau bikin website baru, saya hampir nggak pernah langsung buka AI. Saya justru mulai dari riset dulu, cari website lain yang punya fungsi serupa, kumpulkan referensi yang menurut saya berhasil menyelesaikan masalah penggunanya.
+ Baru setelah itu saya bedah satu-satu: kenapa navigasinya terasa nyaman, kenapa halaman produknya gampang dipahami, kenapa animasinya pas dan nggak berlebihan, kenapa proses checkout-nya bisa secepat itu.
+Saya nggak menyalin seluruh desainnya. Saya cuma ambil ide-ide kecil yang menurut saya berhasil, lalu gabungkan dengan referensi lain dan sesuaikan dengan kebutuhan produk yang lagi saya bangun. 
+Barulah setelah gambarannya jelas, AI saya pakai untuk mempercepat eksekusinya, bukan untuk menggantikan proses berpikirnya.
+## AI Seharusnya Jadi Asisten, Bukan Desainer Utama
+Banyak orang memperlakukan AI kayak tombol "Generate Website". Padahal yang jauh lebih efektif itu memperlakukannya kayak asisten. Makin spesifik arahan yang kita kasih, makin bagus hasil yang keluar. 
+Daripada cuma nulis "buat landing page modern", jauh lebih baik kalau kita udah punya gambaran seperti hero dengan layout editorial ala website A, navigasi minimalis ala website B, microinteraction tombol ala website C, animasi scroll yang halus tanpa ganggu performa, dan fokus utama di kecepatan checkout.
+AI bekerja jauh lebih baik kalau kita sudah tahu apa yang mau dibuat, bukan ketika kita menyerahkan semua keputusan desain ke dia.
+## Taste Itu Nggak Bisa Digenerate
+Ada satu hal yang sering dilupakan kalau lagi bahas AI: taste. Kemampuan buat bedain mana desain yang benar-benar bagus dan mana yang cuma kelihatan menarik. Taste itu nggak muncul dalam semalam, dia dibangun dari ratusan website yang pernah kita lihat, puluhan produk yang pernah kita pakai, dan ratusan keputusan desain yang pernah kita evaluasi. 
+Makin banyak referensi yang kita pelajari, makin gampang kita mengenali pola desain yang efektif, bukan cuma yang indah, tapi juga yang fungsional.
+Ini juga alasan kenapa dua orang bisa pakai AI yang sama, prompt yang nyaris identik, tapi hasilnya beda jauh kualitasnya. Bedanya bukan di tools yang dipakai, tapi di pengalaman dan cara mereka mengambil keputusan.
+## AI Tidak Menggantikan Fundamental Desain
+Justru makin gampang AI dipakai, makin penting juga kita paham fundamental desain, mulai dari hierarki visual, tipografi, whitespace, komposisi, kontras, grid, sampai user flow. Prinsip-prinsip itu nggak hilang cuma karena sekarang kita bisa bikin UI dalam hitungan menit. 
+Sebaliknya, fundamental inilah yang bantu kita menilai apakah hasil dari AI memang layak dipakai atau justru perlu diperbaiki. Tanpa pemahaman itu, kita cuma jadi orang yang menerima hasil, bukan orang yang benar-benar mendesain.
+## Website yang Berkesan Nggak Lahir dari Prompt yang Pendek
+AI bakal terus berkembang. Mungkin beberapa tahun lagi, bikin website cuma butuh beberapa detik. Tapi ada satu hal yang susah digantikan, yaitu kemampuan manusia untuk mengamati, memilih, menggabungkan, dan mengambil keputusan desain yang tepat.
+Karena website yang bagus itu bukan yang kelihatan seperti hasil AI, melainkan yang punya karakter, paham penggunanya, dan terasa dibuat dengan penuh pertimbangan. 
 
-Pengalaman pengguna dibangun di atas kepercayaan, dan kepercayaan dibangun di atas keandalan. Jika sebuah situs web membutuhkan waktu lebih dari tiga detik untuk dimuat, lebih dari 40% pengguna akan meninggalkannya. Setiap milidetik latensi adalah titik gesekan yang mengurangi kepuasan pengguna.
-
-## Bottleneck dalam Aplikasi Web Modern
-
-Meskipun framework modern memungkinkan kita membangun aplikasi satu halaman yang kompleks, mereka juga memperkenalkan overhead yang signifikan:
-1. **JavaScript yang Menggembung**: Mengirimkan megabyte JS yang perlu diurai dan dikompilasi oleh browser.
-2. **Kompleksitas Pohon DOM**: Mereplikasi pohon tata letak atau merender elemen yang tidak terlihat, yang memperlambat kalkulasi ulang.
-3. **Aset yang Memblokir Render**: Impor stylesheet berat atau memuat font khusus melalui impor CSS yang lambat.
-
-## Strategi Utama untuk Optimasi Maksimal
-
-Untuk membangun aplikasi web yang secepat kilat, fokuslah pada optimasi kritis berikut:
-- **Minimalkan Jumlah Node DOM**: Hindari menduplikasi struktur elemen (misalnya merender pohon desktop/mobile terpisah secara bersamaan).
-- **Ekstrak Alokasi Statis**: Definisikan animasi, daftar statis, dan ikon di luar siklus render untuk mencegah kebocoran memori dan overhead pengumpulan sampah (garbage collection).
-- **Terapkan Lazy Loading**: Tangguhkan gambar di luar layar dan bagi bundel menggunakan impor dinamis.
-
-## Kesimpulan
-
-Antarmuka yang indah tidak berguna jika pengguna pergi sebelum selesai dimuat. Prioritaskan performa sebagai pondasi inti dari pengalaman pengguna Anda.
+AI memang bisa mempercepat proses bikin antarmuka, tapi rasa, identitas, dan kualitas sebuah desain tetap bergantung pada orang yang menggunakannya.
           `
         },
         {
           id: 3,
           gambar: "/assets/article_lang_code.png",
-          kategori: "Rekayasa Perangkat Lunak",
+          kategori: "Kreativitas & AI",
           tanggal: "02 April 2026",
-          baca: "6 menit baca",
-          nama: "Bahasa & Kode: Menerjemahkan Semantik menjadi Perangkat Lunak",
-          desk: "Bagaimana latar belakang linguistik dan sastra membangun perspektif unik dalam menulis kode yang bersih dan mudah dipelihara.",
+          baca: "5 menit baca",
+          nama: "Di Era AI, Skill Paling Berharga Justru Bukan Coding atau Desain",
+          desk: "Makin pintarnya AI membuat kemudahan teknis melonjak. Skill yang akan terus bernilai tinggi di masa depan justru hal-hal non-teknis yang tidak bisa diunduh ke model AI.",
           isi: `
-## Bahasa adalah kode, Kode adalah bahasa
-
-Pada intinya, baik bahasa manusia maupun bahasa pemrograman adalah sistem simbol, aturan, dan sintaksis yang dirancang untuk mentransfer makna. Sementara sastra Rusia mengandalkan aturan tata bahasa yang kompleks dan nuansa semantik, JavaScript mengandalkan cakupan leksikal, operator, dan fungsi.
-
-## Pendekatan Linguistik terhadap Arsitektur
-
-Mempelajari linguistik mengajarkan Anda untuk menganalisis sistem. Anda belajar bagaimana kata-kata bergabung membentuk frasa, dan bagaimana konteks mengubah makna. Ketika diterapkan pada rekayasa perangkat lunak, perspektif ini menawarkan manfaat unik:
-- **Konvensi Penamaan yang Bersih**: Memilih nama variabel dan fungsi yang jelas, deskriptif, dan konsisten secara struktur.
-- **HTML Semantik**: Menstrukturkan dokumen sehingga elemen-elemennya menyampaikan makna yang tepat bagi mesin pencari dan alat aksesibilitas.
-- **Debugging Dekonstruktif**: Memecah masalah algoritmik yang kompleks menjadi blok semantik intinya, mirip seperti menganalisis struktur kalimat.
-
-## Menjembatani Celah
-
-Menjadi pengembang dengan latar belakang humaniora bukanlah kemunduran; itu adalah keuntungan. Ini memungkinkan Anda menerjemahkan persyaratan manusia yang kompleks menjadi arsitektur perangkat lunak yang logis dan terstruktur dengan baik. Bagaimanapun, menulis kode hanyalah bentuk lain dari terjemahan.
+Beberapa tahun lalu, bikin sebuah website butuh tim, waktu, dan keahlian teknis yang ngga sedikit. 
+Sekarang, satu prompt bisa menghasilkan aplikasi lengkap. UI dibuat dalam hitungan detik, kode langsung jalan, ilustrasi bisa digenerate, video mulai bisa dibuat otomatis, bahkan AI agent udah mulai bantu ngatur jadwal dan ngerjain tugas-tugas sehari-hari. Dan ini baru beberapa tahun sejak AI generatif mulai dikenal luas, jadi susah membayangkan seperti apa kemampuannya lima atau sepuluh tahun ke depan.
+## Lalu muncul pertanyaan yang sering saya dengar: kalau AI makin pintar, skill apa yang masih layak dipelajari manusia? 
+Menurut saya, jawabannya bukan skill teknis tertentu. 
+Yang bakal makin bernilai justru hal-hal yang nggak bisa diunduh ke dalam sebuah model AI.
+## Pengalaman Menciptakan Cara Pandang
+Saya kerja di beberapa bidang sekaligus, mulai dari desain grafis, web development, sampai editing video. Semua tools yang saya pakai sekarang udah dibantu AI, tapi hasil akhirnya tetap bergantung pada satu hal: pengalaman saya sendiri.
+Misalnya saat mengedit video. Saya nggak cuma motong klip atau nambahin transisi, saya milih momen yang tepat buat bikin penonton tertawa, nentuin ritme video, dan bangun emosi lewat cara penyampaiannya. Keputusan-keputusan kayak gini nggak muncul dari software, mereka terbentuk dari proyek yang pernah saya kerjakan, video yang pernah saya tonton, kesalahan yang pernah saya bikin, dan interaksi saya dengan banyak orang. 
+AI bisa bantu prosesnya, tapi pengalaman tetap jadi sumber dari keputusan kreatif itu.
+## Kreativitas Bukan Sekadar Menghasilkan Sesuatu yang Baru
+Banyak orang menganggap AI udah kreatif karena mampu menghasilkan poster, ilustrasi, atau video yang menarik. Saya setuju, AI memang jago banget dalam menghasilkan variasi. Tapi kreativitas manusia bekerja dengan cara yang agak beda.
+Kita menghubungkan pengalaman yang kelihatannya nggak berkaitan, percakapan dengan teman, humor yang kita dengar saat nongkrong, film yang pernah ditonton, buku yang pernah dibaca, masalah yang pernah dialami. Semua referensi itu bercampur jadi perspektif yang unik. 
+Dua orang bisa pakai AI yang sama, tapi menghasilkan karya yang sangat berbeda karena mereka membawa pengalaman hidup yang berbeda juga. AI membantu membuat karya, manusia yang memberi karya itu karakter.
+## Referensi Membentuk Taste
+Salah satu hal yang paling susah dipelajari adalah taste, kemampuan untuk membedakan mana yang biasa aja dan mana yang benar-benar berkualitas. Taste nggak muncul dari satu prompt. Ia dibangun dari kebiasaan melihat desain yang baik, mencoba berbagai produk, membaca, berdiskusi, menerima kritik, dan terus mengevaluasi hasil sendiri. 
+Makin luas referensi seseorang, makin baik pula keputusan yang ia ambil, dan keputusan itulah yang nggak bisa digantikan cuma dengan otomatisasi.
+## AI Akan Menjadi Alat, Bukan Pengganti Perspektif
+Saya percaya AI bakal terus mengambil alih banyak pekerjaan yang sifatnya berulang dan teknis. Itu bukan sesuatu yang perlu ditakuti, justru itu ngasih kita lebih banyak waktu untuk melakukan hal yang lebih bernilai: berpikir, memahami manusia, membangun ide, dan mengambil keputusan yang lebih baik.
+Karena pada akhirnya, AI bisa menghasilkan ribuan kemungkinan, tapi manusialah yang memutuskan kemungkinan mana yang layak diwujudkan. 
+Semakin berkembang AI, semakin jelas bahwa nilai manusia bukan cuma pada apa yang bisa kita buat, melainkan pada pengalaman, perspektif, kreativitas, dan penilaian yang kita bawa ke dalam setiap karya.
           `
         }
       ]

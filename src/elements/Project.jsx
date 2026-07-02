@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useRef } from "react";
 import { motion } from "framer-motion";
 import { useLanguage } from "../context/LanguageContext";
 
@@ -28,6 +28,14 @@ const sloganVariants = {
 export default function Project({ onSelectProject }) {
   const { t } = useLanguage();
   const listProyek = t("projects.list") || [];
+  const carouselRef = useRef(null);
+
+  const scroll = (direction) => {
+    if (carouselRef.current) {
+      const scrollAmount = direction === "left" ? -400 : 400;
+      carouselRef.current.scrollBy({ left: scrollAmount, behavior: "smooth" });
+    }
+  };
 
   return (
     <motion.section
@@ -63,12 +71,34 @@ export default function Project({ onSelectProject }) {
         </div>
       </div>
 
-      {/* Horizontal Carousel */}
-      <div className="relative w-full">
+      {/* Horizontal Carousel Wrapper */}
+      <div className="relative w-full group/carousel">
+        {/* Carousel Arrow Controls (Floating on Left & Right) */}
+        <button
+          onClick={() => scroll("left")}
+          className="hidden sm:flex absolute left-4 top-[40%] -translate-y-1/2 w-12 h-12 rounded-full bg-black/25 backdrop-blur-[4px] border border-white/5 items-center justify-center text-white/60 hover:bg-white/10 hover:text-[#3B82F6] hover:border-[#3B82F6]/20 active:scale-95 transition-all duration-250 cursor-pointer z-20 shadow-xl opacity-0 group-hover/carousel:opacity-100"
+          aria-label="Scroll left"
+        >
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+            <path d="M15 18l-6-6 6-6" />
+          </svg>
+        </button>
+
+        <button
+          onClick={() => scroll("right")}
+          className="hidden sm:flex absolute right-4 top-[40%] -translate-y-1/2 w-12 h-12 rounded-full bg-black/25 backdrop-blur-[4px] border border-white/5 items-center justify-center text-white/60 hover:bg-white/10 hover:text-[#3B82F6] hover:border-[#3B82F6]/20 active:scale-95 transition-all duration-250 cursor-pointer z-20 shadow-xl opacity-0 group-hover/carousel:opacity-100"
+          aria-label="Scroll right"
+        >
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+            <path d="M9 18l6-6-6-6" />
+          </svg>
+        </button>
+
         {/* Right edge fade */}
         <div className="pointer-events-none absolute right-0 top-0 h-full w-20 bg-gradient-to-l from-[#050505] to-transparent z-10" />
 
         <motion.div
+          ref={carouselRef}
           className="flex overflow-x-auto gap-5 pb-4 snap-x snap-mandatory scroll-smooth scrollbar-none"
           variants={containerVariants}
         >

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { Send, Mail, Phone, Globe, Linkedin, Instagram } from "lucide-react";
 import { motion } from "framer-motion";
 import { useLanguage } from "../context/LanguageContext";
@@ -42,6 +42,7 @@ const contactLinks = [
 
 export default function Contact() {
   const { lang, t } = useLanguage();
+  const [hoveredIndex, setHoveredIndex] = useState(null);
 
   return (
     <motion.section
@@ -93,28 +94,45 @@ export default function Contact() {
             <span className="text-[11px] font-bold tracking-wider text-[#8A8A8A] uppercase mb-4 block">
               {t("contact.channels")}
             </span>
-            <div className="flex flex-col">
+            <div 
+              className="flex flex-col group/channelsList"
+              onMouseLeave={() => setHoveredIndex(null)}
+            >
               {contactLinks.map((link, idx) => {
                 const Icon = link.icon;
                 const localizedLabel = link.label === "Phone" ? (lang === "id" ? "Telepon" : "Phone") : link.label;
+                const isCurrentHovered = hoveredIndex === idx;
+                const isAnyHovered = hoveredIndex !== null;
+
                 return (
-                  <div
+                  <a
                     key={idx}
-                    className="flex items-center justify-between py-3.5 border-b border-white/5 last:border-b-0 hover:bg-white/2 px-2 rounded-lg transition-all duration-200"
+                    href={link.href}
+                    target={link.label !== "Phone" && link.label !== "Email" ? "_blank" : undefined}
+                    rel="noopener noreferrer"
+                    onMouseEnter={() => setHoveredIndex(idx)}
+                    className={`flex items-center justify-between py-3.5 border-b border-white/5 last:border-b-0 px-2 rounded-lg transition-all duration-300 cursor-pointer ${
+                      isAnyHovered 
+                        ? isCurrentHovered 
+                          ? "bg-white/[0.03] opacity-100" 
+                          : "opacity-25 scale-[0.98] blur-[0.5px]" 
+                        : "opacity-100"
+                    }`}
                   >
-                    <span className="text-[13px] text-[#8A8A8A] font-medium flex items-center gap-2">
-                      <Icon size={14} className="text-white/40" />
+                    <span className={`text-[13px] font-medium flex items-center gap-2.5 transition-colors duration-300 ${
+                      isCurrentHovered ? "text-white" : "text-[#8A8A8A]"
+                    }`}>
+                      <Icon size={14} className={`transition-colors duration-300 ${
+                        isCurrentHovered ? "text-[#3B82F6]" : "text-white/40"
+                      }`} />
                       {localizedLabel}
                     </span>
-                    <a
-                      href={link.href}
-                      target={link.label !== "Phone" && link.label !== "Email" ? "_blank" : undefined}
-                      rel="noopener noreferrer"
-                      className="text-[13px] text-white font-semibold hover:text-[#3B82F6] transition-colors duration-200 truncate max-w-[180px] sm:max-w-none text-right"
-                    >
+                    <span className={`text-[13px] font-semibold transition-colors duration-300 truncate max-w-[180px] sm:max-w-none text-right ${
+                      isCurrentHovered ? "text-white" : "text-[#8A8A8A]"
+                    }`}>
                       {link.value}
-                    </a>
-                  </div>
+                    </span>
+                  </a>
                 );
               })}
             </div>
