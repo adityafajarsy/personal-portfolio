@@ -339,6 +339,45 @@ I believe AI will continue to take over repetitive and technical tasks. This is 
 Since in the end, AI can generate thousands of possibilities, but humans must decide which possibility is worth bringing to life. 
 As AI evolves, it becomes clear that human value lies not just in what we can build, but in the experience, perspective, creativity, and judgment we bring to every creation.
           `
+        },
+        {
+          id: 4,
+          gambar: "/assets/article4.webp",
+          kategori: "Personal & Mindset",
+          tanggal: "July 02, 2026",
+          baca: "7 min read",
+          nama: "My Journey to Building a Builder's Mindset",
+          desk: "Transitioning from Russian Literature to software engineering, I realized that the most crucial asset isn't just coding—it's the relentless mindset of a builder.",
+          isi: `
+# My Journey to Building a Builder's Mindset
+Back then, if anyone had asked, "Why study Russian Literature if you ultimately want to work in IT?", I probably would have struggled to answer. At first glance, there really is no connection.
+## One is about language and culture, while the other is about building applications.
+But after spending several years navigating both, I have realized that every phase is interconnected. Nothing was truly in vain. What I have been building all this time is not just a collection of skills. I have been building something far more crucial: **the mindset of a builder.**
+## In the Beginning, I Just Wanted Time
+My reason for choosing a literature major was actually quite simple. My mindset at the time was, "as long as my college schedule isn't too demanding, I can still learn other skills outside of campus." It might sound odd, but that decision turned out to be the starting point of everything.
+From my very first semester, I threw myself into various student organizations and committees. Almost all of my roles revolved around publications, graphic design, multimedia, and documentation. Back then, I was frequently working on motion graphics, video editing, aftermovies, and even 3D visuals. Over time, the creative world became the space where I truly grew.
+## Organizations Taught Me More Than Just Design
+In these student organizations, my job wasn't just to make posters. I designed logos, created visual identities for student bodies, curated Instagram grids, built banners, animated event bumpers, handled event documentation, and edited aftermovies. Everything shared one common trait: they had to be executed with high standards, because every piece of work I put out carried my own name, the organization's reputation, and even the department's brand.
+Whenever there were inter-department competitions or events, I always wanted our team's visual assets to look highly polished. I loved it when my department could come up with fresh creative ideas before anyone else did. Without realizing it, those experiences shaped my way of thinking — not just about design, but about quality standards, ownership, and the habit of continuous improvement. The more projects I handled, the more refined my creativity, visual taste, and ability to read shifting trends became.
+## When the Programming World Began to Call
+As I entered my sixth and seventh semesters, my organizational activities began to wind down. For the first time in a while, finally had a lot of time for self-reflection. That was when I remembered a goal that had been in my mind since before college: stepping into the world of IT.
+One of the defining moments was watching Timothy Ronald's podcast with Deddy Corbuzier in early 2023. Around the same time, the first generation of ChatGPT was gaining public attention. Seeing technology accelerate so rapidly, I felt drawn to it. Not because of the hype, but because I realized this field forces you to learn continuously. And I genuinely love the learning process.
+## Why Web development and Frontend?
+People ask why I chose frontend development first. The answer is simple: because I wanted my creations to be immediately visible to the user.
+My background in graphic design made the transition to frontend feel very natural. I already understood layouts, colors, typography, and visual hierarchy, so the only missing puzzle was translating those concepts into code. The opportunity to join the ReactJS Bootcamp for Frontend Developers at Hacktiv8 solidified my path. From that point on, I began building various applications using the MERN Stack, complete with my own branding and visual identities. I wasn't just learning how to build websites; I was learning how to build digital products.
+## The Design Foundation I am Now Grateful For
+Looking back, I am incredibly grateful for the time I spent mastering graphic design. It became a foundational skill that heavily supports me now, especially when leveraging AI. If I hadn't learned design fundamentals first and jumped straight into writing AI design prompts, the outputs would never look as polished as they do now.
+AI is merely a tool that executes our direction. If we lack the understanding of layout, composition, visual hierarchy, or color theory, we will struggle to evaluate whether an AI output is truly high-quality or still needs refinement. I experience this difference firsthand. When prompting AI to generate a layout, I don't just accept the first result.
+## I can identify these details because I was trained to design things from scratch.
+For me, graphic design is not a skill made obsolete by AI. Instead, it is the exact leverage that allows me to utilize AI to its fullest potential.
+## Trying Many Things Doesn't Mean Losing Direction
+To an outsider, it might look like I was jumping between unrelated fields. But the deeper I got, the more I realized they all complement one another.
+## Design teaches creativity and visual communication. Literature teaches us to understand humans, culture, and diverse perspectives. Programming trains systematic and logical thinking. AI opens new ways to work efficiently through automation. None of these skills exist in a vacuum; they all form the exact same foundation.
+## What I Am Truly Trying to Build
+Today, my roadmap is clear: mastering my foundation as a web developer, expanding into mobile development, and eventually diving deeper into AI integrations and blockchain.
+But as I move forward, I realize the ultimate goal is not just about mastering a set of technologies. What I am truly trying to build is a way of thinking. The mindset of a builder. A mindset that looks at every problem as something solvable, and a drive to create things, no matter how small they are.
+At the end of the day, my journey is not about transitioning from Russian Literature to IT. It is about gathering pieces of experience that shape my identity today. A builder who believes that technology is just a tool. The mindsets that truly matter are the ones that drive us to keep learning, keep building, and keep creating things that deliver real value.
+`
         }
       ]
     },
@@ -615,6 +654,46 @@ Saya percaya AI bakal terus mengambil alih banyak pekerjaan yang sifatnya berula
 Karena pada akhirnya, AI bisa menghasilkan ribuan kemungkinan, tapi manusialah yang memutuskan kemungkinan mana yang layak diwujudkan. 
 Semakin berkembang AI, semakin jelas bahwa nilai manusia bukan cuma pada apa yang bisa kita buat, melainkan pada pengalaman, perspektif, kreativitas, dan penilaian yang kita bawa ke dalam setiap karya.
           `
+        },
+        {
+          id: 4,
+          gambar: "/assets/article4.webp",
+          kategori: "Personal & Mentalitas",
+          tanggal: "02 Juli 2026",
+          baca: "7 menit baca",
+          nama: "Perjalanan Gue Membangun Mental Builder",
+          desk: "Dulu kuliah Sastra Rusia, sekarang kerja di bidang IT. Ternyata, yang gue bangun selama ini bukan sekadar skill pemrograman, melainkan mental seorang builder.",
+          isi: `
+# Perjalanan Gue Membangun Mental Builder
+Dulu, kalau ada yang nanya, "Kenapa kuliah Sastra Rusia kalau akhirnya mau kerja di bidang IT?", mungkin gua juga bakal bingung jawabnya. Soalnya kalau dilihat sekilas, memang nggak ada hubungannya. 
+## Satu belajar bahasa dan budaya, satu lagi bikin aplikasi.
+Tapi setelah beberapa tahun menjalani semuanya, gue justru sadar bahwa setiap fase itu saling terhubung. Ngga ada yang benar-benar sia-sia. Yang gua bangun selama ini ternyata bukan sekadar kumpulan skill. Gua sedang membangun sesuatu yang lebih penting: **mental seorang builder.**
+## Awalnya Cuma Ingin Punya Waktu
+Alasan gue milih jurusan Sastra sebenarnya cukup sederhana. Mindset gue waktu itu adalah, "yang penting kuliahnya nggak terlalu menyita waktu, supaya gue masih bisa belajar skill lain di luar kampus." Mungkin terdengar aneh, tapi ternyata keputusan itu jadi titik awal dari banyak hal.
+Sejak semester pertama, gue aktif di berbagai organisasi dan kepanitiaan. Hampir semuanya berkaitan dengan publikasi, desain grafis, multimedia, dan dokumentasi. Waktu itu gue udah cukup sering ngerjain motion graphic, video editing, aftermovie, sampai visual 3D. Lama-kelamaan, dunia kreatif jadi tempat gue berkembang.
+## Organisasi Mengajarkan Lebih dari Sekadar Desain
+Di organisasi, tugas gue bukan cuma bikin poster. Gue pernah ngerjain logo, identitas visual organisasi, feed Instagram, banner, twibbon, bumper animasi, dokumentasi, sampai aftermovie sebuah acara. Semuanya punya satu kesamaan: harus dikerjakan dengan serius, karena setiap karya yang gue buat membawa nama gua sendiri, membawa nama organisasi, bahkan membawa nama jurusan.
+Saat ada lomba atau kegiatan antarjurusan, gue selalu pengen hasil karya kita kelihatan lebih matang. Gue senang kalau ada ide yang lahir dari jurusan kami sebelum dipikirkan orang lain. Tanpa sadar, pengalaman itu membentuk cara berpikir gue, bukan cuma soal desain, tapi soal standar kualitas, soal tanggung jawab, soal kebiasaan untuk terus memperbaiki sesuatu. Makin sering ngerjain proyek, makin terasah pula kreativitas, taste, dan kemampuan gue baca tren yang terus berubah.
+## Ketika Dunia Programming Mulai Memanggil
+Masuk semester enam dan tujuh, aktivitas organisasi mulai berkurang. Untuk pertama kalinya setelah cukup lama, akhirnya punya banyak waktu buat refleksi. Di situlah gue kembali inget sesuatu yang sebenarnya udah ada sejak sebelum kuliah: keinginan untuk terjun ke dunia IT.
+Salah satu momen yang cukup membekas adalah waktu gue nonton podcast Timothy Ronald bareng Deddy Corbuzier di awal 2023. Di waktu yang hampir bersamaan, ChatGPT generasi awal baru mulai dikenal. Gue lihat gimana teknologi berkembang dengan sangat cepat, dan jujur aja, gue merasa tertarik. Bukan karena hype-nya, tapi karena gue sadar bidang ini memaksa seseorang untuk terus belajar. Dan gue memang suka proses itu.
+## Kenapa Web development dan Frontend?
+Orang nanya kenapa gue milih frontend lebih dulu. Jawabannya sederhana: karena gue pengen hasil karya gue bisa langsung dilihat orang.
+Background desain grafis bikin transisi ke frontend terasa cukup mudah. Gue udah paham layout, warna, tipografi, dan  visual brand, jadi yang perlu gue pelajari tinggal gimana menerjemahkan semuanya jadi kode. Kesempatan ikut Bootcamp ReactJS untuk Frontend Developer dari Hacktiv8 makin menguatkan keyakinan gue. Sejak saat itu, gue mulai membangun berbagai aplikasi pakai MERN Stack dengan identitas dan branding yang gue rancang sendiri. Bukan cuma belajar bikin website, tapi belajar membangun sebuah produk.
+## Fondasi Desain yang Sekarang Gue Syukuri
+Sekarang gue bersyukur karena dulu pernah belajar banyak hal kayak graphic design. Itu jadi skill fundamental yang justru mendukung banget waktu gue mulai pakai AI. Beda ceritanya kalau dulu gue nggak belajar fundamental desain dan langsung ngeprompt AI buat bikin desain, hasilnya pasti nggak bakal sebagus sekarang.
+Karena AI itu cuma alat yang menjalankan apa yang kita arahkan. Kalau kita nggak punya bekal soal layout, komposisi, hierarki visual, atau rasa warna yang oke, kita juga bakal kesulitan menilai apakah hasil dari AI itu udah bagus atau masih perlu diperbaiki. Gue ngerasain sendiri bedanya. Waktu gue prompt AI buat bikin sesuatu, gue nggak cuma nerima hasil pertama yang keluar, gue bisa langsung tahu bagian mana yang komposisinya kurang pas, warnanya kurang match, atau layoutnya masih berantakan. 
+## Itu semua bisa gue lihat karena dulu gue udah terbiasa ngerjain desain dari nol, bukan dari hasil generate doang.
+Jadi buat gue, pengalaman desain grafis itu bukan skill yang ketinggalan zaman gara-gara ada AI. Justru itu jadi modal yang bikin gue bisa memanfaatkan AI dengan lebih maksimal.
+## Mencoba Banyak Hal Bukan Berarti Kehilangan Arah
+Di tengah perjalanan belajar frontend, gue juga sempat mendalami AI automation pakai n8n dan membangun beberapa workflow sederhana. Di sisi lain, gue juga jalanin aktivitas sebagai video editor dan content clipper.
+Sekilas mungkin kelihatan kayak berpindah-pindah bidang. Tapi makin gue jalanin, makin gue sadar bahwa semuanya saling melengkapi. 
+## Desain mengajarkan kreativitas. Sastra mengajarkan cara memahami manusia, budaya, dan perspektif yang berbeda. Programming melatih cara berpikir yang sistematis dan terstruktur. AI membuka cara baru buat kerja lebih efektif lewat otomatisasi. Nggak ada yang berdiri sendiri, semuanya jadi bagian dari fondasi yang sama.
+## Yang Sebenarnya Ingin Gue Bangun
+Hari ini target gue cukup jelas: menyelesaikan fondasi sebagai web developer, lalu lanjut ke mobile development, setelah itu mendalami AI dan blockchain.
+Tapi makin ke sini, gue sadar bahwa tujuan akhirnya bukan sekadar menguasai banyak teknologi. Yang benar-benar ingin gue bangun adalah cara berpikir. Mental seorang builder. Mental yang selalu melihat masalah sebagai sesuatu yang bisa dipecahkan, mental yang terdorong untuk menciptakan sesuatu, sekecil apa pun itu.
+Karena pada akhirnya, semua perjalanan yang gue lalui bukan tentang berpindah dari Sastra ke IT, melainkan tentang mengumpulkan potongan-potongan pengalaman yang membentuk identitas gue hari ini. Seorang builder yang percaya bahwa teknologi hanyalah alat. Yang benar-benar menentukan adalah pola pikir untuk terus belajar, terus membangun, dan terus menciptakan sesuatu yang bermanfaat.
+`
         }
       ]
     },
