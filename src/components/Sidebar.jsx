@@ -20,7 +20,7 @@ export default function Sidebar() {
       <div className="flex flex-col gap-4">
         <div className="w-[80px] h-[80px] rounded-full overflow-hidden border-2 border-white/10 shadow-lg relative group">
           <img
-            src="/assets/adityafajarsy.png"
+            src="/assets/adityafajarsy.webp"
             alt="Aditya Fajar SY"
             className="w-full h-full object-cover object-[center_15%]"
             onError={(e) => {

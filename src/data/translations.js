@@ -122,7 +122,7 @@ export const translations = {
           degree: "Sarjana, Sastra Rusia · GPA 3.70/4.00",
           period: "2021 - 2025",
           location: "Bandung, Sumedang",
-          logo: "/assets/logo-unpad1.png",
+          logo: "/assets/logo-unpad1.webp",
           responsibilities: [
             "Actively participated in various campus organizations, including the Russian Studies Student Association and the Student Executive Board (BEM).",
             "Engaged in self-development through seminars and workshops on Graphic Design, Video Editing, AI, Programming, Finance, and Investment.",
@@ -188,7 +188,7 @@ export const translations = {
       list: [
         {
           id: 1,
-          gambar: "/assets/article_ui_ai.png",
+          gambar: "/assets/article1.webp",
           kategori: "UI/UX & AI",
           tanggal: "June 28, 2026",
           baca: "5 min read",
@@ -274,39 +274,44 @@ They will remember one thing that is far more important.
         },
         {
           id: 2,
-          gambar: "/assets/article_speed_ux.png",
-          kategori: "Web Performance",
+          gambar: "/assets/article2.webp",
+          kategori: "UI/UX Design",
           tanggal: "May 14, 2026",
           baca: "4 min read",
-          nama: "Why Performance is the Ultimate UX Metric",
-          desk: "Deep dive into bundle sizes, DOM nodes, and why fast load times beat fancy transitions every single time.",
+          nama: "Stop Designing Generic Websites",
+          desk: "So many website designs look exactly the same these days.",
           isi: `
-## The Psychology of Speed
+I can usually tell within a few seconds if a website was built using AI. It is not because I am against AI—in fact, I use it almost every day to help with design and development. What makes a website easily recognizable is not the AI itself, but because all the design decisions feel identical. The hero section is the same, the layout is the same, cards have the same shadows, the same purple-blue gradients are used, animations are identical, and even the content order rarely changes. The result looks modern, but it feels like the 100th website I have seen that week.
 
-User experience is built on trust, and trust is built on reliability. If a website takes more than three seconds to load, over 40% of users will abandon it. Every millisecond of latency is a friction point that diminishes user satisfaction.
+## AI Makes Designing Easy. Too Easy, Actually..
+There is no denying that AI has changed how we build digital products. Now, anyone can create a landing page with just a few prompts, and the result is often neat enough to publish immediately. This is an amazing step forward.
+The problem starts when AI is used to replace thinking. Many people simply type "create a modern SaaS landing page" and accept the first result without asking: Does this design actually fit my product? Do my users really need this look? Does this website have its own identity? 
+## If everyone uses the same prompts, it is no surprise the results look identical.
 
-## Bottlenecks in Modern Web Apps
+## Good Design Always Starts with References, Not Generation
+Whenever I build a new website, I almost never open AI right away. Instead, I start with research—finding other websites with similar functions and gathering references that successfully solve real user problems.
+Only then do I break them down: why the navigation feels comfortable, why the product page is easy to understand, why the animations are subtle and not distracting, and why the checkout process is so fast.
+I do not copy the entire design. I only take small ideas that work, combine them with other references, and adapt them to the needs of the product I am building. Once the vision is clear, I use AI to speed up execution, not to replace the thinking process.
 
-While modern frameworks allow us to build complex single-page applications, they also introduce significant overhead:
-1. **JavaScript Bloat**: Shipping megabytes of JS that need to be parsed and compiled by the browser.
-2. **DOM Tree Complexity**: Replicating layout trees or rendering invisible elements, which slows down recalculations.
-3. **Render-blocking Assets**: Importing heavy stylesheets or loading custom fonts via slow CSS imports.
+## AI Should Be an Assistant, Not the Lead Designer
+Many people treat AI like a "Generate Website" button. In reality, it is much more effective to treat it like an assistant. The more specific your directions, the better the output. Instead of writing "make a modern landing page," it is much better if you already have a vision, such as a hero with an editorial layout like Website A, minimalist navigation like Website B, button microinteractions like Website C, smooth scroll animations without lagging, and a primary focus on checkout speed.
+AI works much better when we already know what we want to make, rather than leaving all design decisions to it.
 
-## Key Strategies for Maximum Optimization
+## Taste Cannot Be Generated
+There is one thing often forgotten when discussing AI: taste. The ability to distinguish between what is average and what is truly high quality. Taste does not develop overnight. It is built by looking at hundreds of good designs, using dozens of products, reading, discussing, receiving criticism, and constantly evaluating your own work. The broader your references, the better decisions you make. That decision-making is something automation cannot replace.
 
-To build lightning-fast web applications, focus on these critical optimizations:
-- **Minimize DOM Node Count**: Avoid duplicating element structures (e.g. rendering separate desktop/mobile trees simultaneously).
-- **Extract Static Allocations**: Define animations, static lists, and icons outside the render cycle to prevent memory leaks and garbage collection overhead.
-- **Implement Lazy Loading**: Defer off-screen images and split bundles using dynamic imports.
+## AI Does Not Replace Design Fundamentals
+In fact, the easier AI is to use, the more important it is to understand design fundamentals—from visual hierarchy, typography, whitespace, composition, contrast, and grids, to user flow. These principles do not disappear just because we can build a UI in minutes. Instead, these fundamentals help us judge whether the AI output is actually good to use or needs to be improved. Without this understanding, we are just people accepting outputs, not real designers.
 
-## Conclusion
-
-A beautiful interface is useless if users leave before it finishes loading. Prioritize performance as the core foundation of your user experience.
+## Memorable Websites Are Not Born from Short Prompts
+AI will continue to evolve. In a few years, making a website might take only a few seconds. But one thing remains hard to replace: the human ability to observe, select, combine, and make the right design decisions.
+Because a good website is not the one that looks like an AI output, but the one that has character, understands its users, and feels thoughtfully crafted. 
+AI can speed up the interface building, but the feel, identity, and quality of a design still depend on the person using it.
           `
         },
         {
           id: 3,
-          gambar: "/assets/article_lang_code.png",
+          gambar: "/assets/article3.webp",
           kategori: "Technology & Skills",
           tanggal: "April 02, 2026",
           baca: "5 min read",
@@ -437,7 +442,7 @@ As AI evolves, it becomes clear that human value lies not just in what we can bu
           degree: "Sarjana, Sastra Rusia · IPK 3.70/4.00",
           period: "2021 - 2025",
           location: "Bandung, Sumedang",
-          logo: "/assets/logo-unpad1.png",
+          logo: "/assets/logo-unpad1.webp",
           responsibilities: [
             "Berpartisipasi aktif dalam berbagai organisasi kampus, termasuk Himpunan Mahasiswa Studi Rusia dan Badan Eksekutif Mahasiswa (BEM).",
             "Terlibat dalam pengembangan diri melalui seminar dan lokakarya tentang Desain Grafis, Pengeditan Video, AI, Pemrograman, Keuangan, dan Investasi.",
@@ -503,7 +508,7 @@ As AI evolves, it becomes clear that human value lies not just in what we can bu
       list: [
         {
           id: 1,
-          gambar: "/assets/article_ui_ai.png",
+          gambar: "/assets/article1.webp",
           kategori: "UI/UX & AI",
           tanggal: "28 Juni 2026",
           baca: "5 menit baca",
@@ -543,7 +548,7 @@ Mereka akan ingat satu hal yang jauh lebih penting: *website itu membantu saya m
         },
         {
           id: 2,
-          gambar: "/assets/article_speed_ux.png",
+          gambar: "/assets/article2.webp",
           kategori: "UI/UX Design",
           tanggal: "14 Mei 2026",
           baca: "4 menit baca",
@@ -582,7 +587,7 @@ AI memang bisa mempercepat proses bikin antarmuka, tapi rasa, identitas, dan kua
         },
         {
           id: 3,
-          gambar: "/assets/article_lang_code.png",
+          gambar: "/assets/article3.webp",
           kategori: "Kreativitas & AI",
           tanggal: "02 April 2026",
           baca: "5 menit baca",

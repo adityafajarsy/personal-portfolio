@@ -20,7 +20,7 @@ export default function MobileProfile() {
       <div className="flex items-center gap-4">
         <div className="w-[72px] h-[72px] rounded-full overflow-hidden border-2 border-white/10 shadow-lg flex-shrink-0">
           <img
-            src="/assets/adityafajarsy.png"
+            src="/assets/adityafajarsy.webp"
             alt="Aditya Fajar SY"
             className="w-full h-full object-cover object-[center_15%]"
             onError={(e) => {

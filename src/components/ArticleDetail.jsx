@@ -147,7 +147,7 @@ export default function ArticleDetail({ article: initialArticle, onClose }) {
       </div>
 
       {/* Main Body content */}
-      <div className="text-[15px] sm:text-[16px] leading-relaxed max-w-3xl mt-2">
+      <div className="text-[15px] sm:text-[16px] leading-relaxed w-full mt-2">
         {renderMarkdown(article.isi)}
       </div>
 
