@@ -3,7 +3,7 @@ const ProjectEcomImg = "/projects/hamburger.webp";
 const ProjectCompanyImg = "/projects/leveldva.webp";
 
 const listToolsStatic = [
-  { id: 1, gambar: "https://cdn.simpleicons.org/visualstudiocode/007ACC", nama: "Visual Studio Code" },
+  { id: 1, gambar: "data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%23007ACC'><path d='M23.986 6.892a.573.573 0 0 0-.265-.187L18.423.957a.82.82 0 0 0-.584-.04c-.198.058-.363.18-.464.348l-2.906 4.793-6.536 4.97-5.074-3.83A.574.574 0 0 0 2.5 7.15c-.176.012-.344.085-.47.206L.207 9.179a.573.573 0 0 0-.012.825l3.524 3.524-3.524 3.524a.573.573 0 0 0 .012.825l1.823 1.823c.126.12.294.194.47.206a.57.57 0 0 0 .363-.092l5.074-3.83 6.536 4.97 2.906 4.793a.835.835 0 0 0 .464.348c.199.058.41-.013.584-.04l5.298-5.748a.573.573 0 0 0 .265-.187c.074-.112.115-.246.118-.383V7.275c-.003-.137-.044-.27-.118-.383zm-17.78 8.01l-2.617-2.617 2.617-2.617 3.468 2.617-3.468 2.617zm11.233 4.298l-5.69-4.328 1.942-1.942 3.748 2.828v3.442zm0-5.787l-5.263-3.971 5.263-3.971v7.942zm0-10.303v3.442l-3.748 2.828-1.942-1.942 5.69-4.328z'/></svg>", nama: "Visual Studio Code" },
   { id: 2, gambar: "https://cdn.simpleicons.org/react/61DAFB", nama: "React JS" },
   { id: 3, gambar: "https://cdn.simpleicons.org/nextdotjs/white", nama: "Next JS" },
   { id: 4, gambar: "https://cdn.simpleicons.org/tailwindcss/06B6D4", nama: "Tailwind CSS" },
@@ -18,7 +18,7 @@ const listToolsStatic = [
   { id: 13, gambar: "data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23D97706' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'><polyline points='4 17 10 11 4 5'/><line x1='12' y1='19' x2='20' y2='19'/></svg>", nama: "Claude Code" },
   { id: 15, gambar: "data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23EC4899' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'><path d='M12 3v1M12 20v1M4 12H3M21 12h-1M18.36 5.64l-.7.7M6.34 17.66l-.7.7M5.64 5.64l.7.7M17.66 17.66l.7.7M9 12a3 3 0 1 1 6 0 3 3 0 0 1-6 0z'/></svg>", nama: "AI Tools" },
   { id: 16, gambar: "https://cdn.simpleicons.org/github/white", nama: "Github" },
-  { id: 17, gambar: "https://cdn.simpleicons.org/canva/00C4CC", nama: "Canva" },
+  { id: 17, gambar: "data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%2300C4CC'><path d='M11.758 19.349c-3.136 0-5.728-.888-5.728-3.424 0-1.96 1.488-3.328 4.608-3.552l.968-.072c1.784-.136 2.504-.496 2.504-1.224 0-.84-.96-1.248-2.184-1.248-1.632 0-3.032.504-4.248 1.44l-.408-.688c1.392-1.072 3.096-1.56 4.752-1.56 2.376 0 3.84 1.072 3.84 2.808v5.52c0 .864.456 1.296 1.056 1.296.384 0 .768-.192 1.072-.512l.248.512c-.528.592-1.2.904-1.936.904-1.392 0-2.16-.92-2.16-2.224v-.272c-.792 1.544-2.312 2.512-4.448 2.512zm.288-6.192c-1.984.144-3.048.968-3.048 2.32 0 1.296 1.344 1.952 3.048 1.952 2.344 0 3.752-1.4 3.752-3.192v-.936c-.496.128-1.392.208-2.248.256v.001l-.256-.401zM12 0c6.627 0 12 5.373 12 12s-5.373 12-12 12S0 18.627 0 12 5.373 0 12 0z'/></svg>", nama: "Canva" },
   { id: 18, gambar: "https://cdn.simpleicons.org/figma/F24E1B", nama: "Figma" },
 ];
 
@@ -32,7 +32,7 @@ const listToolsStaticEn = listToolsStatic.map(t => {
   else if (t.id === 10) ket = "Linux Server OS";
   else if (t.id === 11) ket = "Cloud Deployment";
   else if (t.id === 12) ket = "AI Coding Assistant";
-  else if (t.id === 13) ket = "AI Terminal Agent";
+  else if (t.id === 13) ket = "AI Assistant";
   else if (t.id === 15) ket = "AI Workflows";
   else if (t.id === 16) ket = "Repository";
   else if (t.id === 17 || t.id === 18) ket = "Design App";
