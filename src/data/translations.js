@@ -1,6 +1,6 @@
-const ProjectNetflixImg = "https://res.cloudinary.com/bj8jhjaq/image/upload/v1782900697/3_ydl3cu.png";
-const ProjectEcomImg = "https://res.cloudinary.com/bj8jhjaq/image/upload/v1782901544/4_mhe30x.webp";
-const ProjectCompanyImg = "https://res.cloudinary.com/bj8jhjaq/image/upload/v1782901551/8_qjicam.webp";
+const ProjectNetflixImg = "/projects/netflix-clone.webp";
+const ProjectEcomImg = "/projects/hamburger.webp";
+const ProjectCompanyImg = "/projects/leveldva.webp";
 
 const listToolsStatic = [
   { id: 1, gambar: "https://cdn.simpleicons.org/visualstudiocode/007ACC", nama: "Visual Studio Code" },
