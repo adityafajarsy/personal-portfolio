@@ -1,5 +1,5 @@
 import React from "react";
-import { motion } from "framer-motion";
+import { m } from "framer-motion";
 import { useLanguage } from "../context/LanguageContext";
 
 const containerVariants = {
@@ -36,7 +36,7 @@ export default function Article({ onSelectArticle }) {
   const listArticles = t("articles.list") || [];
 
   return (
-    <motion.section
+    <m.section
       id="articles"
       className="scroll-mt-24 flex flex-col gap-6"
       variants={containerVariants}
@@ -46,26 +46,26 @@ export default function Article({ onSelectArticle }) {
     >
       {/* Section Header */}
       <div className="flex flex-col gap-1">
-        <motion.span
+        <m.span
           className="text-[12px] font-bold tracking-[0.15em] text-[#8A8A8A] uppercase"
           variants={itemVariants}
         >
           {t("articles.label")}
-        </motion.span>
+        </m.span>
         <div className="relative mt-3">
-          <motion.span
+          <m.span
             variants={sloganVariants}
             className="absolute top-[-8px] sm:top-[-16px] left-1 font-bold tracking-tighter text-[#3B82F6] select-none origin-left z-10 text-[1.35rem] sm:text-[clamp(1.1rem,3vw,1.7rem)]"
             style={{ fontFamily: "'Nothing You Could Do', cursive" }}
           >
             {t("articles.slogan")}
-          </motion.span>
-          <motion.h2
+          </m.span>
+          <m.h2
             className="text-[32px] lg:text-[40px] font-bold text-white tracking-tight"
             variants={itemVariants}
           >
             {t("articles.title")}
-          </motion.h2>
+          </m.h2>
         </div>
       </div>
 
@@ -74,7 +74,7 @@ export default function Article({ onSelectArticle }) {
         {listArticles.map((article, index) => {
           const isLastOdd = index === listArticles.length - 1 && listArticles.length % 2 !== 0;
           return (
-            <motion.div
+            <m.div
               key={article.id}
               className={`group bg-[#0B0B0B] border border-white/5 rounded-[20px] overflow-hidden flex flex-col hover:border-[#3B82F6]/30 hover:shadow-[0_12px_30px_rgba(59,130,246,0.06)] transition-all duration-300 cursor-pointer ${isLastOdd ? "col-span-2 justify-self-center w-full max-w-[calc(50%-8px)] lg:col-span-1 lg:max-w-none" : ""
                 }`}
@@ -104,10 +104,10 @@ export default function Article({ onSelectArticle }) {
                   </p>
                 </div>
               </div>
-            </motion.div>
+            </m.div>
           );
         })}
       </div>
-    </motion.section>
+    </m.section>
   );
 }

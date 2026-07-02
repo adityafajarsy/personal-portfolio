@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Send, Mail, Phone, Globe, Linkedin, Instagram } from "lucide-react";
-import { motion } from "framer-motion";
+import { m } from "framer-motion";
 import { useLanguage } from "../context/LanguageContext";
 
 const containerVariants = {
@@ -45,7 +45,7 @@ export default function Contact() {
   const [hoveredIndex, setHoveredIndex] = useState(null);
 
   return (
-    <motion.section
+    <m.section
       id="kontak"
       className="scroll-mt-24 flex flex-col gap-8 pb-16"
       variants={containerVariants}
@@ -55,38 +55,38 @@ export default function Contact() {
     >
       {/* Header labels */}
       <div className="flex flex-col gap-1">
-        <motion.span
+        <m.span
           className="text-[12px] font-bold tracking-[0.15em] text-[#8A8A8A] uppercase"
           variants={itemVariants}
         >
           {t("contact.label")}
-        </motion.span>
+        </m.span>
         <div className="relative mt-3">
-          <motion.span
+          <m.span
             variants={sloganVariants}
             className="absolute top-[-8px] sm:top-[-16px] left-1 font-bold tracking-tighter text-[#3B82F6] select-none origin-left z-10 text-[1.35rem] sm:text-[clamp(1.1rem,3vw,1.7rem)]"
             style={{ fontFamily: "'Nothing You Could Do', cursive" }}
           >
             {t("contact.slogan")}
-          </motion.span>
-          <motion.h2
+          </m.span>
+          <m.h2
             className="text-[32px] lg:text-[40px] font-bold text-white tracking-tight"
             variants={itemVariants}
           >
             {t("contact.title")}
-          </motion.h2>
+          </m.h2>
         </div>
-        <motion.p
+        <m.p
           className="text-[14px] text-[#8A8A8A] max-w-md mt-1"
           variants={itemVariants}
         >
           {t("contact.desc")}
-        </motion.p>
+        </m.p>
       </div>
 
       <div className="flex flex-col md:flex-row gap-10 items-stretch mt-4">
         {/* Left Side: Minimal Contact Table */}
-        <motion.div
+        <m.div
           className="flex-1 bg-[#0B0B0B] border border-white/5 rounded-[24px] p-6 lg:p-8 flex flex-col justify-between"
           variants={itemVariants}
         >
@@ -142,10 +142,10 @@ export default function Contact() {
             <span className="w-1.5 h-1.5 rounded-full bg-[#10B981] animate-pulse" />
             <span>{t("contact.availableText")}</span>
           </div>
-        </motion.div>
+        </m.div>
 
         {/* Right Side: Message Form */}
-        <motion.div
+        <m.div
           className="flex-1 bg-[#0B0B0B] border border-white/5 rounded-[24px] p-6 lg:p-8"
           variants={itemVariants}
         >
@@ -212,8 +212,8 @@ export default function Contact() {
               <span>{t("contact.sendBtn")}</span>
             </button>
           </form>
-        </motion.div>
+        </m.div>
       </div>
-    </motion.section>
+    </m.section>
   );
 }

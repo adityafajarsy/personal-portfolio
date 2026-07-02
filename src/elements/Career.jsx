@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { GraduationCap, ChevronDown, ChevronUp, MapPin, Calendar } from "lucide-react";
-import { motion, AnimatePresence } from "framer-motion";
+import { m, AnimatePresence } from "framer-motion";
 import { useLanguage } from "../context/LanguageContext";
 
 const containerVariants = {
@@ -41,7 +41,7 @@ export default function EducationExperience() {
     <div className="flex flex-col gap-24">
 
       {/* Education Section */}
-      <motion.section
+      <m.section
         id="education"
         className="scroll-mt-24 flex flex-col gap-6"
         variants={containerVariants}
@@ -50,35 +50,35 @@ export default function EducationExperience() {
         viewport={{ once: true, margin: "-100px" }}
       >
         <div className="flex flex-col gap-1">
-          <motion.span
+          <m.span
             className="text-[12px] font-bold tracking-[0.15em] text-[#8A8A8A] uppercase flex items-center gap-2"
             variants={itemVariants}
           >
             <GraduationCap size={12} className="text-[#3B82F6]" />
             {t("education.label")}
-          </motion.span>
+          </m.span>
           <div className="relative mt-3">
-            <motion.span
+            <m.span
               variants={sloganVariants}
               className="absolute top-[-8px] sm:top-[-16px] left-1 font-bold tracking-tighter text-[#3B82F6] select-none origin-left z-10 text-[1.35rem] sm:text-[clamp(1.1rem,3vw,1.7rem)]"
               style={{ fontFamily: "'Nothing You Could Do', cursive" }}
             >
               {t("education.slogan")}
-            </motion.span>
-            <motion.h2
+            </m.span>
+            <m.h2
               className="text-[32px] lg:text-[40px] font-bold text-white tracking-tight"
               variants={itemVariants}
             >
               {t("education.title")}
-            </motion.h2>
+            </m.h2>
           </div>
         </div>
 
-        <motion.div className="flex flex-col gap-4" variants={containerVariants}>
+        <m.div className="flex flex-col gap-4" variants={containerVariants}>
           {education.map((edu, index) => {
             const isExpanded = expandedEdu === index;
             return (
-              <motion.div
+              <m.div
                 key={index}
                 className="bg-[#0B0B0B] border border-white/5 rounded-[24px] p-6 hover:border-[#3B82F6]/30 hover:shadow-[0_8px_25px_rgba(59,130,246,0.04)] transition-all duration-300 group"
                 variants={itemVariants}
@@ -139,7 +139,7 @@ export default function EducationExperience() {
                     {/* Expanded Content */}
                     <AnimatePresence initial={false}>
                       {isExpanded && (
-                        <motion.div
+                        <m.div
                           initial={{ height: 0, opacity: 0 }}
                           animate={{ height: "auto", opacity: 1 }}
                           exit={{ height: 0, opacity: 0 }}
@@ -162,16 +162,16 @@ export default function EducationExperience() {
                               ))}
                             </ul>
                           </div>
-                        </motion.div>
+                        </m.div>
                       )}
                     </AnimatePresence>
                   </div>
                 </div>
-              </motion.div>
+              </m.div>
             );
           })}
-        </motion.div>
-      </motion.section>
+        </m.div>
+      </m.section>
     </div>
   );
 }

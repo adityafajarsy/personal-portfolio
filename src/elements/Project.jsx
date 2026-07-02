@@ -1,5 +1,5 @@
 import React, { useRef } from "react";
-import { motion } from "framer-motion";
+import { m } from "framer-motion";
 import { useLanguage } from "../context/LanguageContext";
 
 const containerVariants = {
@@ -38,7 +38,7 @@ export default function Project({ onSelectProject }) {
   };
 
   return (
-    <motion.section
+    <m.section
       id="project"
       className="scroll-mt-24 flex flex-col gap-6"
       variants={containerVariants}
@@ -48,26 +48,26 @@ export default function Project({ onSelectProject }) {
     >
       {/* Section Header */}
       <div className="flex flex-col gap-1">
-        <motion.span
+        <m.span
           className="text-[12px] font-bold tracking-[0.15em] text-[#8A8A8A] uppercase"
           variants={itemVariants}
         >
           {t("projects.label")}
-        </motion.span>
+        </m.span>
         <div className="relative mt-3">
-          <motion.span
+          <m.span
             variants={sloganVariants}
             className="absolute top-[-8px] sm:top-[-16px] left-1 font-bold tracking-tighter text-[#3B82F6] select-none origin-left z-10 text-[1.35rem] sm:text-[clamp(1.1rem,3vw,1.7rem)]"
             style={{ fontFamily: "'Nothing You Could Do', cursive" }}
           >
             {t("projects.slogan")}
-          </motion.span>
-          <motion.h2
+          </m.span>
+          <m.h2
             className="text-[32px] lg:text-[40px] font-bold text-white tracking-tight"
             variants={itemVariants}
           >
             {t("projects.title")}
-          </motion.h2>
+          </m.h2>
         </div>
       </div>
 
@@ -97,13 +97,13 @@ export default function Project({ onSelectProject }) {
         {/* Right edge fade */}
         <div className="pointer-events-none absolute right-0 top-0 h-full w-20 bg-gradient-to-l from-[#050505] to-transparent z-10" />
 
-        <motion.div
+        <m.div
           ref={carouselRef}
           className="flex overflow-x-auto gap-5 pb-4 snap-x snap-mandatory scroll-smooth scrollbar-none"
           variants={containerVariants}
         >
           {listProyek.map((project) => (
-            <motion.div
+            <m.div
               key={project.id}
               className="w-[88vw] sm:w-[72%] lg:w-[68%] flex-shrink-0 snap-start group bg-[#0B0B0B] border border-white/5 rounded-[24px] overflow-hidden hover:border-white/10 hover:shadow-[0_12px_40px_rgba(0,0,0,0.4)] transition-all duration-300"
               variants={itemVariants}
@@ -151,10 +151,10 @@ export default function Project({ onSelectProject }) {
                   ))}
                 </div>
               </div>
-            </motion.div>
+            </m.div>
           ))}
-        </motion.div>
+        </m.div>
       </div>
-    </motion.section>
+    </m.section>
   );
 }

@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import { ArrowLeft, Clock, Calendar } from "lucide-react";
-import { motion } from "framer-motion";
+import { m } from "framer-motion";
 import { useLanguage } from "../context/LanguageContext";
 
 const renderMarkdown = (text) => {
@@ -95,7 +95,7 @@ export default function ArticleDetail({ article: initialArticle, onClose }) {
   };
 
   return (
-    <motion.article
+    <m.article
       initial={{ opacity: 0, y: 15 }}
       animate={{ opacity: 1, y: 0 }}
       exit={{ opacity: 0, y: -15 }}
@@ -161,6 +161,6 @@ export default function ArticleDetail({ article: initialArticle, onClose }) {
           <span>{t("articles.backBtn")}</span>
         </button>
       </div>
-    </motion.article>
+    </m.article>
   );
 }

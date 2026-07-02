@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import { ArrowLeft, ExternalLink, Calendar, User, Tag } from "lucide-react";
-import { motion } from "framer-motion";
+import { m } from "framer-motion";
 import { useLanguage } from "../context/LanguageContext";
 
 const fadeUp = {
@@ -43,7 +43,7 @@ export default function ProjectDetail({ project, onClose }) {
   };
 
   return (
-    <motion.div
+    <m.div
       id="project-detail"
       initial={{ opacity: 0, y: 18 }}
       animate={{ opacity: 1, y: 0 }}
@@ -62,7 +62,7 @@ export default function ProjectDetail({ project, onClose }) {
       </div>
 
       {/* ── Hero image ── */}
-      <motion.div
+      <m.div
         variants={fadeUp}
         initial="hidden"
         animate="visible"
@@ -73,10 +73,10 @@ export default function ProjectDetail({ project, onClose }) {
           alt={project.nama}
           className="w-full h-full object-cover"
         />
-      </motion.div>
+      </m.div>
 
       {/* ── Header: title + meta + live link ── */}
-      <motion.div
+      <m.div
         variants={fadeUp}
         custom={1}
         initial="hidden"
@@ -118,10 +118,10 @@ export default function ProjectDetail({ project, onClose }) {
             </span>
           </div>
         )}
-      </motion.div>
+      </m.div>
 
       {/* ── Main content grid: description + tech stack ── */}
-      <motion.div
+      <m.div
         variants={fadeUp}
         custom={2}
         initial="hidden"
@@ -154,11 +154,11 @@ export default function ProjectDetail({ project, onClose }) {
             ))}
           </div>
         </div>
-      </motion.div>
+      </m.div>
 
       {/* ── Image gallery grid ── */}
       {hasImages ? (
-        <motion.div
+        <m.div
           variants={fadeUp}
           custom={3}
           initial="hidden"
@@ -171,7 +171,7 @@ export default function ProjectDetail({ project, onClose }) {
           <div className="grid grid-cols-2 gap-3">
             {/* First image spans both columns as wide featured shot */}
             {images.map((src, i) => (
-              <motion.div
+              <m.div
                 key={i}
                 variants={fadeUp}
                 custom={4 + i}
@@ -187,13 +187,13 @@ export default function ProjectDetail({ project, onClose }) {
                   className="w-full h-full object-cover hover:scale-[1.02] transition-transform duration-500"
                   loading="lazy"
                 />
-              </motion.div>
+              </m.div>
             ))}
           </div>
-        </motion.div>
+        </m.div>
       ) : (
         /* Placeholder when no extra images are added yet */
-        <motion.div
+        <m.div
           variants={fadeUp}
           custom={3}
           initial="hidden"
@@ -225,7 +225,7 @@ export default function ProjectDetail({ project, onClose }) {
               </div>
             ))}
           </div>
-        </motion.div>
+        </m.div>
       )}
 
       {/* ── Footer back button ── */}
@@ -238,6 +238,6 @@ export default function ProjectDetail({ project, onClose }) {
           {t("projects.backBtn") || "Back to Portfolio"}
         </button>
       </div>
-    </motion.div>
+    </m.div>
   );
 }

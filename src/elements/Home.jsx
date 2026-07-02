@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { Download, Linkedin } from "lucide-react";
-import { motion, AnimatePresence } from "framer-motion";
+import { m, AnimatePresence } from "framer-motion";
 import { useLanguage } from "../context/LanguageContext";
 
 const rolesEn = [
@@ -53,7 +53,7 @@ const sloganVariants = {
 export default function Home() {
   const { lang, t } = useLanguage();
   const [roleIndex, setRoleIndex] = useState(0);
-  const roles = rolesEn;
+  const roles = lang === "id" ? rolesId : rolesEn;
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -63,7 +63,7 @@ export default function Home() {
   }, [roles.length]);
 
   return (
-    <motion.section
+    <m.section
       id="intro"
       className="scroll-mt-24 pt-4 flex flex-col gap-6"
       variants={containerVariants}
@@ -72,40 +72,40 @@ export default function Home() {
       viewport={{ once: true, margin: "-100px" }}
     >
       {/* Small uppercase label */}
-      <motion.span
+      <m.span
         className="text-[12px] font-bold tracking-[0.15em] text-[#8A8A8A] uppercase"
         variants={itemVariants}
       >
         {t("home.intro")}
-      </motion.span>
+      </m.span>
 
       {/* Quote Banner */}
-      <motion.div
+      <m.div
         className="flex items-center gap-3 bg-[#0B0B0B] border border-white/5 w-fit py-2.5 px-4 rounded-full text-[13px] text-[#8A8A8A]"
         variants={itemVariants}
       >
         <div className="w-5 h-5 rounded-full overflow-hidden border border-white/10">
           <img
-            src="/assets/icon aditya.png"
+            src="/assets/icon aditya.webp"
             alt="Aditya Fajar SY"
             className="w-full h-full object-cover"
             loading="lazy"
             onError={(e) => {
-              e.target.src = "/assets/adityafajarsy.png";
+              e.target.src = "/assets/adityafajarsy.webp";
             }}
           />
         </div>
         <q className="italic">{t("home.quote")}</q>
-      </motion.div>
+      </m.div>
 
       {/* Main Title */}
-      <motion.div className="flex flex-col gap-1" variants={itemVariants}>
+      <m.div className="flex flex-col gap-1" variants={itemVariants}>
         <h2 className="text-[36px] lg:text-[44px] font-black tracking-tight leading-none text-white">
           {t("home.title")}
         </h2>
         <div className="h-[44px] lg:h-[54px] overflow-visible relative -mt-1 lg:-mt-1.5">
           <AnimatePresence mode="wait">
-            <motion.span
+            <m.span
               key={roleIndex}
               initial={{ opacity: 0, x: 0, skewX: 0, scaleY: 1 }}
               animate={{
@@ -127,21 +127,21 @@ export default function Home() {
               style={{ fontFamily: "'Nothing You Could Do', cursive" }}
             >
               {roles[roleIndex]}
-            </motion.span>
+            </m.span>
           </AnimatePresence>
         </div>
-      </motion.div>
+      </m.div>
 
       {/* Biography Description */}
-      <motion.p
+      <m.p
         className="text-[16px] lg:text-[18px] leading-relaxed text-[#8A8A8A] max-w-2xl font-normal"
         variants={itemVariants}
       >
         {t("home.bio")}
-      </motion.p>
+      </m.p>
 
       {/* Action Buttons */}
-      <motion.div className="flex flex-wrap items-center gap-4 mt-2" variants={itemVariants}>
+      <m.div className="flex flex-wrap items-center gap-4 mt-2" variants={itemVariants}>
         <a
           href="/assets/CV bahasa indonesia.pdf"
           download="Aditya Fajar Satya Yudha-CV.pdf"
@@ -160,7 +160,7 @@ export default function Home() {
           <Linkedin size={16} className="text-[#3B82F6]" />
           <span>{t("home.connectMe")}</span>
         </a>
-      </motion.div>
-    </motion.section>
+      </m.div>
+    </m.section>
   );
 }

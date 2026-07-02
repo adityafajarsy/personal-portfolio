@@ -1,5 +1,5 @@
 import React from "react";
-import { motion } from "framer-motion";
+import { m } from "framer-motion";
 import { useLanguage } from "../context/LanguageContext";
 
 const containerVariants = {
@@ -79,28 +79,62 @@ const sloganVariants = {
   }
 };
 
-const CalendarIcon = () => (
+const CalendarIcon = React.memo(() => (
   <svg viewBox="0 0 24 24" className="w-3 h-3 sm:w-3.5 sm:h-3.5 text-[#8A8A8A]" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
     <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
     <line x1="16" y1="2" x2="16" y2="6"></line>
     <line x1="8" y1="2" x2="8" y2="6"></line>
     <line x1="3" y1="10" x2="21" y2="10"></line>
   </svg>
-);
+));
 
-const CompanyIcon = () => (
+const CompanyIcon = React.memo(() => (
   <svg viewBox="0 0 24 24" className="w-3 h-3 sm:w-3.5 sm:h-3.5 text-[#8A8A8A]" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
     <rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect>
     <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path>
   </svg>
-);
+));
 
-const MapIcon = () => (
+const MapIcon = React.memo(() => (
   <svg viewBox="0 0 24 24" className="w-3 h-3 sm:w-3.5 sm:h-3.5 text-[#8A8A8A]" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
     <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
     <circle cx="12" cy="10" r="3"></circle>
   </svg>
-);
+));
+
+// Memoized ToolItem to avoid broad React virtual DOM re-renders on mouse pointer movement
+const ToolItem = React.memo(({ tool }) => (
+  <m.div
+    className="flex flex-col sm:flex-row items-center gap-2 sm:gap-4 p-2.5 sm:p-4 rounded-[12px] sm:rounded-[16px] bg-[#0B0B0B] border border-white/5 hover:border-[#3B82F6]/30 transition-all duration-300 group shadow-md text-center sm:text-left origin-center"
+    variants={toolsItemVariants}
+    whileHover={{ 
+      y: -4, 
+      scale: 1.03, 
+      transition: { type: "spring", stiffness: 300, damping: 14 } 
+    }}
+  >
+    {/* Icon Container */}
+    <div className="w-9 h-9 sm:w-12 sm:h-12 bg-white/5 rounded-lg sm:rounded-xl border border-white/5 p-1.5 sm:p-2 flex items-center justify-center group-hover:bg-white/10 transition-colors duration-300 flex-shrink-0">
+      <img
+        src={tool.gambar}
+        alt={tool.nama}
+        className="w-full h-full object-contain filter grayscale group-hover:grayscale-0 transition-all duration-300"
+        loading="lazy"
+        onError={(e) => {
+          e.target.style.display = "none";
+        }}
+      />
+    </div>
+
+    {/* Text Container */}
+    <div className="min-w-0 w-full flex-1">
+      <h4 className="font-bold text-[10px] sm:text-[14px] text-white truncate leading-snug group-hover:text-[#3B82F6] transition-colors duration-250">
+        {tool.nama}
+      </h4>
+      <p className="hidden sm:block text-[12px] text-[#8A8A8A] truncate mt-0.5">{tool.ket}</p>
+    </div>
+  </m.div>
+));
 
 export default function About() {
   const { t } = useLanguage();
@@ -126,7 +160,7 @@ export default function About() {
         loading="lazy"
       />,
       <img
-        src="/assets/logo-unpad1.png"
+        src="/assets/logo-unpad1.webp"
         alt="Unpad Logo"
         className="w-7 h-7 object-contain rounded-md"
         loading="lazy"
@@ -139,7 +173,7 @@ export default function About() {
   });
 
   return (
-    <motion.section
+    <m.section
       id="about"
       className="flex flex-col gap-12"
       variants={containerVariants}
@@ -151,26 +185,26 @@ export default function About() {
       {/* Work Experience Section */}
       <div className="flex flex-col gap-6">
         <div className="flex flex-col gap-1">
-          <motion.span
+          <m.span
             className="text-[12px] font-bold tracking-[0.15em] text-[#8A8A8A] uppercase"
             variants={itemVariants}
           >
             {t("about.expLabel")}
-          </motion.span>
+          </m.span>
           <div className="relative mt-3">
-            <motion.span
+            <m.span
               variants={sloganVariants}
               className="absolute top-[-8px] sm:top-[-16px] left-1 font-bold tracking-tighter text-[#3B82F6] select-none origin-left z-10 text-[1.35rem] sm:text-[clamp(1.1rem,3vw,1.7rem)]"
               style={{ fontFamily: "'Nothing You Could Do', cursive" }}
             >
               {t("about.expSlogan")}
-            </motion.span>
-            <motion.h2
+            </m.span>
+            <m.h2
               className="text-[32px] lg:text-[40px] font-bold text-white tracking-tight"
               variants={itemVariants}
             >
               {t("about.expTitle")}
-            </motion.h2>
+            </m.h2>
           </div>
         </div>
 
@@ -178,7 +212,7 @@ export default function About() {
         <div className="relative pl-4 sm:pl-0 border-l border-white/10 sm:border-l-0 flex flex-col gap-5">
           {experiences.map((exp, idx) => {
             return (
-              <motion.div
+              <m.div
                 key={idx}
                 className="relative p-4 sm:p-5 rounded-[16px] bg-[#0B0B0B] border border-white/5 hover:border-white/10 transition-all duration-300 flex flex-col sm:flex-row items-start gap-4 group"
                 variants={cardVariants}
@@ -225,7 +259,7 @@ export default function About() {
                     {exp.desc}
                   </p>
                 </div>
-              </motion.div>
+              </m.div>
             );
           })}
         </div>
@@ -233,18 +267,18 @@ export default function About() {
 
       {/* Tools Section */}
       <div className="flex flex-col gap-6">
-        <motion.div className="flex flex-col gap-1" variants={itemVariants}>
+        <m.div className="flex flex-col gap-1" variants={itemVariants}>
           <span className="text-[12px] font-bold tracking-[0.15em] text-[#8A8A8A] uppercase">
             {t("about.toolsLabel")}
           </span>
           <div className="relative mt-3 w-fit">
-            <motion.span
+            <m.span
               variants={sloganVariants}
               className="absolute top-[-8px] sm:top-[-10px] left-[45%] sm:left-[50%] font-bold tracking-tighter text-[#3B82F6] select-none origin-left z-10 whitespace-nowrap text-[1.35rem] sm:text-[clamp(1.1rem,3vw,1.7rem)]"
               style={{ fontFamily: "'Nothing You Could Do', cursive" }}
             >
               {t("about.toolsSlogan")}
-            </motion.span>
+            </m.span>
             <h2 className="text-[23px] min-[380px]:text-[25px] sm:text-[32px] lg:text-[36px] font-bold text-white tracking-tight whitespace-nowrap pr-2">
               {t("about.toolsTitle")}
             </h2>
@@ -252,9 +286,9 @@ export default function About() {
           <p className="text-[14px] text-[#8A8A8A] max-w-md mt-2">
             {t("about.toolsDesc")}
           </p>
-        </motion.div>
+        </m.div>
 
-        <motion.div
+        <m.div
           className="grid grid-cols-3 sm:grid-cols-2 lg:grid-cols-3 gap-2.5 sm:gap-4 perspective-[900px]"
           variants={toolsContainerVariants}
           initial="hidden"
@@ -262,40 +296,10 @@ export default function About() {
           viewport={{ once: true, margin: "-40px" }}
         >
           {listTools.map((tool) => (
-            <motion.div
-              key={tool.id}
-              className="flex flex-col sm:flex-row items-center gap-2 sm:gap-4 p-2.5 sm:p-4 rounded-[12px] sm:rounded-[16px] bg-[#0B0B0B] border border-white/5 hover:border-[#3B82F6]/30 transition-all duration-300 group shadow-md text-center sm:text-left origin-center"
-              variants={toolsItemVariants}
-              whileHover={{ 
-                y: -4, 
-                scale: 1.03, 
-                transition: { type: "spring", stiffness: 300, damping: 14 } 
-              }}
-            >
-              {/* Icon Container */}
-              <div className="w-9 h-9 sm:w-12 sm:h-12 bg-white/5 rounded-lg sm:rounded-xl border border-white/5 p-1.5 sm:p-2 flex items-center justify-center group-hover:bg-white/10 transition-colors duration-300 flex-shrink-0">
-                <img
-                  src={tool.gambar}
-                  alt={tool.nama}
-                  className="w-full h-full object-contain filter grayscale group-hover:grayscale-0 transition-all duration-300"
-                  loading="lazy"
-                  onError={(e) => {
-                    e.target.style.display = "none";
-                  }}
-                />
-              </div>
-
-              {/* Text Container */}
-              <div className="min-w-0 w-full flex-1">
-                <h4 className="font-bold text-[10px] sm:text-[14px] text-white truncate leading-snug group-hover:text-[#3B82F6] transition-colors duration-250">
-                  {tool.nama}
-                </h4>
-                <p className="hidden sm:block text-[12px] text-[#8A8A8A] truncate mt-0.5">{tool.ket}</p>
-              </div>
-            </motion.div>
+            <ToolItem key={tool.id} tool={tool} />
           ))}
-        </motion.div>
+        </m.div>
       </div>
-    </motion.section>
+    </m.section>
   );
 }

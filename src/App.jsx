@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, lazy, Suspense } from "react";
 import Sidebar from "./components/Sidebar";
 import MobileProfile from "./components/MobileProfile";
 import FloatingNav from "./components/FloatingNav";
@@ -8,10 +8,20 @@ import Career from "./elements/Career";
 import About from "./elements/About";
 import Article from "./elements/Article";
 import Contact from "./elements/Contact";
-import ArticleDetail from "./components/ArticleDetail";
-import ProjectDetail from "./components/ProjectDetail";
 import LanguageSwitcher from "./components/LanguageSwitcher";
 import CustomCursor from "./components/CustomCursor";
+
+// Lazy-loaded detail views (reduces initial JS bundle size dramatically)
+const ArticleDetail = lazy(() => import("./components/ArticleDetail"));
+const ProjectDetail = lazy(() => import("./components/ProjectDetail"));
+
+// Premium inline dynamic loading placeholder
+const LoadingPlaceholder = () => (
+  <div className="w-full min-h-[40vh] flex flex-col items-center justify-center gap-3 animate-pulse">
+    <div className="w-8 h-8 rounded-full border-2 border-white/5 border-t-[#3B82F6] animate-spin" />
+    <span className="text-[12px] font-bold tracking-widest text-[#8A8A8A] uppercase">Loading...</span>
+  </div>
+);
 
 function App() {
   const [activeArticle, setActiveArticle] = useState(null);
@@ -39,20 +49,22 @@ function App() {
         </div>
 
         {/* Content Sections */}
-        {activeArticle ? (
-          <ArticleDetail article={activeArticle} onClose={() => setActiveArticle(null)} />
-        ) : activeProject ? (
-          <ProjectDetail project={activeProject} onClose={() => setActiveProject(null)} />
-        ) : (
-          <>
-            <Home />
-            <Project onSelectProject={setActiveProject} />
-            <Career />
-            <About />
-            <Article onSelectArticle={setActiveArticle} />
-            <Contact />
-          </>
-        )}
+        <Suspense fallback={<LoadingPlaceholder />}>
+          {activeArticle ? (
+            <ArticleDetail article={activeArticle} onClose={() => setActiveArticle(null)} />
+          ) : activeProject ? (
+            <ProjectDetail project={activeProject} onClose={() => setActiveProject(null)} />
+          ) : (
+            <>
+              <Home />
+              <Project onSelectProject={setActiveProject} />
+              <Career />
+              <About />
+              <Article onSelectArticle={setActiveArticle} />
+              <Contact />
+            </>
+          )}
+        </Suspense>
       </main>
 
       {/* Bottom Floating Nav — mobile only */}

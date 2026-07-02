@@ -1,6 +1,6 @@
 import React, { useEffect, useState, useRef } from "react";
 import { User, Folder, Briefcase, GraduationCap, BookOpen, Mail } from "lucide-react";
-import { motion } from "framer-motion";
+import { m } from "framer-motion";
 import { useLanguage } from "../context/LanguageContext";
 
 export default function FloatingNav() {
@@ -77,7 +77,7 @@ export default function FloatingNav() {
             >
               {/* Active Background Capsule */}
               {isActive && (
-                <motion.div
+                <m.div
                   layoutId="activeNavBg"
                   className="absolute inset-0 bg-white/10 rounded-full shadow-[0_0_15px_rgba(255,255,255,0.05)] border border-white/5"
                   transition={{ type: "spring", stiffness: 380, damping: 30 }}
