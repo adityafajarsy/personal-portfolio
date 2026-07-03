@@ -1,3 +1,5 @@
+const ProjectPPIDImg = "/projects/ppid-cover.webp";
+// Placeholder: replace with actual PPID screenshot when available
 const ProjectNetflixImg = "/projects/netflix-clone.webp";
 const ProjectEcomImg = "/projects/hamburger.webp";
 const ProjectCompanyImg = "/projects/leveldva.webp";
@@ -77,37 +79,145 @@ export const translations = {
         {
           id: 1,
           gambar: ProjectNetflixImg,
-          nama: "Netflix Clone",
-          desk: "My first full-stack course project, by a FastCampus course by Dea Afrizal. I learned both front-end and back-end development using Firebase, MongoDB, Express.js, and Node.js (MERN Stack).",
-          longDesc: "This project was my introduction to full-stack development, completed as part of a structured FastCampus course by Dea Afrizal. I built a Netflix-inspired streaming interface that involved implementing user authentication with Firebase, managing a MongoDB database for storing movie metadata, and creating a RESTful API using Express.js and Node.js. The frontend was developed with React and Vite, using TailwindCSS and DaisyUI for rapid UI styling. Key learnings included understanding client-server architecture, JWT authentication flow, and connecting a React frontend to a Node backend. The project helped me establish a solid MERN stack foundation.",
-          tools: ["Vite", "React", "Tailwind", "DaisyUI", "MongoDB", "Firebase", "NodeJS", "ExpressJs", "Responsive"],
+          // TODO: replace gambar with ProjectPPIDImg once screenshot is ready
+          nama: "PPID Digital Ecosystem",
+          desk: "A complete government digital ecosystem developed during a 6-month internship at Kementerian PANRB, consisting of a public information portal, an internal request management system, and a custom CMS.",
+          subtitle: "A modern digital ecosystem for Indonesia's Public Information and Documentation Management, consisting of a public information portal, an internal request management platform, and a custom content management system.",
+          about: "PPID Digital Ecosystem is a complete digital ecosystem developed during my 6-month internship at Indonesia's Ministry of Administrative and Bureaucratic Reform (Kementerian PANRB). The ecosystem modernizes existing PPID services by redesigning the user experience, rebuilding the frontend, improving internal workflows, and replacing outdated content management processes. The project consists of three integrated modules — Portal PPID (Public Website), SIPIPI (Internal Information Request Management System), and CMS (Internal Content Management System) — all belonging to one integrated ecosystem.",
+          facts: [
+            "Government Project",
+            "Internship Project",
+            "6 Months",
+            "Team of 2 Developers",
+            "Production Ready",
+            "Awaiting Penetration Testing"
+          ],
+          modules: [
+            {
+              name: "Portal PPID",
+              label: "Public Website",
+              type: "public",
+              icon: "globe",
+              desc: "A public-facing website where citizens can access public information, read news, download documents, browse FAQs, submit requests, and track their status in real time.",
+              features: ["Access public information", "Read news articles", "Download public documents", "Browse FAQs", "Submit information requests", "Track request status in real time"]
+            },
+            {
+              name: "SIPIPI",
+              label: "Internal Request Management",
+              type: "internal",
+              icon: "server",
+              desc: "An internal platform for PPID administrators to manage the full lifecycle of public information requests — from receipt to response.",
+              features: ["Receive new requests", "Verify submissions", "Process and review requests", "Upload requested documents", "Respond to citizens", "Update request status", "Automatic email notifications"]
+            },
+            {
+              name: "CMS",
+              label: "Content Management System",
+              type: "internal",
+              icon: "edit",
+              desc: "An internal CMS integrated into the same application, replacing the previous WordPress workflow and allowing administrators to manage all Portal PPID content.",
+              features: ["Banner management", "News articles", "FAQ management", "Public documents", "Video content", "Public information data", "Other portal content"]
+            }
+          ],
+          responsibilities: [
+            { category: "UX Research & Strategy", items: ["UX Research", "Competitor Benchmarking", "Information Architecture"] },
+            { category: "Design", items: ["UI Design", "UX Design", "Wireframing", "High-Fidelity Prototyping"] },
+            { category: "Frontend Development", items: ["Frontend Development", "Responsive Development", "Component Design", "Frontend-Backend Integration"] },
+            { category: "Deployment & Media", items: ["Product Demo via Vercel", "Deployment Collaboration", "Multimedia Design", "Creative Content"] }
+          ],
+          timeline: [
+            { phase: "Research", desc: "UX research, competitor benchmarking, and user flow analysis" },
+            { phase: "UI & UX Design", desc: "Wireframing, high-fidelity prototyping, and design system creation" },
+            { phase: "Prototype", desc: "Interactive prototype review and stakeholder feedback sessions" },
+            { phase: "Frontend Development", desc: "Component development, responsive layouts, and full UI implementation" },
+            { phase: "Backend Integration", desc: "API integration, data fetching, and frontend-backend system connection" },
+            { phase: "Deployment", desc: "Docker containerization and Ubuntu server production deployment" }
+          ],
+          techStack: {
+            frontend: ["Next.js", "TypeScript", "Tailwind CSS", "TanStack", "Radix UI"],
+            backend: ["Prisma", "MariaDB", "MinIO"],
+            deployment: ["Docker", "Ubuntu Server", "SSH"]
+          },
+          results: [
+            "Redesigned an outdated government portal into a modern, accessible digital ecosystem",
+            "Built a complete UI/UX design system with consistent visual identity across all three platforms",
+            "Streamlined the public information request workflow into a single, unified platform",
+            "Replaced the old WordPress CMS with a purpose-built internal content management system",
+            "Improved mobile responsiveness and accessibility following government digital standards",
+            "Integrated real-time request tracking and automated email notifications for citizens",
+            "Successfully deployed to Ubuntu Server using Docker containerization",
+            "Approved by project stakeholders after thorough review"
+          ],
+
+          tools: ["Next.js", "TypeScript", "Tailwind CSS", "TanStack", "Radix UI", "Prisma", "MariaDB", "MinIO", "Docker", "Ubuntu"],
           images: [],
           link: "",
-          meta: { date: "2025", role: "Full Stack Developer", category: "MERN Stack Clone" }
-        },
-        {
-          id: 2,
-          gambar: ProjectEcomImg,
-          nama: "E-Commerce (The Hamburger)",
-          desk: "My first dummy project based on my Hacktiv8 capstone task, featuring basic e-commerce functions, a self-made logo, custom dummy database, and planned visual identity.",
-          longDesc: "The Hamburger is a fully responsive e-commerce web app built as my capstone project during the Hacktiv8 ReactJS Bootcamp. The project features a product listing page, individual product detail views, cart management, and a checkout flow — all connected to a custom dummy database via Axios. I also designed the logo and visual identity from scratch using Figma. The routing is handled by React Router DOM, and the UI is built with TailwindCSS. Deploying to Netlify was also part of the process, making this a complete end-to-end frontend project.",
-          tools: ["Vite", "ReactJS", "Tailwind", "Axios", "React-router-dom", "Responsive"],
-          images: [],
-          link: "https://thehamburger.netlify.app",
-          meta: { date: "2025", role: "Frontend Developer", category: "E-Commerce Web" }
-        },
-        {
-          id: 3,
-          gambar: ProjectCompanyImg,
-          nama: "Website Company (Leveldva)",
-          desk: "A modern, elegant company website project designed with GSAP and Tailwind CSS. The site features smooth scrolling, dynamic animations, and a premium user interface, perfect for professional portfolios or company branding.",
-          longDesc: "Leveldva is a company profile website designed to feel premium and motion-rich. The entire page is animated using GSAP, with scroll-triggered reveals, smooth section transitions, and micro-interactions throughout. Built with Vite and React, styled with TailwindCSS, and enhanced with Framer Motion alongside GSAP. The design emphasizes whitespace, bold typography, and a refined dark color palette. Deployed to Vercel, the site is also fully responsive and optimized for performance.",
-          tools: ["Vite", "Tailwind", "React", "GSAP", "Animation", "Motion"],
-          images: [],
-          link: "https://leveldva.vercel.app/",
-          meta: { date: "2025", role: "Frontend Developer", category: "GSAP" }
+          meta: { date: "2026", role: "Frontend Dev & UI/UX Designer", category: "Government Digital Platform", team: "2 Developers", duration: "6 Months", client: "Kementerian PANRB", status: "Production Ready" }
         }
       ]
+    },
+    ppidDetail: {
+      overviewLabel: "Overview",
+      overviewTitle: "Three Integrated Systems",
+      archLabel: "System Architecture",
+      archTitle: "Ecosystem Flow",
+      contribLabel: "Contribution",
+      contribTitle: "My Responsibilities",
+      contribNote: "I primarily focused on frontend development and UI/UX design, collaborating closely with a backend engineer responsible for backend architecture and API implementation.",
+      processLabel: "Process",
+      processTitle: "Development Timeline",
+      techLabel: "Technology",
+      techTitle: "Tech Stack",
+      galleryLabel: "Gallery",
+      galleryTitle: "Portal PPID Screenshots",
+      galleryNote: "Public-facing Portal PPID interface. Screenshots of the internal systems (SIPIPI & CMS) are not publicly displayed due to confidentiality.",
+      internalLabel: "Internal Systems",
+      internalTitle: "SIPIPI & CMS Platform",
+      internalConfidential: "Confidential — Not Publicly Disclosed",
+      internalNote: "Due to confidentiality and security considerations, the internal management platform (SIPIPI & CMS), source code, and administrative interfaces cannot be publicly disclosed.",
+      internalContribNote: "My contributions to the internal platforms included:",
+      resultsLabel: "Outcomes",
+      resultsTitle: "Project Results",
+      repoLabel: "Source Code",
+      repoTitle: "Repository",
+      repoPrivate: "Private / Confidential",
+      repoNote: "This project was developed for a government institution.",
+      repoUnavailable: "Source code unavailable",
+      publicFlow: "Public Flow",
+      contentFlow: "Content Flow",
+      publicBadge: "Public",
+      internalBadge: "Internal",
+      systemNote: "CMS & SIPIPI run in the same internal app — no separate systems needed.",
+      heroPreview: "Portal PPID — Public Interface Preview",
+      metaRole: "Role",
+      metaTeam: "Team",
+      flowCitizen: "Citizen",
+      flowPortal: "Portal PPID",
+      flowSipipi: "SIPIPI",
+      flowAdmin: "Admin Reviews",
+      flowEmail: "Email Notif",
+      flowResponse: "Citizen Gets Response",
+      flowCms: "CMS Module",
+      flowPublished: "Portal PPID",
+      flowNote: "CMS & SIPIPI run in one app.",
+      techFrontend: "Frontend",
+      techBackend: "Backend",
+      techDeployment: "Deployment",
+      internalContributions: [
+        "UX Redesign",
+        "Frontend Development",
+        "Workflow Optimization",
+        "Frontend-Backend Integration",
+        "Deployment Collaboration",
+        "Multimedia Design"
+      ],
+      galleryLabels: {
+        homepage: "Homepage",
+        pubInfo: "Public Information",
+        news: "News",
+        docs: "Documents",
+        faq: "FAQ",
+        req: "Information Request"
+      }
     },
     education: {
       label: "Education",
@@ -435,39 +545,147 @@ At the end of the day, my journey is not about transitioning from Russian Litera
         {
           id: 1,
           gambar: ProjectNetflixImg,
-          nama: "Netflix Clone",
-          desk: "Proyek kursus full-stack pertama saya, dari kursus FastCampus oleh Dea Afrizal. Saya mempelajari pengembangan front-end dan back-end menggunakan Firebase, MongoDB, Express.js, dan Node.js (MERN Stack).",
-          longDesc: "Proyek ini adalah pengenalan pertama saya ke pengembangan full-stack, diselesaikan sebagai bagian dari kursus terstruktur FastCampus oleh Dea Afrizal. Saya membangun antarmuka streaming bergaya Netflix yang mencakup implementasi autentikasi pengguna dengan Firebase, pengelolaan database MongoDB untuk menyimpan metadata film, dan pembuatan RESTful API menggunakan Express.js dan Node.js. Frontend dikembangkan dengan React dan Vite, menggunakan TailwindCSS dan DaisyUI untuk styling UI yang cepat. Pembelajaran utama meliputi pemahaman arsitektur client-server, alur autentikasi JWT, dan koneksi frontend React ke backend Node. Proyek ini membantu saya membangun fondasi MERN stack yang solid.",
-          tools: ["Vite", "React", "Tailwind", "DaisyUI", "MongoDB", "Firebase", "NodeJS", "ExpressJs", "Responsive"],
+          // TODO: ganti gambar dengan ProjectPPIDImg setelah screenshot tersedia
+          nama: "PPID Digital Ecosystem",
+          desk: "Ekosistem digital pemerintah yang lengkap, dikembangkan selama magang di Kementerian PANRB, terdiri dari portal informasi publik, sistem manajemen permintaan informasi, dan CMS.",
+          subtitle: "Ekosistem digital modern untuk pengelolaan informasi dan dokumentasi publik Indonesia, terdiri dari portal informasi publik, platform manajemen permohonan informasi, dan sistem manajemen konten.",
+          about: "PPID Digital Ecosystem adalah ekosistem digital yang dikembangkan selama saya magang di Kementerian Pendayagunaan Aparatur Negara dan Reformasi Birokrasi (Kementerian PANRB). Ekosistem ini memodernisasi layanan PPID yang ada dengan mendesain ulang user experience, redesign frontend, mengefisienkan alur kerja internal, dan memperbaiki proses manajemen konten yang sudah usang. Proyek ini terdiri dari tiga modul yang terintegrasi : Portal PPID (Website Publik), SIPIPI (Sistem Manajemen Permintaan Informasi PPID), dan CMS (Sistem Manajemen Konten), semuanya merupakan satu ekosistem yang terintegrasi.",
+          facts: [
+            "Proyek Pemerintah",
+            "Proyek Magang",
+            "6 Bulan",
+            "Tim 2 Developer",
+            "Production Ready",
+            "Menunggu Penetration Testing"
+          ],
+          modules: [
+            {
+              name: "Portal PPID",
+              label: "Website Publik",
+              type: "public",
+              icon: "globe",
+              desc: "Website publik sebagai sarana masyarakat dapat mengakses informasi publik, membaca berita terkait, mengunduh dokumen publik seperti laporan keuangan ataupun LHKPN p, mengakses FAQ, mengajukan permohonan informasi, dan melacak statusnya secara real time.",
+              features: ["Akses informasi publik", "Baca artikel berita", "Unduh dokumen publik", "Mengakses FAQ", "Mengajukan permohonan informasi", "Melacak status permohonan informasi secara real time"]
+            },
+            {
+              name: "SIPIPI",
+              label: "Manajemen Permintaan Internal",
+              type: "internal",
+              icon: "server",
+              desc: "Platform internal bagi pejabat PPID untuk mengelola alur penuh permohonan informasi publik dari penerimaan hingga respons.",
+              features: ["Terima permohonan baru", "Verifikasi pengajuan", "Proses dan tinjau permohonan", "Unggah dokumen yang diminta", "Kirim respons ke pemohon", "Perbarui status permohonan", "Notifikasi email otomatis"]
+            },
+            {
+              name: "CMS",
+              label: "Sistem Manajemen Konten",
+              type: "internal",
+              icon: "edit",
+              desc: "Sistem manajemen konten yang terintegrasi dalam aplikasi yang sama, menggantikan alur kerja WordPress sebelumnya dan memungkinkan administrator mengelola seluruh konten Portal PPID.",
+              features: ["Manajemen banner", "Artikel berita", "Manajemen FAQ", "Dokumen publik", "Konten video", "Data informasi publik", "Konten portal lainnya"]
+            }
+          ],
+          responsibilities: [
+            { category: "Riset UX & Strategi", items: ["Riset UX", "Benchmarking Kompetitor", "Arsitektur Informasi"] },
+            { category: "Desain", items: ["Desain UI", "Desain UX", "Wireframing", "Prototipe High-Fidelity"] },
+            { category: "Pengembangan Frontend", items: ["Pengembangan Frontend", "Pengembangan Responsif", "Desain Komponen", "Integrasi Frontend-Backend"] },
+            { category: "Deployment & Media", items: ["Demo Produk via Vercel", "Kolaborasi Deployment", "Desain Multimedia", "Konten Kreatif"] }
+          ],
+          timeline: [
+            { phase: "Riset", desc: "Riset UX, benchmarking kompetitor, dan analisis flow pengguna" },
+            { phase: "Desain UI & UX", desc: "Wireframing, prototipe high-fidelity, dan pembuatan sistem desain" },
+            { phase: "Prototipe", desc: "Tinjauan prototipe interaktif dan sesi umpan balik pemangku kepentingan" },
+            { phase: "Pengembangan Frontend", desc: "Pengembangan komponen, layout responsif, dan implementasi UI lengkap" },
+            { phase: "Integrasi Backend", desc: "Integrasi API, pengambilan data, dan koneksi sistem frontend-backend" },
+            { phase: "Deployment", desc: "Containerisasi Docker dan deployment produksi ke server Ubuntu" }
+          ],
+          techStack: {
+            frontend: ["Next.js", "TypeScript", "Tailwind CSS", "TanStack", "Radix UI"],
+            backend: ["Prisma", "MariaDB", "MinIO"],
+            deployment: ["Docker", "Ubuntu Server", "SSH"]
+          },
+          results: [
+            "Desain ulang website portal ppid yang usang menjadi ekosistem digital modern yang aksesibel",
+            "Membangun sistem desain UI/UX lengkap dengan identitas visual yang konsisten di ketiga platform",
+            "Mempersingkat alur permohonan informasi publik menjadi satu platform yang terintegrasi",
+            "Menggantikan CMS lama dengan sistem manajemen konten yang dibangun khusus",
+            "Meningkatkan responsivitas mobile dan aksesibilitas sesuai standar digital pemerintah",
+            "Mengintegrasikan pelacakan permohonan informasi secara real time dan notifikasi email otomatis untuk masyarakat",
+            "Disetujui oleh pemangku kepentingan proyek setelah tinjauan menyeluruh"
+          ],
+
+          tools: ["Next.js", "TypeScript", "Tailwind CSS", "TanStack", "Radix UI", "Prisma", "MariaDB", "MinIO", "Docker", "Ubuntu"],
           images: [],
           link: "",
-          meta: { date: "2025", role: "Full Stack Developer", category: "MERN Stack Clone" }
-        },
-        {
-          id: 2,
-          gambar: ProjectEcomImg,
-          nama: "E-Commerce (The Hamburger)",
-          desk: "Proyek dummy pertama saya berdasarkan tugas capstone Hacktiv8, menampilkan fungsi dasar e-commerce, logo buatan sendiri, database dummy khusus, dan identitas visual yang direncanakan.",
-          longDesc: "The Hamburger adalah aplikasi web e-commerce yang sepenuhnya responsif, dibangun sebagai proyek capstone saya selama Hacktiv8 ReactJS Bootcamp. Proyek ini menampilkan halaman daftar produk, tampilan detail produk individual, manajemen keranjang, dan alur checkout — semuanya terhubung ke database dummy khusus melalui Axios. Saya juga merancang logo dan identitas visual dari awal menggunakan Figma. Routing ditangani oleh React Router DOM, dan UI dibangun dengan TailwindCSS. Deploy ke Netlify juga menjadi bagian dari prosesnya, menjadikan ini proyek frontend end-to-end yang lengkap.",
-          tools: ["Vite", "ReactJS", "Tailwind", "Axios", "React-router-dom", "Responsive"],
-          images: [],
-          link: "https://thehamburger.netlify.app",
-          meta: { date: "2025", role: "Frontend Developer", category: "E-Commerce Web" }
-        },
-        {
-          id: 3,
-          gambar: ProjectCompanyImg,
-          nama: "Website Company (Leveldva)",
-          desk: "Proyek situs web perusahaan yang modern dan elegan yang dirancang dengan GSAP dan Tailwind CSS. Situs ini menampilkan scroll yang mulus, animasi dinamis, dan antarmuka pengguna premium, cocok untuk portofolio profesional atau branding perusahaan.",
-          longDesc: "Leveldva adalah website company profile yang dirancang untuk terasa premium dan kaya gerakan. Seluruh halaman dianimasikan menggunakan GSAP, dengan scroll-triggered reveals, transisi section yang mulus, dan micro-interaction di seluruh bagian. Dibangun dengan Vite dan React, diberi style dengan TailwindCSS, dan ditingkatkan dengan Framer Motion bersama GSAP. Desainnya menekankan whitespace, tipografi bold, dan palet warna gelap yang halus. Di-deploy ke Vercel, situs ini juga sepenuhnya responsif dan dioptimalkan untuk performa.",
-          tools: ["Vite", "Tailwind", "React", "GSAP", "Animation", "Motion"],
-          images: [],
-          link: "https://leveldva.vercel.app/",
-          meta: { date: "2025", role: "Frontend Developer", category: "GSAP" }
+          meta: { date: "2026", role: "Frontend Dev & UI/UX Designer", category: "Platform Digital Pemerintah", team: "2 Developer", duration: "6 Bulan", client: "Kementerian PANRB", status: "Production Ready" }
         }
       ]
 
     },
+    ppidDetail: {
+      overviewLabel: "Ikhtisar",
+      overviewTitle: "Tiga Sistem Terintegrasi",
+      archLabel: "Arsitektur Sistem",
+      archTitle: "Alur Ekosistem",
+      contribLabel: "Kontribusi",
+      contribTitle: "Tanggung Jawab Saya",
+      contribNote: "Saya berfokus pada pengembangan frontend dan desain UI/UX, berkolaborasi erat dengan backend engineer yang bertanggung jawab atas arsitektur backend dan implementasi API.",
+      processLabel: "Proses",
+      processTitle: "Timeline Pengembangan",
+      techLabel: "Teknologi",
+      techTitle: "Tech Stack",
+      galleryLabel: "Galeri",
+      galleryTitle: "Screenshot Portal PPID",
+      galleryNote: "Interface UI Portal PPID yang bersifat publik. Screenshot sistem internal (SIPIPI & CMS) tidak ditampilkan karena alasan confidential.",
+      internalLabel: "Sistem Internal",
+      internalTitle: "Platform SIPIPI & CMS",
+      internalConfidential: "Rahasia, Tidak Dapat Ditampilkan Publik",
+      internalNote: "Karena alasan kerahasiaan dan keamanan, platform manajemen internal (SIPIPI & CMS), source code, dan antarmuka administratif tidak dapat dipublikasikan.",
+      internalContribNote: "Kontribusi saya pada platform internal meliputi:",
+      resultsLabel: "Hasil",
+      resultsTitle: "Hasil Proyek",
+      repoLabel: "Source Code",
+      repoTitle: "Repository",
+      repoPrivate: "Privat / Rahasia",
+      repoNote: "Proyek ini dikembangkan untuk institusi pemerintah.",
+      repoUnavailable: "Source code tidak tersedia",
+      publicFlow: "Alur Publik",
+      contentFlow: "Alur Konten",
+      publicBadge: "Publik",
+      internalBadge: "Internal",
+      systemNote: "CMS & SIPIPI berjalan dalam satu aplikasi internal — tidak perlu sistem terpisah.",
+      heroPreview: "Portal PPID — Pratinjau Antarmuka Publik",
+      metaRole: "Peran",
+      metaTeam: "Tim",
+      flowCitizen: "Masyarakat",
+      flowPortal: "Portal PPID",
+      flowSipipi: "SIPIPI",
+      flowAdmin: "Tinjauan Admin",
+      flowEmail: "Notifikasi Email",
+      flowResponse: "Masyarakat Menerima Respons",
+      flowCms: "Modul CMS",
+      flowPublished: "Portal PPID",
+      flowNote: "CMS & SIPIPI berjalan dalam satu aplikasi.",
+      techFrontend: "Frontend",
+      techBackend: "Backend",
+      techDeployment: "Deployment",
+      internalContributions: [
+        "Redesain UX",
+        "Pengembangan Frontend",
+        "Optimasi Alur Kerja",
+        "Integrasi Frontend-Backend",
+        "Kolaborasi Deployment",
+        "Desain Multimedia"
+      ],
+      galleryLabels: {
+        homepage: "Halaman Utama",
+        pubInfo: "Informasi Publik",
+        news: "Berita",
+        docs: "Dokumen",
+        faq: "FAQ",
+        req: "Permohonan Informasi"
+      }
+    },
+
     education: {
       label: "Education",
       slogan: "education is key",
