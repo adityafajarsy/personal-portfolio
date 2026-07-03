@@ -61,9 +61,9 @@ export const translations = {
     },
     home: {
       intro: "Intro",
-      quote: "For me, coding is problem solving..",
+      quote: "I start with real problems...",
       title: "Hi, I'm Aditya Fajar SY",
-      bio: "A Fullstack MERN Developer with a background in Language Literature, Graphic Design and Creative Media. I build user pov websites where proper design meets seamless functionality. Balancing technical execution with strategic business goals, my focus is always on engineering web solutions that effectively solve real company problems.",
+      bio: "I build digital products by translating real problems into meaningful solutions. Combining Language, Graphic Design, and Software Engineering, I approach every product through research, user understanding, and thoughtful engineering. Technology isn't where great products begin. Understanding people is.",
       downloadCv: "Download CV",
       connectMe: "Connect with me",
     },
@@ -527,9 +527,9 @@ At the end of the day, my journey is not about transitioning from Russian Litera
     },
     home: {
       intro: "Intro",
-      quote: "For me, coding is problem solving..",
+      quote: "I start with real problems...",
       title: "Hi, I'm Aditya Fajar SY",
-      bio: "Seorang Developer dengan latar belakang Bahasa, Desain Grafis, dan Kreatif Multimedia. Saya membangun situs web dari sudut pandang masalah pengguna di mana desain yang proper berpadu dengan fungsionalitas yang smooth. Menyeimbangkan teknis dengan tujuan bisnis, saya berfokus membuat solusi web yang memecahkan masalah nyata perusahaan secara efektif.",
+      bio: "Membangun aplikasi digital dengan menerjemahkan masalah nyata menjadi solusi yang bermakna. Kombinasi latar belakang Bahasa, Desain Grafis, dan Software Engineering, saya percaya produk terbaik lahir ketika riset, experience pengguna, dan teknologi bekerja sebagai satu kesatuan. Teknologi bukan titik awal, memahami masalah adalah langkah pertama dalam membangun produk yang benar-benar bernilai.",
       downloadCv: "Download CV",
       connectMe: "Connect with me",
     },
@@ -547,7 +547,7 @@ At the end of the day, my journey is not about transitioning from Russian Litera
           gambar: ProjectNetflixImg,
           // TODO: ganti gambar dengan ProjectPPIDImg setelah screenshot tersedia
           nama: "PPID Digital Ecosystem",
-          desk: "Ekosistem digital pemerintah yang lengkap, dikembangkan selama magang di Kementerian PANRB, terdiri dari portal informasi publik, sistem manajemen permintaan informasi, dan CMS.",
+          desk: "Ekosistem digital pemerintah yang lengkap, dikembangkan selama magang di Kementerian PANRB, terdiri dari portal informasi publik, sistem manajemen permohonan informasi, dan CMS.",
           subtitle: "Ekosistem digital modern untuk pengelolaan informasi dan dokumentasi publik Indonesia, terdiri dari portal informasi publik, platform manajemen permohonan informasi, dan sistem manajemen konten.",
           about: "PPID Digital Ecosystem adalah ekosistem digital yang dikembangkan selama saya magang di Kementerian Pendayagunaan Aparatur Negara dan Reformasi Birokrasi (Kementerian PANRB). Ekosistem ini memodernisasi layanan PPID yang ada dengan mendesain ulang user experience, redesign frontend, mengefisienkan alur kerja internal, dan memperbaiki proses manajemen konten yang sudah usang. Proyek ini terdiri dari tiga modul yang terintegrasi : Portal PPID (Website Publik), SIPIPI (Sistem Manajemen Permintaan Informasi PPID), dan CMS (Sistem Manajemen Konten), semuanya merupakan satu ekosistem yang terintegrasi.",
           facts: [
