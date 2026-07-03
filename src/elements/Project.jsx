@@ -121,15 +121,25 @@ export default function Project({ onSelectProject }) {
                 </span>
 
                 {/* Project name */}
-                <span
-                  className={`flex-1 text-[20px] sm:text-[24px] lg:text-[26px] font-bold tracking-tight leading-tight transition-colors duration-200 ${
-                    isOpen
-                      ? "text-[#3B82F6]"
-                      : "text-white group-hover:text-white/80"
-                  }`}
-                >
-                  {project.nama}
-                </span>
+                <div className="flex-1">
+                  <span
+                    className={`relative inline-flex items-center text-[20px] sm:text-[24px] lg:text-[26px] font-bold tracking-tight leading-tight transition-colors duration-200 ${
+                      isOpen
+                        ? "text-[#3B82F6]"
+                        : "text-white group-hover:text-white/80"
+                    }`}
+                  >
+                    {project.nama}
+                    {project.id === 1 && (
+                      <span
+                        className="absolute top-[-14px] left-[105px] sm:left-auto sm:right-[-48px] sm:top-[-10px] text-[#3B82F6] text-[12px] sm:text-[13px] tracking-tight font-bold select-none pointer-events-none whitespace-nowrap"
+                        style={{ fontFamily: "'Nothing You Could Do', cursive", transform: "rotate(-6deg)" }}
+                      >
+                        3 Apps
+                      </span>
+                    )}
+                  </span>
+                </div>
 
                 {/* Category — hidden on small mobile */}
                 <span className="hidden sm:block text-[13px] text-white/40 font-medium w-40 shrink-0">

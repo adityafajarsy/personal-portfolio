@@ -315,9 +315,20 @@ export default function ProjectDetail({ project, onClose }) {
         </div>
       </m.div>
 
-      {/* ── Hero cover image ────────────────────────────────────────────── */}
+      {/* ── Hero cover image / video ────────────────────────────────────── */}
       <m.div variants={fadeUp} custom={1} initial="hidden" animate="visible" className="w-full aspect-[16/8] rounded-[20px] overflow-hidden bg-zinc-900 border border-white/5 relative">
-        <img src={localizedProject.gambar} alt={localizedProject.nama} className="w-full h-full object-cover" loading="lazy" />
+        {localizedProject.video ? (
+          <video
+            src={localizedProject.video}
+            className="w-full h-full object-cover"
+            autoPlay
+            loop
+            muted
+            playsInline
+          />
+        ) : (
+          <img src={localizedProject.gambar} alt={localizedProject.nama} className="w-full h-full object-cover" loading="lazy" />
+        )}
         <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent" />
         <div className="absolute bottom-4 left-5 flex items-center gap-2">
           <span className="text-[11px] font-bold text-white/50 bg-black/40 backdrop-blur-sm px-3 py-1 rounded-full border border-white/10">

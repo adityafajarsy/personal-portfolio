@@ -79,6 +79,7 @@ export const translations = {
         {
           id: 1,
           gambar: ProjectNetflixImg,
+          video: "/assets/project1/demo_homePage.webm",
           // TODO: replace gambar with ProjectPPIDImg once screenshot is ready
           nama: "PPID Digital Ecosystem",
           desk: "A complete government digital ecosystem developed during a 6-month internship at Kementerian PANRB, consisting of a public information portal, an internal request management system, and a custom CMS.",
@@ -545,6 +546,7 @@ At the end of the day, my journey is not about transitioning from Russian Litera
         {
           id: 1,
           gambar: ProjectNetflixImg,
+          video: "/assets/project1/demo_homePage.webm",
           // TODO: ganti gambar dengan ProjectPPIDImg setelah screenshot tersedia
           nama: "PPID Digital Ecosystem",
           desk: "Ekosistem digital pemerintah yang lengkap, dikembangkan selama magang di Kementerian PANRB, terdiri dari portal informasi publik, sistem manajemen permohonan informasi, dan CMS.",
