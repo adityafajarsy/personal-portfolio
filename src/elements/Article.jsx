@@ -153,7 +153,6 @@ export default function Article({ onSelectArticle }) {
               key={article.id}
               className="w-[290px] md:w-[calc((100%-20px)/2)] lg:w-[calc((100%-40px)/3)] flex-shrink-0 snap-start group bg-[#0B0B0B] border border-white/5 rounded-[20px] overflow-hidden flex flex-col hover:border-[#3B82F6]/30 hover:shadow-[0_12px_30px_rgba(59,130,246,0.06)] transition-all duration-300 cursor-pointer"
               variants={itemVariants}
-              whileHover={{ scale: 1.02 }}
               onClick={() => onSelectArticle(article)}
             >
               {/* Image Cover */}

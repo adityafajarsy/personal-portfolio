@@ -278,7 +278,7 @@ They will remember one thing that is far more important.
           kategori: "UI/UX Design",
           tanggal: "May 14, 2026",
           baca: "4 min read",
-          nama: "Stop Designing Generic Websites",
+          nama: "Stop Designing Websites 'Generic'",
           desk: "So many website designs look exactly the same these days.",
           isi: `
 I can usually tell within a few seconds if a website was built using AI. It is not because I am against AI—in fact, I use it almost every day to help with design and development. What makes a website easily recognizable is not the AI itself, but because all the design decisions feel identical. The hero section is the same, the layout is the same, cards have the same shadows, the same purple-blue gradients are used, animations are identical, and even the content order rarely changes. The result looks modern, but it feels like the 100th website I have seen that week.
@@ -661,14 +661,14 @@ Semakin berkembang AI, semakin jelas bahwa nilai manusia bukan cuma pada apa yan
           kategori: "Personal & Mentalitas",
           tanggal: "02 Juli 2026",
           baca: "7 menit baca",
-          nama: "Perjalanan Gue Membangun Mental Builder",
+          nama: "Dari Sastra ke Pemrograman : Perjalanan Membentuk Mental Builder",
           desk: "Dulu kuliah Sastra Rusia, sekarang kerja di bidang IT. Ternyata, yang gue bangun selama ini bukan sekadar skill pemrograman, melainkan mental seorang builder.",
           isi: `
-# Perjalanan Gue Membangun Mental Builder
+## Perjalanan Gue Membangun Mental Builder
 Dulu, kalau ada yang nanya, "Kenapa kuliah Sastra Rusia kalau akhirnya mau kerja di bidang IT?", mungkin gua juga bakal bingung jawabnya. Soalnya kalau dilihat sekilas, memang nggak ada hubungannya. 
 ## Satu belajar bahasa dan budaya, satu lagi bikin aplikasi.
 Tapi setelah beberapa tahun menjalani semuanya, gue justru sadar bahwa setiap fase itu saling terhubung. Ngga ada yang benar-benar sia-sia. Yang gua bangun selama ini ternyata bukan sekadar kumpulan skill. Gua sedang membangun sesuatu yang lebih penting: **mental seorang builder.**
-## Awalnya Cuma Ingin Punya Waktu
+## Awalnya Cuma Ingin Punya Waktu 
 Alasan gue milih jurusan Sastra sebenarnya cukup sederhana. Mindset gue waktu itu adalah, "yang penting kuliahnya nggak terlalu menyita waktu, supaya gue masih bisa belajar skill lain di luar kampus." Mungkin terdengar aneh, tapi ternyata keputusan itu jadi titik awal dari banyak hal.
 Sejak semester pertama, gue aktif di berbagai organisasi dan kepanitiaan. Hampir semuanya berkaitan dengan publikasi, desain grafis, multimedia, dan dokumentasi. Waktu itu gue udah cukup sering ngerjain motion graphic, video editing, aftermovie, sampai visual 3D. Lama-kelamaan, dunia kreatif jadi tempat gue berkembang.
 ## Organisasi Mengajarkan Lebih dari Sekadar Desain
