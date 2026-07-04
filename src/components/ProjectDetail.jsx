@@ -315,20 +315,9 @@ export default function ProjectDetail({ project, onClose }) {
         </div>
       </m.div>
 
-      {/* ── Hero cover image / video ────────────────────────────────────── */}
+      {/* ── Hero cover image ────────────────────────────────────────────── */}
       <m.div variants={fadeUp} custom={1} initial="hidden" animate="visible" className="w-full aspect-[16/8] rounded-[20px] overflow-hidden bg-zinc-900 border border-white/5 relative">
-        {localizedProject.video ? (
-          <video
-            src={localizedProject.video}
-            className="w-full h-full object-cover"
-            autoPlay
-            loop
-            muted
-            playsInline
-          />
-        ) : (
-          <img src={localizedProject.gambar} alt={localizedProject.nama} className="w-full h-full object-cover" loading="lazy" />
-        )}
+        <img src={localizedProject.gambar} alt={localizedProject.nama} className="w-full h-full object-cover" loading="lazy" />
         <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent" />
         <div className="absolute bottom-4 left-5 flex items-center gap-2">
           <span className="text-[11px] font-bold text-white/50 bg-black/40 backdrop-blur-sm px-3 py-1 rounded-full border border-white/10">
@@ -336,6 +325,7 @@ export default function ProjectDetail({ project, onClose }) {
           </span>
         </div>
       </m.div>
+
 
 
       {/* ── 2. OVERVIEW ────────────────────────────────────────────────── */}
@@ -513,12 +503,42 @@ export default function ProjectDetail({ project, onClose }) {
         </div>
 
         {localizedProject.images && localizedProject.images.length > 0 ? (
-          <div className="grid grid-cols-2 gap-3">
-            {localizedProject.images.map((src, i) => (
-              <div key={i} className={`rounded-[14px] overflow-hidden bg-zinc-900 border border-white/5 ${i === 0 ? "col-span-2 aspect-[16/9]" : "aspect-[4/3]"}`}>
-                <img src={src} alt={`Portal PPID screenshot ${i + 1}`} className="w-full h-full object-cover" loading="lazy" />
+          <div className="flex flex-col gap-4">
+            {/* Top item: Video demo */}
+            {localizedProject.images[0].endsWith(".webm") ? (
+              <div className="w-full aspect-[16/9] rounded-[20px] overflow-hidden bg-zinc-900 border border-white/5 relative">
+                <video
+                  src={localizedProject.images[0]}
+                  className="w-full h-full object-cover"
+                  autoPlay
+                  loop
+                  muted
+                  playsInline
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent pointer-events-none" />
+                <div className="absolute bottom-4 left-5">
+                  <span className="text-[11px] font-bold text-white/50 bg-black/40 backdrop-blur-sm px-3 py-1 rounded-full border border-white/10">
+                    {t("ppidDetail.demoVideoLabel")}
+                  </span>
+                </div>
               </div>
-            ))}
+            ) : (
+              <div className="w-full aspect-[16/9] rounded-[20px] overflow-hidden bg-zinc-900 border border-white/5 relative">
+                <img src={localizedProject.images[0]} alt="Portal PPID preview" className="w-full h-full object-cover" loading="lazy" />
+              </div>
+            )}
+
+            {/* Bottom items: Grid compilation of other screenshots */}
+            {localizedProject.images.length > 1 && (
+              <div className="grid grid-cols-2 sm:grid-cols-3 gap-3">
+                {localizedProject.images.slice(1).map((src, i) => (
+                  <div key={i} className="rounded-[14px] overflow-hidden bg-zinc-900 border border-white/5 aspect-[16/10] group relative cursor-pointer">
+                    <img src={src} alt={`Portal PPID screenshot ${i + 2}`} className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-[1.03]" loading="lazy" />
+                    <div className="absolute inset-0 bg-black/25 opacity-0 group-hover:opacity-100 transition-opacity duration-200" />
+                  </div>
+                ))}
+              </div>
+            )}
           </div>
         ) : (
           <div className="grid grid-cols-2 gap-3">
@@ -542,6 +562,7 @@ export default function ProjectDetail({ project, onClose }) {
             ))}
           </div>
         )}
+
       </m.div>
 
       {/* ── 10. INTERNAL PLATFORM (Confidential) ────────────────────────── */}

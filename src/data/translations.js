@@ -78,7 +78,7 @@ export const translations = {
       list: [
         {
           id: 1,
-          gambar: ProjectNetflixImg,
+          gambar: "/assets/project1/banner_utama.webp",
           video: "/assets/project1/demo_homePage.webm",
           // TODO: replace gambar with ProjectPPIDImg once screenshot is ready
           nama: "PPID Digital Ecosystem",
@@ -150,7 +150,17 @@ export const translations = {
           ],
 
           tools: ["Next.js", "TypeScript", "Tailwind CSS", "TanStack", "Radix UI", "Prisma", "MariaDB", "MinIO", "Docker", "Ubuntu"],
-          images: [],
+          images: [
+            "/assets/project1/demo_homePage.webm",
+            "/assets/project1/DIP_Grid.webp",
+            "/assets/project1/Laporan-statistika_grid.webp",
+            "/assets/project1/berita-grid.webp",
+            "/assets/project1/faq-grid.webp",
+            "/assets/project1/lacak-permohonan_grid.webp",
+            "/assets/project1/laporan_evaluasi_grid.webp",
+            "/assets/project1/permohonan-informasi-grid.webp",
+            "/assets/project1/statistiklaporan_grid.webp"
+          ],
           link: "",
           meta: { date: "2026", role: "Frontend Dev & UI/UX Designer", category: "Government Digital Platform", team: "2 Developers", duration: "6 Months", client: "Kementerian PANRB", status: "Production Ready" }
         }
@@ -189,6 +199,7 @@ export const translations = {
       internalBadge: "Internal",
       systemNote: "CMS & SIPIPI run in the same internal app — no separate systems needed.",
       heroPreview: "Portal PPID — Public Interface Preview",
+      demoVideoLabel: "Portal PPID — Interactive Video Demo",
       metaRole: "Role",
       metaTeam: "Team",
       flowCitizen: "Citizen",
@@ -545,7 +556,7 @@ At the end of the day, my journey is not about transitioning from Russian Litera
       list: [
         {
           id: 1,
-          gambar: ProjectNetflixImg,
+          gambar: "/assets/project1/banner_utama.webp",
           video: "/assets/project1/demo_homePage.webm",
           // TODO: ganti gambar dengan ProjectPPIDImg setelah screenshot tersedia
           nama: "PPID Digital Ecosystem",
@@ -616,7 +627,17 @@ At the end of the day, my journey is not about transitioning from Russian Litera
           ],
 
           tools: ["Next.js", "TypeScript", "Tailwind CSS", "TanStack", "Radix UI", "Prisma", "MariaDB", "MinIO", "Docker", "Ubuntu"],
-          images: [],
+          images: [
+            "/assets/project1/demo_homePage.webm",
+            "/assets/project1/DIP_Grid.webp",
+            "/assets/project1/Laporan-statistika_grid.webp",
+            "/assets/project1/berita-grid.webp",
+            "/assets/project1/faq-grid.webp",
+            "/assets/project1/lacak-permohonan_grid.webp",
+            "/assets/project1/laporan_evaluasi_grid.webp",
+            "/assets/project1/permohonan-informasi-grid.webp",
+            "/assets/project1/statistiklaporan_grid.webp"
+          ],
           link: "",
           meta: { date: "2026", role: "Frontend Dev & UI/UX Designer", category: "Platform Digital Pemerintah", team: "2 Developer", duration: "6 Bulan", client: "Kementerian PANRB", status: "Production Ready" }
         }
@@ -656,6 +677,7 @@ At the end of the day, my journey is not about transitioning from Russian Litera
       internalBadge: "Internal",
       systemNote: "CMS & SIPIPI berjalan dalam satu aplikasi internal — tidak perlu sistem terpisah.",
       heroPreview: "Portal PPID — Pratinjau Antarmuka Publik",
+      demoVideoLabel: "Portal PPID — Pratinjau Demo Video",
       metaRole: "Peran",
       metaTeam: "Tim",
       flowCitizen: "Masyarakat",
