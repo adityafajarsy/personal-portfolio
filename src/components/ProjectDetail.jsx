@@ -1,6 +1,7 @@
 import React, { useEffect } from "react";
 import { m, AnimatePresence } from "framer-motion";
 import { useLanguage } from "../context/LanguageContext";
+import PortfolioDetail from "./PortfolioDetail";
 
 const fadeUp = {
   hidden: { opacity: 0, y: 22 },
@@ -206,8 +207,14 @@ export default function ProjectDetail({ project, onClose }) {
     }, 100);
   };
 
-  // Detect if PPID case study (has modules field)
+  // Detect project type
+  const isBuilderArchive = project.id === 2;
   const isPPID = Boolean(project.modules);
+
+  // ── Builder's Archive (Project 2) rendering ───────────────────────────────
+  if (isBuilderArchive) {
+    return <PortfolioDetail project={project} onClose={onClose} />;
+  }
 
   // ── Default (legacy) rendering ───────────────────────────────────────────
   if (!isPPID) {

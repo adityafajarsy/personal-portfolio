@@ -163,6 +163,27 @@ export const translations = {
           ],
           link: "",
           meta: { date: "2026", role: "Frontend Dev & UI/UX Designer", category: "Government Digital Platform", team: "2 Developers", duration: "6 Months", client: "Kementerian PANRB", status: "Production Ready" }
+        },
+        {
+          id: 2,
+          gambar: "/assets/project2/banner_cover.webp",
+          nama: "Builder's Archive",
+          desk: "A personal digital identity system designed to communicate design thinking, engineering philosophy, and creative process, not simply to showcase projects.",
+          subtitle: "A personal digital identity designed to communicate how I think, research, design, and engineer digital products, not simply to showcase projects.",
+          about: "Builder's Archive is my personal portfolio website. But it is not just a portfolio. It is a digital identity system built to communicate my design philosophy, creative process, and engineering capability. Every visual decision, every interaction, and every word on this website exists to tell a story about how I approach problems and build products.",
+          category: "Creative Engineering",
+          facts: [
+            "Personal Project",
+            "Solo Build",
+            "2026",
+            "React + Vite",
+            "Framer Motion",
+            "Bilingual (EN/ID)"
+          ],
+          tools: ["React", "Vite", "Tailwind CSS", "Framer Motion", "JavaScript", "Vercel"],
+          images: [],
+          link: "",
+          meta: { date: "2026", role: "Product Designer & Frontend Engineer", category: "Creative Engineering", team: "Solo", status: "Live" }
         }
       ]
     },
@@ -230,6 +251,124 @@ export const translations = {
         faq: "FAQ",
         req: "Information Request"
       }
+    },
+    builderDetail: {
+      heroLabel: "Case Study",
+      heroSubtitle: "A personal digital identity designed to communicate how I think, research, design, and engineer digital products, not simply to showcase projects.",
+      metaRole: "Role",
+      metaTeam: "Team",
+      metaYear: "Year",
+      metaCategory: "Category",
+      metaStack: "Stack",
+      techLabel: "Tech Stack",
+
+      // Section 1 — Why This Exists
+      whyLabel: "Origin",
+      whyTitle: "Why This Exists",
+      whyBody: [
+        "Branding is not just visual. Branding is how a product is recognized before it is explained.",
+        "For years, I have collected references across multiple disciplines: design, branding, software engineering, esports, streetwear, crypto, investment, editorial, and technology. Not to copy them, but to understand why a piece of work can build a strong identity and leave a lasting impression.",
+        "This website is the result of that process. A space where all my experience, references, and way of thinking are translated into a single, cohesive visual language.",
+        "More than a portfolio, this is a representation of how I design, build, and communicate a digital product."
+      ],
+
+      // Section 2 — Creative Foundations
+      foundationsLabel: "Foundations",
+      foundationsTitle: "Creative Foundations",
+      foundations: [
+        { icon: "problem", title: "Problem Solving", desc: "Everything begins with identifying real user problems instead of choosing technologies first." },
+        { icon: "research", title: "Research", desc: "Every visual decision is backed by observation, inspiration, and benchmarking from multiple industries." },
+        { icon: "design", title: "Design Language", desc: "A consistent visual identity built from typography, colors, symbols, handwritten elements, and motion." },
+        { icon: "code", title: "Engineering", desc: "Transforming design systems into responsive, scalable, and production-ready frontend architecture." }
+      ],
+
+      // Section 3 — Inspiration Journey
+      journeyLabel: "Journey",
+      journeyTitle: "Inspiration Journey",
+      journey: [
+        { era: "Russian Literature", desc: "Learning storytelling, structure, and how ideas are communicated across different cultural contexts." },
+        { era: "Graphic Design", desc: "Understanding composition, typography, hierarchy, and the grammar of visual communication." },
+        { era: "Creative Media Org", desc: "Learning branding systems, social media consistency, creative direction, and team collaboration." },
+        { era: "Crypto & Web3", desc: "Inspired by BLUM's graffiti symbols, dripping aesthetics, hacker visuals, and experimental digital identity." },
+        { era: "Valorant Esports", desc: "Inspired by 100 Thieves branding, handwritten typography, bold layouts, and premium competitive identity." },
+        { era: "Frontend Engineering", desc: "Combining all previous disciplines into one interactive, reactive digital experience." }
+      ],
+
+      // Section 4 — Visual Language
+      visualLabel: "Design System",
+      visualTitle: "Visual Language",
+      visual: [
+        { key: "typography", title: "Typography", detail: "Inter + Nothing You Could Do", desc: "Inter provides technical clarity and professional precision. Nothing You Could Do adds human imperfection, warmth, and personality. The contrast between the two is intentional." },
+        { key: "color", title: "Color System", detail: "Blue #3B82F6", desc: "Blue represents clarity, technology, trust, and focus. It is the color of systems thinking, creative precision, and forward momentum." },
+        { key: "handwriting", title: "Handwritten Typography", detail: "Personal contrast", desc: "Handwritten elements create contrast against clean technical layouts. They make the interface feel more personal, less corporate, and more human." },
+        { key: "graffiti", title: "Graffiti Symbols", detail: "Street identity", desc: "Graffiti represents experimentation, creativity, and imperfect human expression. It adds a layer of subcultural identity to an otherwise technical portfolio." },
+        { key: "editorial", title: "Editorial Layout", detail: "Magazine hierarchy", desc: "Large typography, strong whitespace, asymmetric grids. Inspired by editorial design — content presented with confidence and craft." },
+        { key: "motion", title: "Motion", detail: "Restrained & intentional", desc: "Animations are smooth but restrained. Every motion has a purpose. Interactions should feel intentional, not decorative." }
+      ],
+
+      // Section 5 — Design References
+      refsLabel: "References",
+      refsTitle: "Design References",
+      refsNote: "Not a moodboard. Each reference taught me something specific about identity, hierarchy, and craft.",
+      refs: [
+        { name: "100 Thieves", tag: "Esports Brand", lesson: "Bold handwritten typography, confident visual hierarchy, and premium brand identity built around exclusivity and cultural relevance." },
+        { name: "BLUM", tag: "Crypto / Web3", lesson: "Graffiti symbols, dripping aesthetics, hacker culture visuals, and expressive experimental digital identity that breaks conventional UI rules." },
+        { name: "Editorial Websites", tag: "Digital Publishing", lesson: "Large dominant typography, clean structured layouts, asymmetric grids, and storytelling through deliberate spacing and content hierarchy." },
+        { name: "Luxury Branding", tag: "Minimalism", lesson: "Confidence through restraint. Premium spacing. Timeless visual systems that age well because they eliminate the unnecessary." },
+        { name: "Apple", tag: "Product Design", lesson: "Clarity over cleverness. Simplicity as a design decision. Product-first presentation and interaction consistency across every touchpoint." }
+      ],
+
+      // Section 6 — Design Process
+      processLabel: "Process",
+      processTitle: "Design Process",
+      process: [
+        { phase: "Research", desc: "Collecting references from branding, technology, editorial design, gaming, crypto, and fashion industries." },
+        { phase: "Strategy", desc: "Defining the personality, identity system, and emotional direction of the digital presence." },
+        { phase: "Wireframe", desc: "Creating information hierarchy, content structure, and layout architecture before visual design." },
+        { phase: "Visual Design", desc: "Developing the complete design language — typography, color, spacing, motion, and components." },
+        { phase: "Prototype", desc: "Testing interactions, transitions, and animations to ensure intentional, non-decorative motion." },
+        { phase: "Development", desc: "Implementing using React, Vite, Tailwind CSS, Framer Motion, and responsive component architecture." },
+        { phase: "Iteration", desc: "Continuous refinement based on usability testing, visual consistency reviews, and personal feedback." }
+      ],
+
+      // Section 7 — Engineering
+      engLabel: "Engineering",
+      engTitle: "Engineering Decisions",
+      engFrontend: "Frontend",
+      engAnimation: "Animation",
+      engDeployment: "Deployment",
+      engPerformance: "Performance",
+      engFrontendItems: ["React", "Vite", "JavaScript", "Tailwind CSS"],
+      engAnimationItems: ["Framer Motion"],
+      engDeploymentItems: ["Vercel"],
+      engPerformanceItems: ["Image Optimization", "Code Splitting", "Lazy Loading", "SEO Optimization", "Accessibility", "Responsive Design"],
+      engFrontendNote: "React + Vite provides a fast development experience and production-grade build pipeline. Tailwind enforces design consistency through a utility-first constraint system.",
+      engAnimationNote: "Framer Motion enables physics-based, declarative animations that feel natural and intentional — not CSS transitions bolted on as an afterthought.",
+      engDeploymentNote: "Vercel's edge network provides globally distributed delivery with zero-config CI/CD, enabling instant rollbacks and preview deployments.",
+
+      // Section 8 — Gallery
+      galleryLabel: "Gallery",
+      galleryTitle: "Interface Gallery",
+      galleryNote: "Selected screenshots across different sections of the portfolio, showing the visual language in context.",
+      galleryGroups: ["Landing Page", "Articles", "Projects", "Project Detail", "About", "Mobile"],
+
+      // Section 9 — Outcomes
+      outcomesLabel: "Results",
+      outcomesTitle: "Project Outcomes",
+      outcomes: [
+        { title: "Unified Digital Identity", desc: "A consistent visual language across every page and interaction." },
+        { title: "Story-driven Portfolio", desc: "Communicates process and thinking instead of only showcasing finished results." },
+        { title: "Fully Responsive", desc: "Optimized layout and interaction for desktop, tablet, and mobile screens." },
+        { title: "Performance Focused", desc: "Fast loading, optimized assets, and minimal bundle overhead." },
+        { title: "Expandable Architecture", desc: "Designed to grow alongside future products, articles, and case studies." }
+      ],
+
+      // Section 10 — Repository
+      repoLabel: "Source Code",
+      repoTitle: "Repository",
+      repoPublic: "Public",
+      repoDesc: "Full source code available on GitHub. Includes documentation and component structure.",
+      repoBtn: "View on GitHub"
     },
     education: {
       label: "Education",
@@ -639,9 +778,138 @@ At the end of the day, my journey is not about transitioning from Russian Litera
           ],
           link: "",
           meta: { date: "2026", role: "Frontend Dev & UI/UX Designer", category: "Platform Digital Pemerintah", team: "2 Developer", duration: "6 Bulan", client: "Kementerian PANRB", status: "Production Ready" }
+        },
+        {
+          id: 2,
+          gambar: "/assets/project2/banner_cover.webp",
+          nama: "Builder's Archive",
+          desk: "Sistem identitas digital pribadi yang dirancang untuk mengomunikasikan cara berpikir, filosofi desain, dan proses engineering — bukan sekadar menampilkan proyek.",
+          subtitle: "Identitas digital pribadi yang dirancang untuk mengomunikasikan cara berpikir, meneliti, mendesain, dan mengerjakan produk digital — bukan sekadar portfolio biasa.",
+          about: "Builder's Archive adalah website portfolio saya. Tapi ini bukan sekadar portfolio. Ini adalah sistem identitas digital yang dibangun untuk mengomunikasikan filosofi desain, proses kreatif, dan kemampuan engineering saya. Setiap keputusan visual, setiap interaksi, dan setiap kata di website ini ada untuk menceritakan bagaimana saya mendekati masalah dan membangun produk.",
+          category: "Creative Engineering",
+          facts: [
+            "Proyek Pribadi",
+            "Solo Build",
+            "2026",
+            "React + Vite",
+            "Framer Motion",
+            "Bilingual (EN/ID)"
+          ],
+          tools: ["React", "Vite", "Tailwind CSS", "Framer Motion", "JavaScript", "Vercel"],
+          images: [],
+          link: "",
+          meta: { date: "2026", role: "Product Designer & Frontend Engineer", category: "Creative Engineering", team: "Solo", status: "Live" }
         }
       ]
 
+    },
+    builderDetail: {
+      heroLabel: "Studi Kasus",
+      heroSubtitle: "Identitas digital pribadi yang dirancang untuk mengomunikasikan cara berpikir, meneliti, mendesain, dan mengerjakan produk digital — bukan sekadar portfolio biasa.",
+      metaRole: "Peran",
+      metaTeam: "Tim",
+      metaYear: "Tahun",
+      metaCategory: "Kategori",
+      metaStack: "Stack",
+      techLabel: "Teknologi",
+
+      whyLabel: "Asal Usul",
+      whyTitle: "Mengapa Ini Dibuat",
+      whyBody: [
+        "Branding bukan sekadar visual. Branding adalah cara sebuah produk dikenali sebelum dijelaskan.",
+        "Selama bertahun-tahun saya menggeluti berbagai referensi dari berbagai disiplin: desain, branding, software engineering, esports, streetwear, crypto, investasi, editorial, publikasi, media sosial dan teknologi. Bukan untuk menirunya, tetapi untuk memahami bagaimana sebuah karya mampu membangun identitas yang kuat dan memberikan kesan.",
+        "Website ini adalah hasil dari proses tersebut. Tempat di mana semua pengalaman, referensi, dan cara berpikir diterjemahkan menjadi bahasa visual yang utuh.",
+        "Lebih dari sebuah portfolio, ini adalah representasi cara saya merancang, membangun, dan mengkomunikasikan sebuah produk digital."
+      ],
+
+      foundationsLabel: "Fondasi",
+      foundationsTitle: "Fondasi Kreatif",
+      foundations: [
+        { icon: "problem", title: "Problem Solving", desc: "Segalanya dimulai dari mengidentifikasi masalah nyata pengguna, bukan dari memilih teknologi terlebih dahulu." },
+        { icon: "research", title: "Research", desc: "Setiap keputusan visual didukung oleh observasi, inspirasi, dan benchmarking dari berbagai industri." },
+        { icon: "design", title: "Design Language", desc: "Identitas visual yang konsisten dibangun dari tipografi, warna, simbol, elemen tulisan tangan, dan motion." },
+        { icon: "code", title: "Engineering", desc: "Menerjemahkan design system menjadi arsitektur frontend yang responsif, scalable, dan siap produksi." }
+      ],
+
+      journeyLabel: "Perjalanan",
+      journeyTitle: "Perjalanan Inspirasi",
+      journey: [
+        { era: "Sastra Rusia", desc: "Belajar storytelling, struktur narasi, dan cara ide dikomunikasikan dalam konteks budaya yang berbeda." },
+        { era: "Desain Grafis", desc: "Memahami komposisi, tipografi, hierarki visual, dan tata bahasa komunikasi visual." },
+        { era: "Organisasi Media Kreatif", desc: "Belajar branding system, konsistensi media sosial, creative direction, dan kolaborasi tim." },
+        { era: "Crypto & Web3", desc: "Terinspirasi dari simbol graffiti BLUM, estetika dripping, visual hacker, dan identitas digital eksperimental." },
+        { era: "Valorant Esports", desc: "Terinspirasi dari branding 100 Thieves, tipografi tulisan tangan, layout bold, dan identitas kompetitif premium." },
+        { era: "Frontend Engineering", desc: "Menggabungkan semua disiplin sebelumnya menjadi satu pengalaman digital yang interaktif dan reaktif." }
+      ],
+
+      visualLabel: "Design System",
+      visualTitle: "Visual Language",
+      visual: [
+        { key: "typography", title: "Tipografi", detail: "Inter + Nothing You Could Do", desc: "Inter memberikan kejelasan teknis dan presisi profesional. Nothing You Could Do menambahkan ketidaksempurnaan manusiawi, kehangatan, dan kepribadian. Kontras antara keduanya adalah hal yang disengaja." },
+        { key: "color", title: "Sistem Warna", detail: "Blue #3B82F6", desc: "Biru merepresentasikan kejernihan, teknologi, kepercayaan, dan fokus. Ini adalah warna dari systems thinking, presisi kreatif, dan momentum ke depan." },
+        { key: "handwriting", title: "Tipografi Tulisan Tangan", detail: "Kontras personal", desc: "Elemen tulisan tangan menciptakan kontras terhadap layout teknis yang bersih. Mereka membuat antarmuka terasa lebih personal, kurang korporat, dan lebih manusiawi." },
+        { key: "graffiti", title: "Simbol Graffiti", detail: "Identitas jalanan", desc: "Graffiti merepresentasikan eksperimentasi, kreativitas, dan ekspresi manusia yang tidak sempurna. Ini menambahkan lapisan identitas subkultural pada portfolio yang secara teknis." },
+        { key: "editorial", title: "Layout Editorial", detail: "Hierarki majalah", desc: "Tipografi besar, whitespace yang kuat, grid asimetris. Terinspirasi dari desain editorial — konten disajikan dengan percaya diri dan keahlian." },
+        { key: "motion", title: "Motion", detail: "Terarah & intentional", desc: "Animasi halus tapi terkontrol. Setiap gerakan memiliki tujuan. Interaksi harus terasa intentional, bukan dekoratif." }
+      ],
+
+      refsLabel: "Referensi",
+      refsTitle: "Referensi Desain",
+      refsNote: "Bukan moodboard. Setiap referensi mengajarkan sesuatu yang spesifik tentang identitas, hierarki, dan keahlian.",
+      refs: [
+        { name: "100 Thieves", tag: "Esports Brand", lesson: "Tipografi tulisan tangan yang bold, hierarki visual yang percaya diri, dan identitas brand premium yang dibangun di sekitar eksklusivitas dan relevansi budaya." },
+        { name: "BLUM", tag: "Crypto / Web3", lesson: "Simbol graffiti, estetika dripping, visual budaya hacker, dan identitas digital eksperimental yang melanggar aturan UI konvensional." },
+        { name: "Editorial Websites", tag: "Digital Publishing", lesson: "Tipografi dominan yang besar, layout terstruktur bersih, grid asimetris, dan storytelling melalui spacing dan hierarki konten yang disengaja." },
+        { name: "Luxury Branding", tag: "Minimalism", lesson: "Kepercayaan diri melalui pengendalian diri. Spacing premium. Sistem visual abadi yang bertahan lama karena menghilangkan yang tidak perlu." },
+        { name: "Apple", tag: "Product Design", lesson: "Kejelasan lebih penting dari kecerdikan. Kesederhanaan sebagai keputusan desain. Presentasi product-first dan konsistensi interaksi di setiap touchpoint." }
+      ],
+
+      processLabel: "Proses",
+      processTitle: "Proses Desain",
+      process: [
+        { phase: "Research", desc: "Mengumpulkan referensi dari branding, teknologi, editorial design, gaming, crypto, dan industri fashion." },
+        { phase: "Strategy", desc: "Mendefinisikan kepribadian, sistem identitas, dan arah emosional dari kehadiran digital." },
+        { phase: "Wireframe", desc: "Membuat hierarki informasi, struktur konten, dan arsitektur layout sebelum desain visual." },
+        { phase: "Visual Design", desc: "Mengembangkan design language lengkap — tipografi, warna, spacing, motion, dan komponen." },
+        { phase: "Prototype", desc: "Menguji interaksi, transisi, dan animasi untuk memastikan motion yang intentional, bukan dekoratif." },
+        { phase: "Development", desc: "Implementasi menggunakan React, Vite, Tailwind CSS, Framer Motion, dan arsitektur komponen responsif." },
+        { phase: "Iteration", desc: "Perbaikan berkelanjutan berdasarkan usability testing, review konsistensi visual, dan feedback pribadi." }
+      ],
+
+      engLabel: "Engineering",
+      engTitle: "Keputusan Engineering",
+      engFrontend: "Frontend",
+      engAnimation: "Animasi",
+      engDeployment: "Deployment",
+      engPerformance: "Performa",
+      engFrontendItems: ["React", "Vite", "JavaScript", "Tailwind CSS"],
+      engAnimationItems: ["Framer Motion"],
+      engDeploymentItems: ["Vercel"],
+      engPerformanceItems: ["Optimasi Gambar", "Code Splitting", "Lazy Loading", "Optimasi SEO", "Aksesibilitas", "Responsive Design"],
+      engFrontendNote: "React + Vite memberikan pengalaman development yang cepat dan pipeline build production-grade. Tailwind memaksakan konsistensi desain melalui sistem utility-first.",
+      engAnimationNote: "Framer Motion memungkinkan animasi berbasis fisika yang deklaratif, terasa natural dan intentional — bukan transisi CSS yang ditempel belakangan.",
+      engDeploymentNote: "Edge network Vercel menyediakan pengiriman terdistribusi secara global dengan CI/CD tanpa konfigurasi, memungkinkan rollback instan dan preview deployments.",
+
+      galleryLabel: "Galeri",
+      galleryTitle: "Galeri Interface",
+      galleryNote: "Screenshot terpilih dari berbagai section portfolio, menampilkan visual language dalam konteks nyata.",
+      galleryGroups: ["Halaman Utama", "Artikel", "Proyek", "Detail Proyek", "Tentang", "Mobile"],
+
+      outcomesLabel: "Hasil",
+      outcomesTitle: "Hasil Proyek",
+      outcomes: [
+        { title: "Identitas Digital Terpadu", desc: "Visual language yang konsisten di setiap halaman dan interaksi." },
+        { title: "Portfolio Berbasis Cerita", desc: "Mengomunikasikan proses dan cara berpikir, bukan hanya menampilkan hasil akhir." },
+        { title: "Sepenuhnya Responsif", desc: "Layout dan interaksi yang dioptimalkan untuk desktop, tablet, dan layar mobile." },
+        { title: "Fokus Performa", desc: "Loading cepat, aset yang dioptimalkan, dan overhead bundle minimal." },
+        { title: "Arsitektur yang Dapat Diperluas", desc: "Dirancang untuk berkembang bersama produk, artikel, dan case study di masa depan." }
+      ],
+
+      repoLabel: "Source Code",
+      repoTitle: "Repository",
+      repoPublic: "Publik",
+      repoDesc: "Source code lengkap tersedia di GitHub. Termasuk dokumentasi dan struktur komponen.",
+      repoBtn: "Lihat di GitHub"
     },
     ppidDetail: {
       overviewLabel: "Ikhtisar",
