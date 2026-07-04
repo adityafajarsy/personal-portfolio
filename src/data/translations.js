@@ -264,13 +264,79 @@ export const translations = {
 
       // Section 1 — Why This Exists
       whyLabel: "Origin",
-      whyTitle: "Why This Exists",
       whyBody: [
         "Branding is not just visual. Branding is how a product is recognized before it is explained.",
         "For years, I have collected references across multiple disciplines: design, branding, software engineering, esports, streetwear, crypto, investment, editorial, and technology. Not to copy them, but to understand why a piece of work can build a strong identity and leave a lasting impression.",
         "This website is the result of that process. A space where all my experience, references, and way of thinking are translated into a single, cohesive visual language.",
         "More than a portfolio, this is a representation of how I design, build, and communicate a digital product."
       ],
+      influencesLabel: "INFLUENCES",
+      influencesTitle: "Every Reference Left a Mark",
+      influencesCaption: [
+        "No single reference shaped this website.",
+        "The visual identity of this website is an accumulation of various worlds I observed from esports branding, streetwear culture, language and literature, creative organizations, to software engineering.",
+        "Each reference taught a different principle. This website is the result of all these principles meeting in a single visual language."
+      ],
+      influencesStoryTitle: "Short Story",
+      influencesStory: [
+
+        "During my university years, I studied Russian Literature. Outside the classroom, I spent most of my time in design, publishing, creative media, copywriting, and student organizations. From there, I began to realize that building a product is not just about visuals, but also about how a message can be effectively communicated.",
+        "Over time, that curiosity led me to various worlds that seemed completely unrelated. I began exploring branding, software engineering, Web3, crypto, and streetwear culture. Not to follow trends, but to understand why a piece of work can be recognized, remembered, and establish a strong identity.",
+        "One of the most memorable influences was the visual identity of 100 Thieves. I was fascinated by how they built character through handwriting typography, editorial layouts, and visual consistency across all media. On the other hand, the BLUM × Pokras Lampas collaboration introduced me to a more experimental visual language—graffiti, symbols, dripping elements, and hacker aesthetics—which heavily influenced my visual exploration."
+      ],
+      intentionLabel: "BUILT WITH INTENTION",
+      intentionTitle: "Every visual decision exists for a reason.",
+      intentionCaption: "Behind every visual element lies a reason. No decision was made simply because it looks good.",
+      intentionCards: [
+        {
+          num: "01",
+          title: "Problem Before Pixels",
+          desc: "Before determining colors, animations, or layouts, I always start by understanding what needs to be communicated. Visuals serve as an answer to a problem, not as a starting point.",
+          shortDesc: "Visuals serve as a solution to a problem, not just a starting point."
+        },
+        {
+          num: "02",
+          title: "Identity Before Decoration",
+          desc: "Handwriting, dripping graffiti, typography, and symbols are not mere decorations. They are chosen to build a recognizable visual character and consistency across all pages.",
+          shortDesc: "Elements are chosen to build a strong and recognizable character."
+        },
+        {
+          num: "03",
+          title: "Motion With Purpose",
+          desc: "Animations are used to guide attention, clarify transitions between sections, and establish a reading rhythm. Movement supports the experience rather than diverting focus.",
+          shortDesc: "Motion is used to guide attention and clarify layout transitions."
+        },
+        {
+          num: "04",
+          title: "Consistency Creates Trust",
+          desc: "Colors, typography, spacing, components, and interactions follow a single unified system. Consistency makes the experience feel professional while reinforcing product identity.",
+          shortDesc: "Consistency creates professional trust and reinforces identity."
+        },
+        {
+          num: "05",
+          title: "Research Shapes Design",
+          desc: "Every reference I collect is not to be copied, but to be understood. I observe the rationale behind design decisions and translate them into a visual language tailored to my identity.",
+          shortDesc: "References are analyzed and translated into matching visual codes."
+        },
+        {
+          num: "06",
+          title: "Engineering Supports Design",
+          desc: "The visual experience does not end in Figma. Frontend implementation, performance, responsiveness, and animation are key to ensuring the design is felt exactly as intended.",
+          shortDesc: "Frontend execution and animations ensure visual intent is fully felt."
+        }
+      ],
+      detailsLabel: "Small Decisions, Big Difference.",
+      detailsTitle: "Things You Probably Didn't Notice",
+      detailsCaption: "The experience isn't shaped by one big idea, but by dozens of small decisions working together.",
+      detailsQuote: "Identity isn't built by one big idea.\n\nIt's built by hundreds of intentional decisions.",
+      philosophyLabel: "BUILDING PHILOSOPHY",
+      philosophyTitle: "I don't collect references. I collect principles.",
+      philosophyBody: [
+        "During the process of building this website, I never tried to copy a single specific design. What I studied instead was the underlying reason why each decision was made, why a certain typography felt powerful, why a layout was easy to understand, or why a visual identity could be remembered even before the product was used.",
+        "Ultimately, this website is not about merely combining streetwear, editorial, engineering, or branding into one. It is an effort to translate those lessons into a cohesive system that feels consistent and has its own distinct identity."
+      ],
+      philosophyQuote: "Good design isn't about originality.\nIt's about making good decisions consistently.",
+      philosophySign: "— Aditya Fajar",
 
       // Section 2 — Creative Foundations
       foundationsLabel: "Foundations",
@@ -680,7 +746,7 @@ At the end of the day, my journey is not about transitioning from Russian Litera
       intro: "Intro",
       quote: "I start with real problems...",
       title: "Hi, I'm Aditya Fajar SY",
-      bio: "Membangun aplikasi digital dengan menerjemahkan masalah nyata menjadi solusi yang bermakna. Kombinasi latar belakang Bahasa, Desain Grafis, dan Software Engineering, saya percaya produk terbaik lahir ketika riset, experience pengguna, dan teknologi bekerja sebagai satu kesatuan. Teknologi bukan titik awal, memahami masalah adalah langkah pertama dalam membangun produk yang benar-benar bernilai.",
+      bio: "Membangun aplikasi digital dengan menerjemahkan masalah nyata menjadi solusi yang bermakna. Kombinasi latar belakang Bahasa, Desain Grafis, dan Software Engineering, saya percaya produk yang baik lahir ketika riset, experience pengguna, dan teknologi bekerja sebagai satu kesatuan. Teknologi bukan titik awal, memahami masalah adalah langkah pertama dalam membangun produk yang bernilai.",
       downloadCv: "Download CV",
       connectMe: "Connect with me",
     },
@@ -783,8 +849,8 @@ At the end of the day, my journey is not about transitioning from Russian Litera
           id: 2,
           gambar: "/assets/project2/banner_cover.webp",
           nama: "Builder's Archive",
-          desk: "Sistem identitas digital pribadi yang dirancang untuk mengomunikasikan cara berpikir, filosofi desain, dan proses engineering — bukan sekadar menampilkan proyek.",
-          subtitle: "Identitas digital pribadi yang dirancang untuk mengomunikasikan cara berpikir, meneliti, mendesain, dan mengerjakan produk digital — bukan sekadar portfolio biasa.",
+          desk: "Sistem identitas digital pribadi yang dirancang untuk mengomunikasikan cara berpikir, filosofi desain, dan proses engineering, bukan sekadar menampilkan proyek.",
+          subtitle: "Identitas digital pribadi yang dirancang untuk mengomunikasikan cara berpikir, meneliti, mendesain, dan mengerjakan produk digital, bukan sekadar website portfolio biasa.",
           about: "Builder's Archive adalah website portfolio saya. Tapi ini bukan sekadar portfolio. Ini adalah sistem identitas digital yang dibangun untuk mengomunikasikan filosofi desain, proses kreatif, dan kemampuan engineering saya. Setiap keputusan visual, setiap interaksi, dan setiap kata di website ini ada untuk menceritakan bagaimana saya mendekati masalah dan membangun produk.",
           category: "Creative Engineering",
           facts: [
@@ -805,7 +871,7 @@ At the end of the day, my journey is not about transitioning from Russian Litera
     },
     builderDetail: {
       heroLabel: "Studi Kasus",
-      heroSubtitle: "Identitas digital pribadi yang dirancang untuk mengomunikasikan cara berpikir, meneliti, mendesain, dan mengerjakan produk digital — bukan sekadar portfolio biasa.",
+      heroSubtitle: "Identitas digital pribadi yang dirancang untuk mengomunikasikan cara berpikir, meneliti, mendesain, dan mengerjakan produk digital, bukan sekadar portfolio biasa.",
       metaRole: "Peran",
       metaTeam: "Tim",
       metaYear: "Tahun",
@@ -821,6 +887,72 @@ At the end of the day, my journey is not about transitioning from Russian Litera
         "Website ini adalah hasil dari proses tersebut. Tempat di mana semua pengalaman, referensi, dan cara berpikir diterjemahkan menjadi bahasa visual yang utuh.",
         "Lebih dari sebuah portfolio, ini adalah representasi cara saya merancang, membangun, dan mengkomunikasikan sebuah produk digital."
       ],
+      influencesLabel: "INFLUENCES",
+      influencesTitle: "Every Reference Left a Mark",
+      influencesCaption: [
+        "Tidak ada satu referensi yang membentuk website ini.",
+        "Identitas visual dari website ini merupakan hasil akumulasi dari berbagai dunia yang saya amati mulai dari branding esports, budaya streetwear, bahasa & budaya, organisasi kreatif, hingga software engineering.",
+        "Setiap referensi mengajarkan prinsip yang berbeda. Website ini adalah hasil seluruh prinsip tersebut bertemu dalam satu bahasa visual."
+      ],
+      influencesStoryTitle: "Short Story",
+      influencesStory: [
+        "Selama kuliah, saya menempuh pendidikan di bidang Sastra Rusia. Di luar kelas, saya menghabiskan waktu di dunia desain, publikasi, media kreatif, copywriting, dan organisasi. Saya menyadari bahwa membangun produk bukan hanya soal visual, tetapi juga tentang bagaimana sebuah pesan dapat dikomunikasikan dengan baik.",
+        "Rasa ingin tahu membawa saya ke berbagai dunia yang tampaknya tidak saling berhubungan. Saya mulai mempelajari branding, software engineering, Web3, crypto, hingga budaya streetwear. Bukan untuk mengikuti tren, melainkan untuk memahami mengapa sebuah karya mampu dikenali, diingat, dan memiliki identitas yang kuat.",
+        "Salah satu referensi yang paling membekas adalah identitas visual 100 Thieves dan The Final Tribe (Dota2). Saya tertarik melihat bagaimana mereka membangun karakter melalui tipografi handwriting, layout editorial, dan konsistensi di setiap media. Di sisi lain, kolaborasi BLUM × Pokras Lampas memperkenalkan saya pada bahasa visual yang lebih eksperimental yakni graffiti, simbol, dripping elements, dan nuansa hacker yang kemudian banyak memengaruhi eksplorasi visual saya.",
+      ],
+      intentionLabel: "BUILT WITH INTENTION",
+      intentionTitle: "Every visual decision exists for a reason.",
+      intentionCaption: "Di balik setiap elemen visual terdapat alasan yang dapat dijelaskan. Tidak ada keputusan yang dibuat hanya karena terlihat bagus.",
+      intentionCards: [
+        {
+          num: "01",
+          title: "Problem Before Pixels",
+          desc: "Sebelum menentukan warna, animasi, atau layout, saya selalu memulai dengan memahami apa yang ingin dikomunikasikan. Visual digunakan sebagai jawaban, bukan sebagai titik awal.",
+          shortDesc: "Visual digunakan sebagai jawaban atas masalah, bukan sekadar titik awal."
+        },
+        {
+          num: "02",
+          title: "Identity Before Decoration",
+          desc: "Handwriting, dripping graffiti, typography, dan simbol bukan sekadar dekorasi. Semuanya dipilih untuk membangun karakter visual yang mudah dikenali.",
+          shortDesc: "Elemen dipilih untuk membangun karakter visual yang kuat & konsisten."
+        },
+        {
+          num: "03",
+          title: "Motion With Purpose",
+          desc: "Animasi digunakan untuk mengarahkan perhatian, memperjelas transisi, dan menciptakan ritme membaca. Motion mendukung experience.",
+          shortDesc: "Motion digunakan untuk memperjelas transisi & ritme membaca."
+        },
+        {
+          num: "04",
+          title: "Consistency Creates Trust",
+          desc: "Warna, tipografi, spacing, komponen, dan interaksi dalam satu sistem. Konsistensi menciptakan experience sekaligus membangun identitas.",
+          shortDesc: "Konsistensi menciptakan pengalaman & memperkuat identitas."
+        },
+        {
+          num: "05",
+          title: "Research Shapes Design",
+          desc: "Setiap referensi yang saya kumpulkan bukan untuk ditiru, tetapi untuk dipahami. Saya mengamati alasan di balik setiap keputusan desain, lalu menerjemahkannya menjadi bahasa visual yang selaras dengan identitas saya.",
+          shortDesc: "Referensi dipahami alasannya, lalu diterjemahkan ke bahasa visual."
+        },
+        {
+          num: "06",
+          title: "Engineering Shapes Identity",
+          desc: "Implementasi frontend, performa, dan animasi menjadi bagian penting agar experience dapat dirasakan sebagaimana direncanakan.",
+          shortDesc: "Frontend & optimasi performa agar visual berjalan sesuai rencana."
+        }
+      ],
+      detailsLabel: "Small Decisions, Big Difference.",
+      detailsTitle: "Things You Probably Didn't Notice",
+      detailsCaption: "Pengalaman tidak dibentuk oleh satu ide besar, melainkan oleh puluhan keputusan kecil yang bekerja bersama.",
+      detailsQuote: "Identitas tidak dibangun oleh satu ide besar.\n\nIa dibentuk oleh ratusan keputusan yang disengaja.",
+      philosophyLabel: "BUILDING PHILOSOPHY",
+      philosophyTitle: "I don't collect references. I collect principles.",
+      philosophyBody: [
+        "Selama proses membangun website ini, saya tidak pernah mencoba meniru hanya satu desain tertentu. Yang saya pelajari adalah alasan mengapa setiap keputusan dibuat, mengapa tipografi tertentu yang digunakan, mengapa sebuah layout mudah dipahami, atau mengapa sebuah identitas visual bisa diingat bahkan sebelum produknya digunakan.",
+        "Pada akhirnya, website ini bukan hanya tentang streetwear, editorial, engineering, atau branding. Ini adalah usaha menerjemahkan berbagai pelajaran tersebut menjadi sebuah sistem yang terasa konsisten dan memiliki identitasnya sendiri."
+      ],
+      philosophyQuote: "Good design isn't about originality.\nIt's about making good decisions consistently.",
+      philosophySign: "— Aditya Fajar",
 
       foundationsLabel: "Fondasi",
       foundationsTitle: "Fondasi Kreatif",

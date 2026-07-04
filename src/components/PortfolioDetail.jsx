@@ -1,6 +1,7 @@
 import React from "react";
 import { m } from "framer-motion";
 import { useLanguage } from "../context/LanguageContext";
+import DesignAnatomyHotspot from "./DesignAnatomyHotspot";
 
 const fadeUp = {
   hidden: { opacity: 0, y: 22 },
@@ -116,7 +117,21 @@ export default function PortfolioDetail({ project, onClose }) {
   const engFrontendItems = d.engFrontendItems || [];
   const engAnimationItems = d.engAnimationItems || [];
   const engDeploymentItems = d.engDeploymentItems || [];
-  const engPerformanceItems = d.engPerformanceItems || [];
+  const influencesCaption = d.influencesCaption || [];
+  const influencesStory = d.influencesStory || [];
+  const intentionLabel = d.intentionLabel || "";
+  const intentionTitle = d.intentionTitle || "";
+  const intentionCaption = d.intentionCaption || "";
+  const intentionCards = d.intentionCards || [];
+  const philosophyLabel = d.philosophyLabel || "";
+  const philosophyTitle = d.philosophyTitle || "";
+  const philosophyBody = d.philosophyBody || [];
+  const philosophyQuote = d.philosophyQuote || "";
+  const philosophySign = d.philosophySign || "";
+  const detailsLabel = d.detailsLabel || "";
+  const detailsTitle = d.detailsTitle || "";
+  const detailsCaption = d.detailsCaption || "";
+  const detailsQuote = d.detailsQuote || "";
 
   const handleBack = () => {
     onClose();
@@ -268,9 +283,199 @@ export default function PortfolioDetail({ project, onClose }) {
         </div>
       </m.div>
 
+      <Divider />
 
+      {/* ── 2. HOW REFERENCES BECAME DESIGN DECISIONS ────────────────────────── */}
+      <m.div variants={fadeUp} custom={2} initial="hidden" animate="visible" className="flex flex-col gap-6">
+        <div>
+          <SLabel>{d.influencesLabel || "INFLUENCES"}</SLabel>
+          <div className="flex flex-col-reverse sm:flex-row sm:items-start sm:gap-4 mt-1">
+            <h2 className="text-[22px] sm:text-[28px] font-bold text-white tracking-tight leading-snug">
+              {d.influencesTitle || "Every Reference Left a Mark"}
+            </h2>
+            <div className="mb-2.5 sm:mb-0 sm:relative sm:-top-3.5 sm:ml-1 shrink-0">
+              <img src="/assets/dripping-graf/fire.webp" alt="Fire Graffiti" className="w-8 h-8 sm:w-14 sm:h-14 object-contain rotate-12" />
+            </div>
+          </div>
+        </div>
 
+        {/* Section Visual Image */}
+        <div className="w-full rounded-[20px] overflow-hidden bg-[#070712] border border-white/5 relative flex items-center justify-center p-2 sm:p-4">
+          <img
+            src="/assets/project2/how_references_became_design.webp"
+            alt="How References Became Design Decisions Schema"
+            className="w-full h-auto max-h-[600px] object-contain"
+            loading="lazy"
+          />
+        </div>
 
+        {/* Caption & Story Text Grid */}
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-10">
+          {/* Left Column: Influences Caption (Takes 5 cols) */}
+          <div className="lg:col-span-5 flex flex-col gap-4">
+            {influencesCaption.map((para, i) => (
+              <p
+                key={i}
+                className={`leading-relaxed ${
+                  i === 0
+                    ? "text-[16px] sm:text-[18px] font-semibold text-white/95"
+                    : "text-[13.5px] text-white/50"
+                }`}
+              >
+                {para}
+              </p>
+            ))}
+          </div>
+
+          {/* Right Column: Short Story (Takes 7 cols) */}
+          <div className="lg:col-span-7 flex flex-col gap-4 lg:border-l lg:border-white/5 lg:pl-8">
+            <div className="flex items-center gap-2">
+              <span className="text-[11px] font-mono text-[#3B82F6] tracking-wider uppercase font-bold">
+                {d.influencesStoryTitle || "Short Story"}
+              </span>
+              <span className="text-white/10">•</span>
+              <span
+                className="text-[12px] text-[#3B82F6]"
+                style={{ fontFamily: "'Nothing You Could Do', cursive" }}
+              >
+                behind the curation
+              </span>
+            </div>
+            <div className="flex flex-col gap-4">
+              {influencesStory.map((para, i) => (
+                <p key={i} className="text-[13.5px] text-white/55 leading-relaxed">
+                  {para}
+                </p>
+              ))}
+            </div>
+          </div>
+        </div>
+      </m.div>
+
+      <Divider />      {/* ── 3. BUILT WITH INTENTION ──────────────────────────────────────────── */}
+      <m.div variants={fadeUp} custom={3} initial="hidden" animate="visible" className="flex flex-col gap-6">
+        <div>
+          <SLabel>{intentionLabel || "BUILT WITH INTENTION"}</SLabel>
+          <div className="flex flex-col-reverse sm:flex-row sm:items-start sm:gap-4 mt-1">
+            <h2 className="text-[22px] sm:text-[28px] font-bold text-white tracking-tight leading-snug">
+              {intentionTitle || "Every visual decision exists for a reason."}
+            </h2>
+            <div className="mb-2.5 sm:mb-0 sm:relative sm:-top-3.5 sm:ml-1 shrink-0">
+              <img src="/assets/dripping-graf/star.webp" alt="Star Graffiti" className="w-8 h-8 sm:w-14 sm:h-14 object-contain -rotate-12" />
+            </div>
+          </div>
+          <p className="mt-2 text-[14px] text-white/55 leading-relaxed max-w-3xl">
+            {intentionCaption}
+          </p>
+        </div>
+
+        {/* Section Visual Image — Interactive Design Anatomy Hotspot */}
+        <DesignAnatomyHotspot />
+
+        {/* 3x2 Premium Grid (Compact 3-column layout on all screen sizes) */}
+        <div className="grid grid-cols-3 gap-2 sm:gap-4">
+          {intentionCards.map((card, i) => (
+            <div
+              key={i}
+              className="bg-[#0B0B0B] border border-white/5 hover:border-[#3B82F6]/30 hover:shadow-[0_0_20px_rgba(59,130,246,0.05)] rounded-[12px] sm:rounded-[18px] p-2.5 sm:p-5 flex flex-col gap-1.5 sm:gap-3 transition-all duration-300"
+            >
+              <div className="flex items-center">
+                <span className="text-[8px] sm:text-[10px] font-mono font-black tracking-widest text-[#3B82F6] bg-[#3B82F6]/5 border border-[#3B82F6]/10 px-1.5 py-0.5 rounded">
+                  {card.num}
+                </span>
+              </div>
+              <div className="flex flex-col gap-0.5 sm:gap-1.5">
+                <h3 className="text-[10px] sm:text-[14px] font-bold text-white tracking-tight leading-tight">
+                  {card.title}
+                </h3>
+                <p className="text-[9.5px] sm:text-[12.5px] text-white/40 sm:text-white/50 leading-normal sm:leading-relaxed">
+                  <span className="block sm:hidden">{card.shortDesc || card.desc}</span>
+                  <span className="hidden sm:block">{card.desc}</span>
+                </p>
+              </div>
+            </div>
+          ))}
+        </div>
+      </m.div>
+
+      <Divider />
+
+      {/* ── THINGS YOU PROBABLY DIDN'T NOTICE ──────────────────────────────── */}
+      <m.div variants={fadeUp} custom={3.8} initial="hidden" animate="visible" className="flex flex-col gap-6">
+        <div>
+          <SLabel>{detailsLabel || "Small Decisions, Big Difference."}</SLabel>
+          <div className="flex flex-col-reverse sm:flex-row sm:items-start sm:gap-4 mt-1">
+            <h2 className="text-[22px] sm:text-[28px] font-bold text-white tracking-tight leading-snug">
+              {detailsTitle || "Things You Probably Didn't Notice"}
+            </h2>
+            <div className="mb-2.5 sm:mb-0 sm:relative sm:-top-4 sm:ml-1 shrink-0">
+              <img src="/assets/crown.webp" alt="Crown Icon" className="w-10 h-10 sm:w-18 sm:h-18 object-contain rotate-[6deg]" />
+            </div>
+          </div>
+          <p className="mt-2 text-[14px] text-white/55 leading-relaxed max-w-3xl">
+            {detailsCaption}
+          </p>
+        </div>
+
+        {/* Section Visual Image (Small Details) — No border/bg wrapper to blend with page background */}
+        <div className="w-full relative flex items-center justify-center">
+          <img
+            src="/assets/project2/small_details.webp"
+            alt="Small Details Illustration"
+            className="w-full h-auto max-h-[600px] object-contain"
+            loading="lazy"
+          />
+        </div>
+
+        {/* Big Text Quote Below Image */}
+        <div className="text-center mt-2 flex flex-col gap-1 sm:gap-2">
+          <p className="text-[14px] sm:text-[18px] text-white font-bold leading-snug tracking-tight">
+            {detailsQuote ? detailsQuote.split("\n\n")[0] : "Identity isn't built by one big idea."}
+          </p>
+          <p className="text-[12.5px] sm:text-[15px] text-[#3B82F6] font-medium tracking-wide">
+            {detailsQuote ? detailsQuote.split("\n\n")[1] : "It's built by hundreds of intentional decisions."}
+          </p>
+        </div>
+      </m.div>
+
+      <Divider />
+
+      {/* ── BUILDING PHILOSOPHY ────────────────────────────────────────────── */}
+      <m.div variants={fadeUp} custom={4} initial="hidden" animate="visible" className="flex flex-col gap-6">
+        <div>
+          <SLabel>{philosophyLabel || "BUILDING PHILOSOPHY"}</SLabel>
+          <div className="flex flex-col-reverse sm:flex-row sm:items-start sm:gap-4 mt-1">
+            <h2 className="text-[22px] sm:text-[28px] font-bold text-white tracking-tight leading-snug">
+              {philosophyTitle || "I don't collect references. I collect principles."}
+            </h2>
+            <div className="mb-2.5 sm:mb-0 sm:relative sm:-top-3.5 sm:ml-1 shrink-0">
+              <img src="/assets/dripping-graf/quotes.webp" alt="Quotes Graffiti" className="w-8 h-8 sm:w-14 sm:h-14 object-contain" />
+            </div>
+          </div>
+        </div>
+
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-8">
+          {philosophyBody.map((paragraph, i) => (
+            <p key={i} className="text-[13.5px] text-white/55 leading-relaxed">
+              {paragraph}
+            </p>
+          ))}
+        </div>
+
+        <div className="mt-4 border-l-2 border-[#3B82F6]/30 pl-4 py-1.5 flex flex-col gap-2">
+          <blockquote className="text-[17px] sm:text-[21px] font-bold text-white leading-snug tracking-tight whitespace-pre-line">
+            {philosophyQuote}
+          </blockquote>
+          <span
+            className="text-[#3B82F6] text-[18px] sm:text-[20px] mt-1"
+            style={{ fontFamily: "'Nothing You Could Do', cursive" }}
+          >
+            {philosophySign}
+          </span>
+        </div>
+      </m.div>
+
+      <Divider />
 
       {/* ── 8. GALLERY ───────────────────────────────────────────────────────── */}
       <m.div variants={fadeUp} custom={8} initial="hidden" animate="visible" className="flex flex-col gap-6">
