@@ -144,7 +144,7 @@ export default function About() {
   const experiences = expTranslations.map((exp, idx) => {
     const icons = [
       <img
-        src="/assets/Logo PanRB.png"
+        src="/assets/Logo PanRB.webp"
         alt="Kementerian PANRB Logo"
         className="w-7.5 h-7.5 object-contain rounded-md"
         loading="lazy"
