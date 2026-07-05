@@ -484,7 +484,81 @@ export default function PortfolioDetail({ project, onClose }) {
           <STitle>{d.galleryTitle}</STitle>
           <p className="mt-2 text-[13px] text-white/40 leading-relaxed">{d.galleryNote}</p>
         </div>
-        {localizedProject.images && localizedProject.images.length > 0 ? (
+        {project.id === 2 ? (
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-3.5">
+            {/* 1. Video Demo (col-span-1 sm:col-span-2) */}
+            <div className="rounded-[14px] overflow-hidden sm:col-span-2 relative aspect-[16/9]">
+              <video
+                src="/assets/project2/video_demo.webm"
+                autoPlay
+                loop
+                muted
+                playsInline
+                className="w-full h-full object-cover"
+              />
+            </div>
+
+            {/* 2. Grid 1 (col-span-1, portrait/mobile aspect) */}
+            <div className="rounded-[14px] overflow-hidden flex items-center justify-center">
+              <img
+                src="/assets/project2/grid-1.webp"
+                alt="Mobile interface mockup"
+                className="w-full h-auto max-h-[380px] object-contain rounded-lg"
+                loading="lazy"
+              />
+            </div>
+
+            {/* 3. Grid 2 (col-span-1, aspect-3/2) */}
+            <div className="rounded-[14px] overflow-hidden aspect-[3/2] flex items-center justify-center">
+              <img
+                src="/assets/project2/grid-2.webp"
+                alt="Desktop section closeup"
+                className="w-full h-full object-cover"
+                loading="lazy"
+              />
+            </div>
+
+            {/* 4. Grid 3 (col-span-1, aspect-16/9) */}
+            <div className="rounded-[14px] overflow-hidden aspect-[16/9] flex items-center justify-center">
+              <img
+                src="/assets/project2/grid-3.webp"
+                alt="Interface layout details"
+                className="w-full h-full object-cover"
+                loading="lazy"
+              />
+            </div>
+
+            {/* 5. Grid 5 (col-span-1, aspect-16/9) */}
+            <div className="rounded-[14px] overflow-hidden aspect-[16/9] flex items-center justify-center">
+              <img
+                src="/assets/project2/grid-5.webp"
+                alt="Visual grid typography alignment"
+                className="w-full h-full object-cover"
+                loading="lazy"
+              />
+            </div>
+
+            {/* 6. Grid 6 (col-span-1 sm:col-span-2, aspect-2/1 wide) */}
+            <div className="rounded-[14px] overflow-hidden sm:col-span-2 aspect-[2/1] flex items-center justify-center">
+              <img
+                src="/assets/project2/grid-6.webp"
+                alt="Full platform presentation system"
+                className="w-full h-full object-cover"
+                loading="lazy"
+              />
+            </div>
+
+            {/* 7. Grid 4 (col-span-1, aspect-16/9) */}
+            <div className="rounded-[14px] overflow-hidden aspect-[16/9] flex items-center justify-center">
+              <img
+                src="/assets/project2/grid-4.webp"
+                alt="Responsive mobile grid system details"
+                className="w-full h-full object-cover"
+                loading="lazy"
+              />
+            </div>
+          </div>
+        ) : localizedProject.images && localizedProject.images.length > 0 ? (
           <div className="grid grid-cols-2 sm:grid-cols-3 gap-3">
             {localizedProject.images.map((src, i) => (
               <div key={i} className={`rounded-[14px] overflow-hidden bg-zinc-900 border border-white/5 aspect-[16/10] ${i === 0 ? "col-span-2" : ""}`}>

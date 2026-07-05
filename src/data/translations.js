@@ -264,16 +264,16 @@ export const translations = {
 
       // Section 1 — Why This Exists
       whyLabel: "Origin",
+      whyTitle: "Why This Exists",
       whyBody: [
         "Branding is not just visual. Branding is how a product is recognized before it is explained.",
         "For years, I have collected references across multiple disciplines: design, branding, software engineering, esports, streetwear, crypto, investment, editorial, and technology. Not to copy them, but to understand why a piece of work can build a strong identity and leave a lasting impression.",
-        "This website is the result of that process. A space where all my experience, references, and way of thinking are translated into a single, cohesive visual language.",
-        "More than a portfolio, this is a representation of how I design, build, and communicate a digital product."
+        "This website is the result of that process. A space where all my experience, references, and way of thinking are translated into a single, cohesive visual language."
       ],
       influencesLabel: "INFLUENCES",
       influencesTitle: "Every Reference Left a Mark",
       influencesCaption: [
-        "No single reference shaped this website.",
+        "Not just a single reference shaped this website.",
         "The visual identity of this website is an accumulation of various worlds I observed from esports branding, streetwear culture, language and literature, creative organizations, to software engineering.",
         "Each reference taught a different principle. This website is the result of all these principles meeting in a single visual language."
       ],
@@ -879,18 +879,17 @@ At the end of the day, my journey is not about transitioning from Russian Litera
       metaStack: "Stack",
       techLabel: "Teknologi",
 
-      whyLabel: "Asal Usul",
+      whyLabel: "Origin",
       whyTitle: "Mengapa Ini Dibuat",
       whyBody: [
         "Branding bukan sekadar visual. Branding adalah cara sebuah produk dikenali sebelum dijelaskan.",
         "Selama bertahun-tahun saya menggeluti berbagai referensi dari berbagai disiplin: desain, branding, software engineering, esports, streetwear, crypto, investasi, editorial, publikasi, media sosial dan teknologi. Bukan untuk menirunya, tetapi untuk memahami bagaimana sebuah karya mampu membangun identitas yang kuat dan memberikan kesan.",
         "Website ini adalah hasil dari proses tersebut. Tempat di mana semua pengalaman, referensi, dan cara berpikir diterjemahkan menjadi bahasa visual yang utuh.",
-        "Lebih dari sebuah portfolio, ini adalah representasi cara saya merancang, membangun, dan mengkomunikasikan sebuah produk digital."
       ],
       influencesLabel: "INFLUENCES",
       influencesTitle: "Every Reference Left a Mark",
       influencesCaption: [
-        "Tidak ada satu referensi yang membentuk website ini.",
+        "Tidak hanya satu referensi yang membentuk website ini.",
         "Identitas visual dari website ini merupakan hasil akumulasi dari berbagai dunia yang saya amati mulai dari branding esports, budaya streetwear, bahasa & budaya, organisasi kreatif, hingga software engineering.",
         "Setiap referensi mengajarkan prinsip yang berbeda. Website ini adalah hasil seluruh prinsip tersebut bertemu dalam satu bahasa visual."
       ],
@@ -943,7 +942,7 @@ At the end of the day, my journey is not about transitioning from Russian Litera
       ],
       detailsLabel: "Small Decisions, Big Difference.",
       detailsTitle: "Things You Probably Didn't Notice",
-      detailsCaption: "Pengalaman tidak dibentuk oleh satu ide besar, melainkan oleh puluhan keputusan kecil yang bekerja bersama.",
+      detailsCaption: "Art tidak dibentuk oleh satu ide besar, melainkan oleh puluhan keputusan kecil yang bekerja bersama.",
       detailsQuote: "Identitas tidak dibangun oleh satu ide besar.\n\nIa dibentuk oleh ratusan keputusan yang disengaja.",
       philosophyLabel: "BUILDING PHILOSOPHY",
       philosophyTitle: "I don't collect references. I collect principles.",

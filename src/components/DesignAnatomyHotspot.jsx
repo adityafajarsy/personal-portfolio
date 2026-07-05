@@ -341,10 +341,10 @@ export default function DesignAnatomyHotspot() {
         }
       `}</style>
 
-      {/* Container — same wrapper as before, now also holds hotspot layer */}
+      {/* Container — borderless & bg-less to blend with page background */}
       <div
         ref={containerRef}
-        className="w-full rounded-[20px] overflow-hidden bg-[#070712] border border-white/5 relative flex items-center justify-center p-2 sm:p-4"
+        className="w-full relative flex items-center justify-center"
         style={{ userSelect: "none" }}
       >
         {/* Base image wrapper — hugs the image exactly so percentages match pixels */}
