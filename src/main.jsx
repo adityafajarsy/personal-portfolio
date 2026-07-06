@@ -6,7 +6,8 @@ import PreLoader from "./components/PreLoader";
 import { LanguageProvider } from "./context/LanguageContext";
 import { LazyMotion, domAnimation } from "framer-motion";
 
-import "remixicon/fonts/remixicon.css";
+// remixicon CSS is injected dynamically after mount (non-blocking) — see App.jsx
+// import "remixicon/fonts/remixicon.css";
 
 createRoot(document.getElementById("root")).render(
   <StrictMode>
@@ -18,3 +19,4 @@ createRoot(document.getElementById("root")).render(
     </LanguageProvider>
   </StrictMode>
 );
+

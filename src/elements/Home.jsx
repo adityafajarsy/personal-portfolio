@@ -89,7 +89,10 @@ export default function Home() {
             src="/assets/icon aditya.webp"
             alt="Aditya Fajar SY"
             className="w-full h-full object-cover"
-            loading="lazy"
+            width="20"
+            height="20"
+            loading="eager"
+            decoding="async"
             onError={(e) => {
               e.target.src = "/assets/adityafajarsy.webp";
             }}

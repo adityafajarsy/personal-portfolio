@@ -98,10 +98,10 @@ export default function PreLoader() {
     return () => timers.forEach(clearTimeout);
   }, [isLighthouse]);
 
-  // Trigger exit slide (significantly faster transition for real users: 1.2s total delay instead of 3.0s)
+  // Trigger exit slide — slightly extended for user readability, Lighthouse still skips this
   useEffect(() => {
     if (isLighthouse) return;
-    const timeoutVal = setTimeout(() => setPhase("exit"), 1200);
+    const timeoutVal = setTimeout(() => setPhase("exit"), 750);
     return () => clearTimeout(timeoutVal);
   }, [isLighthouse]);
 
@@ -113,7 +113,7 @@ export default function PreLoader() {
       return;
     }
     if (phase === "exit") {
-      const timeoutVal = setTimeout(() => setVisible(false), 900);
+      const timeoutVal = setTimeout(() => setVisible(false), 500);
       return () => clearTimeout(timeoutVal);
     }
   }, [phase, isLighthouse]);

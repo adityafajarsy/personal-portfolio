@@ -89,6 +89,10 @@ export default function Project({ onSelectProject }) {
             className="w-[80px] sm:w-[100px] lg:w-[120px] object-contain select-none pointer-events-none mt-3"
             style={{ rotate: "-12deg" }}
             variants={itemVariants}
+            width="120"
+            height="120"
+            loading="lazy"
+            decoding="async"
           />
         </div>
       </div>
@@ -258,7 +262,10 @@ export default function Project({ onSelectProject }) {
                           src={project.gambar}
                           alt={project.nama}
                           className="w-full h-full object-cover"
+                          width="420"
+                          height="262"
                           loading="lazy"
+                          decoding="async"
                         />
                       </div>
 

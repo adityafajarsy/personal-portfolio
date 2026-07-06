@@ -119,7 +119,10 @@ const ToolItem = React.memo(({ tool }) => (
         src={tool.gambar}
         alt={tool.nama}
         className="w-full h-full object-contain filter grayscale group-hover:grayscale-0 transition-all duration-300"
+        width="32"
+        height="32"
         loading="lazy"
+        decoding="async"
         onError={(e) => {
           e.target.style.display = "none";
         }}
@@ -147,23 +150,32 @@ export default function About() {
         src="/assets/Logo PanRB.webp"
         alt="Kementerian PANRB Logo"
         className="w-7.5 h-7.5 object-contain rounded-md"
+        width="30"
+        height="30"
         loading="lazy"
+        decoding="async"
       />,
       <svg viewBox="0 0 24 24" className="w-5 h-5 text-indigo-200" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
         <path d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z"></path>
         <circle cx="12" cy="12" r="3"></circle>
       </svg>,
       <img
-        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ5zv605IDYRA7f3I0IMFUy4BKP3ETSMleuJA&s"
+        src="/assets/hacktiv8.webp"
         alt="Hacktiv8 Logo"
         className="w-6 h-6 object-contain rounded-md"
+        width="24"
+        height="24"
         loading="lazy"
+        decoding="async"
       />,
       <img
         src="/assets/logo-unpad1.webp"
         alt="Unpad Logo"
         className="w-7 h-7 object-contain rounded-md"
+        width="28"
+        height="28"
         loading="lazy"
+        decoding="async"
       />
     ];
     return {

@@ -294,7 +294,7 @@ export default function PortfolioDetail({ project, onClose }) {
               {d.influencesTitle || "Every Reference Left a Mark"}
             </h2>
             <div className="mb-2.5 sm:mb-0 sm:relative sm:-top-3.5 sm:ml-1 shrink-0">
-              <img src="/assets/dripping-graf/fire.webp" alt="Fire Graffiti" className="w-8 h-8 sm:w-14 sm:h-14 object-contain rotate-12" />
+              <img src="/assets/dripping-graf/fire.webp" alt="Fire Graffiti" className="w-8 h-8 sm:w-14 sm:h-14 object-contain rotate-12" width="56" height="56" decoding="async" />
             </div>
           </div>
         </div>
@@ -306,6 +306,9 @@ export default function PortfolioDetail({ project, onClose }) {
             alt="How References Became Design Decisions Schema"
             className="w-full h-auto max-h-[600px] object-contain"
             loading="lazy"
+            decoding="async"
+            width="1200"
+            height="550"
           />
         </div>
 
@@ -361,7 +364,7 @@ export default function PortfolioDetail({ project, onClose }) {
               {intentionTitle || "Every visual decision exists for a reason."}
             </h2>
             <div className="mb-2.5 sm:mb-0 sm:relative sm:-top-3.5 sm:ml-1 shrink-0">
-              <img src="/assets/dripping-graf/star.webp" alt="Star Graffiti" className="w-8 h-8 sm:w-14 sm:h-14 object-contain -rotate-12" />
+              <img src="/assets/dripping-graf/star.webp" alt="Star Graffiti" className="w-8 h-8 sm:w-14 sm:h-14 object-contain -rotate-12" width="56" height="56" decoding="async" />
             </div>
           </div>
           <p className="mt-2 text-[14px] text-white/55 leading-relaxed max-w-3xl">
@@ -409,7 +412,7 @@ export default function PortfolioDetail({ project, onClose }) {
               {detailsTitle || "Things You Probably Didn't Notice"}
             </h2>
             <div className="mb-2.5 sm:mb-0 sm:relative sm:-top-4 sm:ml-1 shrink-0">
-              <img src="/assets/crown.webp" alt="Crown Icon" className="w-10 h-10 sm:w-18 sm:h-18 object-contain rotate-[6deg]" />
+              <img src="/assets/crown.webp" alt="Crown Icon" className="w-10 h-10 sm:w-18 sm:h-18 object-contain rotate-[6deg]" width="72" height="72" decoding="async" />
             </div>
           </div>
           <p className="mt-2 text-[14px] text-white/55 leading-relaxed max-w-3xl">
@@ -424,6 +427,9 @@ export default function PortfolioDetail({ project, onClose }) {
             alt="Small Details Illustration"
             className="w-full h-auto max-h-[600px] object-contain"
             loading="lazy"
+            decoding="async"
+            width="1200"
+            height="460"
           />
         </div>
 
@@ -449,7 +455,7 @@ export default function PortfolioDetail({ project, onClose }) {
               {philosophyTitle || "I don't collect references. I collect principles."}
             </h2>
             <div className="mb-2.5 sm:mb-0 sm:relative sm:-top-3.5 sm:ml-1 shrink-0">
-              <img src="/assets/dripping-graf/quotes.webp" alt="Quotes Graffiti" className="w-8 h-8 sm:w-14 sm:h-14 object-contain" />
+              <img src="/assets/dripping-graf/quotes.webp" alt="Quotes Graffiti" className="w-8 h-8 sm:w-14 sm:h-14 object-contain" width="56" height="56" decoding="async" />
             </div>
           </div>
         </div>
@@ -494,6 +500,7 @@ export default function PortfolioDetail({ project, onClose }) {
                 loop
                 muted
                 playsInline
+                preload="metadata"
                 className="w-full h-full object-cover"
               />
             </div>
@@ -505,6 +512,9 @@ export default function PortfolioDetail({ project, onClose }) {
                 alt="Mobile interface mockup"
                 className="w-full h-auto max-h-[380px] object-contain rounded-lg"
                 loading="lazy"
+                decoding="async"
+                width="338"
+                height="370"
               />
             </div>
 
@@ -515,6 +525,9 @@ export default function PortfolioDetail({ project, onClose }) {
                 alt="Desktop section closeup"
                 className="w-full h-full object-cover"
                 loading="lazy"
+                decoding="async"
+                width="1682"
+                height="1126"
               />
             </div>
 
@@ -525,6 +538,9 @@ export default function PortfolioDetail({ project, onClose }) {
                 alt="Interface layout details"
                 className="w-full h-full object-cover"
                 loading="lazy"
+                decoding="async"
+                width="1670"
+                height="912"
               />
             </div>
 
@@ -535,6 +551,9 @@ export default function PortfolioDetail({ project, onClose }) {
                 alt="Visual grid typography alignment"
                 className="w-full h-full object-cover"
                 loading="lazy"
+                decoding="async"
+                width="1664"
+                height="956"
               />
             </div>
 
@@ -545,6 +564,9 @@ export default function PortfolioDetail({ project, onClose }) {
                 alt="Full platform presentation system"
                 className="w-full h-full object-cover"
                 loading="lazy"
+                decoding="async"
+                width="2558"
+                height="1288"
               />
             </div>
 
@@ -555,6 +577,9 @@ export default function PortfolioDetail({ project, onClose }) {
                 alt="Responsive mobile grid system details"
                 className="w-full h-full object-cover"
                 loading="lazy"
+                decoding="async"
+                width="1660"
+                height="868"
               />
             </div>
           </div>

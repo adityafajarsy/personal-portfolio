@@ -28,6 +28,11 @@ export default function MobileProfile() {
                 src="/assets/adityafajarsy.webp"
                 alt="Aditya Fajar SY"
                 className="w-full h-full object-cover object-[center_15%]"
+                width="72"
+                height="72"
+                loading="eager"
+                decoding="async"
+                fetchpriority="high"
                 onError={(e) => {
                   e.target.src = "/assets/hero-img.webp";
                 }}
@@ -90,6 +95,10 @@ export default function MobileProfile() {
             src="/assets/rose.webp"
             alt="Rose decoration"
             className="w-full h-full object-contain"
+            width="84"
+            height="84"
+            loading="lazy"
+            decoding="async"
           />
         </m.div>
       </div>

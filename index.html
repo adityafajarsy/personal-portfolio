@@ -3,27 +3,44 @@
 
 <head>
   <meta charset="UTF-8" />
-  <link className="rounded-full" rel="icon" type="image/webp" href="/assets/icon aditya.webp" />
+  <link rel="icon" type="image/x-icon" href="/assets/icon aditya.webp" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <!-- Fonts & DNS Prefetch -->
+  <!-- DNS Prefetch & Preconnect for Google Fonts -->
   <link rel="dns-prefetch" href="https://fonts.googleapis.com" />
   <link rel="dns-prefetch" href="https://fonts.gstatic.com" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  
-  <!-- High Priority Web Font Preload -->
-  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Nothing+You+Could+Do&family=Lora:ital,wght@0,400;0,500;0,600;1,400&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400&display=swap" />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Nothing+You+Could+Do&family=Lora:ital,wght@0,400;0,500;0,600;1,400&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400&display=swap"
+
+  <!--
+    HERO IMAGE PRELOAD — fetchpriority=high tells the browser to start
+    fetching the LCP element immediately, before parsing the JS bundle.
+    This is the single biggest LCP win available in HTML.
+  -->
+  <link rel="preload" as="image" href="/assets/adityafajarsy.webp" fetchpriority="high" />
+
+  <!--
+    FONTS — Non-blocking (media=print trick + display=swap).
+    Trimmed from 7 Inter weights to 4 (400,500,600,700) — 800/900 only used
+    in PreLoader which already has Inter in fallback stack.
+    Removed Newsreader (article reading body only, not critical path).
+    Lora kept for article view. Nothing You Could Do kept for hero text.
+  -->
+  <link rel="preload" as="style"
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Nothing+You+Could+Do&family=Lora:ital,wght@0,400;0,600;1,400&display=swap" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Nothing+You+Could+Do&family=Lora:ital,wght@0,400;0,600;1,400&display=swap"
     rel="stylesheet" media="print" onload="this.media='all'" />
   <noscript>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Nothing+You+Could+Do&family=Lora:ital,wght@0,400;0,500;0,600;1,400&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400&display=swap" rel="stylesheet" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Nothing+You+Could+Do&family=Lora:ital,wght@0,400;0,600;1,400&display=swap"
+      rel="stylesheet" />
   </noscript>
 
-  <title> Aditya Fajar SY | Website Portfolio</title>
+  <title>Aditya Fajar SY | Website Portfolio</title>
 </head>
 
-<body class="bg-zinc-900 text-white">
+<body class="bg-[#050505] text-white">
   <div id="root"></div>
   <script type="module" src="/src/main.jsx"></script>
 </body>

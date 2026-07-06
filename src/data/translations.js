@@ -282,7 +282,7 @@ export const translations = {
 
         "During my university years, I studied Russian Literature. Outside the classroom, I spent most of my time in design, publishing, creative media, copywriting, and student organizations. From there, I began to realize that building a product is not just about visuals, but also about how a message can be effectively communicated.",
         "Over time, that curiosity led me to various worlds that seemed completely unrelated. I began exploring branding, software engineering, Web3, crypto, and streetwear culture. Not to follow trends, but to understand why a piece of work can be recognized, remembered, and establish a strong identity.",
-        "One of the most memorable influences was the visual identity of 100 Thieves. I was fascinated by how they built character through handwriting typography, editorial layouts, and visual consistency across all media. On the other hand, the BLUM × Pokras Lampas collaboration introduced me to a more experimental visual language—graffiti, symbols, dripping elements, and hacker aesthetics—which heavily influenced my visual exploration."
+        "One of the most memorable influences was the visual identity of 100 Thieves. I was fascinated by how they built character through handwriting typography, editorial layouts, and visual consistency across all media. On the other hand, the BLUM × Pokras Lampas collaboration introduced me to a more experimental visual language graffiti, symbols, dripping elements, and hacker aesthetics which heavily influenced my visual exploration."
       ],
       intentionLabel: "BUILT WITH INTENTION",
       intentionTitle: "Every visual decision exists for a reason.",
@@ -368,7 +368,7 @@ export const translations = {
         { key: "color", title: "Color System", detail: "Blue #3B82F6", desc: "Blue represents clarity, technology, trust, and focus. It is the color of systems thinking, creative precision, and forward momentum." },
         { key: "handwriting", title: "Handwritten Typography", detail: "Personal contrast", desc: "Handwritten elements create contrast against clean technical layouts. They make the interface feel more personal, less corporate, and more human." },
         { key: "graffiti", title: "Graffiti Symbols", detail: "Street identity", desc: "Graffiti represents experimentation, creativity, and imperfect human expression. It adds a layer of subcultural identity to an otherwise technical portfolio." },
-        { key: "editorial", title: "Editorial Layout", detail: "Magazine hierarchy", desc: "Large typography, strong whitespace, asymmetric grids. Inspired by editorial design — content presented with confidence and craft." },
+        { key: "editorial", title: "Editorial Layout", detail: "Magazine hierarchy", desc: "Large typography, strong whitespace, asymmetric grids. Inspired by editorial design content presented with confidence and craft." },
         { key: "motion", title: "Motion", detail: "Restrained & intentional", desc: "Animations are smooth but restrained. Every motion has a purpose. Interactions should feel intentional, not decorative." }
       ],
 
@@ -391,7 +391,7 @@ export const translations = {
         { phase: "Research", desc: "Collecting references from branding, technology, editorial design, gaming, crypto, and fashion industries." },
         { phase: "Strategy", desc: "Defining the personality, identity system, and emotional direction of the digital presence." },
         { phase: "Wireframe", desc: "Creating information hierarchy, content structure, and layout architecture before visual design." },
-        { phase: "Visual Design", desc: "Developing the complete design language — typography, color, spacing, motion, and components." },
+        { phase: "Visual Design", desc: "Developing the complete design language typography, color, spacing, motion, and components." },
         { phase: "Prototype", desc: "Testing interactions, transitions, and animations to ensure intentional, non-decorative motion." },
         { phase: "Development", desc: "Implementing using React, Vite, Tailwind CSS, Framer Motion, and responsive component architecture." },
         { phase: "Iteration", desc: "Continuous refinement based on usability testing, visual consistency reviews, and personal feedback." }
@@ -409,7 +409,7 @@ export const translations = {
       engDeploymentItems: ["Vercel"],
       engPerformanceItems: ["Image Optimization", "Code Splitting", "Lazy Loading", "SEO Optimization", "Accessibility", "Responsive Design"],
       engFrontendNote: "React + Vite provides a fast development experience and production-grade build pipeline. Tailwind enforces design consistency through a utility-first constraint system.",
-      engAnimationNote: "Framer Motion enables physics-based, declarative animations that feel natural and intentional — not CSS transitions bolted on as an afterthought.",
+      engAnimationNote: "Framer Motion enables physics-based, declarative animations that feel natural and intentional not CSS transitions bolted on as an afterthought.",
       engDeploymentNote: "Vercel's edge network provides globally distributed delivery with zero-config CI/CD, enabling instant rollbacks and preview deployments.",
 
       // Section 8 — Gallery
@@ -517,12 +517,12 @@ export const translations = {
           id: 1,
           gambar: "/assets/article1.webp",
           kategori: "UI/UX & AI",
-          tanggal: "June 28, 2026",
+          tanggal: "June 27, 2026",
           baca: "5 min read",
           nama: "AI Can Create Beautiful Websites. But It Still Can't Understand Users.",
           desk: "AI can generate modern, automated landing pages instantly. But visual beauty doesn't guarantee a successful product that truly solves human problems.",
           isi: `
-A few years ago, building a website took weeks. Today, with just a few prompt lines, AI can generate a modern-looking landing page, complete with animations, dark mode, and professional-looking components.
+A few years ago, building a website took weeks. Today, with just a few prompt lines, AI can generate a modern looking landing page, complete with animations, dark mode, and professional looking components.
 At first glance, it all looks impressive.
 But there is one question that is rarely asked.
 If the website looks good, does that mean it actually succeeds?
@@ -603,12 +603,12 @@ They will remember one thing that is far more important.
           id: 2,
           gambar: "/assets/article2.webp",
           kategori: "UI/UX Design",
-          tanggal: "May 14, 2026",
+          tanggal: "June 29, 2026",
           baca: "4 min read",
           nama: "Stop Designing Websites 'Generic'",
           desk: "So many website designs look exactly the same these days.",
           isi: `
-I can usually tell within a few seconds if a website was built using AI. It is not because I am against AI—in fact, I use it almost every day to help with design and development. What makes a website easily recognizable is not the AI itself, but because all the design decisions feel identical. The hero section is the same, the layout is the same, cards have the same shadows, the same purple-blue gradients are used, animations are identical, and even the content order rarely changes. The result looks modern, but it feels like the 100th website I have seen that week.
+I can usually tell within a few seconds if a website was built using AI. It is not because I am against AI in fact, I use it almost every day to help with design and development. What makes a website easily recognizable is not the AI itself, but because all the design decisions feel identical. The hero section is the same, the layout is the same, cards have the same shadows, the same purple-blue gradients are used, animations are identical, and even the content order rarely changes. The result looks modern, but it feels like the 100th website I have seen that week.
 
 ## AI Makes Designing Easy. Too Easy, Actually..
 There is no denying that AI has changed how we build digital products. Now, anyone can create a landing page with just a few prompts, and the result is often neat enough to publish immediately. This is an amazing step forward.
@@ -616,7 +616,7 @@ The problem starts when AI is used to replace thinking. Many people simply type 
 ## If everyone uses the same prompts, it is no surprise the results look identical.
 
 ## Good Design Always Starts with References, Not Generation
-Whenever I build a new website, I almost never open AI right away. Instead, I start with research—finding other websites with similar functions and gathering references that successfully solve real user problems.
+Whenever I build a new website, I almost never open AI right away. Instead, I start with research finding other websites with similar functions and gathering references that successfully solve real user problems.
 Only then do I break them down: why the navigation feels comfortable, why the product page is easy to understand, why the animations are subtle and not distracting, and why the checkout process is so fast.
 I do not copy the entire design. I only take small ideas that work, combine them with other references, and adapt them to the needs of the product I am building. Once the vision is clear, I use AI to speed up execution, not to replace the thinking process.
 
@@ -628,7 +628,7 @@ AI works much better when we already know what we want to make, rather than leav
 There is one thing often forgotten when discussing AI: taste. The ability to distinguish between what is average and what is truly high quality. Taste does not develop overnight. It is built by looking at hundreds of good designs, using dozens of products, reading, discussing, receiving criticism, and constantly evaluating your own work. The broader your references, the better decisions you make. That decision-making is something automation cannot replace.
 
 ## AI Does Not Replace Design Fundamentals
-In fact, the easier AI is to use, the more important it is to understand design fundamentals—from visual hierarchy, typography, whitespace, composition, contrast, and grids, to user flow. These principles do not disappear just because we can build a UI in minutes. Instead, these fundamentals help us judge whether the AI output is actually good to use or needs to be improved. Without this understanding, we are just people accepting outputs, not real designers.
+In fact, the easier AI is to use, the more important it is to understand design fundamentals from visual hierarchy, typography, whitespace, composition, contrast, and grids, to user flow. These principles do not disappear just because we can build a UI in minutes. Instead, these fundamentals help us judge whether the AI output is actually good to use or needs to be improved. Without this understanding, we are just people accepting outputs, not real designers.
 
 ## Memorable Websites Are Not Born from Short Prompts
 AI will continue to evolve. In a few years, making a website might take only a few seconds. But one thing remains hard to replace: the human ability to observe, select, combine, and make the right design decisions.
@@ -640,7 +640,7 @@ AI can speed up the interface building, but the feel, identity, and quality of a
           id: 3,
           gambar: "/assets/article3.webp",
           kategori: "Technology & Skills",
-          tanggal: "April 02, 2026",
+          tanggal: "July 01, 2026",
           baca: "5 min read",
           nama: "In the AI Era, the Most Valuable Skill is Not Coding or Design",
           desk: "As AI tools make software building incredibly easy, the human value shifts away from technical execution to experience, perspective, and taste.",
@@ -656,10 +656,10 @@ Take video editing, for example. I do not just cut clips or add transitions. I c
 AI can assist the process, but experience remains the source of that creative decision.
 ## Creativity is More Than Generating New Things
 Many people think AI is creative because it can generate beautiful posters, illustrations, or videos. I agree that AI is excellent at producing variations. But human creativity works a bit differently.
-We connect experiences that seem completely unrelated—conversations with friends, jokes heard while hanging out, films we have watched, books we have read, and personal problems we have faced. All these references blend into a unique perspective. 
+We connect experiences that seem completely unrelated conversations with friends, jokes heard while hanging out, films we have watched, books we have read, and personal problems we have faced. All these references blend into a unique perspective. 
 Two people can use the exact same AI tool and prompts, but produce completely different works because they bring different life experiences to the table. AI helps build the piece, but humans give it character.
 ## References Build Taste
-One of the hardest things to learn is taste—the ability to distinguish between what is average and what is truly exceptional. Taste does not come from a single prompt. It is built by regularly observing good design, trying different products, reading, discussing, receiving feedback, and constantly evaluating one's own work. 
+One of the hardest things to learn is taste the ability to distinguish between what is average and what is truly exceptional. Taste does not come from a single prompt. It is built by regularly observing good design, trying different products, reading, discussing, receiving feedback, and constantly evaluating one's own work. 
 The broader your references, the better decisions you make. That decision-making is something automation cannot replace.
 ## AI is a Tool, Not a Replacement for Perspective
 I believe AI will continue to take over repetitive and technical tasks. This is not something to fear. Instead, it gives us more time to focus on what is truly valuable: thinking, understanding people, building concepts, and making better decisions.
@@ -671,10 +671,10 @@ As AI evolves, it becomes clear that human value lies not just in what we can bu
           id: 4,
           gambar: "/assets/article4.webp",
           kategori: "Personal & Mindset",
-          tanggal: "July 02, 2026",
+          tanggal: "July 03, 2026",
           baca: "7 min read",
           nama: "My Journey to Building a Builder's Mindset",
-          desk: "Transitioning from Russian Literature to software engineering, I realized that the most crucial asset isn't just coding—it's the relentless mindset of a builder.",
+          desk: "Transitioning from Russian Literature to software engineering, I realized that the most crucial asset isn't just coding it's the relentless mindset of a builder.",
           isi: `
 # My Journey to Building a Builder's Mindset
 Back then, if anyone had asked, "Why study Russian Literature if you ultimately want to work in IT?", I probably would have struggled to answer. At first glance, there really is no connection.
@@ -685,7 +685,7 @@ My reason for choosing a literature major was actually quite simple. My mindset 
 From my very first semester, I threw myself into various student organizations and committees. Almost all of my roles revolved around publications, graphic design, multimedia, and documentation. Back then, I was frequently working on motion graphics, video editing, aftermovies, and even 3D visuals. Over time, the creative world became the space where I truly grew.
 ## Organizations Taught Me More Than Just Design
 In these student organizations, my job wasn't just to make posters. I designed logos, created visual identities for student bodies, curated Instagram grids, built banners, animated event bumpers, handled event documentation, and edited aftermovies. Everything shared one common trait: they had to be executed with high standards, because every piece of work I put out carried my own name, the organization's reputation, and even the department's brand.
-Whenever there were inter-department competitions or events, I always wanted our team's visual assets to look highly polished. I loved it when my department could come up with fresh creative ideas before anyone else did. Without realizing it, those experiences shaped my way of thinking — not just about design, but about quality standards, ownership, and the habit of continuous improvement. The more projects I handled, the more refined my creativity, visual taste, and ability to read shifting trends became.
+Whenever there were inter-department competitions or events, I always wanted our team's visual assets to look highly polished. I loved it when my department could come up with fresh creative ideas before anyone else did. Without realizing it, those experiences shaped my way of thinking not just about design, but about quality standards, ownership, and the habit of continuous improvement. The more projects I handled, the more refined my creativity, visual taste, and ability to read shifting trends became.
 ## When the Programming World Began to Call
 As I entered my sixth and seventh semesters, my organizational activities began to wind down. For the first time in a while, finally had a lot of time for self-reflection. That was when I remembered a goal that had been in my mind since before college: stepping into the world of IT.
 One of the defining moments was watching Timothy Ronald's podcast with Deddy Corbuzier in early 2023. Around the same time, the first generation of ChatGPT was gaining public attention. Seeing technology accelerate so rapidly, I felt drawn to it. Not because of the hype, but because I realized this field forces you to learn continuously. And I genuinely love the learning process.
@@ -1189,7 +1189,7 @@ At the end of the day, my journey is not about transitioning from Russian Litera
           id: 1,
           gambar: "/assets/article1.webp",
           kategori: "UI/UX & AI",
-          tanggal: "28 Juni 2026",
+          tanggal: "27 Juni 2026",
           baca: "5 menit baca",
           nama: "AI Bisa Membuat Web Cantik, Tapi tetep Belum Paham Pengguna.",
           desk: "AI bisa menghasilkan landing page otomatis yang modern dengan instan. Namun, keindahan visual tidak menjamin produk yang sukses memecahkan masalah manusia.",
@@ -1229,7 +1229,7 @@ Mereka akan ingat satu hal yang jauh lebih penting: *website itu membantu saya m
           id: 2,
           gambar: "/assets/article2.webp",
           kategori: "UI/UX Design",
-          tanggal: "14 Mei 2026",
+          tanggal: "29 Juni 2026",
           baca: "4 menit baca",
           nama: "Jangan Bikin Desain Website yang Generik",
           desk: "Banyak banget Design website yang mirip semua akhir akhir ini.",
@@ -1268,7 +1268,7 @@ AI memang bisa mempercepat proses bikin antarmuka, tapi rasa, identitas, dan kua
           id: 3,
           gambar: "/assets/article3.webp",
           kategori: "Kreativitas & AI",
-          tanggal: "02 April 2026",
+          tanggal: "01 Juli 2026",
           baca: "5 menit baca",
           nama: "Di Era AI, Skill Paling Berharga Justru Bukan Coding atau Desain",
           desk: "Makin pintarnya AI membuat kemudahan teknis melonjak. Skill yang akan terus bernilai tinggi di masa depan justru hal-hal non-teknis yang tidak bisa diunduh ke model AI.",

@@ -26,8 +26,13 @@ export default function Sidebar() {
               src="/assets/adityafajarsy.webp"
               alt="Aditya Fajar SY"
               className="w-full h-full object-cover object-[center_15%]"
+              width="80"
+              height="80"
+              loading="eager"
+              decoding="async"
+              fetchpriority="high"
               onError={(e) => {
-                e.target.src = "/assets/hero-img.webp"; // fallback if main photo fails
+                e.target.src = "/assets/hero-img.webp";
               }}
             />
             <div className="absolute inset-0 bg-blue-500/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none" />
@@ -80,6 +85,10 @@ export default function Sidebar() {
             src="/assets/rose.webp"
             alt="Rose decoration"
             className="w-full h-full object-contain"
+            width="116"
+            height="116"
+            loading="lazy"
+            decoding="async"
           />
         </m.div>
       </div>
@@ -115,13 +124,6 @@ export default function Sidebar() {
           >
             <Globe size={16} className="text-[#8A8A8A]" />
             <span className="truncate">github.com/adityafajarsy</span>
-          </a>
-          <a
-            href="tel:+6287741583948"
-            className="flex items-center gap-2.5 hover:text-white transition-colors duration-200"
-          >
-            <Phone size={16} className="text-[#8A8A8A]" />
-            <span>+62 877-4158-3948</span>
           </a>
           <div className="flex items-center gap-2.5">
             <MapPin size={16} className="text-[#8A8A8A]" />

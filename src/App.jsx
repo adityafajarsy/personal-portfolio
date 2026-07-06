@@ -1,7 +1,6 @@
-import React, { useState, lazy, Suspense } from "react";
+import React, { useState, lazy, Suspense, useEffect } from "react";
 import Sidebar from "./components/Sidebar";
 import MobileProfile from "./components/MobileProfile";
-import FloatingNav from "./components/FloatingNav";
 import Home from "./elements/Home";
 import Project from "./elements/Project";
 import Career from "./elements/Career";
@@ -9,13 +8,18 @@ import About from "./elements/About";
 import Article from "./elements/Article";
 import Contact from "./elements/Contact";
 import LanguageSwitcher from "./components/LanguageSwitcher";
-import CustomCursor from "./components/CustomCursor";
 
-// Lazy-loaded detail views (reduces initial JS bundle size dramatically)
+// Lazy-loaded detail views — reduces initial JS bundle size dramatically
 const ArticleDetail = lazy(() => import("./components/ArticleDetail"));
 const ProjectDetail = lazy(() => import("./components/ProjectDetail"));
 
-// Premium inline dynamic loading placeholder
+// Non-critical UI — lazy-loaded so they don't block initial paint
+// FloatingNav: mobile-only bottom nav, never visible during LCP window
+// CustomCursor: desktop-only decorative cursor, zero content value
+const FloatingNav = lazy(() => import("./components/FloatingNav"));
+const CustomCursor = lazy(() => import("./components/CustomCursor"));
+
+// Inline spinner — no external dep, shown during route transitions only
 const LoadingPlaceholder = () => (
   <div className="w-full min-h-[40vh] flex flex-col items-center justify-center gap-3 animate-pulse">
     <div className="w-8 h-8 rounded-full border-2 border-white/5 border-t-[#3B82F6] animate-spin" />
@@ -26,6 +30,25 @@ const LoadingPlaceholder = () => (
 function App() {
   const [activeArticle, setActiveArticle] = useState(null);
   const [activeProject, setActiveProject] = useState(null);
+
+  // Inject remixicon CSS non-blocking after the app mounts and the browser is idle.
+  // This prevents the 600KB icon-font CSS from blocking the critical rendering path.
+  // Icons use <i class="ri-*"> tags which show as text until the CSS loads — acceptable UX.
+  useEffect(() => {
+    const id = "remixicon-stylesheet";
+    if (document.getElementById(id)) return; // already injected (HMR safety)
+    const link = document.createElement("link");
+    link.id = id;
+    link.rel = "stylesheet";
+    link.href = "/assets/remixicon.css";
+    // Use requestIdleCallback to defer until browser is idle, or fallback to setTimeout
+    const inject = () => document.head.appendChild(link);
+    if ("requestIdleCallback" in window) {
+      requestIdleCallback(inject, { timeout: 2000 });
+    } else {
+      setTimeout(inject, 200);
+    }
+  }, []);
 
   return (
     <div className="bg-[#050505] text-white relative min-h-screen overflow-x-hidden flex flex-col lg:flex-row lg:h-screen lg:overflow-hidden">
@@ -67,13 +90,20 @@ function App() {
         </Suspense>
       </main>
 
-      {/* Bottom Floating Nav — mobile only */}
-      {!activeArticle && !activeProject && <FloatingNav />}
+      {/* Bottom Floating Nav — mobile only, lazy-loaded (non-critical) */}
+      {!activeArticle && !activeProject && (
+        <Suspense fallback={null}>
+          <FloatingNav />
+        </Suspense>
+      )}
 
-      {/* Custom Desktop Cursor */}
-      <CustomCursor />
+      {/* Custom Desktop Cursor — lazy-loaded (non-critical) */}
+      <Suspense fallback={null}>
+        <CustomCursor />
+      </Suspense>
     </div>
   );
 }
 
 export default App;
+

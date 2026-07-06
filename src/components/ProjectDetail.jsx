@@ -322,9 +322,8 @@ export default function ProjectDetail({ project, onClose }) {
         </div>
       </m.div>
 
-      {/* ── Hero cover image ────────────────────────────────────────────── */}
       <m.div variants={fadeUp} custom={1} initial="hidden" animate="visible" className="w-full aspect-[16/8] rounded-[20px] overflow-hidden bg-zinc-900 border border-white/5 relative">
-        <img src={localizedProject.gambar} alt={localizedProject.nama} className="w-full h-full object-cover" loading="lazy" />
+        <img src={localizedProject.gambar} alt={localizedProject.nama} className="w-full h-full object-cover" loading="lazy" decoding="async" width="1200" height="600" />
         <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent" />
         <div className="absolute bottom-4 left-5 flex items-center gap-2">
           <span className="text-[11px] font-bold text-white/50 bg-black/40 backdrop-blur-sm px-3 py-1 rounded-full border border-white/10">
@@ -521,6 +520,7 @@ export default function ProjectDetail({ project, onClose }) {
                   loop
                   muted
                   playsInline
+                  preload="metadata"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent pointer-events-none" />
                 <div className="absolute bottom-4 left-5">
@@ -531,7 +531,7 @@ export default function ProjectDetail({ project, onClose }) {
               </div>
             ) : (
               <div className="w-full aspect-[16/9] rounded-[20px] overflow-hidden bg-zinc-900 border border-white/5 relative">
-                <img src={localizedProject.images[0]} alt="Portal PPID preview" className="w-full h-full object-cover" loading="lazy" />
+                <img src={localizedProject.images[0]} alt="Portal PPID preview" className="w-full h-full object-cover" loading="lazy" decoding="async" width="1200" height="675" />
               </div>
             )}
 
@@ -540,7 +540,7 @@ export default function ProjectDetail({ project, onClose }) {
               <div className="grid grid-cols-2 sm:grid-cols-3 gap-3">
                 {localizedProject.images.slice(1).map((src, i) => (
                   <div key={i} className="rounded-[14px] overflow-hidden bg-zinc-900 border border-white/5 aspect-[16/10] group relative cursor-pointer">
-                    <img src={src} alt={`Portal PPID screenshot ${i + 2}`} className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-[1.03]" loading="lazy" />
+                    <img src={src} alt={`Portal PPID screenshot ${i + 2}`} className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-[1.03]" loading="lazy" decoding="async" width="600" height="375" />
                     <div className="absolute inset-0 bg-black/25 opacity-0 group-hover:opacity-100 transition-opacity duration-200" />
                   </div>
                 ))}

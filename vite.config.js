@@ -15,9 +15,14 @@ export default defineConfig({
       brotliSize: true
     })
   ],
+  esbuild: {
+    pure: ['console.log'],
+  },
   build: {
     target: 'esnext', // Optimize for modern browsers (reduces transpilation bloat)
     minify: 'esbuild',
+    cssCodeSplit: true,
+    reportCompressedSize: false,
     rollupOptions: {
       output: {
         manualChunks(id) {
