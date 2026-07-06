@@ -103,7 +103,7 @@ export default function Home() {
 
       {/* Main Title */}
       <m.div className="flex flex-col gap-1" variants={itemVariants}>
-        <h2 className="text-[36px] lg:text-[44px] font-black tracking-tight leading-none text-white">
+        <h2 className="text-[30px] min-[380px]:text-[34px] min-[410px]:text-[36px] lg:text-[44px] font-black tracking-tight leading-none text-white">
           {t("home.title")}
         </h2>
         <div className="h-[44px] lg:h-[54px] overflow-visible relative -mt-1 lg:-mt-1.5">

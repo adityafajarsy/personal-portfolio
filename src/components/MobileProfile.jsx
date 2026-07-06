@@ -18,11 +18,11 @@ export default function MobileProfile() {
   return (
     <div className="flex flex-col gap-8 lg:hidden w-full pb-4">
       {/* Profile Container (Left: Info + Social, Right: Rose) */}
-      <div className="flex items-end justify-start gap-8 w-full">
+      <div className="flex items-end justify-between gap-3 w-full">
         {/* Left Column: Avatar/Name & Social Icons */}
-        <div className="flex flex-col gap-3">
+        <div className="flex flex-col gap-3 min-w-0">
           {/* Avatar + Name row */}
-          <div className="flex items-center gap-4">
+          <div className="flex items-center gap-3">
             <div className="w-[72px] h-[72px] rounded-full overflow-hidden border-2 border-white/10 shadow-lg flex-shrink-0">
               <img
                 src="/assets/adityafajarsy.webp"
@@ -38,9 +38,9 @@ export default function MobileProfile() {
                 }}
               />
             </div>
-            <div className="flex flex-col">
-              <div className="flex items-center gap-2">
-                <span className="text-[20px] font-bold text-white tracking-tight leading-none">
+            <div className="flex flex-col min-w-0">
+              <div className="flex items-center gap-1.5 whitespace-nowrap min-w-0">
+                <span className="text-[17px] min-[380px]:text-[19px] min-[400px]:text-[20px] font-bold text-white tracking-tight leading-none">
                   Aditya Fajar SY
                 </span>
                 {/* Verified badge */}
@@ -89,7 +89,7 @@ export default function MobileProfile() {
             delay: 3.1,
             ease: [0.25, 1, 0.5, 1]
           }}
-          className="w-[84px] h-[84px] relative flex items-center justify-center flex-shrink-0 pb-1"
+          className="w-[72px] h-[72px] min-[390px]:w-[84px] min-[390px]:h-[84px] relative flex items-center justify-center flex-shrink-0 pb-1"
         >
           <img
             src="/assets/rose.webp"
@@ -120,9 +120,6 @@ export default function MobileProfile() {
           </a>
           <a href="https://github.com/adityafajarsy" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2.5 hover:text-white transition-colors duration-200">
             <Globe size={14} /> <span>github.com/adityafajarsy</span>
-          </a>
-          <a href="tel:+6287741583948" className="flex items-center gap-2.5 hover:text-white transition-colors duration-200">
-            <Phone size={14} /> <span>+62 877-4158-3948</span>
           </a>
           <div className="flex items-center gap-2.5">
             <MapPin size={14} /> <span>Jakarta, Indonesia</span>
