@@ -98,10 +98,10 @@ export default function PreLoader() {
     return () => timers.forEach(clearTimeout);
   }, [isLighthouse]);
 
-  // Trigger exit slide — slightly extended for user readability, Lighthouse still skips this
+  // Trigger exit slide — extended to 1500ms to allow glitch animations to finish and text to be read, Lighthouse still skips this
   useEffect(() => {
     if (isLighthouse) return;
-    const timeoutVal = setTimeout(() => setPhase("exit"), 750);
+    const timeoutVal = setTimeout(() => setPhase("exit"), 1500);
     return () => clearTimeout(timeoutVal);
   }, [isLighthouse]);
 
