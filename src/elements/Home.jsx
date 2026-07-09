@@ -146,7 +146,7 @@ export default function Home() {
       {/* Action Buttons */}
       <m.div className="flex flex-wrap items-center gap-4 mt-2" variants={itemVariants}>
         <a
-          href="/assets/CV bahasa indonesia.pdf"
+          href="/assets/CV new.pdf"
           download="Aditya Fajar Satya Yudha-CV.pdf"
           className="flex items-center gap-2 px-5 py-3 rounded-full bg-white text-black font-semibold text-[14px] hover:bg-white/90 transition-all active:scale-95 shadow-md shadow-white/5"
         >
