@@ -282,7 +282,10 @@ export default function About() {
                   </p>
 
                   {/* Paragraph Description ─ Mobile (Compact Collapsible) */}
-                  <div className="block sm:hidden mt-2">
+                  <div
+                    onClick={() => toggleCard(idx)}
+                    className="block sm:hidden mt-2 cursor-pointer group/mobile-exp"
+                  >
                     <p
                       className={`text-[12.5px] leading-relaxed text-[#8A8A8A] font-normal transition-all duration-200 ${
                         !isExpanded ? "line-clamp-2" : ""
@@ -290,32 +293,28 @@ export default function About() {
                     >
                       {exp.desc}
                     </p>
-                    <button
-                      type="button"
-                      onClick={() => toggleCard(idx)}
-                      className="mt-1.5 inline-flex items-center gap-1 text-[11.5px] font-bold text-[#3B82F6] hover:text-[#60A5FA] cursor-pointer transition-colors active:scale-95 py-0.5"
-                    >
-                      <span>
-                        {isExpanded
-                          ? t("about.showLess") || "Sembunyikan"
-                          : t("about.showMore") || "Selengkapnya"}
-                      </span>
-                      <svg
-                        width="12"
-                        height="12"
-                        viewBox="0 0 24 24"
-                        fill="none"
-                        stroke="currentColor"
-                        strokeWidth="2.5"
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        className={`transition-transform duration-200 ${
-                          isExpanded ? "rotate-180" : ""
-                        }`}
+                    <div className="flex items-center justify-end mt-1">
+                      <span
+                        className="inline-flex items-center justify-center p-1 rounded-full text-white/30 group-hover/mobile-exp:text-white/60 transition-colors"
+                        aria-label="Toggle description"
                       >
-                        <polyline points="6 9 12 15 18 9" />
-                      </svg>
-                    </button>
+                        <svg
+                          width="14"
+                          height="14"
+                          viewBox="0 0 24 24"
+                          fill="none"
+                          stroke="currentColor"
+                          strokeWidth="2"
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          className={`transition-transform duration-200 ${
+                            isExpanded ? "rotate-180" : ""
+                          }`}
+                        >
+                          <polyline points="6 9 12 15 18 9" />
+                        </svg>
+                      </span>
+                    </div>
                   </div>
                 </div>
               </m.div>
