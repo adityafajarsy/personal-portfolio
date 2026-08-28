@@ -5,29 +5,99 @@ const ProjectEcomImg = "/projects/hamburger.webp";
 const ProjectCompanyImg = "/projects/leveldva.webp";
 
 const listToolsStatic = [
-  { id: 1, gambar: "data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%23007ACC'><path d='M23.986 6.892a.573.573 0 0 0-.265-.187L18.423.957a.82.82 0 0 0-.584-.04c-.198.058-.363.18-.464.348l-2.906 4.793-6.536 4.97-5.074-3.83A.574.574 0 0 0 2.5 7.15c-.176.012-.344.085-.47.206L.207 9.179a.573.573 0 0 0-.012.825l3.524 3.524-3.524 3.524a.573.573 0 0 0 .012.825l1.823 1.823c.126.12.294.194.47.206a.57.57 0 0 0 .363-.092l5.074-3.83 6.536 4.97 2.906 4.793a.835.835 0 0 0 .464.348c.199.058.41-.013.584-.04l5.298-5.748a.573.573 0 0 0 .265-.187c.074-.112.115-.246.118-.383V7.275c-.003-.137-.044-.27-.118-.383zm-17.78 8.01l-2.617-2.617 2.617-2.617 3.468 2.617-3.468 2.617zm11.233 4.298l-5.69-4.328 1.942-1.942 3.748 2.828v3.442zm0-5.787l-5.263-3.971 5.263-3.971v7.942zm0-10.303v3.442l-3.748 2.828-1.942-1.942 5.69-4.328z'/></svg>", nama: "Visual Studio Code" },
-  { id: 2, gambar: "https://cdn.simpleicons.org/react/61DAFB", nama: "React JS" },
-  { id: 3, gambar: "https://cdn.simpleicons.org/nextdotjs/white", nama: "Next JS" },
-  { id: 4, gambar: "https://cdn.simpleicons.org/tailwindcss/06B6D4", nama: "Tailwind CSS" },
-  { id: 5, gambar: "https://cdn.simpleicons.org/bootstrap/7952B3", nama: "Bootstrap" },
-  { id: 6, gambar: "https://cdn.simpleicons.org/javascript/F7DF1E", nama: "Javascript" },
-  { id: 7, gambar: "https://cdn.simpleicons.org/nodedotjs/339933", nama: "Node JS" },
-  { id: 8, gambar: "https://cdn.simpleicons.org/express/white", nama: "Express JS" },
-  { id: 9, gambar: "https://cdn.simpleicons.org/docker/2496ED", nama: "Docker" },
-  { id: 10, gambar: "https://cdn.simpleicons.org/ubuntu/E95420", nama: "Ubuntu" },
-  { id: 11, gambar: "https://cdn.simpleicons.org/vercel/white", nama: "Vercel" },
-  { id: 12, gambar: "data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%2310B981' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'><circle cx='12' cy='12' r='9'/><path d='M12 16V8M9 11l3-3 3 3'/></svg>", nama: "Antigravity" },
-  { id: 13, gambar: "data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23D97706' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'><polyline points='4 17 10 11 4 5'/><line x1='12' y1='19' x2='20' y2='19'/></svg>", nama: "Claude Code" },
-  { id: 15, gambar: "data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23EC4899' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'><path d='M12 3v1M12 20v1M4 12H3M21 12h-1M18.36 5.64l-.7.7M6.34 17.66l-.7.7M5.64 5.64l.7.7M17.66 17.66l.7.7M9 12a3 3 0 1 1 6 0 3 3 0 0 1-6 0z'/></svg>", nama: "AI Tools" },
-  { id: 16, gambar: "https://cdn.simpleicons.org/github/white", nama: "Github" },
-  { id: 17, gambar: "data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%2300C4CC'><path d='M11.758 19.349c-3.136 0-5.728-.888-5.728-3.424 0-1.96 1.488-3.328 4.608-3.552l.968-.072c1.784-.136 2.504-.496 2.504-1.224 0-.84-.96-1.248-2.184-1.248-1.632 0-3.032.504-4.248 1.44l-.408-.688c1.392-1.072 3.096-1.56 4.752-1.56 2.376 0 3.84 1.072 3.84 2.808v5.52c0 .864.456 1.296 1.056 1.296.384 0 .768-.192 1.072-.512l.248.512c-.528.592-1.2.904-1.936.904-1.392 0-2.16-.92-2.16-2.224v-.272c-.792 1.544-2.312 2.512-4.448 2.512zm.288-6.192c-1.984.144-3.048.968-3.048 2.32 0 1.296 1.344 1.952 3.048 1.952 2.344 0 3.752-1.4 3.752-3.192v-.936c-.496.128-1.392.208-2.248.256v.001l-.256-.401zM12 0c6.627 0 12 5.373 12 12s-5.373 12-12 12S0 18.627 0 12 5.373 0 12 0z'/></svg>", nama: "Canva" },
+  {
+    id: 1,
+    gambar:
+      "data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%23007ACC'><path d='M23.986 6.892a.573.573 0 0 0-.265-.187L18.423.957a.82.82 0 0 0-.584-.04c-.198.058-.363.18-.464.348l-2.906 4.793-6.536 4.97-5.074-3.83A.574.574 0 0 0 2.5 7.15c-.176.012-.344.085-.47.206L.207 9.179a.573.573 0 0 0-.012.825l3.524 3.524-3.524 3.524a.573.573 0 0 0 .012.825l1.823 1.823c.126.12.294.194.47.206a.57.57 0 0 0 .363-.092l5.074-3.83 6.536 4.97 2.906 4.793a.835.835 0 0 0 .464.348c.199.058.41-.013.584-.04l5.298-5.748a.573.573 0 0 0 .265-.187c.074-.112.115-.246.118-.383V7.275c-.003-.137-.044-.27-.118-.383zm-17.78 8.01l-2.617-2.617 2.617-2.617 3.468 2.617-3.468 2.617zm11.233 4.298l-5.69-4.328 1.942-1.942 3.748 2.828v3.442zm0-5.787l-5.263-3.971 5.263-3.971v7.942zm0-10.303v3.442l-3.748 2.828-1.942-1.942 5.69-4.328z'/></svg>",
+    nama: "Visual Studio Code",
+  },
+  {
+    id: 2,
+    gambar: "https://cdn.simpleicons.org/react/61DAFB",
+    nama: "React JS",
+  },
+  {
+    id: 3,
+    gambar: "https://cdn.simpleicons.org/nextdotjs/white",
+    nama: "Next JS",
+  },
+  {
+    id: 4,
+    gambar: "https://cdn.simpleicons.org/tailwindcss/06B6D4",
+    nama: "Tailwind CSS",
+  },
+  {
+    id: 5,
+    gambar: "https://cdn.simpleicons.org/bootstrap/7952B3",
+    nama: "Bootstrap",
+  },
+  {
+    id: 6,
+    gambar: "https://cdn.simpleicons.org/javascript/F7DF1E",
+    nama: "Javascript",
+  },
+  {
+    id: 7,
+    gambar: "https://cdn.simpleicons.org/nodedotjs/339933",
+    nama: "Node JS",
+  },
+  {
+    id: 8,
+    gambar: "https://cdn.simpleicons.org/express/white",
+    nama: "Express JS",
+  },
+  {
+    id: 9,
+    gambar: "https://cdn.simpleicons.org/docker/2496ED",
+    nama: "Docker",
+  },
+  {
+    id: 10,
+    gambar: "https://cdn.simpleicons.org/ubuntu/E95420",
+    nama: "Ubuntu",
+  },
+  {
+    id: 11,
+    gambar: "https://cdn.simpleicons.org/vercel/white",
+    nama: "Vercel",
+  },
+  {
+    id: 12,
+    gambar:
+      "data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%2310B981' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'><circle cx='12' cy='12' r='9'/><path d='M12 16V8M9 11l3-3 3 3'/></svg>",
+    nama: "Antigravity",
+  },
+  {
+    id: 13,
+    gambar:
+      "data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23D97706' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'><polyline points='4 17 10 11 4 5'/><line x1='12' y1='19' x2='20' y2='19'/></svg>",
+    nama: "Claude Code",
+  },
+  {
+    id: 15,
+    gambar:
+      "data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23EC4899' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'><path d='M12 3v1M12 20v1M4 12H3M21 12h-1M18.36 5.64l-.7.7M6.34 17.66l-.7.7M5.64 5.64l.7.7M17.66 17.66l.7.7M9 12a3 3 0 1 1 6 0 3 3 0 0 1-6 0z'/></svg>",
+    nama: "AI Tools",
+  },
+  {
+    id: 16,
+    gambar: "https://cdn.simpleicons.org/github/white",
+    nama: "Github",
+  },
+  {
+    id: 17,
+    gambar:
+      "data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%2300C4CC'><path d='M11.758 19.349c-3.136 0-5.728-.888-5.728-3.424 0-1.96 1.488-3.328 4.608-3.552l.968-.072c1.784-.136 2.504-.496 2.504-1.224 0-.84-.96-1.248-2.184-1.248-1.632 0-3.032.504-4.248 1.44l-.408-.688c1.392-1.072 3.096-1.56 4.752-1.56 2.376 0 3.84 1.072 3.84 2.808v5.52c0 .864.456 1.296 1.056 1.296.384 0 .768-.192 1.072-.512l.248.512c-.528.592-1.2.904-1.936.904-1.392 0-2.16-.92-2.16-2.224v-.272c-.792 1.544-2.312 2.512-4.448 2.512zm.288-6.192c-1.984.144-3.048.968-3.048 2.32 0 1.296 1.344 1.952 3.048 1.952 2.344 0 3.752-1.4 3.752-3.192v-.936c-.496.128-1.392.208-2.248.256v.001l-.256-.401zM12 0c6.627 0 12 5.373 12 12s-5.373 12-12 12S0 18.627 0 12 5.373 0 12 0z'/></svg>",
+    nama: "Canva",
+  },
   { id: 18, gambar: "https://cdn.simpleicons.org/figma/F24E1B", nama: "Figma" },
 ];
 
-const listToolsStaticEn = listToolsStatic.map(t => {
+const listToolsStaticEn = listToolsStatic.map((t) => {
   let ket = "Language";
   if (t.id === 1) ket = "Code Editor";
-  else if (t.id === 2 || t.id === 3 || t.id === 4 || t.id === 5) ket = "Framework";
+  else if (t.id === 2 || t.id === 3 || t.id === 4 || t.id === 5)
+    ket = "Framework";
   else if (t.id === 7) ket = "Javascript Runtime";
   else if (t.id === 8) ket = "Backend Framework";
   else if (t.id === 9) ket = "Containerization";
@@ -49,7 +119,8 @@ export const translations = {
     sidebar: {
       role: "he/him",
       aboutTitle: "ABOUT",
-      aboutText: "Jakarta-based product designer and developer, currently focused on frontend / fullstack MERN with +1 year of hands-on building web app.",
+      aboutText:
+        "Jakarta-based product designer and developer, currently focused on frontend / fullstack MERN with +1 year of hands-on building web app.",
       contactTitle: "CONTACT",
       techTitle: "TECH STACK",
       langTitle: "LANGUAGES",
@@ -83,15 +154,17 @@ export const translations = {
           // TODO: replace gambar with ProjectPPIDImg once screenshot is ready
           nama: "PPID Digital Ecosystem",
           desk: "A complete government digital ecosystem developed during a 6-month internship at Kementerian PANRB, consisting of a public information portal, an internal request management system, and a custom CMS.",
-          subtitle: "A modern digital ecosystem for Indonesia's Public Information and Documentation Management, consisting of a public information portal, an internal request management platform, and a custom content management system.",
-          about: "PPID Digital Ecosystem is a complete digital ecosystem developed during my 6-month internship at Indonesia's Ministry of Administrative and Bureaucratic Reform (Kementerian PANRB). The ecosystem modernizes existing PPID services by redesigning the user experience, rebuilding the frontend, improving internal workflows, and replacing outdated content management processes. The project consists of three integrated modules — Portal PPID (Public Website), SIPIPI (Internal Information Request Management System), and CMS (Internal Content Management System) — all belonging to one integrated ecosystem.",
+          subtitle:
+            "A modern digital ecosystem for Indonesia's Public Information and Documentation Management, consisting of a public information portal, an internal request management platform, and a custom content management system.",
+          about:
+            "PPID Digital Ecosystem is a complete digital ecosystem developed during my 6-month internship at Indonesia's Ministry of Administrative and Bureaucratic Reform (Kementerian PANRB). The ecosystem modernizes existing PPID services by redesigning the user experience, rebuilding the frontend, improving internal workflows, and replacing outdated content management processes. The project consists of three integrated modules — Portal PPID (Public Website), SIPIPI (Internal Information Request Management System), and CMS (Internal Content Management System) — all belonging to one integrated ecosystem.",
           facts: [
             "Government Project",
             "Internship Project",
             "6 Months",
             "Team of 2 Developers",
             "Production Ready",
-            "Awaiting Penetration Testing"
+            "Awaiting Penetration Testing",
           ],
           modules: [
             {
@@ -100,7 +173,14 @@ export const translations = {
               type: "public",
               icon: "globe",
               desc: "A public-facing website where citizens can access public information, read news, download documents, browse FAQs, submit requests, and track their status in real time.",
-              features: ["Access public information", "Read news articles", "Download public documents", "Browse FAQs", "Submit information requests", "Track request status in real time"]
+              features: [
+                "Access public information",
+                "Read news articles",
+                "Download public documents",
+                "Browse FAQs",
+                "Submit information requests",
+                "Track request status in real time",
+              ],
             },
             {
               name: "SIPIPI",
@@ -108,7 +188,15 @@ export const translations = {
               type: "internal",
               icon: "server",
               desc: "An internal platform for PPID administrators to manage the full lifecycle of public information requests — from receipt to response.",
-              features: ["Receive new requests", "Verify submissions", "Process and review requests", "Upload requested documents", "Respond to citizens", "Update request status", "Automatic email notifications"]
+              features: [
+                "Receive new requests",
+                "Verify submissions",
+                "Process and review requests",
+                "Upload requested documents",
+                "Respond to citizens",
+                "Update request status",
+                "Automatic email notifications",
+              ],
             },
             {
               name: "CMS",
@@ -116,27 +204,90 @@ export const translations = {
               type: "internal",
               icon: "edit",
               desc: "An internal CMS integrated into the same application, replacing the previous WordPress workflow and allowing administrators to manage all Portal PPID content.",
-              features: ["Banner management", "News articles", "FAQ management", "Public documents", "Video content", "Public information data", "Other portal content"]
-            }
+              features: [
+                "Banner management",
+                "News articles",
+                "FAQ management",
+                "Public documents",
+                "Video content",
+                "Public information data",
+                "Other portal content",
+              ],
+            },
           ],
           responsibilities: [
-            { category: "UX Research & Strategy", items: ["UX Research", "Competitor Benchmarking", "Information Architecture"] },
-            { category: "Design", items: ["UI Design", "UX Design", "Wireframing", "High-Fidelity Prototyping"] },
-            { category: "Frontend Development", items: ["Frontend Development", "Responsive Development", "Component Design", "Frontend-Backend Integration"] },
-            { category: "Deployment & Media", items: ["Product Demo via Vercel", "Deployment Collaboration", "Multimedia Design", "Creative Content"] }
+            {
+              category: "UX Research & Strategy",
+              items: [
+                "UX Research",
+                "Competitor Benchmarking",
+                "Information Architecture",
+              ],
+            },
+            {
+              category: "Design",
+              items: [
+                "UI Design",
+                "UX Design",
+                "Wireframing",
+                "High-Fidelity Prototyping",
+              ],
+            },
+            {
+              category: "Frontend Development",
+              items: [
+                "Frontend Development",
+                "Responsive Development",
+                "Component Design",
+                "Frontend-Backend Integration",
+              ],
+            },
+            {
+              category: "Deployment & Media",
+              items: [
+                "Product Demo via Vercel",
+                "Deployment Collaboration",
+                "Multimedia Design",
+                "Creative Content",
+              ],
+            },
           ],
           timeline: [
-            { phase: "Research", desc: "UX research, competitor benchmarking, and user flow analysis" },
-            { phase: "UI & UX Design", desc: "Wireframing, high-fidelity prototyping, and design system creation" },
-            { phase: "Prototype", desc: "Interactive prototype review and stakeholder feedback sessions" },
-            { phase: "Frontend Development", desc: "Component development, responsive layouts, and full UI implementation" },
-            { phase: "Backend Integration", desc: "API integration, data fetching, and frontend-backend system connection" },
-            { phase: "Deployment", desc: "Docker containerization and Ubuntu server production deployment" }
+            {
+              phase: "Research",
+              desc: "UX research, competitor benchmarking, and user flow analysis",
+            },
+            {
+              phase: "UI & UX Design",
+              desc: "Wireframing, high-fidelity prototyping, and design system creation",
+            },
+            {
+              phase: "Prototype",
+              desc: "Interactive prototype review and stakeholder feedback sessions",
+            },
+            {
+              phase: "Frontend Development",
+              desc: "Component development, responsive layouts, and full UI implementation",
+            },
+            {
+              phase: "Backend Integration",
+              desc: "API integration, data fetching, and frontend-backend system connection",
+            },
+            {
+              phase: "Deployment",
+              desc: "Docker containerization and Ubuntu server production deployment",
+            },
           ],
           techStack: {
-            frontend: ["Next.js", "TypeScript", "Tailwind CSS", "TanStack", "Radix UI"],
+            frontend: [
+              "Next.js",
+              "TypeScript",
+              "Tailwind CSS",
+              "TanStack",
+              "Radix UI",
+            ],
             backend: ["Prisma", "MariaDB", "MinIO"],
-            deployment: ["Docker", "Ubuntu Server", "SSH"]
+            deployment: ["Docker", "Ubuntu Server", "SSH"],
           },
           results: [
             "Redesigned an outdated government portal into a modern, accessible digital ecosystem",
@@ -146,10 +297,21 @@ export const translations = {
             "Improved mobile responsiveness and accessibility following government digital standards",
             "Integrated real-time request tracking and automated email notifications for citizens",
             "Successfully deployed to Ubuntu Server using Docker containerization",
-            "Approved by project stakeholders after thorough review"
+            "Approved by project stakeholders after thorough review",
           ],
 
-          tools: ["Next.js", "TypeScript", "Tailwind CSS", "TanStack", "Radix UI", "Prisma", "MariaDB", "MinIO", "Docker", "Ubuntu"],
+          tools: [
+            "Next.js",
+            "TypeScript",
+            "Tailwind CSS",
+            "TanStack",
+            "Radix UI",
+            "Prisma",
+            "MariaDB",
+            "MinIO",
+            "Docker",
+            "Ubuntu",
+          ],
           images: [
             "/assets/project1/demo_homePage.webm",
             "/assets/project1/DIP_Grid.webp",
@@ -159,18 +321,28 @@ export const translations = {
             "/assets/project1/lacak-permohonan_grid.webp",
             "/assets/project1/laporan_evaluasi_grid.webp",
             "/assets/project1/permohonan-informasi-grid.webp",
-            "/assets/project1/statistiklaporan_grid.webp"
+            "/assets/project1/statistiklaporan_grid.webp",
           ],
           link: "",
-          meta: { date: "2026", role: "Frontend Dev & UI/UX Designer", category: "Government Digital Platform", team: "2 Developers", duration: "6 Months", client: "Kementerian PANRB", status: "Production Ready" }
+          meta: {
+            date: "2026",
+            role: "Frontend Dev & UI/UX Designer",
+            category: "Government Digital Platform",
+            team: "2 Developers",
+            duration: "6 Months",
+            client: "Kementerian PANRB",
+            status: "Production Ready",
+          },
         },
         {
           id: 2,
           gambar: "/assets/project2/banner_cover.webp",
           nama: "Builder's Archive",
           desk: "A personal digital identity system designed to communicate design thinking, engineering philosophy, and creative process, not simply to showcase projects.",
-          subtitle: "A personal digital identity designed to communicate how I think, research, design, and engineer digital products, not simply to showcase projects.",
-          about: "Builder's Archive is my personal portfolio website. But it is not just a portfolio. It is a digital identity system built to communicate my design philosophy, creative process, and engineering capability. Every visual decision, every interaction, and every word on this website exists to tell a story about how I approach problems and build products.",
+          subtitle:
+            "A personal digital identity designed to communicate how I think, research, design, and engineer digital products, not simply to showcase projects.",
+          about:
+            "Builder's Archive is my personal portfolio website. But it is not just a portfolio. It is a digital identity system built to communicate my design philosophy, creative process, and engineering capability. Every visual decision, every interaction, and every word on this website exists to tell a story about how I approach problems and build products.",
           category: "Creative Engineering",
           facts: [
             "Personal Project",
@@ -178,14 +350,102 @@ export const translations = {
             "2026",
             "React + Vite",
             "Framer Motion",
-            "Bilingual (EN/ID)"
+            "Bilingual (EN/ID)",
           ],
-          tools: ["React", "Vite", "Tailwind CSS", "Framer Motion", "JavaScript", "Vercel"],
+          tools: [
+            "React",
+            "Vite",
+            "Tailwind CSS",
+            "Framer Motion",
+            "JavaScript",
+            "Vercel",
+          ],
           images: [],
           link: "",
-          meta: { date: "2026", role: "Product Designer & Frontend Engineer", category: "Creative Engineering", team: "Solo", status: "Live" }
-        }
-      ]
+          meta: {
+            date: "2026",
+            role: "Product Designer & Frontend Engineer",
+            category: "Creative Engineering",
+            team: "Solo",
+            status: "Live",
+          },
+        },
+        {
+          id: 3,
+          gambar: "/assets/project3/cover-thumora.webp",
+          nama: "Thumora AI",
+          desk: "An AI-powered thumbnail creation platform designed to turn a simple content concept into production-ready thumbnails with minimal effort.",
+          subtitle:
+            "AI-Powered Thumbnail Generation Platform designed around real creator workflows, resilient SSE streaming, and community-driven inspiration.",
+          about:
+            "Thumora AI is an AI-powered thumbnail creation workspace built for creators. Beyond a simple API wrapper, it integrates prompt enhancement, modular visual style systems, dual-engine generation (streaming SSE & non-streaming reference synthesis), fair quota governance, and a community inspiration platform.",
+          category: "AI Product Engineering",
+          facts: [
+            "AI Product",
+            "Solo Build",
+            "2026",
+            "React + TypeScript",
+            "Express + MongoDB",
+            "OpenRouter + Cloudinary",
+          ],
+          tools: [
+            "React",
+            "TypeScript",
+            "Express",
+            "MongoDB",
+            "OpenRouter",
+            "Cloudinary",
+            "Tailwind CSS",
+            "SSE",
+          ],
+          images: [],
+          link: "https://thumoraai.vercel.app",
+          meta: {
+            date: "2026",
+            role: "Product / UI/UX / Fullstack",
+            category: "AI Product Engineering",
+            team: "Solo",
+            status: "Live",
+          },
+        },
+        {
+          id: 4,
+          gambar: "/assets/project4/cover-icon.webp",
+          nama: "SALDO",
+          desk: "An efficient money tracker powered by natural language capture, turning daily financial tracking from a tedious chore into a simple, natural conversation.",
+          subtitle:
+            "Efficient Money Tracker — Natural language financial capture, pace-aware forecasting, and calm editorial design.",
+          about:
+            "Managing money shouldn't feel like accounting. SALDO is an efficient money tracker built from a simple premise: tracking expenses should be as easy as telling someone what happened. Featuring multi-item natural language interpretation, period-over-period intelligence, pace forecasting, and a calm, non-cliché visual system.",
+          category: "Financial Technology",
+          facts: [
+            "Fintech App",
+            "Solo Build",
+            "2026",
+            "React + Node.js",
+            "MongoDB + Express",
+            "OpenRouter AI",
+          ],
+          tools: [
+            "React",
+            "Node.js",
+            "MongoDB",
+            "Express",
+            "OpenRouter",
+            "Tailwind CSS",
+            "Vercel",
+          ],
+          images: [],
+          link: "https://usesaldo.vercel.app",
+          meta: {
+            date: "2026",
+            role: "Product / UI/UX / Fullstack",
+            category: "Financial Technology",
+            team: "Solo",
+            status: "Live",
+          },
+        },
+      ],
     },
     ppidDetail: {
       overviewLabel: "Overview",
@@ -194,19 +454,23 @@ export const translations = {
       archTitle: "Ecosystem Flow",
       contribLabel: "Contribution",
       contribTitle: "My Responsibilities",
-      contribNote: "I primarily focused on frontend development and UI/UX design, collaborating closely with a backend engineer responsible for backend architecture and API implementation.",
+      contribNote:
+        "I primarily focused on frontend development and UI/UX design, collaborating closely with a backend engineer responsible for backend architecture and API implementation.",
       processLabel: "Process",
       processTitle: "Development Timeline",
       techLabel: "Technology",
       techTitle: "Tech Stack",
       galleryLabel: "Gallery",
       galleryTitle: "Portal PPID Screenshots",
-      galleryNote: "Public-facing Portal PPID interface. Screenshots of the internal systems (SIPIPI & CMS) are not publicly displayed due to confidentiality.",
+      galleryNote:
+        "Public-facing Portal PPID interface. Screenshots of the internal systems (SIPIPI & CMS) are not publicly displayed due to confidentiality.",
       internalLabel: "Internal Systems",
       internalTitle: "SIPIPI & CMS Platform",
       internalConfidential: "Confidential — Not Publicly Disclosed",
-      internalNote: "Due to confidentiality and security considerations, the internal management platform (SIPIPI & CMS), source code, and administrative interfaces cannot be publicly disclosed.",
-      internalContribNote: "My contributions to the internal platforms included:",
+      internalNote:
+        "Due to confidentiality and security considerations, the internal management platform (SIPIPI & CMS), source code, and administrative interfaces cannot be publicly disclosed.",
+      internalContribNote:
+        "My contributions to the internal platforms included:",
       resultsLabel: "Outcomes",
       resultsTitle: "Project Results",
       repoLabel: "Source Code",
@@ -218,7 +482,8 @@ export const translations = {
       contentFlow: "Content Flow",
       publicBadge: "Public",
       internalBadge: "Internal",
-      systemNote: "CMS & SIPIPI run in the same internal app — no separate systems needed.",
+      systemNote:
+        "CMS & SIPIPI run in the same internal app — no separate systems needed.",
       heroPreview: "Portal PPID — Public Interface Preview",
       demoVideoLabel: "Portal PPID — Interactive Video Demo",
       metaRole: "Role",
@@ -241,7 +506,7 @@ export const translations = {
         "Workflow Optimization",
         "Frontend-Backend Integration",
         "Deployment Collaboration",
-        "Multimedia Design"
+        "Multimedia Design",
       ],
       galleryLabels: {
         homepage: "Homepage",
@@ -249,12 +514,13 @@ export const translations = {
         news: "News",
         docs: "Documents",
         faq: "FAQ",
-        req: "Information Request"
-      }
+        req: "Information Request",
+      },
     },
     builderDetail: {
       heroLabel: "Case Study",
-      heroSubtitle: "A personal digital identity designed to communicate how I think, research, design, and engineer digital products, not simply to showcase projects.",
+      heroSubtitle:
+        "A personal digital identity designed to communicate how I think, research, design, and engineer digital products, not simply to showcase projects.",
       metaRole: "Role",
       metaTeam: "Team",
       metaYear: "Year",
@@ -268,133 +534,253 @@ export const translations = {
       whyBody: [
         "Branding is not just visual. Branding is how a product is recognized before it is explained.",
         "For years, I have collected references across multiple disciplines: design, branding, software engineering, esports, streetwear, crypto, investment, editorial, and technology. Not to copy them, but to understand why a piece of work can build a strong identity and leave a lasting impression.",
-        "This website is the result of that process. A space where all my experience, references, and way of thinking are translated into a single, cohesive visual language."
+        "This website is the result of that process. A space where all my experience, references, and way of thinking are translated into a single, cohesive visual language.",
       ],
       influencesLabel: "INFLUENCES",
       influencesTitle: "Every Reference Left a Mark",
       influencesCaption: [
         "Not just a single reference shaped this website.",
         "The visual identity of this website is an accumulation of various worlds I observed from esports branding, streetwear culture, language and literature, creative organizations, to software engineering.",
-        "Each reference taught a different principle. This website is the result of all these principles meeting in a single visual language."
+        "Each reference taught a different principle. This website is the result of all these principles meeting in a single visual language.",
       ],
       influencesStoryTitle: "Short Story",
       influencesStory: [
-
         "During my university years, I studied Russian Literature. Outside the classroom, I spent most of my time in design, publishing, creative media, copywriting, and student organizations. From there, I began to realize that building a product is not just about visuals, but also about how a message can be effectively communicated.",
         "Over time, that curiosity led me to various worlds that seemed completely unrelated. I began exploring branding, software engineering, Web3, crypto, and streetwear culture. Not to follow trends, but to understand why a piece of work can be recognized, remembered, and establish a strong identity.",
-        "One of the most memorable influences was the visual identity of 100 Thieves. I was fascinated by how they built character through handwriting typography, editorial layouts, and visual consistency across all media. On the other hand, the BLUM × Pokras Lampas collaboration introduced me to a more experimental visual language graffiti, symbols, dripping elements, and hacker aesthetics which heavily influenced my visual exploration."
+        "One of the most memorable influences was the visual identity of 100 Thieves. I was fascinated by how they built character through handwriting typography, editorial layouts, and visual consistency across all media. On the other hand, the BLUM × Pokras Lampas collaboration introduced me to a more experimental visual language graffiti, symbols, dripping elements, and hacker aesthetics which heavily influenced my visual exploration.",
       ],
       intentionLabel: "BUILT WITH INTENTION",
       intentionTitle: "Every visual decision exists for a reason.",
-      intentionCaption: "Behind every visual element lies a reason. No decision was made simply because it looks good.",
+      intentionCaption:
+        "Behind every visual element lies a reason. No decision was made simply because it looks good.",
       intentionCards: [
         {
           num: "01",
           title: "Problem Before Pixels",
           desc: "Before determining colors, animations, or layouts, I always start by understanding what needs to be communicated. Visuals serve as an answer to a problem, not as a starting point.",
-          shortDesc: "Visuals serve as a solution to a problem, not just a starting point."
+          shortDesc:
+            "Visuals serve as a solution to a problem, not just a starting point.",
         },
         {
           num: "02",
           title: "Identity Before Decoration",
           desc: "Handwriting, dripping graffiti, typography, and symbols are not mere decorations. They are chosen to build a recognizable visual character and consistency across all pages.",
-          shortDesc: "Elements are chosen to build a strong and recognizable character."
+          shortDesc:
+            "Elements are chosen to build a strong and recognizable character.",
         },
         {
           num: "03",
           title: "Motion With Purpose",
           desc: "Animations are used to guide attention, clarify transitions between sections, and establish a reading rhythm. Movement supports the experience rather than diverting focus.",
-          shortDesc: "Motion is used to guide attention and clarify layout transitions."
+          shortDesc:
+            "Motion is used to guide attention and clarify layout transitions.",
         },
         {
           num: "04",
           title: "Consistency Creates Trust",
           desc: "Colors, typography, spacing, components, and interactions follow a single unified system. Consistency makes the experience feel professional while reinforcing product identity.",
-          shortDesc: "Consistency creates professional trust and reinforces identity."
+          shortDesc:
+            "Consistency creates professional trust and reinforces identity.",
         },
         {
           num: "05",
           title: "Research Shapes Design",
           desc: "Every reference I collect is not to be copied, but to be understood. I observe the rationale behind design decisions and translate them into a visual language tailored to my identity.",
-          shortDesc: "References are analyzed and translated into matching visual codes."
+          shortDesc:
+            "References are analyzed and translated into matching visual codes.",
         },
         {
           num: "06",
           title: "Engineering Supports Design",
           desc: "The visual experience does not end in Figma. Frontend implementation, performance, responsiveness, and animation are key to ensuring the design is felt exactly as intended.",
-          shortDesc: "Frontend execution and animations ensure visual intent is fully felt."
-        }
+          shortDesc:
+            "Frontend execution and animations ensure visual intent is fully felt.",
+        },
       ],
       detailsLabel: "Small Decisions, Big Difference.",
       detailsTitle: "Things You Probably Didn't Notice",
-      detailsCaption: "The experience isn't shaped by one big idea, but by dozens of small decisions working together.",
-      detailsQuote: "Identity isn't built by one big idea.\n\nIt's built by hundreds of intentional decisions.",
+      detailsCaption:
+        "The experience isn't shaped by one big idea, but by dozens of small decisions working together.",
+      detailsQuote:
+        "Identity isn't built by one big idea.\n\nIt's built by hundreds of intentional decisions.",
       philosophyLabel: "BUILDING PHILOSOPHY",
       philosophyTitle: "I don't collect references. I collect principles.",
       philosophyBody: [
         "During the process of building this website, I never tried to copy a single specific design. What I studied instead was the underlying reason why each decision was made, why a certain typography felt powerful, why a layout was easy to understand, or why a visual identity could be remembered even before the product was used.",
-        "Ultimately, this website is not about merely combining streetwear, editorial, engineering, or branding into one. It is an effort to translate those lessons into a cohesive system that feels consistent and has its own distinct identity."
+        "Ultimately, this website is not about merely combining streetwear, editorial, engineering, or branding into one. It is an effort to translate those lessons into a cohesive system that feels consistent and has its own distinct identity.",
       ],
-      philosophyQuote: "Good design isn't about originality.\nIt's about making good decisions consistently.",
+      philosophyQuote:
+        "Good design isn't about originality.\nIt's about making good decisions consistently.",
       philosophySign: "— Aditya Fajar",
 
       // Section 2 — Creative Foundations
       foundationsLabel: "Foundations",
       foundationsTitle: "Creative Foundations",
       foundations: [
-        { icon: "problem", title: "Problem Solving", desc: "Everything begins with identifying real user problems instead of choosing technologies first." },
-        { icon: "research", title: "Research", desc: "Every visual decision is backed by observation, inspiration, and benchmarking from multiple industries." },
-        { icon: "design", title: "Design Language", desc: "A consistent visual identity built from typography, colors, symbols, handwritten elements, and motion." },
-        { icon: "code", title: "Engineering", desc: "Transforming design systems into responsive, scalable, and production-ready frontend architecture." }
+        {
+          icon: "problem",
+          title: "Problem Solving",
+          desc: "Everything begins with identifying real user problems instead of choosing technologies first.",
+        },
+        {
+          icon: "research",
+          title: "Research",
+          desc: "Every visual decision is backed by observation, inspiration, and benchmarking from multiple industries.",
+        },
+        {
+          icon: "design",
+          title: "Design Language",
+          desc: "A consistent visual identity built from typography, colors, symbols, handwritten elements, and motion.",
+        },
+        {
+          icon: "code",
+          title: "Engineering",
+          desc: "Transforming design systems into responsive, scalable, and production-ready frontend architecture.",
+        },
       ],
 
       // Section 3 — Inspiration Journey
       journeyLabel: "Journey",
       journeyTitle: "Inspiration Journey",
       journey: [
-        { era: "Russian Literature", desc: "Learning storytelling, structure, and how ideas are communicated across different cultural contexts." },
-        { era: "Graphic Design", desc: "Understanding composition, typography, hierarchy, and the grammar of visual communication." },
-        { era: "Creative Media Org", desc: "Learning branding systems, social media consistency, creative direction, and team collaboration." },
-        { era: "Crypto & Web3", desc: "Inspired by BLUM's graffiti symbols, dripping aesthetics, hacker visuals, and experimental digital identity." },
-        { era: "Valorant Esports", desc: "Inspired by 100 Thieves branding, handwritten typography, bold layouts, and premium competitive identity." },
-        { era: "Frontend Engineering", desc: "Combining all previous disciplines into one interactive, reactive digital experience." }
+        {
+          era: "Russian Literature",
+          desc: "Learning storytelling, structure, and how ideas are communicated across different cultural contexts.",
+        },
+        {
+          era: "Graphic Design",
+          desc: "Understanding composition, typography, hierarchy, and the grammar of visual communication.",
+        },
+        {
+          era: "Creative Media Org",
+          desc: "Learning branding systems, social media consistency, creative direction, and team collaboration.",
+        },
+        {
+          era: "Crypto & Web3",
+          desc: "Inspired by BLUM's graffiti symbols, dripping aesthetics, hacker visuals, and experimental digital identity.",
+        },
+        {
+          era: "Valorant Esports",
+          desc: "Inspired by 100 Thieves branding, handwritten typography, bold layouts, and premium competitive identity.",
+        },
+        {
+          era: "Frontend Engineering",
+          desc: "Combining all previous disciplines into one interactive, reactive digital experience.",
+        },
       ],
 
       // Section 4 — Visual Language
       visualLabel: "Design System",
       visualTitle: "Visual Language",
       visual: [
-        { key: "typography", title: "Typography", detail: "Inter + Nothing You Could Do", desc: "Inter provides technical clarity and professional precision. Nothing You Could Do adds human imperfection, warmth, and personality. The contrast between the two is intentional." },
-        { key: "color", title: "Color System", detail: "Blue #3B82F6", desc: "Blue represents clarity, technology, trust, and focus. It is the color of systems thinking, creative precision, and forward momentum." },
-        { key: "handwriting", title: "Handwritten Typography", detail: "Personal contrast", desc: "Handwritten elements create contrast against clean technical layouts. They make the interface feel more personal, less corporate, and more human." },
-        { key: "graffiti", title: "Graffiti Symbols", detail: "Street identity", desc: "Graffiti represents experimentation, creativity, and imperfect human expression. It adds a layer of subcultural identity to an otherwise technical portfolio." },
-        { key: "editorial", title: "Editorial Layout", detail: "Magazine hierarchy", desc: "Large typography, strong whitespace, asymmetric grids. Inspired by editorial design content presented with confidence and craft." },
-        { key: "motion", title: "Motion", detail: "Restrained & intentional", desc: "Animations are smooth but restrained. Every motion has a purpose. Interactions should feel intentional, not decorative." }
+        {
+          key: "typography",
+          title: "Typography",
+          detail: "Inter + Nothing You Could Do",
+          desc: "Inter provides technical clarity and professional precision. Nothing You Could Do adds human imperfection, warmth, and personality. The contrast between the two is intentional.",
+        },
+        {
+          key: "color",
+          title: "Color System",
+          detail: "Blue #3B82F6",
+          desc: "Blue represents clarity, technology, trust, and focus. It is the color of systems thinking, creative precision, and forward momentum.",
+        },
+        {
+          key: "handwriting",
+          title: "Handwritten Typography",
+          detail: "Personal contrast",
+          desc: "Handwritten elements create contrast against clean technical layouts. They make the interface feel more personal, less corporate, and more human.",
+        },
+        {
+          key: "graffiti",
+          title: "Graffiti Symbols",
+          detail: "Street identity",
+          desc: "Graffiti represents experimentation, creativity, and imperfect human expression. It adds a layer of subcultural identity to an otherwise technical portfolio.",
+        },
+        {
+          key: "editorial",
+          title: "Editorial Layout",
+          detail: "Magazine hierarchy",
+          desc: "Large typography, strong whitespace, asymmetric grids. Inspired by editorial design content presented with confidence and craft.",
+        },
+        {
+          key: "motion",
+          title: "Motion",
+          detail: "Restrained & intentional",
+          desc: "Animations are smooth but restrained. Every motion has a purpose. Interactions should feel intentional, not decorative.",
+        },
       ],
 
       // Section 5 — Design References
       refsLabel: "References",
       refsTitle: "Design References",
-      refsNote: "Not a moodboard. Each reference taught me something specific about identity, hierarchy, and craft.",
+      refsNote:
+        "Not a moodboard. Each reference taught me something specific about identity, hierarchy, and craft.",
       refs: [
-        { name: "100 Thieves", tag: "Esports Brand", lesson: "Bold handwritten typography, confident visual hierarchy, and premium brand identity built around exclusivity and cultural relevance." },
-        { name: "BLUM", tag: "Crypto / Web3", lesson: "Graffiti symbols, dripping aesthetics, hacker culture visuals, and expressive experimental digital identity that breaks conventional UI rules." },
-        { name: "Editorial Websites", tag: "Digital Publishing", lesson: "Large dominant typography, clean structured layouts, asymmetric grids, and storytelling through deliberate spacing and content hierarchy." },
-        { name: "Luxury Branding", tag: "Minimalism", lesson: "Confidence through restraint. Premium spacing. Timeless visual systems that age well because they eliminate the unnecessary." },
-        { name: "Apple", tag: "Product Design", lesson: "Clarity over cleverness. Simplicity as a design decision. Product-first presentation and interaction consistency across every touchpoint." }
+        {
+          name: "100 Thieves",
+          tag: "Esports Brand",
+          lesson:
+            "Bold handwritten typography, confident visual hierarchy, and premium brand identity built around exclusivity and cultural relevance.",
+        },
+        {
+          name: "BLUM",
+          tag: "Crypto / Web3",
+          lesson:
+            "Graffiti symbols, dripping aesthetics, hacker culture visuals, and expressive experimental digital identity that breaks conventional UI rules.",
+        },
+        {
+          name: "Editorial Websites",
+          tag: "Digital Publishing",
+          lesson:
+            "Large dominant typography, clean structured layouts, asymmetric grids, and storytelling through deliberate spacing and content hierarchy.",
+        },
+        {
+          name: "Luxury Branding",
+          tag: "Minimalism",
+          lesson:
+            "Confidence through restraint. Premium spacing. Timeless visual systems that age well because they eliminate the unnecessary.",
+        },
+        {
+          name: "Apple",
+          tag: "Product Design",
+          lesson:
+            "Clarity over cleverness. Simplicity as a design decision. Product-first presentation and interaction consistency across every touchpoint.",
+        },
       ],
 
       // Section 6 — Design Process
       processLabel: "Process",
       processTitle: "Design Process",
       process: [
-        { phase: "Research", desc: "Collecting references from branding, technology, editorial design, gaming, crypto, and fashion industries." },
-        { phase: "Strategy", desc: "Defining the personality, identity system, and emotional direction of the digital presence." },
-        { phase: "Wireframe", desc: "Creating information hierarchy, content structure, and layout architecture before visual design." },
-        { phase: "Visual Design", desc: "Developing the complete design language typography, color, spacing, motion, and components." },
-        { phase: "Prototype", desc: "Testing interactions, transitions, and animations to ensure intentional, non-decorative motion." },
-        { phase: "Development", desc: "Implementing using React, Vite, Tailwind CSS, Framer Motion, and responsive component architecture." },
-        { phase: "Iteration", desc: "Continuous refinement based on usability testing, visual consistency reviews, and personal feedback." }
+        {
+          phase: "Research",
+          desc: "Collecting references from branding, technology, editorial design, gaming, crypto, and fashion industries.",
+        },
+        {
+          phase: "Strategy",
+          desc: "Defining the personality, identity system, and emotional direction of the digital presence.",
+        },
+        {
+          phase: "Wireframe",
+          desc: "Creating information hierarchy, content structure, and layout architecture before visual design.",
+        },
+        {
+          phase: "Visual Design",
+          desc: "Developing the complete design language typography, color, spacing, motion, and components.",
+        },
+        {
+          phase: "Prototype",
+          desc: "Testing interactions, transitions, and animations to ensure intentional, non-decorative motion.",
+        },
+        {
+          phase: "Development",
+          desc: "Implementing using React, Vite, Tailwind CSS, Framer Motion, and responsive component architecture.",
+        },
+        {
+          phase: "Iteration",
+          desc: "Continuous refinement based on usability testing, visual consistency reviews, and personal feedback.",
+        },
       ],
 
       // Section 7 — Engineering
@@ -407,34 +793,135 @@ export const translations = {
       engFrontendItems: ["React", "Vite", "JavaScript", "Tailwind CSS"],
       engAnimationItems: ["Framer Motion"],
       engDeploymentItems: ["Vercel"],
-      engPerformanceItems: ["Image Optimization", "Code Splitting", "Lazy Loading", "SEO Optimization", "Accessibility", "Responsive Design"],
-      engFrontendNote: "React + Vite provides a fast development experience and production-grade build pipeline. Tailwind enforces design consistency through a utility-first constraint system.",
-      engAnimationNote: "Framer Motion enables physics-based, declarative animations that feel natural and intentional not CSS transitions bolted on as an afterthought.",
-      engDeploymentNote: "Vercel's edge network provides globally distributed delivery with zero-config CI/CD, enabling instant rollbacks and preview deployments.",
+      engPerformanceItems: [
+        "Image Optimization",
+        "Code Splitting",
+        "Lazy Loading",
+        "SEO Optimization",
+        "Accessibility",
+        "Responsive Design",
+      ],
+      engFrontendNote:
+        "React + Vite provides a fast development experience and production-grade build pipeline. Tailwind enforces design consistency through a utility-first constraint system.",
+      engAnimationNote:
+        "Framer Motion enables physics-based, declarative animations that feel natural and intentional not CSS transitions bolted on as an afterthought.",
+      engDeploymentNote:
+        "Vercel's edge network provides globally distributed delivery with zero-config CI/CD, enabling instant rollbacks and preview deployments.",
 
       // Section 8 — Gallery
       galleryLabel: "Gallery",
       galleryTitle: "Interface Gallery",
-      galleryNote: "Selected screenshots across different sections of the portfolio, showing the visual language in context.",
-      galleryGroups: ["Landing Page", "Articles", "Projects", "Project Detail", "About", "Mobile"],
+      galleryNote:
+        "Selected screenshots across different sections of the portfolio, showing the visual language in context.",
+      galleryGroups: [
+        "Landing Page",
+        "Articles",
+        "Projects",
+        "Project Detail",
+        "About",
+        "Mobile",
+      ],
 
       // Section 9 — Outcomes
       outcomesLabel: "Results",
       outcomesTitle: "Project Outcomes",
       outcomes: [
-        { title: "Unified Digital Identity", desc: "A consistent visual language across every page and interaction." },
-        { title: "Story-driven Portfolio", desc: "Communicates process and thinking instead of only showcasing finished results." },
-        { title: "Fully Responsive", desc: "Optimized layout and interaction for desktop, tablet, and mobile screens." },
-        { title: "Performance Focused", desc: "Fast loading, optimized assets, and minimal bundle overhead." },
-        { title: "Expandable Architecture", desc: "Designed to grow alongside future products, articles, and case studies." }
+        {
+          title: "Unified Digital Identity",
+          desc: "A consistent visual language across every page and interaction.",
+        },
+        {
+          title: "Story-driven Portfolio",
+          desc: "Communicates process and thinking instead of only showcasing finished results.",
+        },
+        {
+          title: "Fully Responsive",
+          desc: "Optimized layout and interaction for desktop, tablet, and mobile screens.",
+        },
+        {
+          title: "Performance Focused",
+          desc: "Fast loading, optimized assets, and minimal bundle overhead.",
+        },
+        {
+          title: "Expandable Architecture",
+          desc: "Designed to grow alongside future products, articles, and case studies.",
+        },
       ],
 
       // Section 10 — Repository
       repoLabel: "Source Code",
       repoTitle: "Repository",
       repoPublic: "Public",
-      repoDesc: "Full source code available on GitHub. Includes documentation and component structure.",
-      repoBtn: "View on GitHub"
+      repoDesc:
+        "Full source code available on GitHub. Includes documentation and component structure.",
+      repoBtn: "View on GitHub",
+    },
+    thumoraDetail: {
+      sec1Label: "01 / THE PRODUCT",
+      sec1Title: "AI Thumbnail Generator for Creators",
+      sec1Desc:
+        "Thumora helps creators turn simple ideas into ready-to-use thumbnails — or explore existing creations as references for their next one.",
+
+      sec2Label: "02 / THE EXPERIENCE",
+      sec2Title: "From Idea to Thumbnail",
+      sec2Desc:
+        "A simple workflow built around the way creators make thumbnails: define an idea, shape the visual direction, generate, and save the result.",
+
+      sec3Label: "03 / SEE IT IN ACTION",
+      sec3Title: "See Thumora in Action",
+      sec3Desc:
+        "From exploring the product to generating a thumbnail, these walkthroughs show the experience in practice.",
+
+      sec4Label: "04 / COMMUNITY",
+      sec4Title: "More Than a Generator",
+      sec4Desc:
+        "Thumora also gives creators a place to discover thumbnail ideas, inspect how they were made, and use them as references for their own work.",
+
+      sec5Label: "05 / PRODUCT DETAILS",
+      sec5Title: "Designed for the Web",
+      sec5Desc:
+        "Thumora is built as a responsive web application, with authentication, thumbnail generation, personal generation history, and interfaces designed for both desktop and mobile.",
+
+      sec6Label: "FINAL SHOWCASE",
+      sec6Title: "Built to Turn Ideas Into Thumbnails.",
+      sec6Desc:
+        "Thumora combines AI generation, creative controls, and community inspiration in one simple workflow for creators.",
+    },
+    saldoDetail: {
+      heroMeta: "CASE STUDY · 2026 · SOLO BUILD",
+      heroTitle: "SALDO — Efficient Money Tracker",
+      heroDesc:
+        "Managing money shouldn't feel like doing accounting. SALDO turns everyday money tracking into a simple conversation.",
+
+      sec1Label: "01 — THE IDEA",
+      sec1Title: "Money tracking should take seconds, not forms.",
+      sec1Desc:
+        "SALDO started from a simple observation: recording a small expense shouldn't require navigating through multiple fields, categories, accounts, and dates.",
+
+      sec2Label: "02 — THE EXPERIENCE",
+      sec2Title: "Tell SALDO what happened.",
+      sec2Desc:
+        "Type the way you normally speak. SALDO interprets the transaction and prepares it for confirmation.",
+
+      sec3Label: "03 — THE PRODUCT",
+      sec3Title: "A calm interface for everyday money.",
+      sec3Desc:
+        "A serene financial experience designed with subtle mint tones, deep forest surfaces, and generous breathing room.",
+
+      sec4Label: "04 — THE APP",
+      sec4Title: "The same idea, once you're inside.",
+      sec4Desc:
+        "SALDO keeps the interface quiet so the important information stays visible: what you have, what you've spent, and what's likely next.",
+
+      sec5Label: "05 — THE VISUAL LANGUAGE",
+      sec5Title: "Calm, expressive, and intentionally simple.",
+      sec5Desc:
+        "Soft mint surfaces, deep forest tones, expressive typography, and organic motion give SALDO a visual language that feels closer to a product than a spreadsheet.",
+
+      sec6Label: "06 — THE OUTCOME",
+      sec6Title: "Money tracking that feels like a conversation.",
+      sec6Desc:
+        "SALDO turns the small, repetitive task of recording money into a faster, calmer experience — while keeping the bigger picture visible.",
     },
     education: {
       label: "Education",
@@ -455,8 +942,8 @@ export const translations = {
             "Engaged in self-development through seminars and workshops on Graphic Design, Video Editing, AI, Programming, Finance, and Investment.",
             "Contributed directly to the Russian Studies Department by assisting in visual design and video editing for academic and promotional purposes.",
           ],
-        }
-      ]
+        },
+      ],
     },
     about: {
       expLabel: "Experience",
@@ -465,7 +952,8 @@ export const translations = {
       toolsLabel: "Tools",
       toolsSlogan: "my daily arsenal",
       toolsTitle: "Tech Stack & Workspace",
-      toolsDesc: "The software, frameworks, languages, and design applications that I leverage daily.",
+      toolsDesc:
+        "The software, frameworks, languages, and design applications that I leverage daily.",
       listTools: listToolsStaticEn,
       experiences: [
         {
@@ -475,7 +963,8 @@ export const translations = {
           location: "Jakarta, Indonesia",
           color: "bg-[#1E293B] border border-slate-700/50",
           desc: "Directed the complete UI/UX design, user flows, and agile/scrum planning for two portal web applications (PPID & SIPIPI). Collaborated in a two-person team via Git, building the frontend using Next.js, TypeScript, and Tailwind.",
-          descMobile: "Directed UI/UX design, user flows, and agile planning for two web portals (PPID & SIPIPI). Collaborated via Git to build the Next.js and TypeScript frontend.",
+          descMobile:
+            "Directed UI/UX design, user flows, and agile planning for two web portals (PPID & SIPIPI). Collaborated via Git to build the Next.js and TypeScript frontend.",
         },
         {
           role: "Career Break (T-Shaped Upskilling)",
@@ -484,7 +973,8 @@ export const translations = {
           location: "Remote",
           color: "bg-[#312E81] border border-indigo-700/50",
           desc: "Built a T-shaped profile by researching cross-disciplinary skills, including AI workflows, product marketing, and advanced frontend paradigms, followed by intensive self-study in production-grade software engineering.",
-          descMobile: "Researched cross-disciplinary skills including AI workflows, product marketing, and advanced frontend paradigms to build a versatile T-shaped profile.",
+          descMobile:
+            "Researched cross-disciplinary skills including AI workflows, product marketing, and advanced frontend paradigms to build a versatile T-shaped profile.",
         },
         {
           role: "ReactJS for Frontend Developer Bootcamp",
@@ -493,7 +983,8 @@ export const translations = {
           location: "Jakarta, Indonesia",
           color: "bg-[#450A0A] border border-red-900/40",
           desc: "Transitioned from a creative/multimedia background to specialized frontend engineering, mastering modern React.js, modular component architectures, state management, and Git workflows.",
-          descMobile: "Mastered frontend engineering principles, modern React.js workflows, component-driven architectures, state management, and collaborative Git practices.",
+          descMobile:
+            "Mastered frontend engineering principles, modern React.js workflows, component-driven architectures, state management, and collaborative Git practices.",
         },
         {
           role: "Creative Design & Multimedia Lead",
@@ -502,9 +993,10 @@ export const translations = {
           location: "Sumedang, Indonesia",
           color: "bg-[#451A03] border border-amber-900/40",
           desc: "Led visual design and multimedia production for various campus organizations and events, establishing strong foundational skills in UI/UX layout, graphic assets, and user workflows.",
-          descMobile: "Directed visual asset design and multimedia production for campus groups, establishing core skills in UI/UX layout and user flow architecture.",
+          descMobile:
+            "Directed visual asset design and multimedia production for campus groups, establishing core skills in UI/UX layout and user flow architecture.",
         },
-      ]
+      ],
     },
     articles: {
       label: "Articles",
@@ -597,7 +1089,7 @@ And how to help them reach their goals without having to think too hard.
 Because in the end, users won't remember how cool our animations were.
 They will remember one thing that is far more important.
 *The website helped me finish what I needed.*
-          `
+          `,
         },
         {
           id: 2,
@@ -634,7 +1126,7 @@ In fact, the easier AI is to use, the more important it is to understand design 
 AI will continue to evolve. In a few years, making a website might take only a few seconds. But one thing remains hard to replace: the human ability to observe, select, combine, and make the right design decisions.
 Because a good website is not the one that looks like an AI output, but the one that has character, understands its users, and feels thoughtfully crafted. 
 AI can speed up the interface building, but the feel, identity, and quality of a design still depend on the person using it.
-          `
+          `,
         },
         {
           id: 3,
@@ -665,7 +1157,7 @@ The broader your references, the better decisions you make. That decision-making
 I believe AI will continue to take over repetitive and technical tasks. This is not something to fear. Instead, it gives us more time to focus on what is truly valuable: thinking, understanding people, building concepts, and making better decisions.
 Since in the end, AI can generate thousands of possibilities, but humans must decide which possibility is worth bringing to life. 
 As AI evolves, it becomes clear that human value lies not just in what we can build, but in the experience, perspective, creativity, and judgment we bring to every creation.
-          `
+          `,
         },
         {
           id: 4,
@@ -704,9 +1196,9 @@ To an outsider, it might look like I was jumping between unrelated fields. But t
 Today, my roadmap is clear: mastering my foundation as a web developer, expanding into mobile development, and eventually diving deeper into AI integrations and blockchain.
 But as I move forward, I realize the ultimate goal is not just about mastering a set of technologies. What I am truly trying to build is a way of thinking. The mindset of a builder. A mindset that looks at every problem as something solvable, and a drive to create things, no matter how small they are.
 At the end of the day, my journey is not about transitioning from Russian Literature to IT. It is about gathering pieces of experience that shape my identity today. A builder who believes that technology is just a tool. The mindsets that truly matter are the ones that drive us to keep learning, keep building, and keep creating things that deliver real value.
-`
-        }
-      ]
+`,
+        },
+      ],
     },
     contact: {
       label: "Contact",
@@ -723,7 +1215,7 @@ At the end of the day, my journey is not about transitioning from Russian Litera
       placeholderName: "John Doe",
       placeholderEmail: "john@example.com",
       placeholderMsg: "Tell me about your project...",
-    }
+    },
   },
   id: {
     preloader: {
@@ -732,7 +1224,8 @@ At the end of the day, my journey is not about transitioning from Russian Litera
     sidebar: {
       role: "he/him",
       aboutTitle: "ABOUT",
-      aboutText: "Product Designer dan Web Developer yang berdomisili di Jakarta, saat ini fokus pada Frontend / Fullstack MERN dengan pengalaman lebih dari 1 tahun dalam membangun aplikasi web.",
+      aboutText:
+        "Product Designer dan Web Developer yang berdomisili di Jakarta, saat ini fokus pada Frontend / Fullstack MERN dengan pengalaman lebih dari 1 tahun dalam membangun aplikasi web.",
       contactTitle: "CONTACT",
       techTitle: "TECH STACK",
       langTitle: "LANGUAGES",
@@ -765,15 +1258,17 @@ At the end of the day, my journey is not about transitioning from Russian Litera
           video: "/assets/project1/demo_homePage.webm",
           nama: "PPID Digital Ecosystem",
           desk: "Ekosistem digital pemerintah yang lengkap, dikembangkan selama magang di Kementerian PANRB, terdiri dari portal informasi publik, sistem manajemen permohonan informasi, dan CMS.",
-          subtitle: "Ekosistem digital modern untuk pengelolaan informasi dan dokumentasi publik Indonesia, terdiri dari portal informasi publik, platform manajemen permohonan informasi, dan sistem manajemen konten.",
-          about: "PPID Digital Ecosystem adalah ekosistem digital yang dikembangkan selama saya magang di Kementerian Pendayagunaan Aparatur Negara dan Reformasi Birokrasi (Kementerian PANRB). Ekosistem ini memodernisasi layanan PPID yang ada dengan mendesain ulang user experience, redesign frontend, mengefisienkan alur kerja internal, dan memperbaiki proses manajemen konten yang sudah usang. Proyek ini terdiri dari tiga modul yang terintegrasi : Portal PPID (Website Publik), SIPIPI (Sistem Manajemen Permintaan Informasi PPID), dan CMS (Sistem Manajemen Konten), semuanya merupakan satu ekosistem yang terintegrasi.",
+          subtitle:
+            "Ekosistem digital modern untuk pengelolaan informasi dan dokumentasi publik Indonesia, terdiri dari portal informasi publik, platform manajemen permohonan informasi, dan sistem manajemen konten.",
+          about:
+            "PPID Digital Ecosystem adalah ekosistem digital yang dikembangkan selama saya magang di Kementerian Pendayagunaan Aparatur Negara dan Reformasi Birokrasi (Kementerian PANRB). Ekosistem ini memodernisasi layanan PPID yang ada dengan mendesain ulang user experience, redesign frontend, mengefisienkan alur kerja internal, dan memperbaiki proses manajemen konten yang sudah usang. Proyek ini terdiri dari tiga modul yang terintegrasi : Portal PPID (Website Publik), SIPIPI (Sistem Manajemen Permintaan Informasi PPID), dan CMS (Sistem Manajemen Konten), semuanya merupakan satu ekosistem yang terintegrasi.",
           facts: [
             "Proyek Pemerintah",
             "Proyek Magang",
             "6 Bulan",
             "Tim 2 Developer",
             "Production Ready",
-            "Menunggu Penetration Testing"
+            "Menunggu Penetration Testing",
           ],
           modules: [
             {
@@ -782,7 +1277,14 @@ At the end of the day, my journey is not about transitioning from Russian Litera
               type: "public",
               icon: "globe",
               desc: "Website publik sebagai sarana masyarakat dapat mengakses informasi publik, membaca berita terkait, mengunduh dokumen publik seperti laporan keuangan ataupun LHKPN p, mengakses FAQ, mengajukan permohonan informasi, dan melacak statusnya secara real time.",
-              features: ["Akses informasi publik", "Baca artikel berita", "Unduh dokumen publik", "Mengakses FAQ", "Mengajukan permohonan informasi", "Melacak status permohonan informasi secara real time"]
+              features: [
+                "Akses informasi publik",
+                "Baca artikel berita",
+                "Unduh dokumen publik",
+                "Mengakses FAQ",
+                "Mengajukan permohonan informasi",
+                "Melacak status permohonan informasi secara real time",
+              ],
             },
             {
               name: "SIPIPI",
@@ -790,7 +1292,15 @@ At the end of the day, my journey is not about transitioning from Russian Litera
               type: "internal",
               icon: "server",
               desc: "Platform internal bagi pejabat PPID untuk mengelola alur penuh permohonan informasi publik dari penerimaan hingga respons.",
-              features: ["Terima permohonan baru", "Verifikasi pengajuan", "Proses dan tinjau permohonan", "Unggah dokumen yang diminta", "Kirim respons ke pemohon", "Perbarui status permohonan", "Notifikasi email otomatis"]
+              features: [
+                "Terima permohonan baru",
+                "Verifikasi pengajuan",
+                "Proses dan tinjau permohonan",
+                "Unggah dokumen yang diminta",
+                "Kirim respons ke pemohon",
+                "Perbarui status permohonan",
+                "Notifikasi email otomatis",
+              ],
             },
             {
               name: "CMS",
@@ -798,27 +1308,90 @@ At the end of the day, my journey is not about transitioning from Russian Litera
               type: "internal",
               icon: "edit",
               desc: "Sistem manajemen konten yang terintegrasi dalam aplikasi yang sama, menggantikan alur kerja WordPress sebelumnya dan memungkinkan administrator mengelola seluruh konten Portal PPID.",
-              features: ["Manajemen banner", "Artikel berita", "Manajemen FAQ", "Dokumen publik", "Konten video", "Data informasi publik", "Konten portal lainnya"]
-            }
+              features: [
+                "Manajemen banner",
+                "Artikel berita",
+                "Manajemen FAQ",
+                "Dokumen publik",
+                "Konten video",
+                "Data informasi publik",
+                "Konten portal lainnya",
+              ],
+            },
           ],
           responsibilities: [
-            { category: "Riset UX & Strategi", items: ["Riset UX", "Benchmarking Kompetitor", "Arsitektur Informasi"] },
-            { category: "Desain", items: ["Desain UI", "Desain UX", "Wireframing", "Prototipe High-Fidelity"] },
-            { category: "Pengembangan Frontend", items: ["Pengembangan Frontend", "Pengembangan Responsif", "Desain Komponen", "Integrasi Frontend-Backend"] },
-            { category: "Deployment & Media", items: ["Demo Produk via Vercel", "Kolaborasi Deployment", "Desain Multimedia", "Konten Kreatif"] }
+            {
+              category: "Riset UX & Strategi",
+              items: [
+                "Riset UX",
+                "Benchmarking Kompetitor",
+                "Arsitektur Informasi",
+              ],
+            },
+            {
+              category: "Desain",
+              items: [
+                "Desain UI",
+                "Desain UX",
+                "Wireframing",
+                "Prototipe High-Fidelity",
+              ],
+            },
+            {
+              category: "Pengembangan Frontend",
+              items: [
+                "Pengembangan Frontend",
+                "Pengembangan Responsif",
+                "Desain Komponen",
+                "Integrasi Frontend-Backend",
+              ],
+            },
+            {
+              category: "Deployment & Media",
+              items: [
+                "Demo Produk via Vercel",
+                "Kolaborasi Deployment",
+                "Desain Multimedia",
+                "Konten Kreatif",
+              ],
+            },
           ],
           timeline: [
-            { phase: "Riset", desc: "Riset UX, benchmarking kompetitor, dan analisis flow pengguna" },
-            { phase: "Desain UI & UX", desc: "Wireframing, prototipe high-fidelity, dan pembuatan sistem desain" },
-            { phase: "Prototipe", desc: "Tinjauan prototipe interaktif dan sesi umpan balik pemangku kepentingan" },
-            { phase: "Pengembangan Frontend", desc: "Pengembangan komponen, layout responsif, dan implementasi UI lengkap" },
-            { phase: "Integrasi Backend", desc: "Integrasi API, pengambilan data, dan koneksi sistem frontend-backend" },
-            { phase: "Deployment", desc: "Containerisasi Docker dan deployment produksi ke server Ubuntu" }
+            {
+              phase: "Riset",
+              desc: "Riset UX, benchmarking kompetitor, dan analisis flow pengguna",
+            },
+            {
+              phase: "Desain UI & UX",
+              desc: "Wireframing, prototipe high-fidelity, dan pembuatan sistem desain",
+            },
+            {
+              phase: "Prototipe",
+              desc: "Tinjauan prototipe interaktif dan sesi umpan balik pemangku kepentingan",
+            },
+            {
+              phase: "Pengembangan Frontend",
+              desc: "Pengembangan komponen, layout responsif, dan implementasi UI lengkap",
+            },
+            {
+              phase: "Integrasi Backend",
+              desc: "Integrasi API, pengambilan data, dan koneksi sistem frontend-backend",
+            },
+            {
+              phase: "Deployment",
+              desc: "Containerisasi Docker dan deployment produksi ke server Ubuntu",
+            },
           ],
           techStack: {
-            frontend: ["Next.js", "TypeScript", "Tailwind CSS", "TanStack", "Radix UI"],
+            frontend: [
+              "Next.js",
+              "TypeScript",
+              "Tailwind CSS",
+              "TanStack",
+              "Radix UI",
+            ],
             backend: ["Prisma", "MariaDB", "MinIO"],
-            deployment: ["Docker", "Ubuntu Server", "SSH"]
+            deployment: ["Docker", "Ubuntu Server", "SSH"],
           },
           results: [
             "Desain ulang website portal ppid yang usang menjadi ekosistem digital modern yang aksesibel",
@@ -827,10 +1400,21 @@ At the end of the day, my journey is not about transitioning from Russian Litera
             "Menggantikan CMS lama dengan sistem manajemen konten yang dibangun khusus",
             "Meningkatkan responsivitas mobile dan aksesibilitas sesuai standar digital pemerintah",
             "Mengintegrasikan pelacakan permohonan informasi secara real time dan notifikasi email otomatis untuk masyarakat",
-            "Disetujui oleh pemangku kepentingan proyek setelah tinjauan menyeluruh"
+            "Disetujui oleh pemangku kepentingan proyek setelah tinjauan menyeluruh",
           ],
 
-          tools: ["Next.js", "TypeScript", "Tailwind CSS", "TanStack", "Radix UI", "Prisma", "MariaDB", "MinIO", "Docker", "Ubuntu"],
+          tools: [
+            "Next.js",
+            "TypeScript",
+            "Tailwind CSS",
+            "TanStack",
+            "Radix UI",
+            "Prisma",
+            "MariaDB",
+            "MinIO",
+            "Docker",
+            "Ubuntu",
+          ],
           images: [
             "/assets/project1/demo_homePage.webm",
             "/assets/project1/DIP_Grid.webp",
@@ -840,18 +1424,28 @@ At the end of the day, my journey is not about transitioning from Russian Litera
             "/assets/project1/lacak-permohonan_grid.webp",
             "/assets/project1/laporan_evaluasi_grid.webp",
             "/assets/project1/permohonan-informasi-grid.webp",
-            "/assets/project1/statistiklaporan_grid.webp"
+            "/assets/project1/statistiklaporan_grid.webp",
           ],
           link: "",
-          meta: { date: "2026", role: "Frontend Dev & UI/UX Designer", category: "Platform Digital Pemerintah", team: "2 Developer", duration: "6 Bulan", client: "Kementerian PANRB", status: "Production Ready" }
+          meta: {
+            date: "2026",
+            role: "Frontend Dev & UI/UX Designer",
+            category: "Platform Digital Pemerintah",
+            team: "2 Developer",
+            duration: "6 Bulan",
+            client: "Kementerian PANRB",
+            status: "Production Ready",
+          },
         },
         {
           id: 2,
           gambar: "/assets/project2/banner_cover.webp",
           nama: "Builder's Archive",
           desk: "Sistem identitas digital pribadi yang dirancang untuk mengomunikasikan cara berpikir, filosofi desain, dan proses engineering, bukan sekadar menampilkan proyek.",
-          subtitle: "Identitas digital pribadi yang dirancang untuk mengomunikasikan cara berpikir, meneliti, mendesain, dan mengerjakan produk digital, bukan sekadar website portfolio biasa.",
-          about: "Builder's Archive adalah website portfolio saya. Tapi ini bukan sekadar portfolio. Ini adalah sistem identitas digital yang dibangun untuk mengomunikasikan filosofi desain, proses kreatif, dan kemampuan engineering saya. Setiap keputusan visual, setiap interaksi, dan setiap kata di website ini ada untuk menceritakan bagaimana saya mendekati masalah dan membangun produk.",
+          subtitle:
+            "Identitas digital pribadi yang dirancang untuk mengomunikasikan cara berpikir, meneliti, mendesain, dan mengerjakan produk digital, bukan sekadar website portfolio biasa.",
+          about:
+            "Builder's Archive adalah website portfolio saya. Tapi ini bukan sekadar portfolio. Ini adalah sistem identitas digital yang dibangun untuk mengomunikasikan filosofi desain, proses kreatif, dan kemampuan engineering saya. Setiap keputusan visual, setiap interaksi, dan setiap kata di website ini ada untuk menceritakan bagaimana saya mendekati masalah dan membangun produk.",
           category: "Creative Engineering",
           facts: [
             "Proyek Pribadi",
@@ -859,19 +1453,107 @@ At the end of the day, my journey is not about transitioning from Russian Litera
             "2026",
             "React + Vite",
             "Framer Motion",
-            "Bilingual (EN/ID)"
+            "Bilingual (EN/ID)",
           ],
-          tools: ["React", "Vite", "Tailwind CSS", "Framer Motion", "JavaScript", "Vercel"],
+          tools: [
+            "React",
+            "Vite",
+            "Tailwind CSS",
+            "Framer Motion",
+            "JavaScript",
+            "Vercel",
+          ],
           images: [],
           link: "",
-          meta: { date: "2026", role: "Product Designer & Frontend Engineer", category: "Creative Engineering", team: "Solo", status: "Live" }
-        }
-      ]
-
+          meta: {
+            date: "2026",
+            role: "Product Designer & Frontend Engineer",
+            category: "Creative Engineering",
+            team: "Solo",
+            status: "Live",
+          },
+        },
+        {
+          id: 3,
+          gambar: "/assets/project3/cover-thumora.webp",
+          nama: "Thumora AI",
+          desk: "Platform kreasi thumbnail berbasis AI yang dirancang untuk mengubah konsep konten sederhana menjadi thumbnail siap pakai dengan usaha minimal.",
+          subtitle:
+            "Platform Generator Thumbnail Berbasis AI yang dirancang untuk alur kerja kreator nyata, arsitektur streaming SSE yang andal, dan ekosistem inspirasi komunitas.",
+          about:
+            "Thumora AI adalah workspace pembuatan thumbnail bertenaga AI yang dirancang khusus untuk alur kerja kreator konten. Lebih dari sekadar pemanggil API biasa, platform ini mengintegrasikan prompt enhancer cerdas, sistem gaya visual modular, arsitektur generasi ganda (streaming SSE & non-streaming reference fallback), proteksi kuota, dan platform inspirasi komunitas.",
+          category: "AI Product Engineering",
+          facts: [
+            "Produk AI",
+            "Solo Build",
+            "2026",
+            "React + TypeScript",
+            "Express + MongoDB",
+            "OpenRouter + Cloudinary",
+          ],
+          tools: [
+            "React",
+            "TypeScript",
+            "Express",
+            "MongoDB",
+            "OpenRouter",
+            "Cloudinary",
+            "Tailwind CSS",
+            "SSE",
+          ],
+          images: [],
+          link: "https://thumoraai.vercel.app",
+          meta: {
+            date: "2026",
+            role: "Product / UI/UX / Fullstack",
+            category: "AI Product Engineering",
+            team: "Solo",
+            status: "Live",
+          },
+        },
+        {
+          id: 4,
+          gambar: "/assets/project4/cover-icon.webp",
+          nama: "SALDO",
+          desk: "Aplikasi pelacak keuangan efisien bertenaga natural language capture, mengubah pencatatan keuangan harian dari rutinitas membosankan menjadi percakapan alami.",
+          subtitle:
+            "Efficient Money Tracker — Natural language financial capture, pace-aware forecasting, dan desain editorial yang menenangkan.",
+          about:
+            "Mengelola uang tidak seharusnya terasa seperti akuntansi. SALDO adalah aplikasi pelacak keuangan efisien yang dibangun dari premis sederhana: mencatat pengeluaran seharusnya semudah menceritakan apa yang terjadi. Dilengkapi interpretasi natural language multi-item, analisis perbandingan periode, forecasting belanja, dan sistem visual yang tenang.",
+          category: "Financial Technology",
+          facts: [
+            "Aplikasi Fintech",
+            "Solo Build",
+            "2026",
+            "React + Node.js",
+            "MongoDB + Express",
+            "OpenRouter AI",
+          ],
+          tools: [
+            "React",
+            "Node.js",
+            "MongoDB",
+            "Express",
+            "OpenRouter",
+            "Tailwind CSS",
+            "Vercel",
+          ],
+          images: [],
+          link: "https://usesaldo.vercel.app",
+          meta: {
+            date: "2026",
+            role: "Product / UI/UX / Fullstack",
+            category: "Financial Technology",
+            team: "Solo",
+            status: "Live",
+          },
+        },
+      ],
     },
     builderDetail: {
       heroLabel: "Studi Kasus",
-      heroSubtitle: "Identitas digital pribadi yang dirancang untuk mengomunikasikan cara berpikir, meneliti, mendesain, dan mengerjakan produk digital, bukan sekadar portfolio biasa.",
+      heroSubtitle:
+        "Identitas digital pribadi yang dirancang untuk mengomunikasikan cara berpikir, meneliti, mendesain, dan mengerjakan produk digital, bukan sekadar portfolio biasa.",
       metaRole: "Peran",
       metaTeam: "Tim",
       metaYear: "Tahun",
@@ -891,7 +1573,7 @@ At the end of the day, my journey is not about transitioning from Russian Litera
       influencesCaption: [
         "Tidak hanya satu referensi yang membentuk website ini.",
         "Identitas visual dari website ini merupakan hasil akumulasi dari berbagai dunia yang saya amati mulai dari branding esports, budaya streetwear, bahasa & budaya, organisasi kreatif, hingga software engineering.",
-        "Setiap referensi mengajarkan prinsip yang berbeda. Website ini adalah hasil seluruh prinsip tersebut bertemu dalam satu bahasa visual."
+        "Setiap referensi mengajarkan prinsip yang berbeda. Website ini adalah hasil seluruh prinsip tersebut bertemu dalam satu bahasa visual.",
       ],
       influencesStoryTitle: "Short Story",
       influencesStory: [
@@ -901,110 +1583,231 @@ At the end of the day, my journey is not about transitioning from Russian Litera
       ],
       intentionLabel: "BUILT WITH INTENTION",
       intentionTitle: "Every visual decision exists for a reason.",
-      intentionCaption: "Di balik setiap elemen visual terdapat alasan yang dapat dijelaskan. Tidak ada keputusan yang dibuat hanya karena terlihat bagus.",
+      intentionCaption:
+        "Di balik setiap elemen visual terdapat alasan yang dapat dijelaskan. Tidak ada keputusan yang dibuat hanya karena terlihat bagus.",
       intentionCards: [
         {
           num: "01",
           title: "Problem Before Pixels",
           desc: "Sebelum menentukan warna, animasi, atau layout, saya selalu memulai dengan memahami apa yang ingin dikomunikasikan. Visual digunakan sebagai jawaban, bukan sebagai titik awal.",
-          shortDesc: "Visual digunakan sebagai jawaban atas masalah, bukan sekadar titik awal."
+          shortDesc:
+            "Visual digunakan sebagai jawaban atas masalah, bukan sekadar titik awal.",
         },
         {
           num: "02",
           title: "Identity Before Decoration",
           desc: "Handwriting, dripping graffiti, typography, dan simbol bukan sekadar dekorasi. Semuanya dipilih untuk membangun karakter visual yang mudah dikenali.",
-          shortDesc: "Elemen dipilih untuk membangun karakter visual yang kuat & konsisten."
+          shortDesc:
+            "Elemen dipilih untuk membangun karakter visual yang kuat & konsisten.",
         },
         {
           num: "03",
           title: "Motion With Purpose",
           desc: "Animasi digunakan untuk mengarahkan perhatian, memperjelas transisi, dan menciptakan ritme membaca. Motion mendukung experience.",
-          shortDesc: "Motion digunakan untuk memperjelas transisi & ritme membaca."
+          shortDesc:
+            "Motion digunakan untuk memperjelas transisi & ritme membaca.",
         },
         {
           num: "04",
           title: "Consistency Creates Trust",
           desc: "Warna, tipografi, spacing, komponen, dan interaksi dalam satu sistem. Konsistensi menciptakan experience sekaligus membangun identitas.",
-          shortDesc: "Konsistensi menciptakan pengalaman & memperkuat identitas."
+          shortDesc:
+            "Konsistensi menciptakan pengalaman & memperkuat identitas.",
         },
         {
           num: "05",
           title: "Research Shapes Design",
           desc: "Setiap referensi yang saya kumpulkan bukan untuk ditiru, tetapi untuk dipahami. Saya mengamati alasan di balik setiap keputusan desain, lalu menerjemahkannya menjadi bahasa visual yang selaras dengan identitas saya.",
-          shortDesc: "Referensi dipahami alasannya, lalu diterjemahkan ke bahasa visual."
+          shortDesc:
+            "Referensi dipahami alasannya, lalu diterjemahkan ke bahasa visual.",
         },
         {
           num: "06",
           title: "Engineering Shapes Identity",
           desc: "Implementasi frontend, performa, dan animasi menjadi bagian penting agar experience dapat dirasakan sebagaimana direncanakan.",
-          shortDesc: "Frontend & optimasi performa agar visual berjalan sesuai rencana."
-        }
+          shortDesc:
+            "Frontend & optimasi performa agar visual berjalan sesuai rencana.",
+        },
       ],
       detailsLabel: "Small Decisions, Big Difference.",
       detailsTitle: "Things You Probably Didn't Notice",
-      detailsCaption: "Art tidak dibentuk oleh satu ide besar, melainkan oleh puluhan keputusan kecil yang bekerja bersama.",
-      detailsQuote: "Identitas tidak dibangun oleh satu ide besar.\n\nIa dibentuk oleh ratusan keputusan yang disengaja.",
+      detailsCaption:
+        "Art tidak dibentuk oleh satu ide besar, melainkan oleh puluhan keputusan kecil yang bekerja bersama.",
+      detailsQuote:
+        "Identitas tidak dibangun oleh satu ide besar.\n\nIa dibentuk oleh ratusan keputusan yang disengaja.",
       philosophyLabel: "BUILDING PHILOSOPHY",
       philosophyTitle: "I don't collect references. I collect principles.",
       philosophyBody: [
         "Selama proses membangun website ini, saya tidak pernah mencoba meniru hanya satu desain tertentu. Yang saya pelajari adalah alasan mengapa setiap keputusan dibuat, mengapa tipografi tertentu yang digunakan, mengapa sebuah layout mudah dipahami, atau mengapa sebuah identitas visual bisa diingat bahkan sebelum produknya digunakan.",
-        "Pada akhirnya, website ini bukan hanya tentang streetwear, editorial, engineering, atau branding. Ini adalah usaha menerjemahkan berbagai pelajaran tersebut menjadi sebuah sistem yang terasa konsisten dan memiliki identitasnya sendiri."
+        "Pada akhirnya, website ini bukan hanya tentang streetwear, editorial, engineering, atau branding. Ini adalah usaha menerjemahkan berbagai pelajaran tersebut menjadi sebuah sistem yang terasa konsisten dan memiliki identitasnya sendiri.",
       ],
-      philosophyQuote: "Good design isn't about originality.\nIt's about making good decisions consistently.",
+      philosophyQuote:
+        "Good design isn't about originality.\nIt's about making good decisions consistently.",
       philosophySign: "— Aditya Fajar",
 
       foundationsLabel: "Fondasi",
       foundationsTitle: "Fondasi Kreatif",
       foundations: [
-        { icon: "problem", title: "Problem Solving", desc: "Segalanya dimulai dari mengidentifikasi masalah nyata pengguna, bukan dari memilih teknologi terlebih dahulu." },
-        { icon: "research", title: "Research", desc: "Setiap keputusan visual didukung oleh observasi, inspirasi, dan benchmarking dari berbagai industri." },
-        { icon: "design", title: "Design Language", desc: "Identitas visual yang konsisten dibangun dari tipografi, warna, simbol, elemen tulisan tangan, dan motion." },
-        { icon: "code", title: "Engineering", desc: "Menerjemahkan design system menjadi arsitektur frontend yang responsif, scalable, dan siap produksi." }
+        {
+          icon: "problem",
+          title: "Problem Solving",
+          desc: "Segalanya dimulai dari mengidentifikasi masalah nyata pengguna, bukan dari memilih teknologi terlebih dahulu.",
+        },
+        {
+          icon: "research",
+          title: "Research",
+          desc: "Setiap keputusan visual didukung oleh observasi, inspirasi, dan benchmarking dari berbagai industri.",
+        },
+        {
+          icon: "design",
+          title: "Design Language",
+          desc: "Identitas visual yang konsisten dibangun dari tipografi, warna, simbol, elemen tulisan tangan, dan motion.",
+        },
+        {
+          icon: "code",
+          title: "Engineering",
+          desc: "Menerjemahkan design system menjadi arsitektur frontend yang responsif, scalable, dan siap produksi.",
+        },
       ],
 
       journeyLabel: "Perjalanan",
       journeyTitle: "Perjalanan Inspirasi",
       journey: [
-        { era: "Sastra Rusia", desc: "Belajar storytelling, struktur narasi, dan cara ide dikomunikasikan dalam konteks budaya yang berbeda." },
-        { era: "Desain Grafis", desc: "Memahami komposisi, tipografi, hierarki visual, dan tata bahasa komunikasi visual." },
-        { era: "Organisasi Media Kreatif", desc: "Belajar branding system, konsistensi media sosial, creative direction, dan kolaborasi tim." },
-        { era: "Crypto & Web3", desc: "Terinspirasi dari simbol graffiti BLUM, estetika dripping, visual hacker, dan identitas digital eksperimental." },
-        { era: "Valorant Esports", desc: "Terinspirasi dari branding 100 Thieves, tipografi tulisan tangan, layout bold, dan identitas kompetitif premium." },
-        { era: "Frontend Engineering", desc: "Menggabungkan semua disiplin sebelumnya menjadi satu pengalaman digital yang interaktif dan reaktif." }
+        {
+          era: "Sastra Rusia",
+          desc: "Belajar storytelling, struktur narasi, dan cara ide dikomunikasikan dalam konteks budaya yang berbeda.",
+        },
+        {
+          era: "Desain Grafis",
+          desc: "Memahami komposisi, tipografi, hierarki visual, dan tata bahasa komunikasi visual.",
+        },
+        {
+          era: "Organisasi Media Kreatif",
+          desc: "Belajar branding system, konsistensi media sosial, creative direction, dan kolaborasi tim.",
+        },
+        {
+          era: "Crypto & Web3",
+          desc: "Terinspirasi dari simbol graffiti BLUM, estetika dripping, visual hacker, dan identitas digital eksperimental.",
+        },
+        {
+          era: "Valorant Esports",
+          desc: "Terinspirasi dari branding 100 Thieves, tipografi tulisan tangan, layout bold, dan identitas kompetitif premium.",
+        },
+        {
+          era: "Frontend Engineering",
+          desc: "Menggabungkan semua disiplin sebelumnya menjadi satu pengalaman digital yang interaktif dan reaktif.",
+        },
       ],
 
       visualLabel: "Design System",
       visualTitle: "Visual Language",
       visual: [
-        { key: "typography", title: "Tipografi", detail: "Inter + Nothing You Could Do", desc: "Inter memberikan kejelasan teknis dan presisi profesional. Nothing You Could Do menambahkan ketidaksempurnaan manusiawi, kehangatan, dan kepribadian. Kontras antara keduanya adalah hal yang disengaja." },
-        { key: "color", title: "Sistem Warna", detail: "Blue #3B82F6", desc: "Biru merepresentasikan kejernihan, teknologi, kepercayaan, dan fokus. Ini adalah warna dari systems thinking, presisi kreatif, dan momentum ke depan." },
-        { key: "handwriting", title: "Tipografi Tulisan Tangan", detail: "Kontras personal", desc: "Elemen tulisan tangan menciptakan kontras terhadap layout teknis yang bersih. Mereka membuat antarmuka terasa lebih personal, kurang korporat, dan lebih manusiawi." },
-        { key: "graffiti", title: "Simbol Graffiti", detail: "Identitas jalanan", desc: "Graffiti merepresentasikan eksperimentasi, kreativitas, dan ekspresi manusia yang tidak sempurna. Ini menambahkan lapisan identitas subkultural pada portfolio yang secara teknis." },
-        { key: "editorial", title: "Layout Editorial", detail: "Hierarki majalah", desc: "Tipografi besar, whitespace yang kuat, grid asimetris. Terinspirasi dari desain editorial — konten disajikan dengan percaya diri dan keahlian." },
-        { key: "motion", title: "Motion", detail: "Terarah & intentional", desc: "Animasi halus tapi terkontrol. Setiap gerakan memiliki tujuan. Interaksi harus terasa intentional, bukan dekoratif." }
+        {
+          key: "typography",
+          title: "Tipografi",
+          detail: "Inter + Nothing You Could Do",
+          desc: "Inter memberikan kejelasan teknis dan presisi profesional. Nothing You Could Do menambahkan ketidaksempurnaan manusiawi, kehangatan, dan kepribadian. Kontras antara keduanya adalah hal yang disengaja.",
+        },
+        {
+          key: "color",
+          title: "Sistem Warna",
+          detail: "Blue #3B82F6",
+          desc: "Biru merepresentasikan kejernihan, teknologi, kepercayaan, dan fokus. Ini adalah warna dari systems thinking, presisi kreatif, dan momentum ke depan.",
+        },
+        {
+          key: "handwriting",
+          title: "Tipografi Tulisan Tangan",
+          detail: "Kontras personal",
+          desc: "Elemen tulisan tangan menciptakan kontras terhadap layout teknis yang bersih. Mereka membuat antarmuka terasa lebih personal, kurang korporat, dan lebih manusiawi.",
+        },
+        {
+          key: "graffiti",
+          title: "Simbol Graffiti",
+          detail: "Identitas jalanan",
+          desc: "Graffiti merepresentasikan eksperimentasi, kreativitas, dan ekspresi manusia yang tidak sempurna. Ini menambahkan lapisan identitas subkultural pada portfolio yang secara teknis.",
+        },
+        {
+          key: "editorial",
+          title: "Layout Editorial",
+          detail: "Hierarki majalah",
+          desc: "Tipografi besar, whitespace yang kuat, grid asimetris. Terinspirasi dari desain editorial — konten disajikan dengan percaya diri dan keahlian.",
+        },
+        {
+          key: "motion",
+          title: "Motion",
+          detail: "Terarah & intentional",
+          desc: "Animasi halus tapi terkontrol. Setiap gerakan memiliki tujuan. Interaksi harus terasa intentional, bukan dekoratif.",
+        },
       ],
 
       refsLabel: "Referensi",
       refsTitle: "Referensi Desain",
-      refsNote: "Bukan moodboard. Setiap referensi mengajarkan sesuatu yang spesifik tentang identitas, hierarki, dan keahlian.",
+      refsNote:
+        "Bukan moodboard. Setiap referensi mengajarkan sesuatu yang spesifik tentang identitas, hierarki, dan keahlian.",
       refs: [
-        { name: "100 Thieves", tag: "Esports Brand", lesson: "Tipografi tulisan tangan yang bold, hierarki visual yang percaya diri, dan identitas brand premium yang dibangun di sekitar eksklusivitas dan relevansi budaya." },
-        { name: "BLUM", tag: "Crypto / Web3", lesson: "Simbol graffiti, estetika dripping, visual budaya hacker, dan identitas digital eksperimental yang melanggar aturan UI konvensional." },
-        { name: "Editorial Websites", tag: "Digital Publishing", lesson: "Tipografi dominan yang besar, layout terstruktur bersih, grid asimetris, dan storytelling melalui spacing dan hierarki konten yang disengaja." },
-        { name: "Luxury Branding", tag: "Minimalism", lesson: "Kepercayaan diri melalui pengendalian diri. Spacing premium. Sistem visual abadi yang bertahan lama karena menghilangkan yang tidak perlu." },
-        { name: "Apple", tag: "Product Design", lesson: "Kejelasan lebih penting dari kecerdikan. Kesederhanaan sebagai keputusan desain. Presentasi product-first dan konsistensi interaksi di setiap touchpoint." }
+        {
+          name: "100 Thieves",
+          tag: "Esports Brand",
+          lesson:
+            "Tipografi tulisan tangan yang bold, hierarki visual yang percaya diri, dan identitas brand premium yang dibangun di sekitar eksklusivitas dan relevansi budaya.",
+        },
+        {
+          name: "BLUM",
+          tag: "Crypto / Web3",
+          lesson:
+            "Simbol graffiti, estetika dripping, visual budaya hacker, dan identitas digital eksperimental yang melanggar aturan UI konvensional.",
+        },
+        {
+          name: "Editorial Websites",
+          tag: "Digital Publishing",
+          lesson:
+            "Tipografi dominan yang besar, layout terstruktur bersih, grid asimetris, dan storytelling melalui spacing dan hierarki konten yang disengaja.",
+        },
+        {
+          name: "Luxury Branding",
+          tag: "Minimalism",
+          lesson:
+            "Kepercayaan diri melalui pengendalian diri. Spacing premium. Sistem visual abadi yang bertahan lama karena menghilangkan yang tidak perlu.",
+        },
+        {
+          name: "Apple",
+          tag: "Product Design",
+          lesson:
+            "Kejelasan lebih penting dari kecerdikan. Kesederhanaan sebagai keputusan desain. Presentasi product-first dan konsistensi interaksi di setiap touchpoint.",
+        },
       ],
 
       processLabel: "Proses",
       processTitle: "Proses Desain",
       process: [
-        { phase: "Research", desc: "Mengumpulkan referensi dari branding, teknologi, editorial design, gaming, crypto, dan industri fashion." },
-        { phase: "Strategy", desc: "Mendefinisikan kepribadian, sistem identitas, dan arah emosional dari kehadiran digital." },
-        { phase: "Wireframe", desc: "Membuat hierarki informasi, struktur konten, dan arsitektur layout sebelum desain visual." },
-        { phase: "Visual Design", desc: "Mengembangkan design language lengkap — tipografi, warna, spacing, motion, dan komponen." },
-        { phase: "Prototype", desc: "Menguji interaksi, transisi, dan animasi untuk memastikan motion yang intentional, bukan dekoratif." },
-        { phase: "Development", desc: "Implementasi menggunakan React, Vite, Tailwind CSS, Framer Motion, dan arsitektur komponen responsif." },
-        { phase: "Iteration", desc: "Perbaikan berkelanjutan berdasarkan usability testing, review konsistensi visual, dan feedback pribadi." }
+        {
+          phase: "Research",
+          desc: "Mengumpulkan referensi dari branding, teknologi, editorial design, gaming, crypto, dan industri fashion.",
+        },
+        {
+          phase: "Strategy",
+          desc: "Mendefinisikan kepribadian, sistem identitas, dan arah emosional dari kehadiran digital.",
+        },
+        {
+          phase: "Wireframe",
+          desc: "Membuat hierarki informasi, struktur konten, dan arsitektur layout sebelum desain visual.",
+        },
+        {
+          phase: "Visual Design",
+          desc: "Mengembangkan design language lengkap — tipografi, warna, spacing, motion, dan komponen.",
+        },
+        {
+          phase: "Prototype",
+          desc: "Menguji interaksi, transisi, dan animasi untuk memastikan motion yang intentional, bukan dekoratif.",
+        },
+        {
+          phase: "Development",
+          desc: "Implementasi menggunakan React, Vite, Tailwind CSS, Framer Motion, dan arsitektur komponen responsif.",
+        },
+        {
+          phase: "Iteration",
+          desc: "Perbaikan berkelanjutan berdasarkan usability testing, review konsistensi visual, dan feedback pribadi.",
+        },
       ],
 
       engLabel: "Engineering",
@@ -1016,31 +1819,132 @@ At the end of the day, my journey is not about transitioning from Russian Litera
       engFrontendItems: ["React", "Vite", "JavaScript", "Tailwind CSS"],
       engAnimationItems: ["Framer Motion"],
       engDeploymentItems: ["Vercel"],
-      engPerformanceItems: ["Optimasi Gambar", "Code Splitting", "Lazy Loading", "Optimasi SEO", "Aksesibilitas", "Responsive Design"],
-      engFrontendNote: "React + Vite memberikan pengalaman development yang cepat dan pipeline build production-grade. Tailwind memaksakan konsistensi desain melalui sistem utility-first.",
-      engAnimationNote: "Framer Motion memungkinkan animasi berbasis fisika yang deklaratif, terasa natural dan intentional — bukan transisi CSS yang ditempel belakangan.",
-      engDeploymentNote: "Edge network Vercel menyediakan pengiriman terdistribusi secara global dengan CI/CD tanpa konfigurasi, memungkinkan rollback instan dan preview deployments.",
+      engPerformanceItems: [
+        "Optimasi Gambar",
+        "Code Splitting",
+        "Lazy Loading",
+        "Optimasi SEO",
+        "Aksesibilitas",
+        "Responsive Design",
+      ],
+      engFrontendNote:
+        "React + Vite memberikan pengalaman development yang cepat dan pipeline build production-grade. Tailwind memaksakan konsistensi desain melalui sistem utility-first.",
+      engAnimationNote:
+        "Framer Motion memungkinkan animasi berbasis fisika yang deklaratif, terasa natural dan intentional — bukan transisi CSS yang ditempel belakangan.",
+      engDeploymentNote:
+        "Edge network Vercel menyediakan pengiriman terdistribusi secara global dengan CI/CD tanpa konfigurasi, memungkinkan rollback instan dan preview deployments.",
 
       galleryLabel: "Galeri",
       galleryTitle: "Galeri Interface",
-      galleryNote: "Screenshot terpilih dari berbagai section portfolio, menampilkan visual language dalam konteks nyata.",
-      galleryGroups: ["Halaman Utama", "Artikel", "Proyek", "Detail Proyek", "Tentang", "Mobile"],
+      galleryNote:
+        "Screenshot terpilih dari berbagai section portfolio, menampilkan visual language dalam konteks nyata.",
+      galleryGroups: [
+        "Halaman Utama",
+        "Artikel",
+        "Proyek",
+        "Detail Proyek",
+        "Tentang",
+        "Mobile",
+      ],
 
       outcomesLabel: "Hasil",
       outcomesTitle: "Hasil Proyek",
       outcomes: [
-        { title: "Identitas Digital Terpadu", desc: "Visual language yang konsisten di setiap halaman dan interaksi." },
-        { title: "Portfolio Berbasis Cerita", desc: "Mengomunikasikan proses dan cara berpikir, bukan hanya menampilkan hasil akhir." },
-        { title: "Sepenuhnya Responsif", desc: "Layout dan interaksi yang dioptimalkan untuk desktop, tablet, dan layar mobile." },
-        { title: "Fokus Performa", desc: "Loading cepat, aset yang dioptimalkan, dan overhead bundle minimal." },
-        { title: "Arsitektur yang Dapat Diperluas", desc: "Dirancang untuk berkembang bersama produk, artikel, dan case study di masa depan." }
+        {
+          title: "Identitas Digital Terpadu",
+          desc: "Visual language yang konsisten di setiap halaman dan interaksi.",
+        },
+        {
+          title: "Portfolio Berbasis Cerita",
+          desc: "Mengomunikasikan proses dan cara berpikir, bukan hanya menampilkan hasil akhir.",
+        },
+        {
+          title: "Sepenuhnya Responsif",
+          desc: "Layout dan interaksi yang dioptimalkan untuk desktop, tablet, dan layar mobile.",
+        },
+        {
+          title: "Fokus Performa",
+          desc: "Loading cepat, aset yang dioptimalkan, dan overhead bundle minimal.",
+        },
+        {
+          title: "Arsitektur yang Dapat Diperluas",
+          desc: "Dirancang untuk berkembang bersama produk, artikel, dan case study di masa depan.",
+        },
       ],
 
       repoLabel: "Source Code",
       repoTitle: "Repository",
       repoPublic: "Publik",
-      repoDesc: "Source code lengkap tersedia di GitHub. Termasuk dokumentasi dan struktur komponen.",
-      repoBtn: "Lihat di GitHub"
+      repoDesc:
+        "Source code lengkap tersedia di GitHub. Termasuk dokumentasi dan struktur komponen.",
+      repoBtn: "Lihat di GitHub",
+    },
+    thumoraDetail: {
+      sec1Label: "01 / THE PRODUCT",
+      sec1Title: "AI Thumbnail Generator untuk Kreator",
+      sec1Desc:
+        "Thumora membantu kreator mengubah ide sederhana menjadi thumbnail ready to use menjelajahi karya yang sudah ada sebagai referensi untuk karya berikutnya.",
+
+      sec2Label: "02 / THE EXPERIENCE",
+      sec2Title: "Dari Ide Menjadi Thumbnail",
+      sec2Desc:
+        "Alur kerja sederhana yang dirancang mengikuti cara kreator membuat thumbnail: tentukan ide, atur arah visual, generate, dan simpan hasilnya.",
+
+      sec3Label: "03 / SEE IT IN ACTION",
+      sec3Title: "In Action",
+      sec3Desc:
+        "Mulai dari eksplorasi produk hingga proses generasi thumbnail, walkthrough ini memperlihatkan alur kerja nyata aplikasi.",
+
+      sec4Label: "04 / COMMUNITY",
+      sec4Title: "Lebih dari Sekadar AI Gen",
+      sec4Desc:
+        "Thumora juga menyediakan ruang bagi kreator untuk menemukan inspirasi thumbnail, membedah bagaimana thumbnail tersebut dibuat, dan menjadikannya referensi untuk karya sendiri.",
+
+      sec5Label: "05 / PRODUCT DETAILS",
+      sec5Title: "Support Responsif all Device",
+      sec5Desc:
+        "Thumora dibangun sebagai web app responsif, lengkap dengan autentikasi, generasi thumbnail, riwayat generasi pribadi, serta antarmuka yang dioptimalkan untuk desktop dan mobile.",
+
+      sec6Label: "FINAL SHOWCASE",
+      sec6Title: "Dibangun untuk Mengubah Ide Menjadi Thumbnail.",
+      sec6Desc:
+        "Thumora memadukan generasi AI, kontrol visual kreatif, dan inspirasi komunitas dalam satu alur kerja sederhana untuk para kreator.",
+    },
+    saldoDetail: {
+      heroMeta: "STUDI KASUS · 2026 · SOLO BUILD",
+      heroTitle: "SALDO — Efficient Money Tracker",
+      heroDesc:
+        "Mengelola uang tidak seharusnya terasa seperti akuntansi. SALDO mengubah pencatatan keuangan sehari-hari menjadi sebuah percakapan sederhana.",
+
+      sec1Label: "01 — GAGASAN",
+      sec1Title: "Mencatat uang butuh hitungan detik, bukan formulir.",
+      sec1Desc:
+        "SALDO berawal dari observasi sederhana: mencatat pengeluaran kecil seharusnya tidak memaksa pengguna mengisi berbagai formulir, kategori, akun, dan tanggal secara manual.",
+
+      sec2Label: "02 — PENGALAMAN",
+      sec2Title: "Ceritakan pada SALDO apa yang terjadi.",
+      sec2Desc:
+        "Ketik sesuai gaya bicara sehari-hari. SALDO menginterpretasikan transaksi dan menyiapkannya untuk konfirmasi.",
+
+      sec3Label: "03 — PRODUK",
+      sec3Title: "Antarmuka tenang untuk keuangan harian.",
+      sec3Desc:
+        "Pengalaman finansial yang tenang dirancang dengan sentuhan mint halus, permukaan deep forest, dan ruang bernapas yang lega.",
+
+      sec4Label: "04 — APLIKASI",
+      sec4Title: "Prinsip yang sama, saat Anda berada di dalam aplikasi.",
+      sec4Desc:
+        "SALDO menjaga antarmuka tetap tenang agar informasi penting selalu terlihat: apa yang dimiliki, apa yang telah dibelanjakan, dan perkiraan ke depan.",
+
+      sec5Label: "05 — BAHASA VISUAL",
+      sec5Title: "Tenang, ekspresif, dan disengaja sederhana.",
+      sec5Desc:
+        "Permukaan soft mint, nuansa deep forest, tipografi ekspresif, dan gerakan organik memberikan bahasa visual yang terasa seperti produk modern, bukan lembar kerja spreadsheet.",
+
+      sec6Label: "06 — HASIL AKHIR",
+      sec6Title: "Pelacak uang yang terasa seperti percakapan.",
+      sec6Desc:
+        "SALDO mengubah rutinitas kecil mencatat uang menjadi pengalaman yang lebih cepat dan menenangkan — sambil tetap menjaga gambaran besar keuangan Anda.",
     },
     ppidDetail: {
       overviewLabel: "Ikhtisar",
@@ -1049,18 +1953,21 @@ At the end of the day, my journey is not about transitioning from Russian Litera
       archTitle: "Alur Ekosistem",
       contribLabel: "Kontribusi",
       contribTitle: "Tanggung Jawab Saya",
-      contribNote: "Saya berfokus pada pengembangan frontend dan desain UI/UX, berkolaborasi erat dengan backend engineer yang bertanggung jawab atas arsitektur backend dan implementasi API.",
+      contribNote:
+        "Saya berfokus pada pengembangan frontend dan desain UI/UX, berkolaborasi erat dengan backend engineer yang bertanggung jawab atas arsitektur backend dan implementasi API.",
       processLabel: "Proses",
       processTitle: "Timeline Pengembangan",
       techLabel: "Teknologi",
       techTitle: "Tech Stack",
       galleryLabel: "Galeri",
       galleryTitle: "Screenshot Portal PPID",
-      galleryNote: "Interface UI Portal PPID yang bersifat publik. Screenshot sistem internal (SIPIPI & CMS) tidak ditampilkan karena alasan confidential.",
+      galleryNote:
+        "Interface UI Portal PPID yang bersifat publik. Screenshot sistem internal (SIPIPI & CMS) tidak ditampilkan karena alasan confidential.",
       internalLabel: "Sistem Internal",
       internalTitle: "Platform SIPIPI & CMS",
       internalConfidential: "Rahasia, Tidak Dapat Ditampilkan Publik",
-      internalNote: "Karena alasan kerahasiaan dan keamanan, platform manajemen internal (SIPIPI & CMS), source code, dan antarmuka administratif tidak dapat dipublikasikan.",
+      internalNote:
+        "Karena alasan kerahasiaan dan keamanan, platform manajemen internal (SIPIPI & CMS), source code, dan antarmuka administratif tidak dapat dipublikasikan.",
       internalContribNote: "Kontribusi saya pada platform internal meliputi:",
       resultsLabel: "Hasil",
       resultsTitle: "Hasil Proyek",
@@ -1073,7 +1980,8 @@ At the end of the day, my journey is not about transitioning from Russian Litera
       contentFlow: "Alur Konten",
       publicBadge: "Publik",
       internalBadge: "Internal",
-      systemNote: "CMS & SIPIPI berjalan dalam satu aplikasi internal — tidak perlu sistem terpisah.",
+      systemNote:
+        "CMS & SIPIPI berjalan dalam satu aplikasi internal — tidak perlu sistem terpisah.",
       heroPreview: "Portal PPID — Pratinjau Antarmuka Publik",
       demoVideoLabel: "Portal PPID — Pratinjau Demo Video",
       metaRole: "Peran",
@@ -1096,7 +2004,7 @@ At the end of the day, my journey is not about transitioning from Russian Litera
         "Optimasi Alur Kerja",
         "Integrasi Frontend-Backend",
         "Kolaborasi Deployment",
-        "Desain Multimedia"
+        "Desain Multimedia",
       ],
       galleryLabels: {
         homepage: "Halaman Utama",
@@ -1104,8 +2012,8 @@ At the end of the day, my journey is not about transitioning from Russian Litera
         news: "Berita",
         docs: "Dokumen",
         faq: "FAQ",
-        req: "Permohonan Informasi"
-      }
+        req: "Permohonan Informasi",
+      },
     },
 
     education: {
@@ -1127,8 +2035,8 @@ At the end of the day, my journey is not about transitioning from Russian Litera
             "Terlibat dalam pengembangan diri melalui seminar dan lokakarya tentang Desain Grafis, Pengeditan Video, AI, Pemrograman, Keuangan, dan Investasi.",
             "Berkontribusi langsung ke Program Studi Rusia dengan kontribusi dalam desain visual dan pengeditan video untuk kebutuhan akademis dan promosi.",
           ],
-        }
-      ]
+        },
+      ],
     },
     about: {
       expLabel: "Experience",
@@ -1137,7 +2045,8 @@ At the end of the day, my journey is not about transitioning from Russian Litera
       toolsLabel: "Tools",
       toolsSlogan: "my daily arsenal",
       toolsTitle: "Tech Stack & Workspace",
-      toolsDesc: "Software, framework, library, bahasa pemrograman, dan aplikasi design yang saya gunakan sehari-hari.",
+      toolsDesc:
+        "Software, framework, library, bahasa pemrograman, dan aplikasi design yang saya gunakan sehari-hari.",
       listTools: listToolsStaticEn,
       experiences: [
         {
@@ -1147,7 +2056,8 @@ At the end of the day, my journey is not about transitioning from Russian Litera
           location: "Jakarta, Indonesia",
           color: "bg-[#1E293B] border border-slate-700/50",
           desc: "Membuat desain UI/UX lengkap, alur user, pengunjung website, dan perencanaan (agile/scrum) untuk dua aplikasi web portal (PPID & SIPIPI). Berkolaborasi dalam tim dua orang melalui Git, membangun Frontend menggunakan Next.js, TypeScript, Tailwind dan Shadcn UI.",
-          descMobile: "Membuat desain UI/UX, alur user, pengunjung website, dan perencanaan (agile/scrum) untuk dua aplikasi web portal (PPID & SIPIPI). Berkolaborasi melalui Git untuk membangun frontend Next.js, TypeScript, Tailwind dan Shadcn UI.",
+          descMobile:
+            "Membuat desain UI/UX, alur user, pengunjung website, dan perencanaan (agile/scrum) untuk dua aplikasi web portal (PPID & SIPIPI). Berkolaborasi melalui Git untuk membangun frontend Next.js, TypeScript, Tailwind dan Shadcn UI.",
         },
         {
           role: "Career Break (T-Shaped Upskilling)",
@@ -1156,7 +2066,8 @@ At the end of the day, my journey is not about transitioning from Russian Litera
           location: "Remote",
           color: "bg-[#312E81] border border-indigo-700/50",
           desc: "Melatih profil T-shaped dengan meneliti keterampilan lintas disiplin ilmu, termasuk automasi AI, product led growth (PLG), dan frontend lanjutan, diikuti oleh studi mandiri intensif dalam software development.",
-          descMobile: "Melatih profil T-shaped dengan meneliti keterampilan lintas disiplin ilmu, termasuk automasi AI, product led growth (PLG), dan frontend lanjutan, lalu melanjutkan studi mandiri intensif dalam software development.",
+          descMobile:
+            "Melatih profil T-shaped dengan meneliti keterampilan lintas disiplin ilmu, termasuk automasi AI, product led growth (PLG), dan frontend lanjutan, lalu melanjutkan studi mandiri intensif dalam software development.",
         },
         {
           role: "ReactJS for Frontend Developer Bootcamp",
@@ -1165,7 +2076,8 @@ At the end of the day, my journey is not about transitioning from Russian Litera
           location: "Jakarta, Indonesia",
           color: "bg-[#450A0A] border border-red-900/40",
           desc: "Transisi dari latar belakang kreatif/multimedia ke web development, membangun keahlian dalam React Frontend, arsitektur komponen, manajemen state, dan alur kerja kolaboratif Git/GitHub.",
-          descMobile: "Transisi dari latar belakang kreatif/multimedia ke web dev, membangun keahlian dalam React Frontend, arsitektur komponen, manajemen state, dan alur kerja kolaboratif Git/GitHub.",
+          descMobile:
+            "Transisi dari latar belakang kreatif/multimedia ke web dev, membangun keahlian dalam React Frontend, arsitektur komponen, manajemen state, dan alur kerja kolaboratif Git/GitHub.",
         },
         {
           role: "Creative Design & Multimedia Lead",
@@ -1174,9 +2086,10 @@ At the end of the day, my journey is not about transitioning from Russian Litera
           location: "Sumedang, Indonesia",
           color: "bg-[#451A03] border border-amber-900/40",
           desc: "Memimpin perencanaan desain visual dan produksi multimedia untuk berbagai organisasi dan acara kampus, membangun keterampilan dasar yang kuat dalam tata letak UI/UX, aset grafis, dan alur kerja pengguna.",
-          descMobile: "Mengarahkan desain aset visual dan produksi multimedia untuk kelompok kampus, membangun keterampilan inti dalam tata letak UI/UX dan arsitektur alur pengguna.",
+          descMobile:
+            "Mengarahkan desain aset visual dan produksi multimedia untuk kelompok kampus, membangun keterampilan inti dalam tata letak UI/UX dan arsitektur alur pengguna.",
         },
-      ]
+      ],
     },
     articles: {
       label: "Articles",
@@ -1223,7 +2136,7 @@ Semakin berkembangnya AI, proses bikin website juga bakal makin cepat. Kemungkin
 Karena pada akhirnya, pengguna nggak akan ingat seberapa keren animasi yang kita buat. 
 
 Mereka akan ingat satu hal yang jauh lebih penting: *website itu membantu saya menyelesaikan pekerjaan dengan mudah.*
-          `
+          `,
         },
         {
           id: 2,
@@ -1262,7 +2175,7 @@ AI bakal terus berkembang. Mungkin beberapa tahun lagi, bikin website cuma butuh
 Karena website yang bagus itu bukan yang kelihatan seperti hasil AI, melainkan yang punya karakter, paham penggunanya, dan terasa dibuat dengan penuh pertimbangan. 
 
 AI memang bisa mempercepat proses bikin antarmuka, tapi rasa, identitas, dan kualitas sebuah desain tetap bergantung pada orang yang menggunakannya.
-          `
+          `,
         },
         {
           id: 3,
@@ -1293,7 +2206,7 @@ Makin luas referensi seseorang, makin baik pula keputusan yang ia ambil, dan kep
 Saya percaya AI bakal terus mengambil alih banyak pekerjaan yang sifatnya berulang dan teknis. Itu bukan sesuatu yang perlu ditakuti, justru itu ngasih kita lebih banyak waktu untuk melakukan hal yang lebih bernilai: berpikir, memahami manusia, membangun ide, dan mengambil keputusan yang lebih baik.
 Karena pada akhirnya, AI bisa menghasilkan ribuan kemungkinan, tapi manusialah yang memutuskan kemungkinan mana yang layak diwujudkan. 
 Semakin berkembang AI, semakin jelas bahwa nilai manusia bukan cuma pada apa yang bisa kita buat, melainkan pada pengalaman, perspektif, kreativitas, dan penilaian yang kita bawa ke dalam setiap karya.
-          `
+          `,
         },
         {
           id: 4,
@@ -1333,9 +2246,9 @@ Sekilas mungkin kelihatan kayak berpindah-pindah bidang. Tapi makin gue jalanin,
 Hari ini target gue cukup jelas: menyelesaikan fondasi sebagai web developer, lalu lanjut ke mobile development, setelah itu mendalami AI dan blockchain.
 Tapi makin ke sini, gue sadar bahwa tujuan akhirnya bukan sekadar menguasai banyak teknologi. Yang benar-benar ingin gue bangun adalah cara berpikir. Mental seorang builder. Mental yang selalu melihat masalah sebagai sesuatu yang bisa dipecahkan, mental yang terdorong untuk menciptakan sesuatu, sekecil apa pun itu.
 Karena pada akhirnya, semua perjalanan yang gue lalui bukan tentang berpindah dari Sastra ke IT, melainkan tentang mengumpulkan potongan-potongan pengalaman yang membentuk identitas gue hari ini. Seorang builder yang percaya bahwa teknologi hanyalah alat. Yang benar-benar menentukan adalah pola pikir untuk terus belajar, terus membangun, dan terus menciptakan sesuatu yang bermanfaat.
-`
-        }
-      ]
+`,
+        },
+      ],
     },
     contact: {
       label: "Contact",
@@ -1352,6 +2265,6 @@ Karena pada akhirnya, semua perjalanan yang gue lalui bukan tentang berpindah da
       placeholderName: "John Doe",
       placeholderEmail: "john@example.com",
       placeholderMsg: "Saya ingin hire anda...",
-    }
-  }
+    },
+  },
 };

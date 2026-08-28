@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Send, Mail, Phone, Globe, Linkedin, Instagram } from "lucide-react";
+import { Mail, Globe, Linkedin, Instagram, ArrowUpRight } from "lucide-react";
 import { m } from "framer-motion";
 import { useLanguage } from "../context/LanguageContext";
 
@@ -33,8 +33,7 @@ const sloganVariants = {
 };
 
 const contactLinks = [
-  { label: "Email", value: "adityafajar.sy90@gmail.com", href: "mailto:adityafajar.sy90@email.com", icon: Mail },
-  { label: "Phone", value: "+62 877-4158-3948", href: "tel:+6287741583948", icon: Phone },
+  { label: "Email", value: "adityafajar.sy90@gmail.com", href: "mailto:adityafajar.sy90@gmail.com", icon: Mail },
   { label: "LinkedIn", value: "linkedin.com/in/adityafajarsy", href: "https://www.linkedin.com/in/adityafajarsy/", icon: Linkedin },
   { label: "GitHub", value: "github.com/adityafajarsy", href: "https://github.com/adityafajarsy", icon: Globe },
   { label: "Instagram", value: "instagram.com/adityafajarsyy", href: "https://instagram.com/adityafajarsyy", icon: Instagram },
@@ -84,10 +83,10 @@ export default function Contact() {
         </m.p>
       </div>
 
-      <div className="flex flex-col md:flex-row gap-10 items-stretch mt-4">
-        {/* Left Side: Minimal Contact Table */}
+      <div className="mt-2 w-full max-w-2xl">
+        {/* Contact Channels Card */}
         <m.div
-          className="flex-1 bg-[#0B0B0B] border border-white/5 rounded-[24px] p-6 lg:p-8 flex flex-col justify-between"
+          className="bg-[#0B0B0B] border border-white/5 rounded-[24px] p-6 lg:p-8 flex flex-col justify-between shadow-2xl"
           variants={itemVariants}
         >
           <div className="flex flex-col">
@@ -100,7 +99,6 @@ export default function Contact() {
             >
               {contactLinks.map((link, idx) => {
                 const Icon = link.icon;
-                const localizedLabel = link.label === "Phone" ? (lang === "id" ? "Telepon" : "Phone") : link.label;
                 const isCurrentHovered = hoveredIndex === idx;
                 const isAnyHovered = hoveredIndex !== null;
 
@@ -108,25 +106,26 @@ export default function Contact() {
                   <a
                     key={idx}
                     href={link.href}
-                    target={link.label !== "Phone" && link.label !== "Email" ? "_blank" : undefined}
+                    target={link.label !== "Email" ? "_blank" : undefined}
                     rel="noopener noreferrer"
                     onMouseEnter={() => setHoveredIndex(idx)}
-                    className={`flex items-center justify-between py-3.5 border-b border-white/5 last:border-b-0 px-2 rounded-lg transition-all duration-300 cursor-pointer ${isAnyHovered
+                    className={`flex items-center justify-between py-4 border-b border-white/5 last:border-b-0 px-3 rounded-xl transition-all duration-300 cursor-pointer group ${isAnyHovered
                         ? isCurrentHovered
-                          ? "bg-white/[0.03] opacity-100"
-                          : "opacity-25 scale-[0.98] blur-[0.5px]"
-                        : "opacity-100"
+                          ? "bg-white/[0.04] opacity-100"
+                          : "opacity-30 scale-[0.99]"
+                        : "opacity-100 hover:bg-white/[0.02]"
                       }`}
                   >
-                    <span className={`text-[13px] font-medium flex items-center gap-2.5 transition-colors duration-300 ${isCurrentHovered ? "text-white" : "text-[#8A8A8A]"
+                    <span className={`text-[13.5px] font-medium flex items-center gap-3 transition-colors duration-300 ${isCurrentHovered ? "text-white" : "text-[#8A8A8A]"
                       }`}>
-                      <Icon size={14} className={`transition-colors duration-300 ${isCurrentHovered ? "text-[#3B82F6]" : "text-white/40"
+                      <Icon size={16} className={`transition-colors duration-300 ${isCurrentHovered ? "text-[#3B82F6]" : "text-white/40"
                         }`} />
-                      {localizedLabel}
+                      {link.label}
                     </span>
-                    <span className={`text-[13px] font-semibold transition-colors duration-300 truncate max-w-[180px] sm:max-w-none text-right ${isCurrentHovered ? "text-white" : "text-[#8A8A8A]"
+                    <span className={`text-[13px] sm:text-[13.5px] font-semibold transition-colors duration-300 flex items-center gap-1.5 truncate text-right ${isCurrentHovered ? "text-white" : "text-[#8A8A8A]"
                       }`}>
-                      {link.value}
+                      <span>{link.value}</span>
+                      <ArrowUpRight size={13} className={`transition-all duration-300 ${isCurrentHovered ? "text-[#3B82F6] opacity-100 translate-x-0.5 -translate-y-0.5" : "opacity-0"}`} />
                     </span>
                   </a>
                 );
@@ -134,80 +133,10 @@ export default function Contact() {
             </div>
           </div>
 
-          <div className="mt-8 text-[12px] text-[#8A8A8A] font-medium flex items-center gap-1.5 p-3.5 bg-white/2 rounded-xl border border-white/5">
-            <span className="w-1.5 h-1.5 rounded-full bg-[#10B981] animate-pulse" />
+          <div className="mt-8 text-[12px] text-[#8A8A8A] font-medium flex items-center gap-2 p-3.5 bg-white/[0.02] rounded-xl border border-white/5">
+            <span className="w-2 h-2 rounded-full bg-[#10B981] animate-pulse" />
             <span>{t("contact.availableText")}</span>
           </div>
-        </m.div>
-
-        {/* Right Side: Message Form */}
-        <m.div
-          className="flex-1 bg-[#0B0B0B] border border-white/5 rounded-[24px] p-6 lg:p-8"
-          variants={itemVariants}
-        >
-          <span className="text-[11px] font-bold tracking-wider text-[#8A8A8A] uppercase mb-5 block">
-            {t("contact.sendWa")}
-          </span>
-          <form
-            className="flex flex-col gap-4"
-            autoComplete="off"
-            onSubmit={(e) => {
-              e.preventDefault();
-              const name = e.target.nama.value;
-              const email = e.target.email.value;
-              const message = e.target.pesan.value;
-
-              const text = `Halo, saya ${name} (${email})%0A%0A${message}`;
-              const phone = "6287741583948";
-
-              const url = `https://wa.me/${phone}?text=${text}`;
-              window.open(url, "_blank");
-            }}
-          >
-            <div className="flex flex-col gap-1.5">
-              <label className="text-[12px] font-bold text-[#8A8A8A] uppercase">{t("contact.name")}</label>
-              <input
-                className="bg-[#121212] border border-white/5 rounded-xl px-4 py-3 text-[14px] text-white placeholder-white/20 focus:outline-none focus:border-[#3B82F6]/50 focus:bg-[#161616] transition-all duration-200"
-                type="text"
-                name="nama"
-                placeholder={t("contact.placeholderName")}
-                required
-              />
-            </div>
-
-            <div className="flex flex-col gap-1.5">
-              <label className="text-[12px] font-bold text-[#8A8A8A] uppercase">{t("contact.email")}</label>
-              <input
-                className="bg-[#121212] border border-white/5 rounded-xl px-4 py-3 text-[14px] text-white placeholder-white/20 focus:outline-none focus:border-[#3B82F6]/50 focus:bg-[#161616] transition-all duration-200"
-                type="email"
-                name="email"
-                placeholder={t("contact.placeholderEmail")}
-                required
-              />
-            </div>
-
-            <div className="flex flex-col gap-1.5">
-              <label htmlFor="pesan" className="text-[12px] font-bold text-[#8A8A8A] uppercase">
-                {t("contact.message")}
-              </label>
-              <textarea
-                className="bg-[#121212] border border-white/5 rounded-xl px-4 py-3 text-[14px] text-white placeholder-white/20 focus:outline-none focus:border-[#3B82F6]/50 focus:bg-[#161616] transition-all duration-200 resize-none"
-                name="pesan"
-                id="pesan"
-                rows="4"
-                placeholder={t("contact.placeholderMsg")}
-                required
-              ></textarea>
-            </div>
-
-            <button
-              type="submit"
-              className="mt-2 inline-flex items-center justify-center gap-2 w-full px-5 py-3 rounded-xl bg-white hover:bg-white/90 text-black text-[14px] font-bold transition-all duration-250 cursor-pointer active:scale-[0.98]"
-            >
-              <Send size={14} />
-              <span>{t("contact.sendBtn")}</span>
-            </button>
-          </form>
         </m.div>
       </div>
     </m.section>

@@ -2,6 +2,8 @@ import React, { useEffect } from "react";
 import { m, AnimatePresence } from "framer-motion";
 import { useLanguage } from "../context/LanguageContext";
 import PortfolioDetail from "./PortfolioDetail";
+import ThumoraDetail from "./ThumoraDetail";
+import SaldoDetail from "./SaldoDetail";
 
 const fadeUp = {
   hidden: { opacity: 0, y: 22 },
@@ -209,7 +211,19 @@ export default function ProjectDetail({ project, onClose }) {
 
   // Detect project type
   const isBuilderArchive = project.id === 2;
+  const isThumora = project.id === 3;
+  const isSaldo = project.id === 4;
   const isPPID = Boolean(project.modules);
+
+  // ── SALDO (Project 4) rendering ───────────────────────────────────────────
+  if (isSaldo) {
+    return <SaldoDetail project={project} onClose={onClose} />;
+  }
+
+  // ── Thumora AI (Project 3) rendering ──────────────────────────────────────
+  if (isThumora) {
+    return <ThumoraDetail project={project} onClose={onClose} />;
+  }
 
   // ── Builder's Archive (Project 2) rendering ───────────────────────────────
   if (isBuilderArchive) {

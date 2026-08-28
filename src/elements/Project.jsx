@@ -117,8 +117,9 @@ export default function Project({ onSelectProject }) {
               >
                 {/* Number */}
                 <span
-                  className={`text-[13px] font-bold tracking-widest tabular-nums transition-colors duration-200 w-7 shrink-0 ${isOpen ? "text-[#3B82F6]" : "text-white/25"
-                    }`}
+                  className={`text-[13px] font-bold tracking-widest tabular-nums transition-colors duration-200 w-7 shrink-0 ${
+                    isOpen ? "text-[#3B82F6]" : "text-white/25"
+                  }`}
                 >
                   {num}
                 </span>
@@ -126,16 +127,20 @@ export default function Project({ onSelectProject }) {
                 {/* Project name */}
                 <div className="flex-1">
                   <span
-                    className={`relative inline-flex items-center text-[20px] sm:text-[24px] lg:text-[26px] font-bold tracking-tight leading-tight transition-colors duration-200 ${isOpen
-                      ? "text-[#3B82F6]"
-                      : "text-white group-hover:text-white/80"
-                      }`}
+                    className={`relative inline-flex items-center text-[20px] sm:text-[24px] lg:text-[26px] font-bold tracking-tight leading-tight transition-colors duration-200 ${
+                      isOpen
+                        ? "text-[#3B82F6]"
+                        : "text-white group-hover:text-white/80"
+                    }`}
                   >
                     {project.nama}
                     {project.id === 1 && (
                       <span
-                        className="absolute top-[-14px] left-[105px] sm:left-auto sm:right-[-48px] sm:top-[-10px] text-[#3B82F6] text-[12px] sm:text-[13px] tracking-tight font-bold select-none pointer-events-none whitespace-nowrap"
-                        style={{ fontFamily: "'Nothing You Could Do', cursive", transform: "rotate(-6deg)" }}
+                        className="absolute top-[-14px] left-[105px] sm:left-auto sm:right-[-48px] sm:top-[-10px] text-[#38BDF8] text-[12px] sm:text-[13px] tracking-tight font-bold select-none pointer-events-none whitespace-nowrap"
+                        style={{
+                          fontFamily: "'Nothing You Could Do', cursive",
+                          transform: "rotate(-6deg)",
+                        }}
                       >
                         3 Apps
                       </span>
@@ -143,12 +148,36 @@ export default function Project({ onSelectProject }) {
                     {project.id === 2 && (
                       <span
                         className="absolute top-[-14px] left-[110px] sm:left-auto sm:right-[-52px] sm:top-[-10px] text-[#3B82F6] text-[12px] sm:text-[13px] tracking-tight font-bold select-none pointer-events-none whitespace-nowrap"
-                        style={{ fontFamily: "'Nothing You Could Do', cursive", transform: "rotate(-6deg)" }}
+                        style={{
+                          fontFamily: "'Nothing You Could Do', cursive",
+                          transform: "rotate(-6deg)",
+                        }}
                       >
                         Portfolio
                       </span>
                     )}
-
+                    {project.id === 3 && (
+                      <span
+                        className="absolute top-[-14px] left-[105px] sm:left-auto sm:right-[-48px] sm:top-[-10px] text-[#C084FC] text-[12px] sm:text-[13px] tracking-tight font-bold select-none pointer-events-none whitespace-nowrap"
+                        style={{
+                          fontFamily: "'Nothing You Could Do', cursive",
+                          transform: "rotate(-6deg)",
+                        }}
+                      >
+                        AI Product
+                      </span>
+                    )}
+                    {project.id === 4 && (
+                      <span
+                        className="absolute top-[-14px] left-[75px] sm:left-auto sm:right-[-68px] sm:top-[-10px] text-[#10B981] text-[12px] sm:text-[13px] tracking-tight font-bold select-none pointer-events-none whitespace-nowrap"
+                        style={{
+                          fontFamily: "'Nothing You Could Do', cursive",
+                          transform: "rotate(-6deg)",
+                        }}
+                      >
+                        AI Money Tracker
+                      </span>
+                    )}
                   </span>
                 </div>
 
@@ -164,11 +193,15 @@ export default function Project({ onSelectProject }) {
 
                 {/* Expand icon */}
                 <div
-                  className={`ml-3 shrink-0 w-8 h-8 rounded-full border flex items-center justify-center transition-all duration-200 ${isOpen
-                    ? "border-[#3B82F6]/60 text-[#3B82F6] bg-[#3B82F6]/10 rotate-45"
-                    : "border-white/15 text-white/40 group-hover:border-white/30 group-hover:text-white/70"
-                    }`}
-                  style={{ transform: isOpen ? "rotate(45deg)" : "rotate(0deg)", transition: "transform 0.25s ease" }}
+                  className={`ml-3 shrink-0 w-8 h-8 rounded-full border flex items-center justify-center transition-all duration-200 ${
+                    isOpen
+                      ? "border-[#3B82F6]/60 text-[#3B82F6] bg-[#3B82F6]/10 rotate-45"
+                      : "border-white/15 text-white/40 group-hover:border-white/30 group-hover:text-white/70"
+                  }`}
+                  style={{
+                    transform: isOpen ? "rotate(45deg)" : "rotate(0deg)",
+                    transition: "transform 0.25s ease",
+                  }}
                 >
                   <svg
                     width="14"
@@ -229,11 +262,23 @@ export default function Project({ onSelectProject }) {
                         {/* Launch / View Detail row */}
                         <div className="flex items-center gap-3 mt-1">
                           <button
-                            onClick={() => onSelectProject && onSelectProject(project)}
+                            onClick={() =>
+                              onSelectProject && onSelectProject(project)
+                            }
                             className="flex items-center gap-1.5 text-[11px] font-bold text-white/60 hover:text-white transition-colors duration-150"
                           >
-                            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
-                              <circle cx="11" cy="11" r="8" /><path d="M21 21l-4.35-4.35" />
+                            <svg
+                              width="12"
+                              height="12"
+                              viewBox="0 0 24 24"
+                              fill="none"
+                              stroke="currentColor"
+                              strokeWidth="2.5"
+                              strokeLinecap="round"
+                              strokeLinejoin="round"
+                            >
+                              <circle cx="11" cy="11" r="8" />
+                              <path d="M21 21l-4.35-4.35" />
                             </svg>
                             View Detail
                           </button>
@@ -245,7 +290,16 @@ export default function Project({ onSelectProject }) {
                               className="flex items-center gap-1.5 text-[11px] font-bold text-[#3B82F6] hover:text-[#60A5FA] transition-colors duration-150 ml-auto"
                             >
                               {t("projects.launchBtn")}
-                              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+                              <svg
+                                width="12"
+                                height="12"
+                                viewBox="0 0 24 24"
+                                fill="none"
+                                stroke="currentColor"
+                                strokeWidth="2.5"
+                                strokeLinecap="round"
+                                strokeLinejoin="round"
+                              >
                                 <path d="M7 17L17 7M7 7h10v10" />
                               </svg>
                             </a>
@@ -298,11 +352,23 @@ export default function Project({ onSelectProject }) {
                         {/* Action buttons */}
                         <div className="flex items-center gap-4 mt-2">
                           <button
-                            onClick={() => onSelectProject && onSelectProject(project)}
+                            onClick={() =>
+                              onSelectProject && onSelectProject(project)
+                            }
                             className="flex items-center gap-2 text-[12px] font-bold text-white/60 hover:text-white border border-white/10 hover:border-white/25 rounded-full px-4 py-2 transition-all duration-200"
                           >
-                            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
-                              <circle cx="11" cy="11" r="8" /><path d="M21 21l-4.35-4.35" />
+                            <svg
+                              width="13"
+                              height="13"
+                              viewBox="0 0 24 24"
+                              fill="none"
+                              stroke="currentColor"
+                              strokeWidth="2.5"
+                              strokeLinecap="round"
+                              strokeLinejoin="round"
+                            >
+                              <circle cx="11" cy="11" r="8" />
+                              <path d="M21 21l-4.35-4.35" />
                             </svg>
                             View Detail
                           </button>
@@ -315,7 +381,16 @@ export default function Project({ onSelectProject }) {
                               className="flex items-center gap-2 text-[12px] font-bold text-[#3B82F6] hover:text-[#60A5FA] border border-[#3B82F6]/30 hover:border-[#3B82F6]/60 rounded-full px-4 py-2 transition-all duration-200"
                             >
                               {t("projects.launchBtn")}
-                              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+                              <svg
+                                width="12"
+                                height="12"
+                                viewBox="0 0 24 24"
+                                fill="none"
+                                stroke="currentColor"
+                                strokeWidth="2.5"
+                                strokeLinecap="round"
+                                strokeLinejoin="round"
+                              >
                                 <path d="M7 17L17 7M7 7h10v10" />
                               </svg>
                             </a>
