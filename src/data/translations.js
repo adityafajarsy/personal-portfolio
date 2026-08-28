@@ -1917,34 +1917,34 @@ At the end of the day, my journey is not about transitioning from Russian Litera
         "Mengelola uang tidak seharusnya terasa seperti akuntansi. SALDO mengubah pencatatan keuangan sehari-hari menjadi sebuah percakapan sederhana.",
 
       sec1Label: "01 — GAGASAN",
-      sec1Title: "Mencatat uang butuh hitungan detik, bukan formulir.",
+      sec1Title: "Mencatat uang butuh hitungan detik, ga pake ribet.",
       sec1Desc:
         "SALDO berawal dari observasi sederhana: mencatat pengeluaran kecil seharusnya tidak memaksa pengguna mengisi berbagai formulir, kategori, akun, dan tanggal secara manual.",
 
       sec2Label: "02 — PENGALAMAN",
-      sec2Title: "Ceritakan pada SALDO apa yang terjadi.",
+      sec2Title: "Kasihi tau pada SALDO apa yang habis kamu beli.",
       sec2Desc:
         "Ketik sesuai gaya bicara sehari-hari. SALDO menginterpretasikan transaksi dan menyiapkannya untuk konfirmasi.",
 
       sec3Label: "03 — PRODUK",
-      sec3Title: "Antarmuka tenang untuk keuangan harian.",
+      sec3Title: "Interface nyaman untuk keuangan harian.",
       sec3Desc:
         "Pengalaman finansial yang tenang dirancang dengan sentuhan mint halus, permukaan deep forest, dan ruang bernapas yang lega.",
 
       sec4Label: "04 — APLIKASI",
-      sec4Title: "Prinsip yang sama, saat Anda berada di dalam aplikasi.",
+      sec4Title: "Prinsip yang sama, saat kamu berada di dalam aplikasi.",
       sec4Desc:
         "SALDO menjaga antarmuka tetap tenang agar informasi penting selalu terlihat: apa yang dimiliki, apa yang telah dibelanjakan, dan perkiraan ke depan.",
 
       sec5Label: "05 — BAHASA VISUAL",
-      sec5Title: "Tenang, ekspresif, dan disengaja sederhana.",
+      sec5Title: "Tenang, ekspresif, dan sederhana.",
       sec5Desc:
         "Permukaan soft mint, nuansa deep forest, tipografi ekspresif, dan gerakan organik memberikan bahasa visual yang terasa seperti produk modern, bukan lembar kerja spreadsheet.",
 
       sec6Label: "06 — HASIL AKHIR",
-      sec6Title: "Pelacak uang yang terasa seperti percakapan.",
+      sec6Title: "Pelacak uang yang terasa seperti teman ngobrol.",
       sec6Desc:
-        "SALDO mengubah rutinitas kecil mencatat uang menjadi pengalaman yang lebih cepat dan menenangkan — sambil tetap menjaga gambaran besar keuangan Anda.",
+        "SALDO mengubah rutinitas kecil mencatat uang menjadi pengalaman yang lebih cepat dan menenangkan - tetap menjaga gambaran besar keuangan.",
     },
     ppidDetail: {
       overviewLabel: "Ikhtisar",
