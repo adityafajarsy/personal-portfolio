@@ -141,6 +141,15 @@ const ToolItem = React.memo(({ tool }) => (
 
 export default function About() {
   const { t } = useLanguage();
+  const [expandedCards, setExpandedCards] = React.useState({});
+
+  const toggleCard = (idx) => {
+    setExpandedCards((prev) => ({
+      ...prev,
+      [idx]: !prev[idx],
+    }));
+  };
+
   const listTools = t("about.listTools") || [];
   const expTranslations = t("about.experiences") || [];
 
@@ -223,6 +232,7 @@ export default function About() {
         {/* Experience Cards Stack */}
         <div className="relative pl-4 sm:pl-0 border-l border-white/10 sm:border-l-0 flex flex-col gap-5">
           {experiences.map((exp, idx) => {
+            const isExpanded = !!expandedCards[idx];
             return (
               <m.div
                 key={idx}
@@ -243,7 +253,7 @@ export default function About() {
                 </div>
 
                 {/* Right Side: Details & Info */}
-                <div className="flex-1 min-w-0">
+                <div className="flex-1 min-w-0 w-full">
                   <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-1">
                     <h3 className="text-[16px] font-bold text-white tracking-tight leading-snug">
                       {exp.role}
@@ -266,10 +276,47 @@ export default function About() {
                     </span>
                   </div>
 
-                  {/* Paragraph Description ─ Desktop & Mobile */}
-                  <p className="text-[13px] sm:text-[13.5px] leading-relaxed text-[#8A8A8A] mt-2.5 font-normal">
+                  {/* Paragraph Description ─ Desktop (Full View) */}
+                  <p className="hidden sm:block text-[13.5px] leading-relaxed text-[#8A8A8A] mt-2.5 font-normal">
                     {exp.desc}
                   </p>
+
+                  {/* Paragraph Description ─ Mobile (Compact Collapsible) */}
+                  <div className="block sm:hidden mt-2">
+                    <p
+                      className={`text-[12.5px] leading-relaxed text-[#8A8A8A] font-normal transition-all duration-200 ${
+                        !isExpanded ? "line-clamp-2" : ""
+                      }`}
+                    >
+                      {exp.desc}
+                    </p>
+                    <button
+                      type="button"
+                      onClick={() => toggleCard(idx)}
+                      className="mt-1.5 inline-flex items-center gap-1 text-[11.5px] font-bold text-[#3B82F6] hover:text-[#60A5FA] cursor-pointer transition-colors active:scale-95 py-0.5"
+                    >
+                      <span>
+                        {isExpanded
+                          ? t("about.showLess") || "Sembunyikan"
+                          : t("about.showMore") || "Selengkapnya"}
+                      </span>
+                      <svg
+                        width="12"
+                        height="12"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        strokeWidth="2.5"
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        className={`transition-transform duration-200 ${
+                          isExpanded ? "rotate-180" : ""
+                        }`}
+                      >
+                        <polyline points="6 9 12 15 18 9" />
+                      </svg>
+                    </button>
+                  </div>
                 </div>
               </m.div>
             );

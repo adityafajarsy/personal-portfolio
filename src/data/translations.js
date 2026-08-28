@@ -954,6 +954,8 @@ export const translations = {
       toolsTitle: "Tech Stack & Workspace",
       toolsDesc:
         "The software, frameworks, languages, and design applications that I leverage daily.",
+      showMore: "Read more",
+      showLess: "Show less",
       listTools: listToolsStaticEn,
       experiences: [
         {
@@ -2047,6 +2049,8 @@ At the end of the day, my journey is not about transitioning from Russian Litera
       toolsTitle: "Tech Stack & Workspace",
       toolsDesc:
         "Software, framework, library, bahasa pemrograman, dan aplikasi design yang saya gunakan sehari-hari.",
+      showMore: "Selengkapnya",
+      showLess: "Sembunyikan",
       listTools: listToolsStaticEn,
       experiences: [
         {
