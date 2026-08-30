@@ -137,7 +137,7 @@ export default function Home() {
 
       {/* Biography Description */}
       <m.p
-        className="text-[16px] lg:text-[18px] leading-relaxed text-[#8A8A8A] max-w-2xl font-normal"
+        className="text-[16px] lg:text-[18px] leading-relaxed text-[#8A8A8A] max-w-4xl lg:max-w-5xl font-normal"
         variants={itemVariants}
       >
         {t("home.bio")}
@@ -146,8 +146,10 @@ export default function Home() {
       {/* Action Buttons */}
       <m.div className="flex flex-wrap items-center gap-4 mt-2" variants={itemVariants}>
         <a
-          href="/assets/CV new.pdf"
+          href="/assets/CV-Terbaru.pdf"
           download="Aditya Fajar Satya Yudha-CV.pdf"
+          target="_blank"
+          rel="noopener noreferrer"
           className="flex items-center gap-2 px-5 py-3 rounded-full bg-white text-black font-semibold text-[14px] hover:bg-white/90 transition-all active:scale-95 shadow-md shadow-white/5"
         >
           <Download size={16} />

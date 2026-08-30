@@ -2,11 +2,13 @@ import React from "react";
 import { Mail, Globe, Phone, MapPin } from "lucide-react";
 import { useLanguage } from "../context/LanguageContext";
 import { m } from "framer-motion";
+import GithubActivity from "./GithubActivity";
 
 const techStack = {
-  frontend: ["React", "JavaScript", "TypeScript", "Tailwind", "Shadcn"],
+  frontend: ["React", "JavaScript", "TypeScript", "Tailwind"],
   backend: ["Node.js", "Express", "Python"],
-  database: ["MongoDB", "PostgreSQL", "Firebase"],
+  database: ["MongoDB", "PostgreSQL", "Supabase", "Firebase"],
+  skills: ["Design Research", "UX", "User Research"],
   tools: ["Docker", "VS Code", "Antigravity", "Git"],
   design: ["Figma", "Canva"],
 };
@@ -157,6 +159,9 @@ export default function Sidebar() {
           ))}
         </div>
       </div>
+
+      {/* GitHub Activity Section */}
+      <GithubActivity />
 
       {/* Languages Section */}
       <div className="flex flex-col gap-3">

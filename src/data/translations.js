@@ -7,8 +7,7 @@ const ProjectCompanyImg = "/projects/leveldva.webp";
 const listToolsStatic = [
   {
     id: 1,
-    gambar:
-      "data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%23007ACC'><path d='M23.986 6.892a.573.573 0 0 0-.265-.187L18.423.957a.82.82 0 0 0-.584-.04c-.198.058-.363.18-.464.348l-2.906 4.793-6.536 4.97-5.074-3.83A.574.574 0 0 0 2.5 7.15c-.176.012-.344.085-.47.206L.207 9.179a.573.573 0 0 0-.012.825l3.524 3.524-3.524 3.524a.573.573 0 0 0 .012.825l1.823 1.823c.126.12.294.194.47.206a.57.57 0 0 0 .363-.092l5.074-3.83 6.536 4.97 2.906 4.793a.835.835 0 0 0 .464.348c.199.058.41-.013.584-.04l5.298-5.748a.573.573 0 0 0 .265-.187c.074-.112.115-.246.118-.383V7.275c-.003-.137-.044-.27-.118-.383zm-17.78 8.01l-2.617-2.617 2.617-2.617 3.468 2.617-3.468 2.617zm11.233 4.298l-5.69-4.328 1.942-1.942 3.748 2.828v3.442zm0-5.787l-5.263-3.971 5.263-3.971v7.942zm0-10.303v3.442l-3.748 2.828-1.942-1.942 5.69-4.328z'/></svg>",
+    gambar: "/assets/tools/vscode.svg",
     nama: "Visual Studio Code",
   },
   {
@@ -63,21 +62,13 @@ const listToolsStatic = [
   },
   {
     id: 12,
-    gambar:
-      "data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%2310B981' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'><circle cx='12' cy='12' r='9'/><path d='M12 16V8M9 11l3-3 3 3'/></svg>",
+    gambar: "/assets/icon-antigravity.webp",
     nama: "Antigravity",
   },
   {
     id: 13,
-    gambar:
-      "data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23D97706' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'><polyline points='4 17 10 11 4 5'/><line x1='12' y1='19' x2='20' y2='19'/></svg>",
+    gambar: "/assets/icon-claudecode.webp.webp",
     nama: "Claude Code",
-  },
-  {
-    id: 15,
-    gambar:
-      "data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23EC4899' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'><path d='M12 3v1M12 20v1M4 12H3M21 12h-1M18.36 5.64l-.7.7M6.34 17.66l-.7.7M5.64 5.64l.7.7M17.66 17.66l.7.7M9 12a3 3 0 1 1 6 0 3 3 0 0 1-6 0z'/></svg>",
-    nama: "AI Tools",
   },
   {
     id: 16,
@@ -86,8 +77,7 @@ const listToolsStatic = [
   },
   {
     id: 17,
-    gambar:
-      "data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%2300C4CC'><path d='M11.758 19.349c-3.136 0-5.728-.888-5.728-3.424 0-1.96 1.488-3.328 4.608-3.552l.968-.072c1.784-.136 2.504-.496 2.504-1.224 0-.84-.96-1.248-2.184-1.248-1.632 0-3.032.504-4.248 1.44l-.408-.688c1.392-1.072 3.096-1.56 4.752-1.56 2.376 0 3.84 1.072 3.84 2.808v5.52c0 .864.456 1.296 1.056 1.296.384 0 .768-.192 1.072-.512l.248.512c-.528.592-1.2.904-1.936.904-1.392 0-2.16-.92-2.16-2.224v-.272c-.792 1.544-2.312 2.512-4.448 2.512zm.288-6.192c-1.984.144-3.048.968-3.048 2.32 0 1.296 1.344 1.952 3.048 1.952 2.344 0 3.752-1.4 3.752-3.192v-.936c-.496.128-1.392.208-2.248.256v.001l-.256-.401zM12 0c6.627 0 12 5.373 12 12s-5.373 12-12 12S0 18.627 0 12 5.373 0 12 0z'/></svg>",
+    gambar: "/assets/icon-canva.webp.webp",
     nama: "Canva",
   },
   { id: 18, gambar: "https://cdn.simpleicons.org/figma/F24E1B", nama: "Figma" },
@@ -105,7 +95,6 @@ const listToolsStaticEn = listToolsStatic.map((t) => {
   else if (t.id === 11) ket = "Cloud Deployment";
   else if (t.id === 12) ket = "AI Coding Assistant";
   else if (t.id === 13) ket = "AI Assistant";
-  else if (t.id === 15) ket = "AI Workflows";
   else if (t.id === 16) ket = "Repository";
   else if (t.id === 17 || t.id === 18) ket = "Design App";
   return { ...t, ket };
@@ -123,6 +112,11 @@ export const translations = {
         "Jakarta-based product designer and developer, currently focused on frontend / fullstack MERN with +1 year of hands-on building web app.",
       contactTitle: "CONTACT",
       techTitle: "TECH STACK",
+      githubTitle: "GITHUB ACTIVITY",
+      githubContributions: "contributions",
+      githubInLast6Months: "in the last 6 months",
+      githubLess: "Less",
+      githubMore: "More",
       langTitle: "LANGUAGES",
       langList: [
         { name: "Indonesian", flag: "🇮🇩" },
@@ -147,6 +141,81 @@ export const translations = {
       notDeployed: "Not Deployed (Local Dev)",
       backBtn: "Back to Portfolio",
       list: [
+        {
+          id: 3,
+          gambar: "/assets/project3/cover-thumora.webp",
+          nama: "Thumora AI",
+          desk: "An AI-powered thumbnail creation platform designed to turn a simple content concept into production-ready thumbnails with minimal effort.",
+          subtitle:
+            "AI-Powered Thumbnail Generation Platform designed around real creator workflows, resilient SSE streaming, and community-driven inspiration.",
+          about:
+            "Thumora AI is an AI-powered thumbnail creation workspace built for creators. Beyond a simple API wrapper, it integrates prompt enhancement, modular visual style systems, dual-engine generation (streaming SSE & non-streaming reference synthesis), fair quota governance, and a community inspiration platform.",
+          category: "AI Product Engineering",
+          facts: [
+            "AI Product",
+            "Solo Build",
+            "2026",
+            "React + TypeScript",
+            "Express + MongoDB",
+            "OpenRouter + Cloudinary",
+          ],
+          tools: [
+            "React",
+            "TypeScript",
+            "Express",
+            "MongoDB",
+            "OpenRouter",
+            "Cloudinary",
+            "Tailwind CSS",
+            "SSE",
+          ],
+          images: [],
+          link: "https://thumoraai.vercel.app",
+          meta: {
+            date: "2026",
+            role: "Product / UI/UX / Fullstack",
+            category: "AI Product Engineering",
+            team: "Solo",
+            status: "Live",
+          },
+        },
+        {
+          id: 4,
+          gambar: "/assets/project4/cover-icon.webp",
+          nama: "SALDO",
+          desk: "An efficient money tracker powered by natural language capture, turning daily financial tracking from a tedious chore into a simple, natural conversation.",
+          subtitle:
+            "Efficient Money Tracker — Natural language financial capture, pace-aware forecasting, and calm editorial design.",
+          about:
+            "Managing money shouldn't feel like accounting. SALDO is an efficient money tracker built from a simple premise: tracking expenses should be as easy as telling someone what happened. Featuring multi-item natural language interpretation, period-over-period intelligence, pace forecasting, and a calm, non-cliché visual system.",
+          category: "Financial Technology",
+          facts: [
+            "Fintech App",
+            "Solo Build",
+            "2026",
+            "React + Node.js",
+            "MongoDB + Express",
+            "OpenRouter AI",
+          ],
+          tools: [
+            "React",
+            "Node.js",
+            "MongoDB",
+            "Express",
+            "OpenRouter",
+            "Tailwind CSS",
+            "Vercel",
+          ],
+          images: [],
+          link: "https://usesaldo.vercel.app",
+          meta: {
+            date: "2026",
+            role: "Product / UI/UX / Fullstack",
+            category: "Financial Technology",
+            team: "Solo",
+            status: "Live",
+          },
+        },
         {
           id: 1,
           gambar: "/assets/project1/banner_utama.webp",
@@ -366,81 +435,6 @@ export const translations = {
             date: "2026",
             role: "Product Designer & Frontend Engineer",
             category: "Creative Engineering",
-            team: "Solo",
-            status: "Live",
-          },
-        },
-        {
-          id: 3,
-          gambar: "/assets/project3/cover-thumora.webp",
-          nama: "Thumora AI",
-          desk: "An AI-powered thumbnail creation platform designed to turn a simple content concept into production-ready thumbnails with minimal effort.",
-          subtitle:
-            "AI-Powered Thumbnail Generation Platform designed around real creator workflows, resilient SSE streaming, and community-driven inspiration.",
-          about:
-            "Thumora AI is an AI-powered thumbnail creation workspace built for creators. Beyond a simple API wrapper, it integrates prompt enhancement, modular visual style systems, dual-engine generation (streaming SSE & non-streaming reference synthesis), fair quota governance, and a community inspiration platform.",
-          category: "AI Product Engineering",
-          facts: [
-            "AI Product",
-            "Solo Build",
-            "2026",
-            "React + TypeScript",
-            "Express + MongoDB",
-            "OpenRouter + Cloudinary",
-          ],
-          tools: [
-            "React",
-            "TypeScript",
-            "Express",
-            "MongoDB",
-            "OpenRouter",
-            "Cloudinary",
-            "Tailwind CSS",
-            "SSE",
-          ],
-          images: [],
-          link: "https://thumoraai.vercel.app",
-          meta: {
-            date: "2026",
-            role: "Product / UI/UX / Fullstack",
-            category: "AI Product Engineering",
-            team: "Solo",
-            status: "Live",
-          },
-        },
-        {
-          id: 4,
-          gambar: "/assets/project4/cover-icon.webp",
-          nama: "SALDO",
-          desk: "An efficient money tracker powered by natural language capture, turning daily financial tracking from a tedious chore into a simple, natural conversation.",
-          subtitle:
-            "Efficient Money Tracker — Natural language financial capture, pace-aware forecasting, and calm editorial design.",
-          about:
-            "Managing money shouldn't feel like accounting. SALDO is an efficient money tracker built from a simple premise: tracking expenses should be as easy as telling someone what happened. Featuring multi-item natural language interpretation, period-over-period intelligence, pace forecasting, and a calm, non-cliché visual system.",
-          category: "Financial Technology",
-          facts: [
-            "Fintech App",
-            "Solo Build",
-            "2026",
-            "React + Node.js",
-            "MongoDB + Express",
-            "OpenRouter AI",
-          ],
-          tools: [
-            "React",
-            "Node.js",
-            "MongoDB",
-            "Express",
-            "OpenRouter",
-            "Tailwind CSS",
-            "Vercel",
-          ],
-          images: [],
-          link: "https://usesaldo.vercel.app",
-          meta: {
-            date: "2026",
-            role: "Product / UI/UX / Fullstack",
-            category: "Financial Technology",
             team: "Solo",
             status: "Live",
           },
@@ -1230,6 +1224,11 @@ At the end of the day, my journey is not about transitioning from Russian Litera
         "Product Designer dan Web Developer yang berdomisili di Jakarta, saat ini fokus pada Frontend / Fullstack MERN dengan pengalaman lebih dari 1 tahun dalam membangun aplikasi web.",
       contactTitle: "CONTACT",
       techTitle: "TECH STACK",
+      githubTitle: "AKTIVITAS GITHUB",
+      githubContributions: "kontribusi",
+      githubInLast6Months: "dalam 6 bulan terakhir",
+      githubLess: "Sedikit",
+      githubMore: "Banyak",
       langTitle: "LANGUAGES",
       langList: [
         { name: "Indonesia", flag: "🇮🇩" },
@@ -1254,6 +1253,81 @@ At the end of the day, my journey is not about transitioning from Russian Litera
       notDeployed: "Tidak Dideploy (Lokal)",
       backBtn: "Kembali ke Portofolio",
       list: [
+        {
+          id: 3,
+          gambar: "/assets/project3/cover-thumora.webp",
+          nama: "Thumora AI",
+          desk: "Platform kreasi thumbnail berbasis AI yang dirancang untuk mengubah konsep konten sederhana menjadi thumbnail siap pakai dengan usaha minimal.",
+          subtitle:
+            "Platform Generator Thumbnail Berbasis AI yang dirancang untuk alur kerja kreator nyata, arsitektur streaming SSE yang andal, dan ekosistem inspirasi komunitas.",
+          about:
+            "Thumora AI adalah workspace pembuatan thumbnail bertenaga AI yang dirancang khusus untuk alur kerja kreator konten. Lebih dari sekadar pemanggil API biasa, platform ini mengintegrasikan prompt enhancer cerdas, sistem gaya visual modular, arsitektur generasi ganda (streaming SSE & non-streaming reference fallback), proteksi kuota, dan platform inspirasi komunitas.",
+          category: "AI Product Engineering",
+          facts: [
+            "Produk AI",
+            "Solo Build",
+            "2026",
+            "React + TypeScript",
+            "Express + MongoDB",
+            "OpenRouter + Cloudinary",
+          ],
+          tools: [
+            "React",
+            "TypeScript",
+            "Express",
+            "MongoDB",
+            "OpenRouter",
+            "Cloudinary",
+            "Tailwind CSS",
+            "SSE",
+          ],
+          images: [],
+          link: "https://thumoraai.vercel.app",
+          meta: {
+            date: "2026",
+            role: "Product / UI/UX / Fullstack",
+            category: "AI Product Engineering",
+            team: "Solo",
+            status: "Live",
+          },
+        },
+        {
+          id: 4,
+          gambar: "/assets/project4/cover-icon.webp",
+          nama: "SALDO",
+          desk: "Aplikasi pelacak keuangan efisien bertenaga natural language capture, mengubah pencatatan keuangan harian dari rutinitas membosankan menjadi percakapan alami.",
+          subtitle:
+            "Efficient Money Tracker — Natural language financial capture, pace-aware forecasting, dan desain editorial yang menenangkan.",
+          about:
+            "Mengelola uang tidak seharusnya terasa seperti akuntansi. SALDO adalah aplikasi pelacak keuangan efisien yang dibangun dari premis sederhana: mencatat pengeluaran seharusnya semudah menceritakan apa yang terjadi. Dilengkapi interpretasi natural language multi-item, analisis perbandingan periode, forecasting belanja, dan sistem visual yang tenang.",
+          category: "Financial Technology",
+          facts: [
+            "Aplikasi Fintech",
+            "Solo Build",
+            "2026",
+            "React + Node.js",
+            "MongoDB + Express",
+            "OpenRouter AI",
+          ],
+          tools: [
+            "React",
+            "Node.js",
+            "MongoDB",
+            "Express",
+            "OpenRouter",
+            "Tailwind CSS",
+            "Vercel",
+          ],
+          images: [],
+          link: "https://usesaldo.vercel.app",
+          meta: {
+            date: "2026",
+            role: "Product / UI/UX / Fullstack",
+            category: "Financial Technology",
+            team: "Solo",
+            status: "Live",
+          },
+        },
         {
           id: 1,
           gambar: "/assets/project1/banner_utama.webp",
@@ -1471,81 +1545,6 @@ At the end of the day, my journey is not about transitioning from Russian Litera
             date: "2026",
             role: "Product Designer & Frontend Engineer",
             category: "Creative Engineering",
-            team: "Solo",
-            status: "Live",
-          },
-        },
-        {
-          id: 3,
-          gambar: "/assets/project3/cover-thumora.webp",
-          nama: "Thumora AI",
-          desk: "Platform kreasi thumbnail berbasis AI yang dirancang untuk mengubah konsep konten sederhana menjadi thumbnail siap pakai dengan usaha minimal.",
-          subtitle:
-            "Platform Generator Thumbnail Berbasis AI yang dirancang untuk alur kerja kreator nyata, arsitektur streaming SSE yang andal, dan ekosistem inspirasi komunitas.",
-          about:
-            "Thumora AI adalah workspace pembuatan thumbnail bertenaga AI yang dirancang khusus untuk alur kerja kreator konten. Lebih dari sekadar pemanggil API biasa, platform ini mengintegrasikan prompt enhancer cerdas, sistem gaya visual modular, arsitektur generasi ganda (streaming SSE & non-streaming reference fallback), proteksi kuota, dan platform inspirasi komunitas.",
-          category: "AI Product Engineering",
-          facts: [
-            "Produk AI",
-            "Solo Build",
-            "2026",
-            "React + TypeScript",
-            "Express + MongoDB",
-            "OpenRouter + Cloudinary",
-          ],
-          tools: [
-            "React",
-            "TypeScript",
-            "Express",
-            "MongoDB",
-            "OpenRouter",
-            "Cloudinary",
-            "Tailwind CSS",
-            "SSE",
-          ],
-          images: [],
-          link: "https://thumoraai.vercel.app",
-          meta: {
-            date: "2026",
-            role: "Product / UI/UX / Fullstack",
-            category: "AI Product Engineering",
-            team: "Solo",
-            status: "Live",
-          },
-        },
-        {
-          id: 4,
-          gambar: "/assets/project4/cover-icon.webp",
-          nama: "SALDO",
-          desk: "Aplikasi pelacak keuangan efisien bertenaga natural language capture, mengubah pencatatan keuangan harian dari rutinitas membosankan menjadi percakapan alami.",
-          subtitle:
-            "Efficient Money Tracker — Natural language financial capture, pace-aware forecasting, dan desain editorial yang menenangkan.",
-          about:
-            "Mengelola uang tidak seharusnya terasa seperti akuntansi. SALDO adalah aplikasi pelacak keuangan efisien yang dibangun dari premis sederhana: mencatat pengeluaran seharusnya semudah menceritakan apa yang terjadi. Dilengkapi interpretasi natural language multi-item, analisis perbandingan periode, forecasting belanja, dan sistem visual yang tenang.",
-          category: "Financial Technology",
-          facts: [
-            "Aplikasi Fintech",
-            "Solo Build",
-            "2026",
-            "React + Node.js",
-            "MongoDB + Express",
-            "OpenRouter AI",
-          ],
-          tools: [
-            "React",
-            "Node.js",
-            "MongoDB",
-            "Express",
-            "OpenRouter",
-            "Tailwind CSS",
-            "Vercel",
-          ],
-          images: [],
-          link: "https://usesaldo.vercel.app",
-          meta: {
-            date: "2026",
-            role: "Product / UI/UX / Fullstack",
-            category: "Financial Technology",
             team: "Solo",
             status: "Live",
           },

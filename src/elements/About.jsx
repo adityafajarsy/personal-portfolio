@@ -118,7 +118,7 @@ const ToolItem = React.memo(({ tool }) => (
       <img
         src={tool.gambar}
         alt={tool.nama}
-        className="w-full h-full object-contain filter grayscale group-hover:grayscale-0 transition-all duration-300"
+        className="w-full h-full object-contain filter grayscale opacity-75 group-hover:opacity-100 group-hover:grayscale-0 transition-all duration-300"
         width="32"
         height="32"
         loading="lazy"
