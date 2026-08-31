@@ -1,11 +1,34 @@
-import React, { useEffect, useState, useRef } from "react";
+import React, { useEffect, useState } from "react";
 import { User, Folder, Briefcase, GraduationCap, BookOpen, Mail } from "lucide-react";
 import { m } from "framer-motion";
 import { useLanguage } from "../context/LanguageContext";
 
+const iconDropVariants = {
+  hidden: {
+    opacity: 0,
+    y: -60,
+    rotate: -15,
+    scale: 0.5,
+  },
+  visible: (i) => ({
+    opacity: 1,
+    y: [-60, 7, -4.5, 2.5, -1, 0],
+    rotate: [-15, 10, -7, 4, -1.5, 0],
+    scale: [0.5, 1.24, 0.9, 1.06, 0.98, 1],
+    transition: {
+      delay: 0.1 + i * 0.09,
+      duration: 0.75,
+      ease: "easeOut",
+    },
+  }),
+};
+
 export default function FloatingNav() {
   const { t } = useLanguage();
   const [activeSection, setActiveSection] = useState("intro");
+  const [isReady, setIsReady] = useState(() => {
+    return typeof window !== "undefined" && window.__PRELOADER_EXIT__ === true;
+  });
 
   const navItems = [
     { id: "intro", label: t("home.intro"), icon: User },
@@ -15,6 +38,26 @@ export default function FloatingNav() {
     { id: "articles", label: t("articles.label"), icon: BookOpen },
     { id: "kontak", label: t("contact.label"), icon: Mail },
   ];
+
+  // Synchronize start of icon drop animation exactly when PreLoader exits
+  useEffect(() => {
+    if (isReady) return;
+
+    const handlePreloaderExit = () => {
+      setIsReady(true);
+    };
+
+    window.addEventListener("preloader-exit", handlePreloaderExit);
+    // Fallback timer if event already passed or skipped
+    const timer = setTimeout(() => {
+      setIsReady(true);
+    }, 1600);
+
+    return () => {
+      window.removeEventListener("preloader-exit", handlePreloaderExit);
+      clearTimeout(timer);
+    };
+  }, [isReady]);
 
   useEffect(() => {
     const observerOptions = {
@@ -63,9 +106,14 @@ export default function FloatingNav() {
   };
 
   return (
-    <div className="fixed bottom-6 left-1/2 lg:left-[calc(50%+205px)] -translate-x-1/2 z-50">
+    <m.div
+      initial={{ opacity: 0, y: 25 }}
+      animate={isReady ? { opacity: 1, y: 0 } : { opacity: 0, y: 25 }}
+      transition={{ duration: 0.5, ease: "easeOut" }}
+      className="fixed bottom-6 left-1/2 lg:left-[calc(50%+205px)] -translate-x-1/2 z-50 pointer-events-auto"
+    >
       <nav className="flex items-center gap-6 px-6 py-2 rounded-full bg-[#0F0F0FC0] backdrop-blur-xl border border-white/8 shadow-2xl relative">
-        {navItems.map((item) => {
+        {navItems.map((item, index) => {
           const Icon = item.icon;
           const isActive = activeSection === item.id;
           return (
@@ -84,12 +132,21 @@ export default function FloatingNav() {
                 />
               )}
 
-              <Icon
-                size={18}
-                className={`relative z-10 transition-transform duration-300 group-hover:scale-110 ${
-                  isActive ? "text-[#3B82F6] scale-105" : "text-[#8A8A8A]"
-                }`}
-              />
+              {/* Animated Dropping & Shaking Icon */}
+              <m.div
+                custom={index}
+                variants={iconDropVariants}
+                initial="hidden"
+                animate={isReady ? "visible" : "hidden"}
+                className="relative z-10 flex items-center justify-center"
+              >
+                <Icon
+                  size={18}
+                  className={`transition-transform duration-300 group-hover:scale-110 ${
+                    isActive ? "text-[#3B82F6] scale-105" : "text-[#8A8A8A]"
+                  }`}
+                />
+              </m.div>
 
               {/* Tooltip on Hover */}
               <span className="absolute bottom-full mb-2 bg-[#0B0B0B] border border-white/5 text-white text-[11px] px-2 py-1 rounded-md opacity-0 translate-y-1 pointer-events-none group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-200 shadow-md whitespace-nowrap">
@@ -99,6 +156,6 @@ export default function FloatingNav() {
           );
         })}
       </nav>
-    </div>
+    </m.div>
   );
 }

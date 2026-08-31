@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { m, AnimatePresence } from "framer-motion";
+import { m, AnimatePresence, useMotionValue, useSpring, useTransform } from "framer-motion";
 import { useLanguage } from "../context/LanguageContext";
 
 const containerVariants = {
@@ -43,8 +43,29 @@ export default function Project({ onSelectProject }) {
   const { t } = useLanguage();
   const listProyek = t("projects.list") || [];
   const [expandedId, setExpandedId] = useState(null);
+  const [hoveredProject, setHoveredProject] = useState(null);
+
+  // Mouse cursor tracking for floating preview
+  const mouseX = useMotionValue(-500);
+  const mouseY = useMotionValue(-500);
+
+  const springConfig = { damping: 22, stiffness: 260, mass: 0.5 };
+  const smoothX = useSpring(mouseX, springConfig);
+  const smoothY = useSpring(mouseY, springConfig);
+
+  const rotateX = useTransform(smoothX, (latest) => {
+    if (typeof window === "undefined") return 0;
+    const center = window.innerWidth / 2;
+    return ((latest - center) / center) * 10;
+  });
+
+  const handleMouseMove = (e) => {
+    mouseX.set(e.clientX);
+    mouseY.set(e.clientY);
+  };
 
   const toggle = (id) => {
+    setHoveredProject(null);
     setExpandedId((prev) => (prev === id ? null : id));
   };
 
@@ -56,7 +77,55 @@ export default function Project({ onSelectProject }) {
       initial="hidden"
       whileInView="visible"
       viewport={{ once: true, margin: "-100px" }}
+      onMouseMove={handleMouseMove}
     >
+      {/* Desktop Floating Cursor Image Preview */}
+      <div className="hidden lg:block fixed inset-0 pointer-events-none z-[90] overflow-hidden">
+        <AnimatePresence>
+          {hoveredProject && expandedId !== hoveredProject.id && (
+            <m.div
+              key={hoveredProject.id}
+              initial={{ opacity: 0, scale: 0.6, y: 15 }}
+              animate={{ opacity: 1, scale: 1, y: 0 }}
+              exit={{
+                opacity: 0,
+                scale: 0.5,
+                y: 10,
+                transition: { duration: 0.18 },
+              }}
+              style={{
+                position: "fixed",
+                left: smoothX,
+                top: smoothY,
+                x: "-50%",
+                y: "-50%",
+                rotate: rotateX,
+              }}
+              className="w-[290px] h-[180px] rounded-[16px] overflow-hidden shadow-[0_25px_60px_-15px_rgba(0,0,0,0.95),0_0_35px_rgba(59,130,246,0.2)] border border-white/20 bg-[#0B0B0B] p-1.5 flex flex-col"
+            >
+              <div className="w-full h-full rounded-[12px] overflow-hidden relative">
+                <img
+                  src={hoveredProject.gambar}
+                  alt={hoveredProject.nama}
+                  className="w-full h-full object-cover"
+                  loading="eager"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-black/20" />
+                <div className="absolute bottom-2.5 left-3 right-3 flex items-center justify-between">
+                  <span className="text-[11.5px] font-bold text-white tracking-wide truncate drop-shadow-md">
+                    {hoveredProject.nama}
+                  </span>
+                  <span className="text-[9.5px] font-semibold text-[#3B82F6] bg-black/75 backdrop-blur-md px-2 py-0.5 rounded-full border border-white/15 shrink-0">
+                    {hoveredProject.category ||
+                      hoveredProject.meta?.category ||
+                      "Explore"}
+                  </span>
+                </div>
+              </div>
+            </m.div>
+          )}
+        </AnimatePresence>
+      </div>
       {/* Section Header */}
       <div className="flex flex-col gap-1">
         <m.span
@@ -111,8 +180,12 @@ export default function Project({ onSelectProject }) {
             >
               {/* Row Header — clickable */}
               <button
-                className="w-full text-left py-5 flex items-center gap-4 group cursor-pointer focus:outline-none"
+                className="w-full text-left py-5 flex items-center gap-4 group cursor-pointer focus:outline-none relative"
                 onClick={() => toggle(project.id)}
+                onMouseEnter={() => {
+                  if (!isOpen) setHoveredProject(project);
+                }}
+                onMouseLeave={() => setHoveredProject(null)}
                 aria-expanded={isOpen}
               >
                 {/* Number */}
