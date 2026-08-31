@@ -963,7 +963,7 @@ export const translations = {
             "Directed UI/UX design, user flows, and agile planning for two web portals (PPID & SIPIPI). Collaborated via Git to build the Next.js and TypeScript frontend.",
         },
         {
-          role: "Career Break (T-Shaped Upskilling)",
+          role: "Career Break",
           company: "Independent Learning",
           period: "Jan 2025 - Nov 2025",
           location: "Remote",
@@ -2063,7 +2063,7 @@ At the end of the day, my journey is not about transitioning from Russian Litera
             "Membuat desain UI/UX, alur user, pengunjung website, dan perencanaan (agile/scrum) untuk dua aplikasi web portal (PPID & SIPIPI). Berkolaborasi melalui Git untuk membangun frontend Next.js, TypeScript, Tailwind dan Shadcn UI.",
         },
         {
-          role: "Career Break (T-Shaped Upskilling)",
+          role: "Career Break",
           company: "Independent Learning",
           period: "Jan 2025 - Nov 2025",
           location: "Remote",
