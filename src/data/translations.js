@@ -2068,9 +2068,9 @@ At the end of the day, my journey is not about transitioning from Russian Litera
           period: "Jan 2025 - Nov 2025",
           location: "Remote",
           color: "bg-[#312E81] border border-indigo-700/50",
-          desc: "Melatih profil T-shaped dengan meneliti keterampilan lintas disiplin ilmu, termasuk automasi AI, product led growth (PLG), dan frontend lanjutan, diikuti oleh studi mandiri intensif dalam software development.",
+          desc: "Melatih profil T-shaped dengan meneliti keterampilan lintas disiplin ilmu, termasuk automasi AI, product led growth, dan frontend lanjutan, diikuti oleh studi mandiri intensif dalam software development.",
           descMobile:
-            "Melatih profil T-shaped dengan meneliti keterampilan lintas disiplin ilmu, termasuk automasi AI, product led growth (PLG), dan frontend lanjutan, lalu melanjutkan studi mandiri intensif dalam software development.",
+            "Melatih profil T-shaped dengan meneliti keterampilan lintas disiplin ilmu, termasuk automasi AI, product led growth, dan frontend lanjutan, lalu melanjutkan studi mandiri intensif dalam software development.",
         },
         {
           role: "ReactJS for Frontend Developer Bootcamp",
