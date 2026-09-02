@@ -968,9 +968,9 @@ export const translations = {
           period: "Jan 2025 - Nov 2025",
           location: "Remote",
           color: "bg-[#312E81] border border-indigo-700/50",
-          desc: "Built a T-shaped profile by researching cross-disciplinary skills, including AI workflows, product marketing, and advanced frontend paradigms, followed by intensive self-study in production-grade software engineering.",
+          desc: "Built a diverse profile by researching cross-disciplinary skills, including AI workflows, product marketing, and advanced frontend paradigms, followed by intensive self-study in production-grade software engineering.",
           descMobile:
-            "Researched cross-disciplinary skills including AI workflows, product marketing, and advanced frontend paradigms to build a versatile T-shaped profile.",
+            "Researched cross-disciplinary skills including AI workflows, product marketing, and advanced frontend paradigms to build a diverse profile.",
         },
         {
           role: "ReactJS for Frontend Developer Bootcamp",
@@ -2068,9 +2068,9 @@ At the end of the day, my journey is not about transitioning from Russian Litera
           period: "Jan 2025 - Nov 2025",
           location: "Remote",
           color: "bg-[#312E81] border border-indigo-700/50",
-          desc: "Melatih profil T-shaped dengan meneliti keterampilan lintas disiplin ilmu, termasuk automasi AI, product led growth, dan frontend lanjutan, diikuti oleh studi mandiri intensif dalam software development.",
+          desc: "Mengasah keterampilan lintas disiplin ilmu, termasuk automasi AI, product led growth, dan frontend lanjutan, diikuti oleh studi mandiri intensif dalam software development.",
           descMobile:
-            "Melatih profil T-shaped dengan meneliti keterampilan lintas disiplin ilmu, termasuk automasi AI, product led growth, dan frontend lanjutan, lalu melanjutkan studi mandiri intensif dalam software development.",
+            "Mengasah keterampilan lintas disiplin ilmu, termasuk automasi AI, product led growth, dan frontend lanjutan, lalu melanjutkan studi mandiri intensif dalam software development.",
         },
         {
           role: "ReactJS for Frontend Developer Bootcamp",
