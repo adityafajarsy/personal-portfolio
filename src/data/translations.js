@@ -983,7 +983,7 @@ export const translations = {
             "Mastered frontend engineering principles, modern React.js workflows, component-driven architectures, state management, and collaborative Git practices.",
         },
         {
-          role: "Creative Design & Multimedia Lead",
+          role: "Creative Lead",
           company: "Universitas Padjadjaran",
           period: "2021 - 2025",
           location: "Sumedang, Indonesia",
