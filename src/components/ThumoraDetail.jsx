@@ -13,7 +13,7 @@ const fadeUp = {
 
 // ── Shared Section Label & Title ──────────────────────────────────────────────
 const SLabel = ({ children }) => (
-  <span className="text-[11px] font-bold tracking-[0.2em] text-[#C084FC] uppercase block mb-1">
+  <span className="text-[11px] font-bold tracking-[0.2em] text-[#F85EAD] uppercase block mb-1">
     {children}
   </span>
 );
@@ -104,8 +104,8 @@ const MediaFrame = ({
     <div
       className={`w-full rounded-[18px] sm:rounded-[24px] overflow-hidden bg-[#08080C] border border-white/8 relative flex flex-col ${aspect} justify-between p-4 sm:p-7 shadow-2xl transition-all duration-300 hover:border-white/15 ${className}`}
     >
-      {/* Subtle Purple / Ambient Glow */}
-      <div className="absolute inset-0 bg-gradient-to-tr from-[#A855F7]/5 via-transparent to-[#3B82F6]/5 pointer-events-none" />
+      {/* Subtle Pink / Ambient Glow */}
+      <div className="absolute inset-0 bg-gradient-to-tr from-[#F85EAD]/5 via-transparent to-[#3B82F6]/5 pointer-events-none" />
       <div className="absolute inset-0 bg-[radial-gradient(#ffffff08_1px,transparent_1px)] [background-size:20px_20px] pointer-events-none opacity-40" />
 
       {/* Real Video Player if provided */}
@@ -136,7 +136,7 @@ const MediaFrame = ({
           {/* Top Bar Label */}
           <div className="relative z-10 flex items-center justify-between w-full border-b border-white/5 pb-3">
             <div className="flex items-center gap-2">
-              <span className="w-2 h-2 rounded-full bg-[#C084FC]/70" />
+              <span className="w-2 h-2 rounded-full bg-[#F85EAD]/70" />
               <span className="text-[10px] font-mono tracking-widest text-white/50 uppercase font-semibold">
                 {label}
               </span>
@@ -146,7 +146,7 @@ const MediaFrame = ({
 
           {/* Center Visual Mockup Indicator */}
           <div className="relative z-10 my-auto flex flex-col items-center justify-center text-center gap-3 px-4 py-6">
-            <div className="w-12 h-12 sm:w-14 sm:h-14 rounded-2xl bg-white/[0.03] border border-white/10 flex items-center justify-center text-[#C084FC] shadow-inner">
+            <div className="w-12 h-12 sm:w-14 sm:h-14 rounded-2xl bg-white/[0.03] border border-white/10 flex items-center justify-center text-[#F85EAD] shadow-inner">
               {isVideo ? <IconPlay /> : <IconImage />}
             </div>
             <div className="flex flex-col gap-1 max-w-lg">
@@ -205,14 +205,14 @@ export default function ThumoraDetail({ project, onClose }) {
         </button>
 
         <div className="flex items-center gap-3">
-          <span className="text-[11px] font-mono font-bold tracking-widest text-[#C084FC] bg-[#C084FC]/10 border border-[#C084FC]/25 px-2.5 py-1 rounded-full uppercase">
+          <span className="text-[11px] font-mono font-bold tracking-widest text-[#F85EAD] bg-[#F85EAD]/10 border border-[#F85EAD]/25 px-2.5 py-1 rounded-full uppercase">
             AI Product
           </span>
           <a
             href="https://thumoraai.vercel.app"
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-xl bg-[#A855F7] hover:bg-[#9333EA] text-white text-[12px] font-bold transition-all shadow-md shadow-[#A855F7]/20 active:scale-95"
+            className="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-xl bg-[#F85EAD] hover:bg-[#e04c97] text-white text-[12px] font-bold transition-all shadow-md shadow-[#F85EAD]/20 active:scale-95"
           >
             <span>Live App</span>
             <IconExternal />
@@ -463,7 +463,7 @@ export default function ThumoraDetail({ project, onClose }) {
           <span className="text-[10px] font-mono text-[#8A8A8A] uppercase tracking-widest font-bold">
             CORE STACK
           </span>
-          <span className="text-[14px] font-mono font-semibold text-[#C084FC]">
+          <span className="text-[14px] font-mono font-semibold text-[#F85EAD]">
             React · TypeScript · Express · MongoDB · OpenRouter · Cloudinary
           </span>
         </div>
@@ -485,7 +485,7 @@ export default function ThumoraDetail({ project, onClose }) {
           href="https://thumoraai.vercel.app"
           target="_blank"
           rel="noopener noreferrer"
-          className="inline-flex items-center gap-2 text-[#C084FC] hover:text-[#D8B4FE] text-[13px] sm:text-[14px] font-bold transition-colors group"
+          className="inline-flex items-center gap-2 text-[#F85EAD] hover:text-[#fba3ce] text-[13px] sm:text-[14px] font-bold transition-colors group"
         >
           <span>thumoraai.vercel.app</span>
           <span className="group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform duration-200">

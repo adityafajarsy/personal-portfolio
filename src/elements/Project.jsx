@@ -231,7 +231,7 @@ export default function Project({ onSelectProject }) {
                     )}
                     {project.id === 3 && (
                       <span
-                        className="absolute top-[-14px] left-[105px] sm:left-auto sm:right-[-48px] sm:top-[-10px] text-[#C084FC] text-[12px] sm:text-[13px] tracking-tight font-bold select-none pointer-events-none whitespace-nowrap"
+                        className="absolute top-[-14px] left-[105px] sm:left-auto sm:right-[-48px] sm:top-[-10px] text-[#F85EAD] text-[12px] sm:text-[13px] tracking-tight font-bold select-none pointer-events-none whitespace-nowrap"
                         style={{
                           fontFamily: "'Nothing You Could Do', cursive",
                           transform: "rotate(-6deg)",
