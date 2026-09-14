@@ -1,5 +1,11 @@
 import React, { useState } from "react";
-import { m, AnimatePresence, useMotionValue, useSpring, useTransform } from "framer-motion";
+import {
+  m,
+  AnimatePresence,
+  useMotionValue,
+  useSpring,
+  useTransform,
+} from "framer-motion";
 import { useLanguage } from "../context/LanguageContext";
 
 const containerVariants = {
@@ -237,7 +243,7 @@ export default function Project({ onSelectProject }) {
                           transform: "rotate(-6deg)",
                         }}
                       >
-                        AI Product
+                        Intelligence Generator
                       </span>
                     )}
                     {project.id === 4 && (
@@ -248,7 +254,7 @@ export default function Project({ onSelectProject }) {
                           transform: "rotate(-6deg)",
                         }}
                       >
-                        AI Money Tracker
+                        Smart Money Tracker
                       </span>
                     )}
                   </span>

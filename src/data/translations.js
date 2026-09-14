@@ -145,7 +145,7 @@ export const translations = {
           id: 3,
           gambar: "/assets/project3/cover-thumora.webp",
           nama: "Thumora AI",
-          desk: "An AI-powered thumbnail creation platform designed to turn a simple content concept into production-ready thumbnails with minimal effort.",
+          desk: "An Intelligence thumbnail creation platform designed to turn a simple content concept into production-ready thumbnails with minimal effort.",
           subtitle:
             "AI-Powered Thumbnail Generation Platform designed around real creator workflows, resilient SSE streaming, and community-driven inspiration.",
           about:
@@ -1295,7 +1295,7 @@ At the end of the day, my journey is not about transitioning from Russian Litera
           id: 4,
           gambar: "/assets/project4/cover-icon.webp",
           nama: "SALDO",
-          desk: "Aplikasi pelacak keuangan efisien bertenaga natural language capture, mengubah pencatatan keuangan harian dari rutinitas membosankan menjadi percakapan alami.",
+          desk: "Aplikasi pelacak keuangan efisien bertenaga natural language capture, mengubah pencatatan keuangan harian menjadi percakapan alami.",
           subtitle:
             "Efficient Money Tracker — Natural language financial capture, pace-aware forecasting, dan desain editorial yang menenangkan.",
           about:
@@ -1517,11 +1517,11 @@ At the end of the day, my journey is not about transitioning from Russian Litera
           id: 2,
           gambar: "/assets/project2/banner_cover.webp",
           nama: "Builder's Archive",
-          desk: "Sistem identitas digital pribadi yang dirancang untuk mengomunikasikan cara berpikir, filosofi desain, dan proses engineering, bukan sekadar menampilkan proyek.",
+          desk: "Portfolio yang dirancang untuk mengomunikasikan cara berpikir, filosofi desain, dan proses engineering, bukan sekadar menampilkan proyek.",
           subtitle:
-            "Identitas digital pribadi yang dirancang untuk mengomunikasikan cara berpikir, meneliti, mendesain, dan mengerjakan produk digital, bukan sekadar website portfolio biasa.",
+            "Portfolio yang dirancang untuk mengomunikasikan cara berpikir, meneliti, mendesain, dan mengerjakan produk digital, bukan sekadar website portfolio biasa.",
           about:
-            "Builder's Archive adalah website portfolio saya. Tapi ini bukan sekadar portfolio. Ini adalah sistem identitas digital yang dibangun untuk mengomunikasikan filosofi desain, proses kreatif, dan kemampuan engineering saya. Setiap keputusan visual, setiap interaksi, dan setiap kata di website ini ada untuk menceritakan bagaimana saya mendekati masalah dan membangun produk.",
+            "Builder's Archive adalah website portfolio saya. Tapi ini bukan sekadar portfolio. Ini adalah identitas digital yang dibangun untuk mengomunikasikan filosofi desain, proses kreatif, dan kemampuan engineering saya. Setiap keputusan visual, setiap interaksi, dan setiap kata di website ini ada untuk menceritakan bagaimana saya mendekati masalah dan membangun produk.",
           category: "Creative Engineering",
           facts: [
             "Proyek Pribadi",
