@@ -205,9 +205,6 @@ export default function ThumoraDetail({ project, onClose }) {
         </button>
 
         <div className="flex items-center gap-3">
-          <span className="text-[11px] font-mono font-bold tracking-widest text-[#F85EAD] bg-[#F85EAD]/10 border border-[#F85EAD]/25 px-2.5 py-1 rounded-full uppercase">
-            AI Product
-          </span>
           <a
             href="https://thumoraai.vercel.app"
             target="_blank"
@@ -223,10 +220,9 @@ export default function ThumoraDetail({ project, onClose }) {
       {/* ── SECTION 01 — INTRO / THE PRODUCT ─────────────────────────────────── */}
       <m.div variants={fadeUp} custom={0} initial="hidden" animate="visible" className="flex flex-col gap-6">
         <div className="flex flex-col gap-3">
-          <SLabel>{d.sec1Label || "01 / THE PRODUCT"}</SLabel>
           <STitle>{d.sec1Title || "AI Thumbnail Generator for Creators"}</STitle>
           <p className="text-[15px] sm:text-[17px] text-white/70 leading-relaxed max-w-3xl font-normal mt-1">
-            {d.sec1Desc || "Thumora helps creators turn simple ideas into ready-to-use thumbnails — or explore existing creations as references for their next one."}
+            {d.sec1Desc || "Thumora helps creators turn simple ideas into ready-to-use thumbnails, or explore existing creations as references for their next one."}
           </p>
 
           <div className="pt-2">
@@ -251,7 +247,6 @@ export default function ThumoraDetail({ project, onClose }) {
       {/* ── SECTION 02 — FROM IDEA TO THUMBNAIL ──────────────────────────────── */}
       <m.div variants={fadeUp} custom={1} initial="hidden" animate="visible" className="flex flex-col gap-6">
         <div className="flex flex-col gap-2">
-          <SLabel>{d.sec2Label || "02 / THE EXPERIENCE"}</SLabel>
           <STitle>{d.sec2Title || "From Idea to Thumbnail"}</STitle>
           <p className="text-[14.5px] sm:text-[16px] text-white/60 leading-relaxed max-w-3xl font-normal">
             {d.sec2Desc || "A simple workflow built around the way creators make thumbnails: define an idea, shape the visual direction, generate, and save the result."}
@@ -304,7 +299,6 @@ export default function ThumoraDetail({ project, onClose }) {
       {/* ── SECTION 03 — SEE IT IN ACTION ────────────────────────────────────── */}
       <m.div variants={fadeUp} custom={2} initial="hidden" animate="visible" className="flex flex-col gap-8">
         <div className="flex flex-col gap-2">
-          <SLabel>{d.sec3Label || "03 / SEE IT IN ACTION"}</SLabel>
           <STitle>{d.sec3Title || "See Thumora in Action"}</STitle>
           <p className="text-[14.5px] sm:text-[16px] text-white/60 leading-relaxed max-w-3xl font-normal">
             {d.sec3Desc || "From exploring the product to generating a thumbnail, these walkthroughs show the experience in practice."}
@@ -341,7 +335,6 @@ export default function ThumoraDetail({ project, onClose }) {
       {/* ── SECTION 04 — COMMUNITY ───────────────────────────────────────────── */}
       <m.div variants={fadeUp} custom={3} initial="hidden" animate="visible" className="flex flex-col gap-6">
         <div className="flex flex-col gap-2">
-          <SLabel>{d.sec4Label || "04 / COMMUNITY"}</SLabel>
           <STitle>{d.sec4Title || "More Than a Generator"}</STitle>
           <p className="text-[14.5px] sm:text-[16px] text-white/60 leading-relaxed max-w-3xl font-normal">
             {d.sec4Desc || "Thumora also gives creators a place to discover thumbnail ideas, inspect how they were made, and use them as references for their own work."}
@@ -387,7 +380,6 @@ export default function ThumoraDetail({ project, onClose }) {
       {/* ── SECTION 05 — RESPONSIVE + PRODUCT DETAILS ────────────────────────── */}
       <m.div variants={fadeUp} custom={4} initial="hidden" animate="visible" className="flex flex-col gap-6">
         <div className="flex flex-col gap-2">
-          <SLabel>{d.sec5Label || "05 / PRODUCT DETAILS"}</SLabel>
           <STitle>{d.sec5Title || "Designed for the Web"}</STitle>
           <p className="text-[14.5px] sm:text-[16px] text-white/60 leading-relaxed max-w-3xl font-normal">
             {d.sec5Desc || "Thumora is built as a responsive web application, with authentication, thumbnail generation, personal generation history, and interfaces designed for both desktop and mobile."}
@@ -430,7 +422,6 @@ export default function ThumoraDetail({ project, onClose }) {
       {/* ── SECTION 06 — FINAL SHOWCASE / CLOSING ────────────────────────────── */}
       <m.div variants={fadeUp} custom={5} initial="hidden" animate="visible" className="flex flex-col gap-6">
         <div className="flex flex-col gap-2">
-          <SLabel>{d.sec6Label || "FINAL SHOWCASE"}</SLabel>
           <STitle>{d.sec6Title || "Built to Turn Ideas Into Thumbnails."}</STitle>
           <p className="text-[14.5px] sm:text-[16px] text-white/60 leading-relaxed max-w-3xl font-normal">
             {d.sec6Desc || "Thumora combines AI generation, creative controls, and community inspiration in one simple workflow for creators."}

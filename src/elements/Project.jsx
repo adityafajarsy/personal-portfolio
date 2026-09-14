@@ -213,6 +213,17 @@ export default function Project({ onSelectProject }) {
                     }`}
                   >
                     {project.nama}
+                    {project.id === 5 && (
+                      <span
+                        className="absolute top-[-14px] left-[70px] sm:left-auto sm:right-[-68px] sm:top-[-10px] text-[#38BDF8] text-[12px] sm:text-[13px] tracking-tight font-bold select-none pointer-events-none whitespace-nowrap"
+                        style={{
+                          fontFamily: "'Nothing You Could Do', cursive",
+                          transform: "rotate(-6deg)",
+                        }}
+                      >
+                        Visual Intelligence
+                      </span>
+                    )}
                     {project.id === 1 && (
                       <span
                         className="absolute top-[-14px] left-[105px] sm:left-auto sm:right-[-48px] sm:top-[-10px] text-[#38BDF8] text-[12px] sm:text-[13px] tracking-tight font-bold select-none pointer-events-none whitespace-nowrap"

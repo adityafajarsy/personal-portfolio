@@ -1,9 +1,3 @@
-const ProjectPPIDImg = "/projects/ppid-cover.webp";
-// Placeholder: replace with actual PPID screenshot when available
-const ProjectNetflixImg = "/projects/netflix-clone.webp";
-const ProjectEcomImg = "/projects/hamburger.webp";
-const ProjectCompanyImg = "/projects/leveldva.webp";
-
 const listToolsStatic = [
   {
     id: 1,
@@ -135,12 +129,52 @@ export const translations = {
     projects: {
       label: "Projects",
       slogan: "crafting digital experiences",
-      title: "Selected Works",
+      title: "Featured Projects",
       swipe: "Swipe",
       launchBtn: "Launch Project",
       notDeployed: "Not Deployed (Local Dev)",
       backBtn: "Back to Portfolio",
       list: [
+        {
+          id: 5,
+          gambar: "/assets/nemu/banner-nemu.webp",
+          nama: "NEMU",
+          desk: "An AI-powered visual reference intelligence tool that turns visual inspiration into actionable design information.",
+          subtitle:
+            "Visual Reference Intelligence: Inspect the visual DNA behind any reference, from typography and color systems to actionable generation prompts.",
+          about:
+            "NEMU is an AI-powered visual reference intelligence tool built for designers and creative builders. Rather than functioning as a generic AI image descriptor, it dissects reference posters and artwork into inspectable layers: detected typography classifications with Google Font alternatives, deterministic mathematical color palettes, composition principles, and generative prompt studios.",
+          category: "Visual Search Intelligence",
+          facts: [
+            "AI Product",
+            "Solo Build",
+            "2026",
+            "React + Vite",
+            "Node.js + Express",
+            "node-vibrant + OpenRouter",
+            "MongoDB + Cloudinary",
+          ],
+          tools: [
+            "React",
+            "Vite",
+            "Tailwind CSS",
+            "Node.js",
+            "Express",
+            "MongoDB",
+            "OpenRouter",
+            "Cloudinary",
+            "node-vibrant",
+          ],
+          images: [],
+          link: "https://nemu-in.vercel.app",
+          meta: {
+            date: "2026",
+            role: "Product Designer & Full-Stack Developer",
+            category: "Visual Search Intelligence",
+            team: "Solo",
+            status: "Live",
+          },
+        },
         {
           id: 3,
           gambar: "/assets/project3/cover-thumora.webp",
@@ -150,7 +184,7 @@ export const translations = {
             "AI-Powered Thumbnail Generation Platform designed around real creator workflows, resilient SSE streaming, and community-driven inspiration.",
           about:
             "Thumora AI is an AI-powered thumbnail creation workspace built for creators. Beyond a simple API wrapper, it integrates prompt enhancement, modular visual style systems, dual-engine generation (streaming SSE & non-streaming reference synthesis), fair quota governance, and a community inspiration platform.",
-          category: "AI Product Engineering",
+          category: "Thumbnail Generator",
           facts: [
             "AI Product",
             "Solo Build",
@@ -174,7 +208,7 @@ export const translations = {
           meta: {
             date: "2026",
             role: "Product / UI/UX / Fullstack",
-            category: "AI Product Engineering",
+            category: "Thumbnail Generator",
             team: "Solo",
             status: "Live",
           },
@@ -185,7 +219,7 @@ export const translations = {
           nama: "SALDO",
           desk: "An efficient money tracker powered by natural language capture, turning daily financial tracking from a tedious chore into a simple, natural conversation.",
           subtitle:
-            "Efficient Money Tracker — Natural language financial capture, pace-aware forecasting, and calm editorial design.",
+            "Efficient Money Tracker: Natural language financial capture, pace-aware forecasting, and calm editorial design.",
           about:
             "Managing money shouldn't feel like accounting. SALDO is an efficient money tracker built from a simple premise: tracking expenses should be as easy as telling someone what happened. Featuring multi-item natural language interpretation, period-over-period intelligence, pace forecasting, and a calm, non-cliché visual system.",
           category: "Financial Technology",
@@ -226,7 +260,7 @@ export const translations = {
           subtitle:
             "A modern digital ecosystem for Indonesia's Public Information and Documentation Management, consisting of a public information portal, an internal request management platform, and a custom content management system.",
           about:
-            "PPID Digital Ecosystem is a complete digital ecosystem developed during my 6-month internship at Indonesia's Ministry of Administrative and Bureaucratic Reform (Kementerian PANRB). The ecosystem modernizes existing PPID services by redesigning the user experience, rebuilding the frontend, improving internal workflows, and replacing outdated content management processes. The project consists of three integrated modules — Portal PPID (Public Website), SIPIPI (Internal Information Request Management System), and CMS (Internal Content Management System) — all belonging to one integrated ecosystem.",
+            "PPID Digital Ecosystem is a complete digital ecosystem developed during my 6-month internship at Indonesia's Ministry of Administrative and Bureaucratic Reform (Kementerian PANRB). The ecosystem modernizes existing PPID services by redesigning the user experience, rebuilding the frontend, improving internal workflows, and replacing outdated content management processes. The project consists of three integrated modules: Portal PPID (Public Website), SIPIPI (Internal Information Request Management System), and CMS (Internal Content Management System), all belonging to one integrated ecosystem.",
           facts: [
             "Government Project",
             "Internship Project",
@@ -256,7 +290,7 @@ export const translations = {
               label: "Internal Request Management",
               type: "internal",
               icon: "server",
-              desc: "An internal platform for PPID administrators to manage the full lifecycle of public information requests — from receipt to response.",
+              desc: "An internal platform for PPID administrators to manage the full lifecycle of public information requests from receipt to response.",
               features: [
                 "Receive new requests",
                 "Verify submissions",
@@ -460,7 +494,7 @@ export const translations = {
         "Public-facing Portal PPID interface. Screenshots of the internal systems (SIPIPI & CMS) are not publicly displayed due to confidentiality.",
       internalLabel: "Internal Systems",
       internalTitle: "SIPIPI & CMS Platform",
-      internalConfidential: "Confidential — Not Publicly Disclosed",
+      internalConfidential: "Confidential: Not Publicly Disclosed",
       internalNote:
         "Due to confidentiality and security considerations, the internal management platform (SIPIPI & CMS), source code, and administrative interfaces cannot be publicly disclosed.",
       internalContribNote:
@@ -477,9 +511,9 @@ export const translations = {
       publicBadge: "Public",
       internalBadge: "Internal",
       systemNote:
-        "CMS & SIPIPI run in the same internal app — no separate systems needed.",
-      heroPreview: "Portal PPID — Public Interface Preview",
-      demoVideoLabel: "Portal PPID — Interactive Video Demo",
+        "CMS & SIPIPI run in the same internal app, with no separate systems needed.",
+      heroPreview: "Portal PPID: Public Interface Preview",
+      demoVideoLabel: "Portal PPID: Interactive Video Demo",
       metaRole: "Role",
       metaTeam: "Team",
       flowCitizen: "Citizen",
@@ -854,7 +888,7 @@ export const translations = {
       sec1Label: "01 / THE PRODUCT",
       sec1Title: "AI Thumbnail Generator for Creators",
       sec1Desc:
-        "Thumora helps creators turn simple ideas into ready-to-use thumbnails — or explore existing creations as references for their next one.",
+        "Thumora helps creators turn simple ideas into ready-to-use thumbnails or explore existing creations as references for their next one.",
 
       sec2Label: "02 / THE EXPERIENCE",
       sec2Title: "From Idea to Thumbnail",
@@ -883,39 +917,39 @@ export const translations = {
     },
     saldoDetail: {
       heroMeta: "CASE STUDY · 2026 · SOLO BUILD",
-      heroTitle: "SALDO — Efficient Money Tracker",
+      heroTitle: "SALDO: Efficient Money Tracker",
       heroDesc:
         "Managing money shouldn't feel like doing accounting. SALDO turns everyday money tracking into a simple conversation.",
 
-      sec1Label: "01 — THE IDEA",
+      sec1Label: "01. THE IDEA",
       sec1Title: "Money tracking should take seconds, not forms.",
       sec1Desc:
         "SALDO started from a simple observation: recording a small expense shouldn't require navigating through multiple fields, categories, accounts, and dates.",
 
-      sec2Label: "02 — THE EXPERIENCE",
+      sec2Label: "02. THE EXPERIENCE",
       sec2Title: "Tell SALDO what happened.",
       sec2Desc:
         "Type the way you normally speak. SALDO interprets the transaction and prepares it for confirmation.",
 
-      sec3Label: "03 — THE PRODUCT",
+      sec3Label: "03. THE PRODUCT",
       sec3Title: "A calm interface for everyday money.",
       sec3Desc:
         "A serene financial experience designed with subtle mint tones, deep forest surfaces, and generous breathing room.",
 
-      sec4Label: "04 — THE APP",
+      sec4Label: "04. THE APP",
       sec4Title: "The same idea, once you're inside.",
       sec4Desc:
         "SALDO keeps the interface quiet so the important information stays visible: what you have, what you've spent, and what's likely next.",
 
-      sec5Label: "05 — THE VISUAL LANGUAGE",
+      sec5Label: "05. THE VISUAL LANGUAGE",
       sec5Title: "Calm, expressive, and intentionally simple.",
       sec5Desc:
         "Soft mint surfaces, deep forest tones, expressive typography, and organic motion give SALDO a visual language that feels closer to a product than a spreadsheet.",
 
-      sec6Label: "06 — THE OUTCOME",
+      sec6Label: "06. THE OUTCOME",
       sec6Title: "Money tracking that feels like a conversation.",
       sec6Desc:
-        "SALDO turns the small, repetitive task of recording money into a faster, calmer experience — while keeping the bigger picture visible.",
+        "SALDO turns the small, repetitive task of recording money into a faster, calmer experience, while keeping the bigger picture visible.",
     },
     education: {
       label: "Education",
@@ -1212,6 +1246,95 @@ At the end of the day, my journey is not about transitioning from Russian Litera
       placeholderEmail: "john@example.com",
       placeholderMsg: "Tell me about your project...",
     },
+    nemuDetail: {
+      tag: "Visual Reference Intelligence",
+      launchBtn: "Launch NEMU",
+      meta: {
+        roleLabel: "ROLE",
+        role: "Product Designer & Full-Stack Developer",
+        typeLabel: "TYPE",
+        type: "Visual Search Intelligence",
+        stackLabel: "STACK",
+        stack:
+          "React · Vite · Tailwind CSS · Node.js · Express · MongoDB · OpenRouter · Cloudinary · node-vibrant",
+        statusLabel: "STATUS",
+        status: "Live",
+        dateLabel: "YEAR",
+        date: "2026",
+      },
+      sec1Label: "01 / VISUAL REFERENCE INTELLIGENCE",
+      sec1Title: "What if you could inspect why a reference works?",
+      sec1Desc:
+        "Designers constantly collect references from posters, social media, websites, branding, and photography. The difficult part isn't finding inspiration; it's understanding what visual style is at play, why the typography works, what colors drive the composition, and how to translate that visual language into an actionable creative direction.",
+      sec1Transform: {
+        refTitle: "Original Reference",
+        refDesc: "Raw poster or visual asset collected as creative inspiration",
+        engineTitle: "NEMU Intelligence Engine",
+        engineDesc:
+          "Hybrid deterministic extraction & multimodal visual reasoning",
+        outputTitle: "Usable Design DNA",
+        outputDesc:
+          "Structured typography match, exact color tokens, composition logic, and prompt studio",
+      },
+      sec2Label: "02 / THE INSPECTOR",
+      sec2Title: "One reference. A complete visual breakdown.",
+      sec2Desc:
+        "NEMU keeps the original reference visible on the left while breaking its visual language into inspectable layers on the right (style, typography, color, composition, and creative direction). The user is never forced to mentally compare the original reference with isolated text.",
+      callouts: {
+        styleLabel: "STYLE",
+        styleTitle: "Editorial / Swiss-Inspired / Structured",
+        styleDesc:
+          "Identifies stylistic movements, grid discipline, and structural visual mood.",
+        typeLabel: "TYPE",
+        typeTitle: "Classification → Closest Google Font",
+        typeDesc:
+          "Detects typographic classification (Grotesk, Serif, Display) and pairs it with immediately testable Google Fonts.",
+        colorLabel: "COLOR",
+        colorTitle: "Dominant Palette + Exact HEX / RGB",
+        colorDesc:
+          "Extracts mathematical color dominance, exact color codes, and contrast relationships.",
+        compLabel: "COMPOSITION",
+        compTitle: "Grid, Focal Point & Balance",
+        compDesc:
+          "Analyzes focal hierarchy, negative whitespace balance, and layout alignment rules.",
+      },
+      sec3Label: "03 / TURNING INSIGHT INTO ACTION",
+      sec3Title: "The output isn't just an explanation. It's a starting point.",
+      sec3Desc:
+        "Rather than simply offering a passive description of an image, NEMU converts visual impressions into concrete design tools: a live typography playground, exact color swatches, and high-intent search & generation prompts.",
+      actionA: {
+        label: "A. TYPOGRAPHY PLAYGROUND",
+        title: "Classification → Immediately Testable Font",
+        desc: "NEMU doesn't stop at identifying a font style. It pairs the reference with the closest Google Font alternative, provides confidence metrics, and gives the designer an interactive specimen where they can test custom copy in real-time.",
+      },
+      actionB: {
+        label: "B. COLOR PALETTE EXTRACTION",
+        title: "A visual impression becomes usable design data.",
+        desc: "Color extraction isn't just swatches; it's usable design data. Dominant colors are measured with percentage dominance, exact HEX, RGB, and contrast readiness with one-click copy.",
+      },
+      actionC: {
+        label: "C. PROMPT STUDIO & DISCOVERY",
+        title: "From visual DNA to creative exploration.",
+        desc: "Once the visual language is understood, NEMU translates it into curated Pinterest keywords and structured AI generation prompts so the designer can continue exploring similar directions.",
+      },
+      sec4Label: "04 / UNDER THE HOOD",
+      sec4Title: "A hybrid pipeline, not a single AI call.",
+      sec4Desc:
+        "NEMU separates what should be deterministic from what benefits from visual reasoning. Color extraction is handled programmatically with node-vibrant for mathematical precision, while multimodal vision models interpret the reference to structure creative analysis and typography matching.",
+      arch: {
+        client: "React + Vite Client",
+        api: "Express / Node.js API",
+        vibrant: "node-vibrant (Deterministic Color Extraction)",
+        vision: "OpenRouter Vision Model (Visual Reasoning)",
+        db: "MongoDB Database",
+        cloudinary: "Cloudinary Image CDN",
+      },
+      productDepth: {
+        label: "FULL PRODUCT LIFECYCLE",
+        title: "A Complete Visual Intelligence Library",
+        desc: "NEMU is engineered as a complete product experience: Upload ➔ Analyze ➔ Save ➔ Favorite ➔ Archive with authenticated workspaces and persistent reference collections.",
+      },
+    },
   },
   id: {
     preloader: {
@@ -1247,12 +1370,52 @@ At the end of the day, my journey is not about transitioning from Russian Litera
     projects: {
       label: "Projects",
       slogan: "crafting digital experiences",
-      title: "Selected Works",
+      title: "Featured Projects",
       swipe: "Geser",
       launchBtn: "Buka Proyek",
       notDeployed: "Tidak Dideploy (Lokal)",
       backBtn: "Kembali ke Portofolio",
       list: [
+        {
+          id: 5,
+          gambar: "/assets/nemu/banner-nemu.webp",
+          nama: "NEMU",
+          desk: "Platform visual reference intelligence bertenaga AI yang mengubah inspirasi visual menjadi informasi dan sistem desain yang siap pakai.",
+          subtitle:
+            "Visual Reference Intelligence: Bedah DNA visual di balik referensi desain, mulai dari tipografi dan sistem warna hingga keyword pencarian dan prompt untuk generate.",
+          about:
+            "NEMU adalah platform visual reference intelligence bertenaga AI untuk desainer dan kreator. Bukan sekadar pendeskripsi gambar AI biasa, NEMU membedah poster dan referensi visual menjadi lapisan data yang dapat diinspeksi: klasifikasi tipografi dengan alternatif Google Font terdekat, ekstraksi palet warna matematis deterministik, prinsip komposisi, serta studio prompt generasi & pencarian.",
+          category: "Visual Search Intelligence",
+          facts: [
+            "Produk AI",
+            "Solo Build",
+            "2026",
+            "React + Vite",
+            "Node.js + Express",
+            "node-vibrant + OpenRouter",
+            "MongoDB + Cloudinary",
+          ],
+          tools: [
+            "React",
+            "Vite",
+            "Tailwind CSS",
+            "Node.js",
+            "Express",
+            "MongoDB",
+            "OpenRouter",
+            "Cloudinary",
+            "node-vibrant",
+          ],
+          images: [],
+          link: "https://nemu-in.vercel.app",
+          meta: {
+            date: "2026",
+            role: "Product Designer & Full-Stack Developer",
+            category: "Visual Search Intelligence",
+            team: "Solo",
+            status: "Live",
+          },
+        },
         {
           id: 3,
           gambar: "/assets/project3/cover-thumora.webp",
@@ -1262,7 +1425,7 @@ At the end of the day, my journey is not about transitioning from Russian Litera
             "Platform Generator Thumbnail Berbasis AI yang dirancang untuk alur kerja kreator nyata, arsitektur streaming SSE yang andal, dan ekosistem inspirasi komunitas.",
           about:
             "Thumora AI adalah workspace pembuatan thumbnail bertenaga AI yang dirancang khusus untuk alur kerja kreator konten. Lebih dari sekadar pemanggil API biasa, platform ini mengintegrasikan prompt enhancer cerdas, sistem gaya visual modular, arsitektur generasi ganda (streaming SSE & non-streaming reference fallback), proteksi kuota, dan platform inspirasi komunitas.",
-          category: "AI Product Engineering",
+          category: "Thumbnail Generator",
           facts: [
             "Produk AI",
             "Solo Build",
@@ -1286,7 +1449,7 @@ At the end of the day, my journey is not about transitioning from Russian Litera
           meta: {
             date: "2026",
             role: "Product / UI/UX / Fullstack",
-            category: "AI Product Engineering",
+            category: "Thumbnail Generator",
             team: "Solo",
             status: "Live",
           },
@@ -1297,7 +1460,7 @@ At the end of the day, my journey is not about transitioning from Russian Litera
           nama: "SALDO",
           desk: "Aplikasi pelacak keuangan efisien bertenaga natural language capture, mengubah pencatatan keuangan harian menjadi percakapan alami.",
           subtitle:
-            "Efficient Money Tracker — Natural language financial capture, pace-aware forecasting, dan desain editorial yang menenangkan.",
+            "Efficient Money Tracker: Natural language financial capture, pace-aware forecasting, dan desain editorial yang menenangkan.",
           about:
             "Mengelola uang tidak seharusnya terasa seperti akuntansi. SALDO adalah aplikasi pelacak keuangan efisien yang dibangun dari premis sederhana: mencatat pengeluaran seharusnya semudah menceritakan apa yang terjadi. Dilengkapi interpretasi natural language multi-item, analisis perbandingan periode, forecasting belanja, dan sistem visual yang tenang.",
           category: "Financial Technology",
@@ -1731,7 +1894,7 @@ At the end of the day, my journey is not about transitioning from Russian Litera
           key: "editorial",
           title: "Layout Editorial",
           detail: "Hierarki majalah",
-          desc: "Tipografi besar, whitespace yang kuat, grid asimetris. Terinspirasi dari desain editorial — konten disajikan dengan percaya diri dan keahlian.",
+          desc: "Tipografi besar, whitespace yang kuat, grid asimetris. Terinspirasi dari desain editorial, konten disajikan dengan percaya diri dan keahlian.",
         },
         {
           key: "motion",
@@ -1795,7 +1958,7 @@ At the end of the day, my journey is not about transitioning from Russian Litera
         },
         {
           phase: "Visual Design",
-          desc: "Mengembangkan design language lengkap — tipografi, warna, spacing, motion, dan komponen.",
+          desc: "Mengembangkan design language lengkap mencakup tipografi, warna, spacing, motion, dan komponen.",
         },
         {
           phase: "Prototype",
@@ -1831,7 +1994,7 @@ At the end of the day, my journey is not about transitioning from Russian Litera
       engFrontendNote:
         "React + Vite memberikan pengalaman development yang cepat dan pipeline build production-grade. Tailwind memaksakan konsistensi desain melalui sistem utility-first.",
       engAnimationNote:
-        "Framer Motion memungkinkan animasi berbasis fisika yang deklaratif, terasa natural dan intentional — bukan transisi CSS yang ditempel belakangan.",
+        "Framer Motion memungkinkan animasi berbasis fisika yang deklaratif, terasa natural dan intentional, bukan transisi CSS yang ditempel belakangan.",
       engDeploymentNote:
         "Edge network Vercel menyediakan pengiriman terdistribusi secara global dengan CI/CD tanpa konfigurasi, memungkinkan rollback instan dan preview deployments.",
 
@@ -1913,36 +2076,36 @@ At the end of the day, my journey is not about transitioning from Russian Litera
     },
     saldoDetail: {
       heroMeta: "STUDI KASUS · 2026 · SOLO BUILD",
-      heroTitle: "SALDO — Efficient Money Tracker",
+      heroTitle: "SALDO: Efficient Money Tracker",
       heroDesc:
         "Mengelola uang tidak seharusnya terasa seperti akuntansi. SALDO mengubah pencatatan keuangan sehari-hari menjadi sebuah percakapan sederhana.",
 
-      sec1Label: "01 — GAGASAN",
+      sec1Label: "01. GAGASAN",
       sec1Title: "Mencatat uang butuh hitungan detik, ga pake ribet.",
       sec1Desc:
         "SALDO berawal dari observasi sederhana: mencatat pengeluaran kecil seharusnya tidak memaksa pengguna mengisi berbagai formulir, kategori, akun, dan tanggal secara manual.",
 
-      sec2Label: "02 — PENGALAMAN",
+      sec2Label: "02. PENGALAMAN",
       sec2Title: "Kasihi tau pada SALDO apa yang habis kamu beli.",
       sec2Desc:
         "Ketik sesuai gaya bicara sehari-hari. SALDO menginterpretasikan transaksi dan menyiapkannya untuk konfirmasi.",
 
-      sec3Label: "03 — PRODUK",
+      sec3Label: "03. PRODUK",
       sec3Title: "Interface nyaman untuk keuangan harian.",
       sec3Desc:
         "Pengalaman finansial yang tenang dirancang dengan sentuhan mint halus, permukaan deep forest, dan ruang bernapas yang lega.",
 
-      sec4Label: "04 — APLIKASI",
+      sec4Label: "04. APLIKASI",
       sec4Title: "Prinsip yang sama, saat kamu berada di dalam aplikasi.",
       sec4Desc:
         "SALDO menjaga antarmuka tetap tenang agar informasi penting selalu terlihat: apa yang dimiliki, apa yang telah dibelanjakan, dan perkiraan ke depan.",
 
-      sec5Label: "05 — BAHASA VISUAL",
+      sec5Label: "05. BAHASA VISUAL",
       sec5Title: "Tenang, ekspresif, dan sederhana.",
       sec5Desc:
         "Permukaan soft mint, nuansa deep forest, tipografi ekspresif, dan gerakan organik memberikan bahasa visual yang terasa seperti produk modern, bukan lembar kerja spreadsheet.",
 
-      sec6Label: "06 — HASIL AKHIR",
+      sec6Label: "06. HASIL AKHIR",
       sec6Title: "Pelacak uang yang terasa seperti teman ngobrol.",
       sec6Desc:
         "SALDO mengubah rutinitas kecil mencatat uang menjadi pengalaman yang lebih cepat dan menenangkan - tetap menjaga gambaran besar keuangan.",
@@ -1982,9 +2145,9 @@ At the end of the day, my journey is not about transitioning from Russian Litera
       publicBadge: "Publik",
       internalBadge: "Internal",
       systemNote:
-        "CMS & SIPIPI berjalan dalam satu aplikasi internal — tidak perlu sistem terpisah.",
-      heroPreview: "Portal PPID — Pratinjau Antarmuka Publik",
-      demoVideoLabel: "Portal PPID — Pratinjau Demo Video",
+        "CMS & SIPIPI berjalan dalam satu aplikasi internal, tidak perlu sistem terpisah.",
+      heroPreview: "Portal PPID: Pratinjau Antarmuka Publik",
+      demoVideoLabel: "Portal PPID: Pratinjau Demo Video",
       metaRole: "Peran",
       metaTeam: "Tim",
       flowCitizen: "Masyarakat",
@@ -2268,6 +2431,97 @@ Karena pada akhirnya, semua perjalanan yang gue lalui bukan tentang berpindah da
       placeholderName: "John Doe",
       placeholderEmail: "john@example.com",
       placeholderMsg: "Saya ingin hire anda...",
+    },
+    nemuDetail: {
+      tag: "Visual Reference Intelligence",
+      launchBtn: "Buka NEMU",
+      meta: {
+        roleLabel: "PERAN",
+        role: "Product Designer & Full-Stack Developer",
+        typeLabel: "TIPE",
+        type: "Visual Search Intelligence",
+        stackLabel: "STACK",
+        stack:
+          "React · Vite · Tailwind CSS · Node.js · Express · MongoDB · OpenRouter · Cloudinary · node-vibrant",
+        statusLabel: "STATUS",
+        status: "Live",
+        dateLabel: "TAHUN",
+        date: "2026",
+      },
+      sec1Label: "01 / VISUAL REFERENCE INTELLIGENCE",
+      sec1Title: "Bagaimana jika kamu bisa membedah sebuah poster desain?",
+      sec1Desc:
+        "Desainer punya kebiasaan mengumpulkan referensi dari poster, media sosial, website, branding, dan fotografi. Bagian yang sulit bukan menemukan inspirasi, melainkan memahami gaya visual apa yang sedang dilihat, mengapa tipografinya terlihat tepat, warna apa yang menggerakkan komposisi, dan bagaimana menerjemahkan bahasa visual tersebut menjadi arahan kreatif yang siap digunakan.",
+      sec1Transform: {
+        refTitle: "Referensi Asli",
+        refDesc:
+          "Poster mentah atau karya visual yang dikoleksi sebagai inspirasi kreatif",
+        engineTitle: "Mesin Inteligensi NEMU",
+        engineDesc:
+          "Ekstraksi deterministik hibrida & penalaran visual multimodal",
+        outputTitle: "DNA Desain Siap Pakai",
+        outputDesc:
+          "Pencocokan font Google, token warna presisi, logika komposisi, dan prompt studio",
+      },
+      sec2Label: "02 / THE INSPECTOR",
+      sec2Title: "Satu referensi. Analisis visual lengkap.",
+      sec2Desc:
+        "NEMU mempertahankan referensi asli tetap terlihat di sisi kiri sementara membedah bahasa visualnya menjadi lapisan-lapisan yang dapat diinspeksi di sisi kanan (gaya, tipografi, warna, komposisi, dan arahan kreatif). Pengguna tidak perlu membandingkan gambar asli dengan teks terpisah.",
+      callouts: {
+        styleLabel: "GAYA VISUAL",
+        styleTitle: "Editorial / Swiss-Inspired / Terstruktur",
+        styleDesc:
+          "Mengidentifikasi gerakan gaya, disiplin grid, dan nuansa visual struktural.",
+        typeLabel: "TIPOGRAFI",
+        typeTitle: "Klasifikasi → Font Google Terdekat",
+        typeDesc:
+          "Mendeteksi klasifikasi tipografi (Grotesk, Serif, Display) dan mencocokkannya dengan alternatif Google Font yang dapat langsung diuji.",
+        colorLabel: "PALET WARNA",
+        colorTitle: "Palet Dominan + Nilai HEX / RGB Presisi",
+        colorDesc:
+          "Mengekstrak dominasi warna matematis, kode warna pasti, dan relasi kontras.",
+        compLabel: "KOMPOSISI",
+        compTitle: "Grid, Focal Point & Keseimbangan",
+        compDesc:
+          "Menganalisis hierarki fokus, keseimbangan ruang negatif, dan aturan penataan layout.",
+      },
+      sec3Label: "03 / MENGUBAH WAWASAN MENJADI AKSI",
+      sec3Title:
+        "Hasilnya bukan sekadar penjelasan. Ini adalah titik awal berkarya.",
+      sec3Desc:
+        "Bukan sekadar memberikan deskripsi pasif dari sebuah gambar, NEMU mengubah impresi visual menjadi alat desain nyata: playground tipografi interaktif, swatch warna presisi, serta keyword pencarian dan prompt generasi AI berakurasi tinggi.",
+      actionA: {
+        label: "A. PLAYGROUND TIPOGRAFI",
+        title: "Klasifikasi → Font yang Langsung Dapat Diuji",
+        desc: "NEMU tidak berhenti pada menyebutkan nama gaya font. Platform ini mencocokkan referensi dengan alternatif Google Font terdekat, menyajikan metrik keyakinan, dan menyediakan spesimen interaktif di mana desainer dapat mengetik teks kustom secara real-time.",
+      },
+      actionB: {
+        label: "B. EKSTRAKSI PALET WARNA",
+        title: "Impresi visual berubah menjadi data desain siap pakai.",
+        desc: "Ekstraksi warna bukan sekadar deretan swatch; ini adalah token desain yang dapat langsung dipakai. Warna dominan diukur dengan persentase dominasi, kode HEX, RGB, dan status kontras dengan satu klik salin.",
+      },
+      actionC: {
+        label: "C. STUDIO PROMPT & EKSPLORASI",
+        title: "Dari DNA visual menuju eksplorasi kreatif baru.",
+        desc: "Setelah bahasa visual terurai, NEMU menerjemahkannya menjadi kata kunci pencarian Pinterest dan prompt generasi AI terstruktur sehingga desainer dapat terus mengeksplorasi variasi desain serupa.",
+      },
+      sec4Label: "04 / UNDER THE HOOD",
+      sec4Title: "Pipeline hibrida, bukan sekadar satu pemanggilan AI.",
+      sec4Desc:
+        "NEMU memisahkan apa yang seharusnya deterministik dari apa yang membutuhkan penalaran visual. Ekstraksi warna ditangani secara terprogram melalui node-vibrant untuk presisi matematis, sementara model vision multimodal menginterpretasikan referensi untuk menyusun analisis kreatif dan pencocokan tipografi.",
+      arch: {
+        client: "Frontend React + Vite",
+        api: "API Express / Node.js",
+        vibrant: "node-vibrant (Ekstraksi Warna Deterministik)",
+        vision: "Model Vision OpenRouter (Penalaran Visual)",
+        db: "Database MongoDB",
+        cloudinary: "CDN Gambar Cloudinary",
+      },
+      productDepth: {
+        label: "KEDALAMAN PRODUK PENUH",
+        title: "Perpustakaan Visual Intelligence Lengkap",
+        desc: "NEMU dirancang sebagai pengalaman produk utuh: Upload ➔ Analyze ➔ Save ➔ Favorite ➔ Archive dengan autentikasi pengguna dan koleksi referensi tersimpan.",
+      },
     },
   },
 };

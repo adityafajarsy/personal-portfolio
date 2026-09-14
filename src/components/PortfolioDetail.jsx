@@ -209,8 +209,6 @@ export default function PortfolioDetail({ project, onClose }) {
         {/* Title block */}
         <div className="flex flex-col gap-2">
           <div className="flex items-center gap-2 flex-wrap">
-            <SLabel>{d.heroLabel || "Case Study"}</SLabel>
-            <span className="text-white/15">·</span>
             <span className="text-[11px] font-bold text-white/30 tracking-widest uppercase">{localizedProject.category}</span>
           </div>
           <h1 className="text-[28px] sm:text-[36px] font-black text-white tracking-tight leading-tight">
@@ -255,7 +253,6 @@ export default function PortfolioDetail({ project, onClose }) {
       {/* ── 1. WHY THIS EXISTS ───────────────────────────────────────────────── */}
       <m.div variants={fadeUp} custom={1} initial="hidden" animate="visible" className="flex flex-col gap-6 relative">
         <div>
-          <SLabel>{d.whyLabel}</SLabel>
           <STitle>{d.whyTitle}</STitle>
         </div>
         <div className="flex flex-col gap-5 relative">
@@ -288,7 +285,6 @@ export default function PortfolioDetail({ project, onClose }) {
       {/* ── 2. HOW REFERENCES BECAME DESIGN DECISIONS ────────────────────────── */}
       <m.div variants={fadeUp} custom={2} initial="hidden" animate="visible" className="flex flex-col gap-6">
         <div>
-          <SLabel>{d.influencesLabel || "INFLUENCES"}</SLabel>
           <div className="flex flex-col-reverse sm:flex-row sm:items-start sm:gap-4 mt-1">
             <h2 className="text-[22px] sm:text-[28px] font-bold text-white tracking-tight leading-snug">
               {d.influencesTitle || "Every Reference Left a Mark"}
@@ -358,7 +354,6 @@ export default function PortfolioDetail({ project, onClose }) {
       <Divider />      {/* ── 3. BUILT WITH INTENTION ──────────────────────────────────────────── */}
       <m.div variants={fadeUp} custom={3} initial="hidden" animate="visible" className="flex flex-col gap-6">
         <div>
-          <SLabel>{intentionLabel || "BUILT WITH INTENTION"}</SLabel>
           <div className="flex flex-col-reverse sm:flex-row sm:items-start sm:gap-4 mt-1">
             <h2 className="text-[22px] sm:text-[28px] font-bold text-white tracking-tight leading-snug">
               {intentionTitle || "Every visual decision exists for a reason."}
@@ -406,7 +401,6 @@ export default function PortfolioDetail({ project, onClose }) {
       {/* ── THINGS YOU PROBABLY DIDN'T NOTICE ──────────────────────────────── */}
       <m.div variants={fadeUp} custom={3.8} initial="hidden" animate="visible" className="flex flex-col gap-6">
         <div>
-          <SLabel>{detailsLabel || "Small Decisions, Big Difference."}</SLabel>
           <div className="flex flex-col-reverse sm:flex-row sm:items-start sm:gap-4 mt-1">
             <h2 className="text-[22px] sm:text-[28px] font-bold text-white tracking-tight leading-snug">
               {detailsTitle || "Things You Probably Didn't Notice"}
@@ -449,7 +443,6 @@ export default function PortfolioDetail({ project, onClose }) {
       {/* ── BUILDING PHILOSOPHY ────────────────────────────────────────────── */}
       <m.div variants={fadeUp} custom={4} initial="hidden" animate="visible" className="flex flex-col gap-6">
         <div>
-          <SLabel>{philosophyLabel || "BUILDING PHILOSOPHY"}</SLabel>
           <div className="flex flex-col-reverse sm:flex-row sm:items-start sm:gap-4 mt-1">
             <h2 className="text-[22px] sm:text-[28px] font-bold text-white tracking-tight leading-snug">
               {philosophyTitle || "I don't collect references. I collect principles."}
@@ -486,7 +479,6 @@ export default function PortfolioDetail({ project, onClose }) {
       {/* ── 8. GALLERY ───────────────────────────────────────────────────────── */}
       <m.div variants={fadeUp} custom={8} initial="hidden" animate="visible" className="flex flex-col gap-6">
         <div>
-          <SLabel>{d.galleryLabel}</SLabel>
           <STitle>{d.galleryTitle}</STitle>
           <p className="mt-2 text-[13px] text-white/40 leading-relaxed">{d.galleryNote}</p>
         </div>
@@ -607,7 +599,6 @@ export default function PortfolioDetail({ project, onClose }) {
       {/* ── 10. REPOSITORY ───────────────────────────────────────────────────── */}
       <m.div variants={fadeUp} custom={10} initial="hidden" animate="visible" className="flex flex-col gap-5">
         <div>
-          <SLabel>{d.repoLabel}</SLabel>
           <STitle>{d.repoTitle}</STitle>
         </div>
         <div className="bg-[#0B0B0B] border border-white/5 rounded-[20px] p-5 sm:p-6 flex flex-col sm:flex-row sm:items-center gap-5">

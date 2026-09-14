@@ -4,6 +4,7 @@ import { useLanguage } from "../context/LanguageContext";
 import PortfolioDetail from "./PortfolioDetail";
 import ThumoraDetail from "./ThumoraDetail";
 import SaldoDetail from "./SaldoDetail";
+import NemuDetail from "./NemuDetail";
 
 const fadeUp = {
   hidden: { opacity: 0, y: 22 },
@@ -210,10 +211,16 @@ export default function ProjectDetail({ project, onClose }) {
   };
 
   // Detect project type
+  const isNemu = project.id === 5;
   const isBuilderArchive = project.id === 2;
   const isThumora = project.id === 3;
   const isSaldo = project.id === 4;
   const isPPID = Boolean(project.modules);
+
+  // ── NEMU (Project 5) rendering ────────────────────────────────────────────
+  if (isNemu) {
+    return <NemuDetail project={project} onClose={onClose} />;
+  }
 
   // ── SALDO (Project 4) rendering ───────────────────────────────────────────
   if (isSaldo) {

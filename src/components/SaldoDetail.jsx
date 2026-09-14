@@ -288,9 +288,6 @@ export default function SaldoDetail({ project, onClose }) {
         </button>
 
         <div className="flex items-center gap-3">
-          <span className="text-[11px] font-mono font-bold tracking-widest text-[#10B981] bg-[#10B981]/10 border border-[#10B981]/25 px-2.5 py-1 rounded-full uppercase">
-            Money Tracker
-          </span>
           <a
             href="https://usesaldo.vercel.app/"
             target="_blank"
@@ -351,7 +348,6 @@ export default function SaldoDetail({ project, onClose }) {
         className="flex flex-col gap-8"
       >
         <div className="flex flex-col gap-2">
-          <SLabel>{d.sec1Label || "01 — THE IDEA"}</SLabel>
           <STitle>
             {d.sec1Title || "Money tracking should take seconds, not forms."}
           </STitle>
@@ -433,7 +429,6 @@ export default function SaldoDetail({ project, onClose }) {
         className="flex flex-col gap-6"
       >
         <div className="flex flex-col gap-2">
-          <SLabel>{d.sec2Label || "02 — THE EXPERIENCE"}</SLabel>
           <STitle>{d.sec2Title || "Tell SALDO what happened."}</STitle>
           <p className="text-[14.5px] sm:text-[16px] text-white/60 leading-relaxed max-w-3xl font-normal">
             {d.sec2Desc ||
@@ -449,7 +444,7 @@ export default function SaldoDetail({ project, onClose }) {
           videoSrc="/assets/project4/carakerja.webm"
           isVideo={true}
           aspect="aspect-[16/9]"
-          caption="SALDO Capture — from a sentence to a saved transaction."
+          caption="SALDO Capture: from a sentence to a saved transaction."
         />
       </m.div>
 
@@ -464,7 +459,6 @@ export default function SaldoDetail({ project, onClose }) {
         className="flex flex-col gap-10"
       >
         <div className="flex flex-col gap-2">
-          <SLabel>{d.sec3Label || "03 — THE PRODUCT"}</SLabel>
           <STitle>
             {d.sec3Title || "A calm interface for everyday money."}
           </STitle>
@@ -515,7 +509,7 @@ export default function SaldoDetail({ project, onClose }) {
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8 pt-2">
           <div className="flex flex-col gap-2 border-t border-white/10 pt-4">
             <span className="text-[11px] font-mono text-[#10B981] font-bold tracking-widest uppercase">
-              01 — TELL
+              01. TELL
             </span>
             <h4 className="text-[15px] font-bold text-white tracking-tight">
               Say what happened.
@@ -527,7 +521,7 @@ export default function SaldoDetail({ project, onClose }) {
 
           <div className="flex flex-col gap-2 border-t border-white/10 pt-4">
             <span className="text-[11px] font-mono text-[#10B981] font-bold tracking-widest uppercase">
-              02 — UNDERSTAND
+              02. UNDERSTAND
             </span>
             <h4 className="text-[15px] font-bold text-white tracking-tight">
               SALDO interprets details.
@@ -539,7 +533,7 @@ export default function SaldoDetail({ project, onClose }) {
 
           <div className="flex flex-col gap-2 border-t border-white/10 pt-4">
             <span className="text-[11px] font-mono text-[#10B981] font-bold tracking-widest uppercase">
-              03 — REVIEW
+              03. REVIEW
             </span>
             <h4 className="text-[15px] font-bold text-white tracking-tight">
               Check the result.
@@ -551,7 +545,7 @@ export default function SaldoDetail({ project, onClose }) {
 
           <div className="flex flex-col gap-2 border-t border-white/10 pt-4">
             <span className="text-[11px] font-mono text-[#10B981] font-bold tracking-widest uppercase">
-              04 — SAVE
+              04. SAVE
             </span>
             <h4 className="text-[15px] font-bold text-white tracking-tight">
               Confirm the transaction.
@@ -574,7 +568,6 @@ export default function SaldoDetail({ project, onClose }) {
         className="flex flex-col gap-12"
       >
         <div className="flex flex-col gap-2">
-          <SLabel>{d.sec4Label || "04 — THE APP"}</SLabel>
           <STitle>{d.sec4Title || "The same idea, once you're inside."}</STitle>
           <p className="text-[14.5px] sm:text-[16px] text-white/60 leading-relaxed max-w-3xl font-normal">
             {d.sec4Desc ||
@@ -656,7 +649,6 @@ export default function SaldoDetail({ project, onClose }) {
         className="flex flex-col gap-6"
       >
         <div className="flex flex-col gap-2">
-          <SLabel>{d.sec5Label || "05 — THE VISUAL LANGUAGE"}</SLabel>
           <STitle>
             {d.sec5Title || "Calm, expressive, and intentionally simple."}
           </STitle>
@@ -756,13 +748,12 @@ export default function SaldoDetail({ project, onClose }) {
         className="flex flex-col gap-8"
       >
         <div className="flex flex-col gap-2">
-          <SLabel>{d.sec6Label || "06 — THE OUTCOME"}</SLabel>
           <STitle>
             {d.sec6Title || "Money tracking that feels like a conversation."}
           </STitle>
           <p className="text-[14.5px] sm:text-[16px] text-white/60 leading-relaxed max-w-3xl font-normal">
             {d.sec6Desc ||
-              "SALDO turns the small, repetitive task of recording money into a faster, calmer experience — while keeping the bigger picture visible."}
+              "SALDO turns the small, repetitive task of recording money into a faster, calmer experience, while keeping the bigger picture visible."}
           </p>
         </div>
 
