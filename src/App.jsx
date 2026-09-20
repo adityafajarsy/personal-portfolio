@@ -9,17 +9,17 @@ import Article from "./elements/Article";
 import Contact from "./elements/Contact";
 import LanguageSwitcher from "./components/LanguageSwitcher";
 
-// Lazy-loaded detail views — reduces initial JS bundle size dramatically
+// Lazy-loaded detail ,  initial JS bundle size dramatically
 const ArticleDetail = lazy(() => import("./components/ArticleDetail"));
 const ProjectDetail = lazy(() => import("./components/ProjectDetail"));
 
-// Non-critical UI — lazy-loaded so they don't block initial paint
+// Non-critical , -loaded so they don't block initial paint
 // FloatingNav: mobile-only bottom nav, never visible during LCP window
 // CustomCursor: desktop-only decorative cursor, zero content value
 const FloatingNav = lazy(() => import("./components/FloatingNav"));
 const CustomCursor = lazy(() => import("./components/CustomCursor"));
 
-// Inline spinner — no external dep, shown during route transitions only
+// Inline ,  external dep, shown during route transitions only
 const LoadingPlaceholder = () => (
   <div className="w-full min-h-[40vh] flex flex-col items-center justify-center gap-3 animate-pulse">
     <div className="w-8 h-8 rounded-full border-2 border-white/5 border-t-[#3B82F6] animate-spin" />
@@ -33,7 +33,7 @@ function App() {
 
   // Inject remixicon CSS non-blocking after the app mounts and the browser is idle.
   // This prevents the 600KB icon-font CSS from blocking the critical rendering path.
-  // Icons use <i class="ri-*"> tags which show as text until the CSS loads — acceptable UX.
+  // Icons use <i class="ri-*"> tags which show as text until the CSS ,  UX.
   useEffect(() => {
     const id = "remixicon-stylesheet";
     if (document.getElementById(id)) return; // already injected (HMR safety)
@@ -90,14 +90,14 @@ function App() {
         </Suspense>
       </main>
 
-      {/* Bottom Floating Nav — mobile only, lazy-loaded (non-critical) */}
+      {/* Bottom Floating ,  only, lazy-loaded (non-critical) */}
       {!activeArticle && !activeProject && (
         <Suspense fallback={null}>
           <FloatingNav />
         </Suspense>
       )}
 
-      {/* Custom Desktop Cursor — lazy-loaded (non-critical) */}
+      {/* Custom Desktop , -loaded (non-critical) */}
       <Suspense fallback={null}>
         <CustomCursor />
       </Suspense>

@@ -365,7 +365,7 @@ export default function ProjectDetail({ project, onClose }) {
           </p>
         </div>
 
-        {/* Compact editorial module list — 2 col on mobile */}
+        {/* Compact editorial module ,  col on mobile */}
         <div className="grid grid-cols-1 sm:grid-cols-1 divide-y divide-white/5 border border-white/5 rounded-[16px] overflow-hidden">
           {modules.map((mod, i) => {
             const isPublic = mod.type === "public";
@@ -404,7 +404,7 @@ export default function ProjectDetail({ project, onClose }) {
           <SectionTitle>{t("ppidDetail.archTitle")}</SectionTitle>
         </div>
 
-        {/* Compact two-column flow — side by side on all sizes */}
+        {/* Compact two-column ,  by side on all sizes */}
         <div className="grid grid-cols-2 gap-3">
           {/* Public flow */}
           <div className="bg-[#0B0B0B] border border-white/5 rounded-[12px] p-3 flex flex-col gap-1">

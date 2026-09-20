@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import {
   m,
   AnimatePresence,
@@ -50,6 +50,18 @@ export default function Project({ onSelectProject }) {
   const listProyek = t("projects.list") || [];
   const [expandedId, setExpandedId] = useState(null);
   const [hoveredProject, setHoveredProject] = useState(null);
+  // Mobile fullscreen overlay state
+  const [mobileOverlay, setMobileOverlay] = useState(null);
+
+  // Lock body scroll when mobile overlay is open
+  useEffect(() => {
+    if (mobileOverlay) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "";
+    }
+    return () => { document.body.style.overflow = ""; };
+  }, [mobileOverlay]);
 
   // Mouse cursor tracking for floating preview
   const mouseX = useMotionValue(-500);
@@ -72,10 +84,132 @@ export default function Project({ onSelectProject }) {
 
   const toggle = (id) => {
     setHoveredProject(null);
+    // On mobile: open fullscreen overlay instead of inline expand
+    if (window.innerWidth < 640) {
+      const project = listProyek.find((p) => p.id === id);
+      if (project) {
+        setMobileOverlay(project);
+        return;
+      }
+    }
     setExpandedId((prev) => (prev === id ? null : id));
   };
 
   return (
+    <>
+    {/* ── Mobile Bottom Sheet Overlay ── */}
+    <AnimatePresence>
+      {mobileOverlay && (
+        <>
+          {/* Backdrop — no blur during animation, too expensive on mobile */}
+          <m.div
+            key="backdrop"
+            className="sm:hidden fixed inset-0 z-[199] bg-black/70"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            transition={{ duration: 0.2 }}
+            onClick={() => setMobileOverlay(null)}
+          />
+
+          {/* Bottom Sheet — outer layer: transform only (GPU composite) */}
+          <m.div
+            key="mobile-sheet"
+            className="sm:hidden fixed bottom-0 inset-x-0 z-[200]"
+            style={{ height: "60vh", willChange: "transform" }}
+            initial={{ y: "100%" }}
+            animate={{ y: 0 }}
+            exit={{ y: "100%" }}
+            transition={{ type: "spring", damping: 32, stiffness: 320, mass: 0.8 }}
+          >
+            {/* Inner visual layer: radius + clip + bg (static, no transform) */}
+            <div className="w-full h-full rounded-t-[28px] overflow-hidden bg-[#0D0D0D] border-t border-white/10 flex flex-col">
+            {/* Drag handle */}
+            <div className="flex justify-center pt-3 pb-1 shrink-0">
+              <div className="w-10 h-1 rounded-full bg-white/20" />
+            </div>
+
+            {/* Cover image — top 45% of sheet */}
+            <div className="relative shrink-0" style={{ height: "45%" }}>
+              <img
+                src={mobileOverlay.gambar}
+                alt={mobileOverlay.nama}
+                className="w-full h-full object-cover"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-[#0D0D0D] via-black/20 to-transparent" />
+
+              {/* Top-right icon bar: view detail + live + close */}
+              <div className="absolute top-3 right-3 flex items-center gap-2">
+                {/* View Detail pill (icon + text) */}
+                <button
+                  onClick={() => {
+                    setMobileOverlay(null);
+                    onSelectProject && onSelectProject(mobileOverlay);
+                  }}
+                  className="h-9 px-3 rounded-full bg-black/50 backdrop-blur-md border border-white/20 flex items-center gap-1.5"
+                  aria-label="View Detail"
+                >
+                  <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+                    <circle cx="11" cy="11" r="8" />
+                    <path d="M21 21l-4.35-4.35" />
+                  </svg>
+                  <span className="text-[11px] font-semibold text-white">View Details</span>
+                </button>
+
+                {/* Live project icon (only if link exists) */}
+                {mobileOverlay.link && (
+                  <a
+                    href={mobileOverlay.link}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="w-9 h-9 rounded-full bg-black/50 backdrop-blur-md border border-white/20 flex items-center justify-center"
+                    aria-label="Launch Project"
+                  >
+                    <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+                      <path d="M7 17L17 7M7 7h10v10" />
+                    </svg>
+                  </a>
+                )}
+
+                {/* Close */}
+                <button
+                  onClick={() => setMobileOverlay(null)}
+                  className="w-9 h-9 rounded-full bg-black/50 backdrop-blur-md border border-white/20 flex items-center justify-center"
+                  aria-label="Close"
+                >
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="2.5" strokeLinecap="round">
+                    <line x1="18" y1="6" x2="6" y2="18" />
+                    <line x1="6" y1="6" x2="18" y2="18" />
+                  </svg>
+                </button>
+              </div>
+            </div>
+
+            {/* Content */}
+            <div className="flex-1 flex flex-col px-5 pt-3 pb-6 overflow-hidden">
+              <div className="flex items-center justify-between">
+                <h3 className="text-[20px] font-bold text-white tracking-tight leading-tight">
+                  {mobileOverlay.nama}
+                </h3>
+                {mobileOverlay.meta?.date && (
+                  <span className="text-[11px] text-white/35 font-medium">{mobileOverlay.meta.date}</span>
+                )}
+              </div>
+              {mobileOverlay.meta?.category && (
+                <span className="text-[10px] font-bold tracking-[0.15em] text-white/35 uppercase mt-0.5">
+                  {mobileOverlay.meta.category}
+                </span>
+              )}
+              <p className="mt-2 text-[12px] text-white/55 leading-relaxed line-clamp-3">
+                {mobileOverlay.desk}
+              </p>
+            </div>
+            </div>
+          </m.div>
+        </>
+      )}
+    </AnimatePresence>
+
     <m.section
       id="project"
       className="scroll-mt-24 flex flex-col gap-6"
@@ -150,7 +284,8 @@ export default function Project({ onSelectProject }) {
               {t("projects.slogan")}
             </m.span>
             <m.h2
-              className="text-[32px] lg:text-[40px] font-bold text-white tracking-tight"
+              className="font-bold text-white tracking-tight whitespace-nowrap"
+              style={{ fontSize: "clamp(1.75rem, 7vw, 2.5rem)" }}
               variants={itemVariants}
             >
               {t("projects.title")}
@@ -184,9 +319,9 @@ export default function Project({ onSelectProject }) {
               className="border-t border-white/8 last:border-b"
               variants={itemVariants}
             >
-              {/* Row Header — clickable */}
+              {/* Row ,  */}
               <button
-                className="w-full text-left py-5 flex items-center gap-4 group cursor-pointer focus:outline-none relative"
+                className="w-full text-left py-6 flex items-center gap-4 group cursor-pointer focus:outline-none relative"
                 onClick={() => toggle(project.id)}
                 onMouseEnter={() => {
                   if (!isOpen) setHoveredProject(project);
@@ -196,7 +331,7 @@ export default function Project({ onSelectProject }) {
               >
                 {/* Number */}
                 <span
-                  className={`text-[13px] font-bold tracking-widest tabular-nums transition-colors duration-200 w-7 shrink-0 ${
+                  className={`text-[14px] font-bold tracking-widest tabular-nums transition-colors duration-200 w-8 shrink-0 ${
                     isOpen ? "text-[#3B82F6]" : "text-white/25"
                   }`}
                 >
@@ -206,84 +341,29 @@ export default function Project({ onSelectProject }) {
                 {/* Project name */}
                 <div className="flex-1">
                   <span
-                    className={`relative inline-flex items-center text-[20px] sm:text-[24px] lg:text-[26px] font-bold tracking-tight leading-tight transition-colors duration-200 ${
+                    className={`text-[23px] sm:text-[24px] lg:text-[26px] font-bold tracking-tight leading-tight transition-colors duration-200 ${
                       isOpen
                         ? "text-[#3B82F6]"
                         : "text-white group-hover:text-white/80"
                     }`}
                   >
                     {project.nama}
-                    {project.id === 5 && (
-                      <span
-                        className="absolute top-[-14px] left-[70px] sm:left-auto sm:right-[-68px] sm:top-[-10px] text-[#38BDF8] text-[12px] sm:text-[13px] tracking-tight font-bold select-none pointer-events-none whitespace-nowrap"
-                        style={{
-                          fontFamily: "'Nothing You Could Do', cursive",
-                          transform: "rotate(-6deg)",
-                        }}
-                      >
-                        Visual Intelligence
-                      </span>
-                    )}
-                    {project.id === 1 && (
-                      <span
-                        className="absolute top-[-14px] left-[105px] sm:left-auto sm:right-[-48px] sm:top-[-10px] text-[#38BDF8] text-[12px] sm:text-[13px] tracking-tight font-bold select-none pointer-events-none whitespace-nowrap"
-                        style={{
-                          fontFamily: "'Nothing You Could Do', cursive",
-                          transform: "rotate(-6deg)",
-                        }}
-                      >
-                        3 Apps
-                      </span>
-                    )}
-                    {project.id === 2 && (
-                      <span
-                        className="absolute top-[-14px] left-[110px] sm:left-auto sm:right-[-52px] sm:top-[-10px] text-[#3B82F6] text-[12px] sm:text-[13px] tracking-tight font-bold select-none pointer-events-none whitespace-nowrap"
-                        style={{
-                          fontFamily: "'Nothing You Could Do', cursive",
-                          transform: "rotate(-6deg)",
-                        }}
-                      >
-                        Portfolio
-                      </span>
-                    )}
-                    {project.id === 3 && (
-                      <span
-                        className="absolute top-[-14px] left-[105px] sm:left-auto sm:right-[-48px] sm:top-[-10px] text-[#F85EAD] text-[12px] sm:text-[13px] tracking-tight font-bold select-none pointer-events-none whitespace-nowrap"
-                        style={{
-                          fontFamily: "'Nothing You Could Do', cursive",
-                          transform: "rotate(-6deg)",
-                        }}
-                      >
-                        Intelligence Generator
-                      </span>
-                    )}
-                    {project.id === 4 && (
-                      <span
-                        className="absolute top-[-14px] left-[75px] sm:left-auto sm:right-[-68px] sm:top-[-10px] text-[#10B981] text-[12px] sm:text-[13px] tracking-tight font-bold select-none pointer-events-none whitespace-nowrap"
-                        style={{
-                          fontFamily: "'Nothing You Could Do', cursive",
-                          transform: "rotate(-6deg)",
-                        }}
-                      >
-                        Smart Money Tracker
-                      </span>
-                    )}
                   </span>
                 </div>
 
-                {/* Category — hidden on small mobile */}
+                {/* ,  on small mobile */}
                 <span className="hidden sm:block text-[13px] text-white/40 font-medium w-40 shrink-0">
                   {project.meta?.category || "Web Application"}
                 </span>
 
                 {/* Year */}
-                <span className="text-[13px] text-white/40 font-medium w-12 shrink-0 text-right sm:text-left">
+                <span className="text-[14px] text-white/40 font-medium w-12 shrink-0 text-right sm:text-left">
                   {project.meta?.date || "2025"}
                 </span>
 
                 {/* Expand icon */}
                 <div
-                  className={`ml-3 shrink-0 w-8 h-8 rounded-full border flex items-center justify-center transition-all duration-200 ${
+                  className={`ml-3 shrink-0 w-9 h-9 rounded-full border flex items-center justify-center transition-all duration-200 ${
                     isOpen
                       ? "border-[#3B82F6]/60 text-[#3B82F6] bg-[#3B82F6]/10 rotate-45"
                       : "border-white/15 text-white/40 group-hover:border-white/30 group-hover:text-white/70"
@@ -294,8 +374,8 @@ export default function Project({ onSelectProject }) {
                   }}
                 >
                   <svg
-                    width="14"
-                    height="14"
+                    width="15"
+                    height="15"
                     viewBox="0 0 14 14"
                     fill="none"
                     stroke="currentColor"
@@ -500,5 +580,6 @@ export default function Project({ onSelectProject }) {
         })}
       </m.div>
     </m.section>
+    </>
   );
 }

@@ -220,7 +220,7 @@ export const listArticles = [
     isi: `
 ## Introduction
 
-Artificial Intelligence is no longer just a backend utility. Today, we are witnessing the emergence of generative interfaces—UIs that adapt, morph, and customize themselves in real-time based on user behavior and intent. This convergence of User Interface (UI) design and Artificial Intelligence (AI) is transforming the web.
+Artificial Intelligence is no longer just a backend utility. Today, we are witnessing the emergence of generative ,  that adapt, morph, and customize themselves in real-time based on user behavior and intent. This convergence of User Interface (UI) design and Artificial Intelligence (AI) is transforming the web.
 
 ## The Shift to Generative UIs
 

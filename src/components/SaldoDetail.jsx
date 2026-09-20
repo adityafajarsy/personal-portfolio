@@ -339,7 +339,7 @@ export default function SaldoDetail({ project, onClose }) {
 
       <OrganicFlowLine />
 
-      {/* ── 01 — THE IDEA (BEFORE → SALDO TRANSFORMATION) ────────────────────── */}
+      {/* ── ,  IDEA (BEFORE → SALDO TRANSFORMATION) ────────────────────── */}
       <m.div
         variants={fadeUp}
         custom={1}
@@ -420,7 +420,7 @@ export default function SaldoDetail({ project, onClose }) {
 
       <Divider />
 
-      {/* ── 02 — THE EXPERIENCE (HOW SALDO WORKS) ────────────────────────────── */}
+      {/* ── ,  EXPERIENCE (HOW SALDO WORKS) ────────────────────────────── */}
       <m.div
         variants={fadeUp}
         custom={2}
@@ -450,7 +450,7 @@ export default function SaldoDetail({ project, onClose }) {
 
       <Divider />
 
-      {/* ── 03 — THE PRODUCT (LANDING PAGE & SCROLL VIDEO) ────────────────────── */}
+      {/* ── ,  PRODUCT (LANDING PAGE & SCROLL VIDEO) ────────────────────── */}
       <m.div
         variants={fadeUp}
         custom={3}
@@ -559,7 +559,7 @@ export default function SaldoDetail({ project, onClose }) {
 
       <Divider />
 
-      {/* ── 04 — THE APP (DESKTOP, MOBILE, DARK MODE, AUTH) ──────────────────── */}
+      {/* ── ,  APP (DESKTOP, MOBILE, DARK MODE, AUTH) ──────────────────── */}
       <m.div
         variants={fadeUp}
         custom={4}
@@ -640,7 +640,7 @@ export default function SaldoDetail({ project, onClose }) {
 
       <Divider />
 
-      {/* ── 05 — THE VISUAL LANGUAGE ─────────────────────────────────────────── */}
+      {/* ── ,  VISUAL LANGUAGE ─────────────────────────────────────────── */}
       <m.div
         variants={fadeUp}
         custom={5}
@@ -739,7 +739,7 @@ export default function SaldoDetail({ project, onClose }) {
 
       <Divider />
 
-      {/* ── 06 — THE OUTCOME & CLOSING ────────────────────────────────────────── */}
+      {/* ── ,  OUTCOME & CLOSING ────────────────────────────────────────── */}
       <m.div
         variants={fadeUp}
         custom={6}

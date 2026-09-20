@@ -274,7 +274,7 @@ export default function PortfolioDetail({ project, onClose }) {
               className="text-[20px] sm:text-[24px] text-[#3B82F6] font-bold select-none rotate-[-4deg] translate-y-1"
               style={{ fontFamily: "'Nothing You Could Do', cursive" }}
             >
-              — Aditya Fajar
+              - Aditya Fajar
             </span>
           </div>
         </div>
@@ -367,7 +367,7 @@ export default function PortfolioDetail({ project, onClose }) {
           </p>
         </div>
 
-        {/* Section Visual Image — Interactive Design Anatomy Hotspot */}
+        {/* Section Visual ,  Design Anatomy Hotspot */}
         <DesignAnatomyHotspot />
 
         {/* 3x2 Premium Grid (Compact 3-column layout on all screen sizes) */}
@@ -414,7 +414,7 @@ export default function PortfolioDetail({ project, onClose }) {
           </p>
         </div>
 
-        {/* Section Visual Image (Small Details) — No border/bg wrapper to blend with page background */}
+        {/* Section Visual Image (Small Details) - No border/bg wrapper to blend with page background */}
         <div className="w-full relative flex items-center justify-center">
           <img
             src="/assets/project2/small_details.webp"

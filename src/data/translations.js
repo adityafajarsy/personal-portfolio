@@ -144,7 +144,7 @@ export const translations = {
             "Visual Reference Intelligence: Inspect the visual DNA behind any reference, from typography and color systems to actionable generation prompts.",
           about:
             "NEMU is an AI-powered visual reference intelligence tool built for designers and creative builders. Rather than functioning as a generic AI image descriptor, it dissects reference posters and artwork into inspectable layers: detected typography classifications with Google Font alternatives, deterministic mathematical color palettes, composition principles, and generative prompt studios.",
-          category: "Visual Search Intelligence",
+          category: "Design Analysis App",
           facts: [
             "AI Product",
             "Solo Build",
@@ -170,7 +170,7 @@ export const translations = {
           meta: {
             date: "2026",
             role: "Product Designer & Full-Stack Developer",
-            category: "Visual Search Intelligence",
+            category: "Design Analysis App",
             team: "Solo",
             status: "Live",
           },
@@ -222,7 +222,7 @@ export const translations = {
             "Efficient Money Tracker: Natural language financial capture, pace-aware forecasting, and calm editorial design.",
           about:
             "Managing money shouldn't feel like accounting. SALDO is an efficient money tracker built from a simple premise: tracking expenses should be as easy as telling someone what happened. Featuring multi-item natural language interpretation, period-over-period intelligence, pace forecasting, and a calm, non-cliché visual system.",
-          category: "Financial Technology",
+          category: "Smart Finance Tracker",
           facts: [
             "Fintech App",
             "Solo Build",
@@ -245,7 +245,7 @@ export const translations = {
           meta: {
             date: "2026",
             role: "Product / UI/UX / Fullstack",
-            category: "Financial Technology",
+            category: "Smart Finance Tracker",
             team: "Solo",
             status: "Live",
           },
@@ -446,7 +446,7 @@ export const translations = {
             "A personal digital identity designed to communicate how I think, research, design, and engineer digital products, not simply to showcase projects.",
           about:
             "Builder's Archive is my personal portfolio website. But it is not just a portfolio. It is a digital identity system built to communicate my design philosophy, creative process, and engineering capability. Every visual decision, every interaction, and every word on this website exists to tell a story about how I approach problems and build products.",
-          category: "Creative Engineering",
+          category: "Behind the Portfolio",
           facts: [
             "Personal Project",
             "Solo Build",
@@ -468,7 +468,7 @@ export const translations = {
           meta: {
             date: "2026",
             role: "Product Designer & Frontend Engineer",
-            category: "Creative Engineering",
+            category: "Behind the Portfolio",
             team: "Solo",
             status: "Live",
           },
@@ -556,7 +556,7 @@ export const translations = {
       metaStack: "Stack",
       techLabel: "Tech Stack",
 
-      // Section 1 — Why This Exists
+      // Section ,  This Exists
       whyLabel: "Origin",
       whyTitle: "Why This Exists",
       whyBody: [
@@ -639,9 +639,9 @@ export const translations = {
       ],
       philosophyQuote:
         "Good design isn't about originality.\nIt's about making good decisions consistently.",
-      philosophySign: "— Aditya Fajar",
+      philosophySign: "- Aditya Fajar",
 
-      // Section 2 — Creative Foundations
+      // Section ,  Foundations
       foundationsLabel: "Foundations",
       foundationsTitle: "Creative Foundations",
       foundations: [
@@ -667,7 +667,7 @@ export const translations = {
         },
       ],
 
-      // Section 3 — Inspiration Journey
+      // Section ,  Journey
       journeyLabel: "Journey",
       journeyTitle: "Inspiration Journey",
       journey: [
@@ -697,7 +697,7 @@ export const translations = {
         },
       ],
 
-      // Section 4 — Visual Language
+      // Section ,  Language
       visualLabel: "Design System",
       visualTitle: "Visual Language",
       visual: [
@@ -739,7 +739,7 @@ export const translations = {
         },
       ],
 
-      // Section 5 — Design References
+      // Section ,  References
       refsLabel: "References",
       refsTitle: "Design References",
       refsNote:
@@ -777,7 +777,7 @@ export const translations = {
         },
       ],
 
-      // Section 6 — Design Process
+      // Section ,  Process
       processLabel: "Process",
       processTitle: "Design Process",
       process: [
@@ -811,7 +811,7 @@ export const translations = {
         },
       ],
 
-      // Section 7 — Engineering
+      // Section ,
       engLabel: "Engineering",
       engTitle: "Engineering Decisions",
       engFrontend: "Frontend",
@@ -836,7 +836,7 @@ export const translations = {
       engDeploymentNote:
         "Vercel's edge network provides globally distributed delivery with zero-config CI/CD, enabling instant rollbacks and preview deployments.",
 
-      // Section 8 — Gallery
+      // Section ,
       galleryLabel: "Gallery",
       galleryTitle: "Interface Gallery",
       galleryNote:
@@ -850,7 +850,7 @@ export const translations = {
         "Mobile",
       ],
 
-      // Section 9 — Outcomes
+      // Section ,
       outcomesLabel: "Results",
       outcomesTitle: "Project Outcomes",
       outcomes: [
@@ -876,7 +876,7 @@ export const translations = {
         },
       ],
 
-      // Section 10 — Repository
+      // Section ,
       repoLabel: "Source Code",
       repoTitle: "Repository",
       repoPublic: "Public",
@@ -1253,7 +1253,7 @@ At the end of the day, my journey is not about transitioning from Russian Litera
         roleLabel: "ROLE",
         role: "Product Designer & Full-Stack Developer",
         typeLabel: "TYPE",
-        type: "Visual Search Intelligence",
+        type: "Design Analysis App",
         stackLabel: "STACK",
         stack:
           "React · Vite · Tailwind CSS · Node.js · Express · MongoDB · OpenRouter · Cloudinary · node-vibrant",
@@ -1385,7 +1385,7 @@ At the end of the day, my journey is not about transitioning from Russian Litera
             "Visual Reference Intelligence: Bedah DNA visual di balik referensi desain, mulai dari tipografi dan sistem warna hingga keyword pencarian dan prompt untuk generate.",
           about:
             "NEMU adalah platform visual reference intelligence bertenaga AI untuk desainer dan kreator. Bukan sekadar pendeskripsi gambar AI biasa, NEMU membedah poster dan referensi visual menjadi lapisan data yang dapat diinspeksi: klasifikasi tipografi dengan alternatif Google Font terdekat, ekstraksi palet warna matematis deterministik, prinsip komposisi, serta studio prompt generasi & pencarian.",
-          category: "Visual Search Intelligence",
+          category: "Design Analysis App",
           facts: [
             "Produk AI",
             "Solo Build",
@@ -1411,7 +1411,7 @@ At the end of the day, my journey is not about transitioning from Russian Litera
           meta: {
             date: "2026",
             role: "Product Designer & Full-Stack Developer",
-            category: "Visual Search Intelligence",
+            category: "Design Analysis App",
             team: "Solo",
             status: "Live",
           },
@@ -1463,7 +1463,7 @@ At the end of the day, my journey is not about transitioning from Russian Litera
             "Efficient Money Tracker: Natural language financial capture, pace-aware forecasting, dan desain editorial yang menenangkan.",
           about:
             "Mengelola uang tidak seharusnya terasa seperti akuntansi. SALDO adalah aplikasi pelacak keuangan efisien yang dibangun dari premis sederhana: mencatat pengeluaran seharusnya semudah menceritakan apa yang terjadi. Dilengkapi interpretasi natural language multi-item, analisis perbandingan periode, forecasting belanja, dan sistem visual yang tenang.",
-          category: "Financial Technology",
+          category: "Smart Finance Tracker",
           facts: [
             "Aplikasi Fintech",
             "Solo Build",
@@ -1486,7 +1486,7 @@ At the end of the day, my journey is not about transitioning from Russian Litera
           meta: {
             date: "2026",
             role: "Product / UI/UX / Fullstack",
-            category: "Financial Technology",
+            category: "Smart Finance Tracker",
             team: "Solo",
             status: "Live",
           },
@@ -1685,7 +1685,7 @@ At the end of the day, my journey is not about transitioning from Russian Litera
             "Portfolio yang dirancang untuk mengomunikasikan cara berpikir, meneliti, mendesain, dan mengerjakan produk digital, bukan sekadar website portfolio biasa.",
           about:
             "Builder's Archive adalah website portfolio saya. Tapi ini bukan sekadar portfolio. Ini adalah identitas digital yang dibangun untuk mengomunikasikan filosofi desain, proses kreatif, dan kemampuan engineering saya. Setiap keputusan visual, setiap interaksi, dan setiap kata di website ini ada untuk menceritakan bagaimana saya mendekati masalah dan membangun produk.",
-          category: "Creative Engineering",
+          category: "Behind the Portfolio",
           facts: [
             "Proyek Pribadi",
             "Solo Build",
@@ -1707,7 +1707,7 @@ At the end of the day, my journey is not about transitioning from Russian Litera
           meta: {
             date: "2026",
             role: "Product Designer & Frontend Engineer",
-            category: "Creative Engineering",
+            category: "Behind the Portfolio",
             team: "Solo",
             status: "Live",
           },
@@ -1807,7 +1807,7 @@ At the end of the day, my journey is not about transitioning from Russian Litera
       ],
       philosophyQuote:
         "Good design isn't about originality.\nIt's about making good decisions consistently.",
-      philosophySign: "— Aditya Fajar",
+      philosophySign: "- Aditya Fajar",
 
       foundationsLabel: "Fondasi",
       foundationsTitle: "Fondasi Kreatif",
@@ -2439,7 +2439,7 @@ Karena pada akhirnya, semua perjalanan yang gue lalui bukan tentang berpindah da
         roleLabel: "PERAN",
         role: "Product Designer & Full-Stack Developer",
         typeLabel: "TIPE",
-        type: "Visual Search Intelligence",
+        type: "Design Analysis App",
         stackLabel: "STACK",
         stack:
           "React · Vite · Tailwind CSS · Node.js · Express · MongoDB · OpenRouter · Cloudinary · node-vibrant",

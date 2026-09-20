@@ -387,7 +387,7 @@ export default function NemuDetail({ project, onClose }) {
 
       <Divider />
 
-      {/* ── SECTION 01 — REFERENCE → VISUAL INTELLIGENCE ──────────────────────── */}
+      {/* ── SECTION ,  → VISUAL INTELLIGENCE ──────────────────────── */}
       <m.div
         variants={fadeUp}
         custom={1}
@@ -414,7 +414,7 @@ export default function NemuDetail({ project, onClose }) {
 
       <Divider />
 
-      {/* ── SECTION 02 — THE NEMU INSPECTOR ──────────────────────────────────── */}
+      {/* ── SECTION ,  NEMU INSPECTOR ──────────────────────────────────── */}
       <m.div
         variants={fadeUp}
         custom={2}
@@ -497,7 +497,7 @@ export default function NemuDetail({ project, onClose }) {
 
       <Divider />
 
-      {/* ── SECTION 03 — FROM INSIGHT TO ACTION ──────────────────────────────── */}
+      {/* ── SECTION ,  INSIGHT TO ACTION ──────────────────────────────── */}
       <m.div
         variants={fadeUp}
         custom={3}

@@ -1,7 +1,7 @@
 import React, { useEffect, useState, useRef } from "react";
 import { useLanguage } from "../context/LanguageContext";
 
-const GLITCH_CHARS = "!<>-_\\/[]{}—=+*^?#@$%&ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
+const GLITCH_CHARS = "!<>-_\\/[]{}-=+*^?#@$%&ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
 const NAME = "PORTFOLIO";
 
 function useGlitchText(target, duration = 900, startDelay = 0) {
@@ -98,7 +98,7 @@ export default function PreLoader() {
     return () => timers.forEach(clearTimeout);
   }, [isLighthouse]);
 
-  // Trigger exit slide — extended to 1500ms to allow glitch animations to finish and text to be read, Lighthouse still skips this
+  // Trigger exit ,  to 1500ms to allow glitch animations to finish and text to be read, Lighthouse still skips this
   useEffect(() => {
     if (isLighthouse) return;
     const timeoutVal = setTimeout(() => {

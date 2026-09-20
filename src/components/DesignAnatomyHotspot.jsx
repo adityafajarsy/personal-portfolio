@@ -2,7 +2,7 @@ import React, { useState, useRef, useCallback, useEffect } from "react";
 import { AnimatePresence, m } from "framer-motion";
 
 // ── Hotspot definitions (position as % of image container) ─────────────────────
-// x/y are the CENTER of the hotspot dot relative to the image container (0–100)
+// x/y are the CENTER of the hotspot dot relative to the image container (0-100)
 // cardSide: preferred side to show the floating card ("right" | "left" | "top" | "bottom")
 const HOTSPOTS = [
   {
@@ -341,13 +341,13 @@ export default function DesignAnatomyHotspot() {
         }
       `}</style>
 
-      {/* Container — borderless & bg-less to blend with page background */}
+      {/* ,  & bg-less to blend with page background */}
       <div
         ref={containerRef}
         className="w-full relative flex items-center justify-center"
         style={{ userSelect: "none" }}
       >
-        {/* Base image wrapper — hugs the image exactly so percentages match pixels */}
+        {/* Base image ,  the image exactly so percentages match pixels */}
         <div style={{ position: "relative", display: "inline-block", maxWidth: "100%" }}>
           <img
             src="/assets/project2/design_anatomy.webp"
@@ -358,10 +358,10 @@ export default function DesignAnatomyHotspot() {
             style={{ display: "block" }}
           />
 
-          {/* Hotspot overlay — absolute layer, covers same area as the image (hidden on mobile) */}
+          {/* Hotspot ,  layer, covers same area as the image (hidden on mobile) */}
           {!isMobile && (
             <div
-              aria-label="Interactive Design Anatomy — hover or tap hotspots to inspect design decisions"
+              aria-label="Interactive Design ,  or tap hotspots to inspect design decisions"
               style={{
                 position: "absolute",
                 inset: 0,

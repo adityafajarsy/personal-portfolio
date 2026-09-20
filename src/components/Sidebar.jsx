@@ -22,19 +22,16 @@ export default function Sidebar() {
       {/* Profile Header */}
       <div className="flex items-center gap-4">
         {/* Profile Picture */}
-        <div className="w-[72px] h-[72px] rounded-[18px] overflow-hidden bg-white/5 border border-white/10 flex-shrink-0 relative group shadow-md">
+        <div className="w-[80px] h-[80px] rounded-full overflow-hidden border-2 border-white/10 shadow-lg relative group flex-shrink-0">
           <img
-            src="/assets/profile-pict.webp"
-            alt="Aditya Fajar SY Profile Picture"
+            src="/assets/adityafajarsy.webp"
+            alt="Aditya Fajar SY"
             className="w-full h-full object-cover object-[center_15%]"
             width="80"
             height="80"
             loading="eager"
             decoding="async"
             fetchpriority="high"
-            onError={(e) => {
-              e.target.src = "/assets/hero-img.webp";
-            }}
           />
           <div className="absolute inset-0 bg-blue-500/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none" />
         </div>

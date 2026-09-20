@@ -217,7 +217,7 @@ export default function ThumoraDetail({ project, onClose }) {
         </div>
       </div>
 
-      {/* ── SECTION 01 — INTRO / THE PRODUCT ─────────────────────────────────── */}
+      {/* ── SECTION ,  / THE PRODUCT ─────────────────────────────────── */}
       <m.div variants={fadeUp} custom={0} initial="hidden" animate="visible" className="flex flex-col gap-6">
         <div className="flex flex-col gap-3">
           <STitle>{d.sec1Title || "AI Thumbnail Generator for Creators"}</STitle>
@@ -232,7 +232,7 @@ export default function ThumoraDetail({ project, onClose }) {
           </div>
         </div>
 
-        {/* Large Media Area — Landing Page */}
+        {/* Large Media ,  Page */}
         <MediaFrame
           title="Thumora Landing Page"
           subtitle="Clean product introduction, value proposition, and creator onboarding."
@@ -244,7 +244,7 @@ export default function ThumoraDetail({ project, onClose }) {
 
       <Divider />
 
-      {/* ── SECTION 02 — FROM IDEA TO THUMBNAIL ──────────────────────────────── */}
+      {/* ── SECTION ,  IDEA TO THUMBNAIL ──────────────────────────────── */}
       <m.div variants={fadeUp} custom={1} initial="hidden" animate="visible" className="flex flex-col gap-6">
         <div className="flex flex-col gap-2">
           <STitle>{d.sec2Title || "From Idea to Thumbnail"}</STitle>
@@ -253,7 +253,7 @@ export default function ThumoraDetail({ project, onClose }) {
           </p>
         </div>
 
-        {/* Large Media Area — Generate Page Screenshot */}
+        {/* Large Media ,  Page Screenshot */}
         <MediaFrame
           title="Generate Workspace"
           subtitle="Prompt composition, visual styles, color temperature, aspect ratios, and reference-guided generation."
@@ -296,7 +296,7 @@ export default function ThumoraDetail({ project, onClose }) {
 
       <Divider />
 
-      {/* ── SECTION 03 — SEE IT IN ACTION ────────────────────────────────────── */}
+      {/* ── SECTION ,  IT IN ACTION ────────────────────────────────────── */}
       <m.div variants={fadeUp} custom={2} initial="hidden" animate="visible" className="flex flex-col gap-8">
         <div className="flex flex-col gap-2">
           <STitle>{d.sec3Title || "See Thumora in Action"}</STitle>
@@ -305,7 +305,7 @@ export default function ThumoraDetail({ project, onClose }) {
           </p>
         </div>
 
-        {/* Video Asset 1 — Landing Walkthrough */}
+        {/* Video Asset ,  Walkthrough */}
         <div className="flex flex-col gap-3">
           <MediaFrame
             title="Landing Page Walkthrough"
@@ -317,7 +317,7 @@ export default function ThumoraDetail({ project, onClose }) {
           />
         </div>
 
-        {/* Video Asset 2 — Thumbnail Generation Flow */}
+        {/* Video Asset ,  Generation Flow */}
         <div className="flex flex-col gap-3">
           <MediaFrame
             title="Thumbnail Generation Flow"
@@ -332,7 +332,7 @@ export default function ThumoraDetail({ project, onClose }) {
 
       <Divider />
 
-      {/* ── SECTION 04 — COMMUNITY ───────────────────────────────────────────── */}
+      {/* ── SECTION ,  ───────────────────────────────────────────── */}
       <m.div variants={fadeUp} custom={3} initial="hidden" animate="visible" className="flex flex-col gap-6">
         <div className="flex flex-col gap-2">
           <STitle>{d.sec4Title || "More Than a Generator"}</STitle>
@@ -341,7 +341,7 @@ export default function ThumoraDetail({ project, onClose }) {
           </p>
         </div>
 
-        {/* Large Media Area — Community Screenshot */}
+        {/* Large Media ,  Screenshot */}
         <MediaFrame
           title="Community Inspiration Gallery Feed"
           subtitle="Explore trending thumbnails, inspect verified prompt recipes, and clone generation presets with one click."
@@ -377,7 +377,7 @@ export default function ThumoraDetail({ project, onClose }) {
 
       <Divider />
 
-      {/* ── SECTION 05 — RESPONSIVE + PRODUCT DETAILS ────────────────────────── */}
+      {/* ── SECTION ,  + PRODUCT DETAILS ────────────────────────── */}
       <m.div variants={fadeUp} custom={4} initial="hidden" animate="visible" className="flex flex-col gap-6">
         <div className="flex flex-col gap-2">
           <STitle>{d.sec5Title || "Designed for the Web"}</STitle>
@@ -419,7 +419,7 @@ export default function ThumoraDetail({ project, onClose }) {
 
       <Divider />
 
-      {/* ── SECTION 06 — FINAL SHOWCASE / CLOSING ────────────────────────────── */}
+      {/* ── SECTION ,  SHOWCASE / CLOSING ────────────────────────────── */}
       <m.div variants={fadeUp} custom={5} initial="hidden" animate="visible" className="flex flex-col gap-6">
         <div className="flex flex-col gap-2">
           <STitle>{d.sec6Title || "Built to Turn Ideas Into Thumbnails."}</STitle>
@@ -439,7 +439,7 @@ export default function ThumoraDetail({ project, onClose }) {
         />
       </m.div>
 
-      {/* ── SECTION 07 — ROLE + STACK (EXTREMELY SIMPLE EDITORIAL LAYOUT) ─────── */}
+      {/* ── SECTION ,  + STACK (EXTREMELY SIMPLE EDITORIAL LAYOUT) ─────── */}
       <div className="border-t border-white/10 pt-8 mt-2 flex flex-col sm:flex-row sm:items-start sm:justify-between gap-6">
         <div className="flex flex-col gap-1">
           <span className="text-[10px] font-mono text-[#8A8A8A] uppercase tracking-widest font-bold">
