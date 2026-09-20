@@ -298,12 +298,6 @@ export default function ProjectDetail({ project, onClose }) {
 
       {/* ── 1. HERO ────────────────────────────────────────────────────── */}
       <m.div variants={fadeUp} custom={0} initial="hidden" animate="visible" className="flex flex-col gap-5">
-        {/* Category tag */}
-        <div className="flex items-center gap-2">
-          <span className="text-[11px] font-bold tracking-[0.15em] text-[#3B82F6] uppercase">{meta.category}</span>
-          <span className="text-white/15">·</span>
-          <span className="text-[11px] font-bold tracking-[0.1em] text-white/35 uppercase">{meta.date}</span>
-        </div>
 
         {/* Title */}
         <h1 className="text-[28px] sm:text-[36px] lg:text-[44px] font-black text-white tracking-tight leading-tight max-w-2xl">
@@ -397,63 +391,7 @@ export default function ProjectDetail({ project, onClose }) {
         </div>
       </m.div>
 
-      {/* ── 3. ARCHITECTURE ───────────────────────────────────────────────── */}
-      <m.div variants={fadeUp} custom={3} initial="hidden" animate="visible" className="flex flex-col gap-4">
-        <div>
-          <SectionLabel>{t("ppidDetail.archLabel")}</SectionLabel>
-          <SectionTitle>{t("ppidDetail.archTitle")}</SectionTitle>
-        </div>
 
-        {/* Compact two-column ,  by side on all sizes */}
-        <div className="grid grid-cols-2 gap-3">
-          {/* Public flow */}
-          <div className="bg-[#0B0B0B] border border-white/5 rounded-[12px] p-3 flex flex-col gap-1">
-            <span className="text-[9px] font-bold tracking-widest text-[#3B82F6] uppercase mb-1">{t("ppidDetail.publicFlow")}</span>
-            {[
-              { label: t("ppidDetail.flowCitizen"), accent: false },
-              { label: t("ppidDetail.flowPortal"), accent: "blue" },
-              { label: t("ppidDetail.flowSipipi"), accent: "amber" },
-              { label: t("ppidDetail.flowAdmin"), accent: false },
-              { label: t("ppidDetail.flowEmail"), accent: "green" },
-              { label: t("ppidDetail.flowResponse"), accent: false },
-            ].map((node, i, arr) => (
-              <div key={i} className="flex flex-col">
-                <div className={`text-[10px] font-semibold px-2 py-1 rounded ${
-                  node.accent === "blue" ? "text-[#3B82F6] bg-[#3B82F6]/8" :
-                  node.accent === "amber" ? "text-[#F59E0B] bg-[#F59E0B]/8" :
-                  node.accent === "green" ? "text-[#10B981] bg-[#10B981]/8" :
-                  "text-white/45 bg-white/[0.03]"
-                } leading-tight`}>{node.label}</div>
-                {i < arr.length - 1 && <div className="self-start ml-2 w-px h-1.5 bg-white/10 mt-0.5" />}
-              </div>
-            ))}
-          </div>
-
-          {/* CMS flow */}
-          <div className="bg-[#0B0B0B] border border-white/5 rounded-[12px] p-3 flex flex-col gap-1">
-            <span className="text-[9px] font-bold tracking-widest text-[#8B5CF6] uppercase mb-1">{t("ppidDetail.contentFlow")}</span>
-            <div className="text-[10px] font-semibold px-2 py-1 rounded text-[#A78BFA] bg-[#8B5CF6]/8 leading-tight">{t("ppidDetail.flowCms")}</div>
-            <div className="self-start ml-2 w-px h-1.5 bg-white/10" />
-            <div className="flex flex-wrap gap-1">
-              {[
-                t("ppidDetail.galleryLabels.homepage"),
-                t("ppidDetail.galleryLabels.news"),
-                t("ppidDetail.galleryLabels.docs"),
-                t("ppidDetail.galleryLabels.faq"),
-                "Video",
-                "Info"
-              ].map((item, i) => (
-                <span key={i} className="text-[9px] font-medium text-[#A78BFA]/70 bg-[#8B5CF6]/5 border border-[#8B5CF6]/15 px-1.5 py-0.5 rounded">{item}</span>
-              ))}
-            </div>
-            <div className="self-start ml-2 w-px h-1.5 bg-white/10" />
-            <div className="text-[10px] font-semibold px-2 py-1 rounded text-[#3B82F6] bg-[#3B82F6]/8 leading-tight">Portal PPID</div>
-            <p className="text-[9px] text-white/20 mt-1 leading-relaxed">
-              CMS & SIPIPI run in one app.
-            </p>
-          </div>
-        </div>
-      </m.div>
 
       {/* ── 6. RESPONSIBILITIES ─────────────────────────────────────────── */}
       <m.div variants={fadeUp} custom={5} initial="hidden" animate="visible" className="flex flex-col gap-5">
@@ -480,44 +418,7 @@ export default function ProjectDetail({ project, onClose }) {
         </div>
       </m.div>
 
-      {/* ── 7. TIMELINE ─────────────────────────────────────────────────── */}
-      <m.div variants={fadeUp} custom={6} initial="hidden" animate="visible" className="flex flex-col gap-5">
-        <div>
-          <SectionLabel>{t("ppidDetail.processLabel")}</SectionLabel>
-          <SectionTitle>{t("ppidDetail.processTitle")}</SectionTitle>
-        </div>
-        <div className="bg-[#0B0B0B] border border-white/5 rounded-[14px] p-4">
-          <Timeline steps={timeline} />
-        </div>
-      </m.div>
 
-      {/* ── 8. TECH STACK ───────────────────────────────────────────────── */}
-      <m.div variants={fadeUp} custom={7} initial="hidden" animate="visible" className="flex flex-col gap-5">
-        <div>
-          <SectionLabel>{t("ppidDetail.techLabel")}</SectionLabel>
-          <SectionTitle>{t("ppidDetail.techTitle")}</SectionTitle>
-        </div>
-        <div className="grid grid-cols-3 gap-2">
-          {[
-            { label: t("ppidDetail.techFrontend") || "Frontend", items: techStack.frontend, color: "#3B82F6" },
-            { label: t("ppidDetail.techBackend") || "Backend", items: techStack.backend, color: "#10B981" },
-            { label: t("ppidDetail.techDeployment") || "Deployment", items: techStack.deployment, color: "#F59E0B" },
-          ].map((group, i) => (
-            <div key={i} className="bg-[#0B0B0B] border border-white/5 rounded-[12px] p-3 flex flex-col gap-2">
-              <span className="text-[9px] font-bold tracking-widest uppercase" style={{ color: group.color }}>
-                {group.label}
-              </span>
-              <div className="flex flex-wrap gap-1.5">
-                {group.items.map((item, j) => (
-                  <span key={j} className="text-[10px] font-semibold text-white/55 bg-white/5 border border-white/8 px-1.5 py-0.5 rounded">
-                    {item}
-                  </span>
-                ))}
-              </div>
-            </div>
-          ))}
-        </div>
-      </m.div>
 
       {/* ── 9. GALLERY (Portal PPID only) ───────────────────────────────── */}
       <m.div variants={fadeUp} custom={8} initial="hidden" animate="visible" className="flex flex-col gap-5">
@@ -593,76 +494,9 @@ export default function ProjectDetail({ project, onClose }) {
 
       </m.div>
 
-      {/* ── 10. INTERNAL PLATFORM (Confidential) ────────────────────────── */}
-      <m.div variants={fadeUp} custom={9} initial="hidden" animate="visible" className="flex flex-col gap-5">
-        <div>
-          <SectionLabel>{t("ppidDetail.internalLabel")}</SectionLabel>
-          <SectionTitle>{t("ppidDetail.internalTitle")}</SectionTitle>
-        </div>
-        <div className="bg-[#0B0B0B] border border-white/5 rounded-[20px] p-6 sm:p-8 flex flex-col gap-4">
-          <div className="flex items-start gap-4">
-            <div className="w-10 h-10 rounded-xl bg-white/5 border border-white/8 flex items-center justify-center flex-shrink-0 text-white/40">
-              <IconLock />
-            </div>
-            <div className="flex-1">
-              <h3 className="text-[14px] font-bold text-white mb-2">{t("ppidDetail.internalConfidential")}</h3>
-              <p className="text-[13px] text-white/50 leading-relaxed">
-                {t("ppidDetail.internalNote")}
-              </p>
-            </div>
-          </div>
 
-          <div className="border-t border-white/5 pt-4">
-            <p className="text-[12px] text-white/40 leading-relaxed mb-3">{t("ppidDetail.internalContribNote")}</p>
-            <div className="grid grid-cols-2 sm:grid-cols-3 gap-2">
-              {(t("ppidDetail.internalContributions", { returnObjects: true }) || []).map((item, i) => (
-                <div key={i} className="flex items-center gap-2 text-[11px] text-white/45">
-                  <span className="text-[#3B82F6]/60"><IconCheck /></span>
-                  {item}
-                </div>
-              ))}
-            </div>
-          </div>
-        </div>
-      </m.div>
 
-      {/* ── 11. RESULTS ─────────────────────────────────────────────────── */}
-      <m.div variants={fadeUp} custom={10} initial="hidden" animate="visible" className="flex flex-col gap-4">
-        <div>
-          <SectionLabel>{t("ppidDetail.resultsLabel")}</SectionLabel>
-          <SectionTitle>{t("ppidDetail.resultsTitle")}</SectionTitle>
-        </div>
-        <div className="flex flex-col">
-          {results.map((result, i) => (
-            <div key={i} className="flex items-start gap-3 py-2.5 border-b border-white/[0.04] last:border-0">
-              <span className="text-[#3B82F6]/60 flex-shrink-0 mt-0.5"><IconCheck /></span>
-              <p className="text-[12px] text-white/60 leading-relaxed">{result}</p>
-            </div>
-          ))}
-        </div>
-      </m.div>
 
-      {/* ── 12. REPOSITORY ──────────────────────────────────────────────── */}
-      <m.div variants={fadeUp} custom={11} initial="hidden" animate="visible" className="flex flex-col gap-5">
-        <div>
-          <SectionLabel>{t("ppidDetail.repoLabel")}</SectionLabel>
-          <SectionTitle>{t("ppidDetail.repoTitle")}</SectionTitle>
-        </div>
-        <div className="bg-[#0B0B0B] border border-white/5 rounded-[16px] p-6 flex flex-col sm:flex-row items-start sm:items-center gap-4">
-          <div className="flex items-center gap-3 flex-1">
-            <div className="w-10 h-10 rounded-xl bg-white/5 border border-white/8 flex items-center justify-center text-white/35 flex-shrink-0">
-              <IconLock />
-            </div>
-            <div>
-              <p className="text-[13px] font-bold text-white">{t("ppidDetail.repoPrivate")}</p>
-              <p className="text-[12px] text-white/40 mt-0.5">{t("ppidDetail.repoNote")}</p>
-            </div>
-          </div>
-          <span className="text-[11px] font-semibold text-white/30 bg-white/5 border border-white/8 px-3 py-1.5 rounded-lg whitespace-nowrap">
-            {t("ppidDetail.repoUnavailable")}
-          </span>
-        </div>
-      </m.div>
 
 
       {/* ── Footer back button ───────────────────────────────────────────── */}

@@ -132,7 +132,7 @@ export const translations = {
       title: "Featured Projects",
       swipe: "Swipe",
       launchBtn: "Launch Project",
-      notDeployed: "Not Deployed (Local Dev)",
+      notDeployed: "",
       backBtn: "Back to Portfolio",
       list: [
         {
