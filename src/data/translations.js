@@ -176,14 +176,54 @@ export const translations = {
           },
         },
         {
+          id: 6,
+          gambar: "/assets/pico/pico-laptop.webp",
+          nama: "PICO",
+          desk: "A design-centric social and knowledge platform bridging Pinterest-style visual discovery with structured community discussions and in-thread multimodal AI critique.",
+          subtitle:
+            "Corner for Designers: Visual moodboards, structured problem-solving discussions, and in-thread multimodal AI critique.",
+          about:
+            "PICO is a dedicated social and knowledge platform built specifically for UI/UX designers, visual creators, and creative technologists. PICO bridges two worlds that are usually disconnected: editorial moodboard curation (Pinterest-style) for exploring visual references, and structured, high-context community discussions (Reddit/Discord-style) for dissecting case studies and solving technical design challenges collaboratively. Equipped with an in-thread multimodal AI assistant (@pico-ai) that inspects visual attachments (UI screenshots, typography, grid layouts) and provides objective, actionable design critique directly inside comment threads.",
+          category: "Design Social & AI Platform",
+          facts: [
+            "Full-Stack Web App",
+            "Design Community",
+            "2026",
+            "React 19 + TypeScript",
+            "Node.js + Express",
+            "MongoDB + Cloudinary",
+            "OpenRouter Multimodal AI",
+          ],
+          tools: [
+            "React 19",
+            "TypeScript",
+            "Vite",
+            "Tailwind CSS",
+            "Node.js",
+            "Express",
+            "MongoDB",
+            "OpenRouter",
+            "Cloudinary",
+          ],
+          images: [],
+          link: "https://picorner.vercel.app",
+          meta: {
+            date: "2026",
+            role: "Full-Stack Developer & UI/UX Designer",
+            category: "Social Media for Designers",
+            team: "Solo Build",
+            status: "Live",
+          },
+        },
+        {
           id: 3,
           gambar: "/assets/project3/cover-thumora.webp",
-          nama: "Thumora AI",
+          nama: "Thumora",
           desk: "An Intelligence thumbnail creation platform designed to turn a simple content concept into production-ready thumbnails with minimal effort.",
           subtitle:
             "AI-Powered Thumbnail Generation Platform designed around real creator workflows, resilient SSE streaming, and community-driven inspiration.",
           about:
-            "Thumora AI is an AI-powered thumbnail creation workspace built for creators. Beyond a simple API wrapper, it integrates prompt enhancement, modular visual style systems, dual-engine generation (streaming SSE & non-streaming reference synthesis), fair quota governance, and a community inspiration platform.",
+            "Thumora is an AI-powered thumbnail creation workspace built for creators. Beyond a simple API wrapper, it integrates prompt enhancement, modular visual style systems, dual-engine generation (streaming SSE & non-streaming reference synthesis), fair quota governance, and a community inspiration platform.",
           category: "Thumbnail Generator",
           facts: [
             "AI Product",
@@ -1335,6 +1375,50 @@ At the end of the day, my journey is not about transitioning from Russian Litera
         desc: "NEMU is engineered as a complete product experience: Upload ➔ Analyze ➔ Save ➔ Favorite ➔ Archive with authenticated workspaces and persistent reference collections.",
       },
     },
+    picoDetail: {
+      launchBtn: "Launch PICO",
+      repoBtn: "GitHub Repo",
+      liveDemoUrl: "https://picorner.vercel.app",
+      repoUrl: "https://github.com/adityafajarsy/PICO-Social-Media-Designer",
+      heroHeadline:
+        "A social sanctuary built specifically for designers to find real solutions, share references, and converse with an in-thread multimodal AI.",
+
+      sec1Label: "01 / THE SPARK",
+      sec1Title: "A dedicated gathering space for designers.",
+      sec1Desc:
+        "PICO was born out of a real frustration: despite endless social apps, there wasn't a dedicated social hub where digital designers could gather, exchange raw work-in-progress, and find genuine solutions and visual references without algorithmic noise.",
+      sec1Badge: "FEED & COMMUNITY OVERVIEW",
+      sec1MediaSrc: "/assets/pico/feed-3d.webp",
+      sec1Caption:
+        "PICO live platform — responsive dark interface with designer-first workflows.",
+
+      sec2Label: "02 / VISUAL DISCOVERY",
+      sec2Title: "Showcase & visual discovery, Pinterest-style.",
+      sec2Desc:
+        "Built-in visual pinning allows designers and creators to upload and curate design references in a clean masonry grid. Users can explore typography, branding, and UI inspirations, inspect details in high-res lightbox modals, and save references to private collections in a single click.",
+      sec2Badge: "VISUAL PINNING & MOODBOARD",
+      sec2MediaSrc: "/assets/pico/moodboard.webp",
+      sec2Caption:
+        "Masonry reference board for exploratory UI, typography, and poster curation.",
+
+      sec3Label: "03 / MASCOT & VISION AI",
+      sec3Title: "Meet Pico the cat & the in-thread @pico-ai.",
+      sec3Desc:
+        "Pico is the friendly cat mascot of the platform. Beside him is @pico-ai — a multimodal assistant inspired by Grok. Tag @pico-ai in any comment thread, and it will analyze the full post including image attachments (UI screenshots, contrast ratios, spacing, or grids) with sharp visual reasoning.",
+      sec3Badge: "IN-THREAD MULTIMODAL ASSISTANT",
+      sec3MediaSrc: "/assets/pico/pico-chat.webp",
+      sec3Caption:
+        "Tagging @pico-ai in comments triggers instant multimodal visual analysis.",
+
+      sec4Label: "04 / THE SOCIAL CORE",
+      sec4Title: "A living social platform for creators.",
+      sec4Desc:
+        "Everything you'd expect from a social platform, tailored for creative craft: status updates, showcase posts with constructive critique, technical Q&A with verified solutions, dynamic Discord-style emoji reactions, and studio direct messaging.",
+      sec4Badge: "COMMUNITY THREADS & DISCUSSIONS",
+      sec4MediaSrc: "/assets/pico/last-section.webp",
+      sec4Caption:
+        "Structured post intents, threaded comments, and real-time community engagement.",
+    },
   },
   id: {
     preloader: {
@@ -1417,14 +1501,54 @@ At the end of the day, my journey is not about transitioning from Russian Litera
           },
         },
         {
+          id: 6,
+          gambar: "/assets/pico/pico-laptop.webp",
+          nama: "PICO",
+          desk: "Platform sosial dan pusat pengetahuan desain yang memadukan eksplorasi visual ala Pinterest dengan diskusi komunitas terstruktur dan kritik AI multimodal in-thread.",
+          subtitle:
+            "Corner for Designers: Kurasi visual editorial, ruang diskusi terstruktur pemecah masalah, dan kritik AI multimodal in-thread.",
+          about:
+            "PICO adalah platform sosial dan ruang berbagi wawasan yang dibangun khusus untuk para desainer UI/UX, kreator visual, dan creative developer. PICO memadukan dua dunia yang biasanya terpisah: kurasi visual bergaya moodboard editorial (ala Pinterest) untuk eksplorasi dan menyimpan referensi karya visual, serta ruang diskusi terstruktur yang kaya konteks (ala Reddit/Discord) untuk bertukar pikiran, membedah studi kasus, dan menyelesaikan masalah teknis desain secara kolaboratif. Dilengkapi dengan asisten AI in-thread (@pico-ai) yang mampu membaca lampiran visual (tangkapan layar UI, tipografi, grid) dan memberikan umpan balik desain secara objektif langsung di kolom komentar.",
+          category: "Platform Sosial & AI Desain",
+          facts: [
+            "Aplikasi Full-Stack",
+            "Komunitas Desain",
+            "2026",
+            "React 19 + TypeScript",
+            "Node.js + Express",
+            "MongoDB + Cloudinary",
+            "AI Vision Multimodal",
+          ],
+          tools: [
+            "React 19",
+            "TypeScript",
+            "Vite",
+            "Tailwind CSS",
+            "Node.js",
+            "Express",
+            "MongoDB",
+            "OpenRouter",
+            "Cloudinary",
+          ],
+          images: [],
+          link: "https://picorner.vercel.app",
+          meta: {
+            date: "2026",
+            role: "Full-Stack Developer & UI/UX Designer",
+            category: "Social Media for Designers",
+            team: "Solo Build",
+            status: "Live",
+          },
+        },
+        {
           id: 3,
           gambar: "/assets/project3/cover-thumora.webp",
-          nama: "Thumora AI",
+          nama: "Thumora",
           desk: "Platform kreasi thumbnail berbasis AI yang dirancang untuk mengubah konsep konten sederhana menjadi thumbnail siap pakai dengan usaha minimal.",
           subtitle:
             "Platform Generator Thumbnail Berbasis AI yang dirancang untuk alur kerja kreator nyata, arsitektur streaming SSE yang andal, dan ekosistem inspirasi komunitas.",
           about:
-            "Thumora AI adalah workspace pembuatan thumbnail bertenaga AI yang dirancang khusus untuk alur kerja kreator konten. Lebih dari sekadar pemanggil API biasa, platform ini mengintegrasikan prompt enhancer cerdas, sistem gaya visual modular, arsitektur generasi ganda (streaming SSE & non-streaming reference fallback), proteksi kuota, dan platform inspirasi komunitas.",
+            "Thumora adalah workspace pembuatan thumbnail bertenaga AI yang dirancang khusus untuk alur kerja kreator konten. Lebih dari sekadar pemanggil API biasa, platform ini mengintegrasikan prompt enhancer cerdas, sistem gaya visual modular, arsitektur generasi ganda (streaming SSE & non-streaming reference fallback), proteksi kuota, dan platform inspirasi komunitas.",
           category: "Thumbnail Generator",
           facts: [
             "Produk AI",
@@ -2522,6 +2646,50 @@ Karena pada akhirnya, semua perjalanan yang gue lalui bukan tentang berpindah da
         title: "Perpustakaan Visual Intelligence Lengkap",
         desc: "NEMU dirancang sebagai pengalaman produk utuh: Upload ➔ Analyze ➔ Save ➔ Favorite ➔ Archive dengan autentikasi pengguna dan koleksi referensi tersimpan.",
       },
+    },
+    picoDetail: {
+      launchBtn: "Buka PICO",
+      repoBtn: "Repositori GitHub",
+      liveDemoUrl: "https://picorner.vercel.app",
+      repoUrl: "https://github.com/adityafajarsy/PICO-Social-Media-Designer",
+      heroHeadline:
+        "Tempat kumpul khusus desainer untuk mencari solusi, bertukar referensi visual, dan berdiskusi dengan AI vision multimodal in-thread.",
+
+      sec1Label: "01 / AWAL MULA",
+      sec1Title: "Tempat  kumpul buat desainer.",
+      sec1Desc:
+        "PICO lahir dari keresahan pribadi:  media sosial yang benar-benar jadi titik temu desainer untuk saling mencari solusi, mendiskusikan proses kerja nyata, dan bertukar referensi tanpa tenggelam dalam kebisingan algoritma umum.",
+      sec1Badge: "FEED & COMMUNITY OVERVIEW",
+      sec1MediaSrc: "/assets/pico/feed-3d.webp",
+      sec1Caption:
+        "Platform live PICO — UI yang terang untuk flow kerja desain grafis.",
+
+      sec2Label: "02 / EKSPLORASI VISUAL",
+      sec2Title: "Showcase & referensi visual ala Pinterest.",
+      sec2Desc:
+        "Fitur showcase reference memudahkan kreator membagikan karya dan referensi visual dalam layout yang rapi. Desainer bisa menelaah detail karya lewat modal lightbox, menyimpan inspirasi ke koleksi, dan mengeksplorasi referensi UI, tipografi, serta branding.",
+      sec2Badge: "VISUAL MOODBOARD",
+      sec2MediaSrc: "/assets/pico/moodboard.webp",
+      sec2Caption:
+        "Papan referensi untuk eksplorasi UI, tipografi, dan inspirasi visual.",
+
+      sec3Label: "03 / MASKOT & AI VISION",
+      sec3Title: "Kenalan sama Pico si maskot kucing & @pico-ai.",
+      sec3Desc:
+        "Pico hadir sebagai maskot kucing yang ramah. Di dalam platform, ada @pico-ai yang cara kerjanya mirip Grok — cukup mention @pico-ai di komentar postingan mana saja, dan dia siap diajak ngobrolin apa pun sesuai konteks. Karena dibekali kapabilitas vision, @pico-ai bisa membaca teks sekaligus gambar lampiran (hierarki UI, kontras, dan layout).",
+      sec3Badge: "ASISTEN VISUAL IN-THREAD",
+      sec3MediaSrc: "/assets/pico/pico-chat.webp",
+      sec3Caption:
+        "Mention @pico-ai di komentar untuk analisis visual multimodal secara langsung.",
+
+      sec4Label: "04 / MEDSOS KOMUNITAS",
+      sec4Title: "Ekosistem media sosial yang hidup dan terstruktur.",
+      sec4Desc:
+        "Update status, postingan showcase untuk meminta saran membangun, forum tanya-jawab dengan solusi, sistem reaksi emoji dinamis ala Discord, hingga pesan privat antar kreator.",
+      sec4Badge: "DISKUSI & KOMUNITAS",
+      sec4MediaSrc: "/assets/pico/last-section.webp",
+      sec4Caption:
+        "Komentar berjenjang, reaksi emoji interaktif, dan ruang diskusi antar kreator.",
     },
   },
 };

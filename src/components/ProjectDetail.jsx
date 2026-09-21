@@ -5,6 +5,7 @@ import PortfolioDetail from "./PortfolioDetail";
 import ThumoraDetail from "./ThumoraDetail";
 import SaldoDetail from "./SaldoDetail";
 import NemuDetail from "./NemuDetail";
+import PicoDetail from "./PicoDetail";
 
 const fadeUp = {
   hidden: { opacity: 0, y: 22 },
@@ -211,11 +212,17 @@ export default function ProjectDetail({ project, onClose }) {
   };
 
   // Detect project type
+  const isPico = project.id === 6;
   const isNemu = project.id === 5;
   const isBuilderArchive = project.id === 2;
   const isThumora = project.id === 3;
   const isSaldo = project.id === 4;
   const isPPID = Boolean(project.modules);
+
+  // ── PICO (Project 6) rendering ────────────────────────────────────────────
+  if (isPico) {
+    return <PicoDetail project={project} onClose={onClose} />;
+  }
 
   // ── NEMU (Project 5) rendering ────────────────────────────────────────────
   if (isNemu) {
