@@ -136,6 +136,47 @@ export const translations = {
       backBtn: "Back to Portfolio",
       list: [
         {
+          id: 7,
+          gambar: "/assets/sequel/banner-cover.webp",
+          nama: "Sequel",
+          desk: "An AI-powered creative engine that generates social media visuals with strict Visual DNA consistency and editorial continuity.",
+          subtitle:
+            "Same Vibe, Further: Eliminate random AI generation with structured Visual DNA extraction, lineage continuation, and guided studio workflows.",
+          about:
+            "Sequel is an AI-powered creative engine built for creators, agencies, and marketing teams who demand brand-consistent social visuals without algorithmic chaos. Traditional image generators produce disjointed outputs lacking visual lineage, making brand harmony nearly impossible across an editorial feed. Sequel solves this through two deterministic workflows: Guided Editorial Intake (Mode 1) for structured brand-first synthesis, and Visual DNA Lineage Continuation (Mode 2) which analyzes 1 to 8 reference posts to maintain color palettes, typography, whitespace, and lighting across consecutive campaigns. All powered by in-canvas AI edit passes, Clerk authentication, OpenRouter vision reasoning, and MongoDB.",
+          category: "Creative AI Engine",
+          facts: [
+            "AI Product",
+            "Solo Build",
+            "2026",
+            "React 18 + TypeScript",
+            "Node.js + Express",
+            "OpenRouter (Vision + Gen)",
+            "MongoDB + Cloudinary",
+          ],
+          tools: [
+            "React 18",
+            "TypeScript",
+            "Vite",
+            "Tailwind CSS",
+            "Node.js",
+            "Express",
+            "MongoDB",
+            "OpenRouter",
+            "Cloudinary",
+            "Clerk",
+          ],
+          images: [],
+          link: "https://sequelstudio.vercel.app",
+          meta: {
+            date: "2026",
+            role: "Full-Stack Developer & UI/UX Designer",
+            category: "AI Design & Visual Continuity Engine",
+            team: "Solo Build",
+            status: "Live",
+          },
+        },
+        {
           id: 5,
           gambar: "/assets/nemu/banner-nemu.webp",
           nama: "NEMU",
@@ -1419,6 +1460,46 @@ At the end of the day, my journey is not about transitioning from Russian Litera
       sec4Caption:
         "Structured post intents, threaded comments, and real-time community engagement.",
     },
+    sequelDetail: {
+      launchBtn: "Launch Sequel",
+      repoBtn: "GitHub Repo",
+      liveDemoUrl: "https://sequelstudio.vercel.app",
+      repoUrl: "https://github.com/adityafajarsy/Sequel_ai-design-clone",
+      heroHeadline:
+        "Creative engine powered by AI to produce social media visuals with strict Visual DNA consistency and editorial continuity—eliminating random prompt chaos.",
+
+      sec1Label: "01 / LINEAGE CONTINUATION",
+      sec1Title: "Visual DNA & Lineage Continuation from existing posts.",
+      sec1Desc:
+        "Upload 1 to 8 past posts or feed screenshots. Sequel dissects baseline design rules—color palettes, typography hierarchy, whitespace, lighting temperature, and layout density—then renders a new post that blends natively into your existing feed, complete with side-by-side comparison.",
+      sec1Badge: "MODE 2: LINEAGE CONTINUATION",
+      sec1MediaSrc: "/assets/sequel/continue-section.webp",
+      sec1Caption:
+        "Two-stage AI vision analysis extracting creative blueprints from multi-post references.",
+
+      sec2Label: "02 / GUIDED INTAKE",
+      sec2Title: "Guided Editorial Intake on an interactive studio canvas.",
+      sec2Desc:
+        "Start from scratch without chaotic manual prompting. An interactive studio canvas guides creators through brand context, industry taxonomy, creative direction, color palettes, and typographic styling before synthesizing the final visual.",
+      sec2Badge: "MODE 1: GUIDED STUDIO INTAKE",
+      sec2MediaSrc: "/assets/sequel/section-mode-1.webp",
+      sec2Caption:
+        "Interactive studio questionnaire replacing trial-and-error prompting with structured design choices.",
+
+      sec3Label: "03 / IN-CANVAS PASS & PIPELINE",
+      sec3Title: "In-Canvas AI Edit Pass & Two-Stage Pipeline.",
+      sec3Desc:
+        "Perform precision visual refinements directly on the studio canvas without restarting prompts or damaging established compositions. Backed by a two-stage pipeline combining vision reasoning (OpenRouter gpt-5.6-luna) and high-res image synthesis (gpt-image-2) with Cloudinary CDN storage and Clerk auth.",
+      sec3Badge: "IN-CANVAS ITERATION & PIPELINE",
+      sec3MediaSrc: "/assets/sequel/edit-canvas.webp",
+      sec3Caption:
+        "Direct in-canvas refinement pass preserving visual hierarchy and series lineage.",
+
+      ctaTag: "SAME VIBE, FURTHER",
+      ctaHeadline: "Ready to explore the Sequel creative engine?",
+      ctaDesc:
+        "Experience brand-consistent social media visual generation on the live studio or inspect the full-stack architecture on GitHub.",
+    },
   },
   id: {
     preloader: {
@@ -1460,6 +1541,47 @@ At the end of the day, my journey is not about transitioning from Russian Litera
       notDeployed: "Tidak Dideploy (Lokal)",
       backBtn: "Kembali ke Portofolio",
       list: [
+        {
+          id: 7,
+          gambar: "/assets/sequel/banner-cover.webp",
+          nama: "Sequel",
+          desk: "Creative engine berbasis AI untuk menghasilkan visual media sosial dengan konsistensi Visual DNA dan kontinuitas editorial tanpa improvisasi acak.",
+          subtitle:
+            "Same Vibe, Further: Jaga konsistensi visual feed media sosial dengan ekstraksi Visual DNA, lineage continuation, dan studio intake terarah.",
+          about:
+            "Sebagian besar AI image generator menghasilkan gambar visual yang terlalu improvisasi dan tidak beraturan tanpa keterkaitan satu sama lain, sehingga menyulitkan kreator dalam menjaga identitas brand, palet warna, tipografi, dan gaya editorial yang seragam. Sequel dirancang khusus untuk kreator, agensi, dan tim marketing yang membutuhkan konten visual berkualitas editorial dengan garis keturunan visual (lineage) yang terjaga. Pengguna dapat memulai dari awal melalui intake terarah (Mode 1) atau mengunggah 1–8 referensi postingan untuk mengekstrak Visual DNA dan melanjutkan estetika yang sudah ada secara konsisten (Mode 2) dengan in-canvas AI edit pass.",
+          category: "Creative AI Engine",
+          facts: [
+            "Produk AI",
+            "Solo Build",
+            "2026",
+            "React 18 + TypeScript",
+            "Node.js + Express",
+            "OpenRouter (Vision + Gen)",
+            "MongoDB + Cloudinary",
+          ],
+          tools: [
+            "React 18",
+            "TypeScript",
+            "Vite",
+            "Tailwind CSS",
+            "Node.js",
+            "Express",
+            "MongoDB",
+            "OpenRouter",
+            "Cloudinary",
+            "Clerk",
+          ],
+          images: [],
+          link: "https://sequelstudio.vercel.app",
+          meta: {
+            date: "2026",
+            role: "Full-Stack Developer & UI/UX Designer",
+            category: "AI Design & Visual Continuity Engine",
+            team: "Solo Build",
+            status: "Live",
+          },
+        },
         {
           id: 5,
           gambar: "/assets/nemu/banner-nemu.webp",
@@ -2690,6 +2812,46 @@ Karena pada akhirnya, semua perjalanan yang gue lalui bukan tentang berpindah da
       sec4MediaSrc: "/assets/pico/last-section.webp",
       sec4Caption:
         "Komentar berjenjang, reaksi emoji interaktif, dan ruang diskusi antar kreator.",
+    },
+    sequelDetail: {
+      launchBtn: "Buka Sequel",
+      repoBtn: "Repositori GitHub",
+      liveDemoUrl: "https://sequelstudio.vercel.app",
+      repoUrl: "https://github.com/adityafajarsy/Sequel_ai-design-clone",
+      heroHeadline:
+        "Creative engine berbasis AI untuk menghasilkan visual media sosial dengan konsistensi Visual DNA dan kontinuitas editorial tanpa improvisasi acak.",
+
+      sec1Label: "01 / LINEAGE CONTINUATION",
+      sec1Title: "Visual DNA & Lineage Continuation dari postingan yang sudah ada.",
+      sec1Desc:
+        "Unggah 1 sampai 8 postingan lama atau tangkapan layar feed media sosial Anda. Sequel menganalisis aturan visual dasar seperti palet warna, tipografi, whitespace, pencahayaan, dan kepadatan komposisi, lalu merender postingan baru yang menyatu alami dengan feed yang sudah ada. Dilengkapi pula dengan fitur perbandingan berdampingan (Side-by-Side Comparison).",
+      sec1Badge: "MODE 2: LINEAGE CONTINUATION",
+      sec1MediaSrc: "/assets/sequel/continue-section.webp",
+      sec1Caption:
+        "Analisis AI vision 2 tahap mengekstrak blueprint kreatif dari multi-referensi postingan.",
+
+      sec2Label: "02 / GUIDED INTAKE",
+      sec2Title: "Guided Editorial Intake di atas kanvas studio interaktif.",
+      sec2Desc:
+        "Alur interaktif di atas kanvas studio yang memandu pengguna menentukan konteks brand, taksonomi industri, arah kreatif, palet warna, dan gaya tipografi sebelum gambar di-generate. Pendekatan ini menggantikan prompt manual yang acak dengan keputusan desain yang terstruktur.",
+      sec2Badge: "MODE 1: GUIDED STUDIO INTAKE",
+      sec2MediaSrc: "/assets/sequel/section-mode-1.webp",
+      sec2Caption:
+        "Kuesioner studio interaktif menggantikan prompt manual dengan parameter desain terarah.",
+
+      sec3Label: "03 / IN-CANVAS PASS & PIPELINE",
+      sec3Title: "In-Canvas AI Edit Pass & Arsitektur Pipeline Dua Tahap.",
+      sec3Desc:
+        "Lakukan revisi visual secara terarah langsung di dalam studio kanvas tanpa harus membuat ulang prompt dari awal atau merusak komposisi yang sudah terbentuk. Ditenagai arsitektur pipeline dua tahap: penalaran visi OpenRouter (openai/gpt-5.6-luna) dan sintesis gambar (openai/gpt-image-2), penyimpanan Cloudinary, serta autentikasi Clerk.",
+      sec3Badge: "IN-CANVAS ITERATION & PIPELINE",
+      sec3MediaSrc: "/assets/sequel/edit-canvas.webp",
+      sec3Caption:
+        "Revisi terarah langsung di kanvas menjaga hierarki visual dan kontinuitas seri konten.",
+
+      ctaTag: "SAME VIBE, FURTHER",
+      ctaHeadline: "Siap mencoba creative engine Sequel?",
+      ctaDesc:
+        "Bikin desain postingan Instagram ga pake pusing dengan konsistensi Visual DNA yang terjaga di studio live atau telusuri kodenya di GitHub.",
     },
   },
 };
