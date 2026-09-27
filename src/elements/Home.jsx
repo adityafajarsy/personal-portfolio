@@ -4,19 +4,17 @@ import { m, AnimatePresence } from "framer-motion";
 import { useLanguage } from "../context/LanguageContext";
 
 const rolesEn = [
-  "Web Developer",
-  "Product Engineer",
-  "UI/UX Designer",
-  "Fullstack MERN Devs",
-  "Value Translator",
+  "Frontend Developer",
+  "Product Designer",
+  "UI/UX Web Design",
+  "Fullstack Dev ",
 ];
 
 const rolesId = [
-  "Web Developer",
-  "Product Engineer",
-  "UI/UX Desainer",
-  "Fullstack MERN Devs",
-  "Value Translator",
+  "Frontend Developer",
+  "Product Designer",
+  "UI/UX Web Design",
+  "Fullstack Dev ",
 ];
 
 const containerVariants = {
