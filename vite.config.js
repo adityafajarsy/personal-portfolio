@@ -15,6 +15,11 @@ export default defineConfig({
       brotliSize: true
     })
   ],
+  server: {
+    watch: {
+      ignored: ['**/*.pdf'],
+    },
+  },
   esbuild: {
     pure: ['console.log'],
   },

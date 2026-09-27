@@ -8,7 +8,7 @@ const rolesEn = [
   "Product Engineer",
   "UI/UX Designer",
   "Fullstack MERN Devs",
-  "Value Translator"
+  "Value Translator",
 ];
 
 const rolesId = [
@@ -16,7 +16,7 @@ const rolesId = [
   "Product Engineer",
   "UI/UX Desainer",
   "Fullstack MERN Devs",
-  "Value Translator"
+  "Value Translator",
 ];
 
 const containerVariants = {
@@ -46,8 +46,8 @@ const sloganVariants = {
       delay: 0.8,
       duration: 0.4,
       ease: "linear",
-    }
-  }
+    },
+  },
 };
 
 export default function Home() {
@@ -144,9 +144,12 @@ export default function Home() {
       </m.p>
 
       {/* Action Buttons */}
-      <m.div className="flex flex-wrap items-center gap-4 mt-2" variants={itemVariants}>
+      <m.div
+        className="flex flex-wrap items-center gap-4 mt-2"
+        variants={itemVariants}
+      >
         <a
-          href="/assets/CV-Terbaru.pdf"
+          href="/assets/CV_Product-Designer.pdf"
           download="Aditya Fajar Satya Yudha-CV.pdf"
           target="_blank"
           rel="noopener noreferrer"
