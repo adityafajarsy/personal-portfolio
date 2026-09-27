@@ -13,25 +13,62 @@ const fadeUp = {
 
 // ── Icons ─────────────────────────────────────────────────────────────────────
 const IconArrowLeft = () => (
-  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+  <svg
+    width="15"
+    height="15"
+    viewBox="0 0 24 24"
+    fill="none"
+    stroke="currentColor"
+    strokeWidth="2.5"
+    strokeLinecap="round"
+    strokeLinejoin="round"
+  >
     <path d="M19 12H5M12 5l-7 7 7 7" />
   </svg>
 );
 
 const IconExternal = () => (
-  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+  <svg
+    width="12"
+    height="12"
+    viewBox="0 0 24 24"
+    fill="none"
+    stroke="currentColor"
+    strokeWidth="2.5"
+    strokeLinecap="round"
+    strokeLinejoin="round"
+  >
     <path d="M7 17L17 7M7 7h10v10" />
   </svg>
 );
 
 const IconGithub = () => (
-  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+  <svg
+    width="14"
+    height="14"
+    viewBox="0 0 24 24"
+    fill="none"
+    stroke="currentColor"
+    strokeWidth="2"
+    strokeLinecap="round"
+    strokeLinejoin="round"
+  >
     <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22" />
   </svg>
 );
 
 const IconMediaPlaceholder = () => (
-  <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" className="text-red-400/60">
+  <svg
+    width="26"
+    height="26"
+    viewBox="0 0 24 24"
+    fill="none"
+    stroke="currentColor"
+    strokeWidth="1.8"
+    strokeLinecap="round"
+    strokeLinejoin="round"
+    className="text-red-400/60"
+  >
     <rect width="18" height="18" x="3" y="3" rx="2" ry="2" />
     <circle cx="9" cy="9" r="2" />
     <path d="m21 15-3.086-3.086a2 2 0 0 0-2.828 0L6 21" />
@@ -48,12 +85,7 @@ const STitle = ({ children }) => (
 const Divider = () => <div className="w-full h-px bg-white/5 my-10 sm:my-16" />;
 
 // ── Non-Cropped Media Frame (No hover zoom, fits 100% full content) ───────────
-const MediaFrame = ({
-  src,
-  title,
-  caption,
-  className = "",
-}) => {
+const MediaFrame = ({ src, title, caption, className = "" }) => {
   const [hasError, setHasError] = useState(false);
   const isVideo = src && (src.endsWith(".webm") || src.endsWith(".mp4"));
 
@@ -147,13 +179,18 @@ export default function SequelDetail({ project, onClose }) {
 
         <div className="flex items-center gap-2 sm:gap-3">
           <a
-            href={d.repoUrl || "https://github.com/adityafajarsy/Sequel_ai-design-clone"}
+            href={
+              d.repoUrl ||
+              "https://github.com/adityafajarsy/Sequel_ai-design-clone"
+            }
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center gap-1.5 px-3 sm:px-3.5 py-1.5 rounded-xl bg-white/5 hover:bg-white/10 border border-white/8 text-white/80 text-[12px] font-bold transition-all active:scale-95"
           >
             <IconGithub />
-            <span className="hidden sm:inline">{d.repoBtn || "GitHub Repo"}</span>
+            <span className="hidden sm:inline">
+              {d.repoBtn || "GitHub Repo"}
+            </span>
           </a>
           <a
             href={d.liveDemoUrl || "https://sequelstudio.vercel.app"}
@@ -168,13 +205,21 @@ export default function SequelDetail({ project, onClose }) {
       </div>
 
       {/* ── Hero Section ──────────────────────────────────────────────────────── */}
-      <m.div variants={fadeUp} custom={0} initial="hidden" animate="visible" className="flex flex-col gap-6">
+      <m.div
+        variants={fadeUp}
+        custom={0}
+        initial="hidden"
+        animate="visible"
+        className="flex flex-col gap-6"
+      >
         <div className="flex flex-col gap-3">
           <div className="flex items-center gap-3">
             <h1 className="text-[40px] sm:text-[56px] lg:text-[68px] font-black text-white tracking-tight leading-[1.04]">
               Sequel
             </h1>
-            <span className="text-[#EF4444] text-[36px] sm:text-[52px] leading-none font-black">•</span>
+            <span className="text-white text-[36px] sm:text-[52px] leading-none font-black">
+              ®
+            </span>
           </div>
 
           <p className="text-[16px] sm:text-[19px] text-white/70 leading-relaxed max-w-3xl font-normal">
@@ -193,14 +238,23 @@ export default function SequelDetail({ project, onClose }) {
       <Divider />
 
       {/* ── Section 01: Mode 2 — Visual DNA & Lineage Continuation ────────────── */}
-      <m.div variants={fadeUp} custom={1} initial="hidden" animate="visible" className="flex flex-col gap-5">
+      <m.div
+        variants={fadeUp}
+        custom={1}
+        initial="hidden"
+        animate="visible"
+        className="flex flex-col gap-5"
+      >
         <div className="flex flex-col gap-2.5">
           <div>
             <span className="px-3 py-1 rounded-full bg-red-950/60 border border-red-500/30 text-[10px] sm:text-[11px] font-mono font-bold tracking-wider text-red-300 uppercase shadow-sm">
               {d.sec1Badge || "MODE 2: LINEAGE CONTINUATION"}
             </span>
           </div>
-          <STitle>{d.sec1Title || "Visual DNA & Lineage Continuation from existing posts."}</STitle>
+          <STitle>
+            {d.sec1Title ||
+              "Visual DNA & Lineage Continuation from existing posts."}
+          </STitle>
           <p className="text-[14px] sm:text-[16px] text-white/60 leading-relaxed max-w-3xl">
             {d.sec1Desc}
           </p>
@@ -216,14 +270,23 @@ export default function SequelDetail({ project, onClose }) {
       <Divider />
 
       {/* ── Section 02: Mode 1 — Guided Editorial Intake ──────────────────────── */}
-      <m.div variants={fadeUp} custom={2} initial="hidden" animate="visible" className="flex flex-col gap-5">
+      <m.div
+        variants={fadeUp}
+        custom={2}
+        initial="hidden"
+        animate="visible"
+        className="flex flex-col gap-5"
+      >
         <div className="flex flex-col gap-2.5">
           <div>
             <span className="px-3 py-1 rounded-full bg-red-950/60 border border-red-500/30 text-[10px] sm:text-[11px] font-mono font-bold tracking-wider text-red-300 uppercase shadow-sm">
               {d.sec2Badge || "MODE 1: GUIDED STUDIO INTAKE"}
             </span>
           </div>
-          <STitle>{d.sec2Title || "Guided Editorial Intake on an interactive studio canvas."}</STitle>
+          <STitle>
+            {d.sec2Title ||
+              "Guided Editorial Intake on an interactive studio canvas."}
+          </STitle>
           <p className="text-[14px] sm:text-[16px] text-white/60 leading-relaxed max-w-3xl">
             {d.sec2Desc}
           </p>
@@ -239,14 +302,22 @@ export default function SequelDetail({ project, onClose }) {
       <Divider />
 
       {/* ── Section 03: In-Canvas AI Edit Pass & Pipeline ─────────────────────── */}
-      <m.div variants={fadeUp} custom={3} initial="hidden" animate="visible" className="flex flex-col gap-5">
+      <m.div
+        variants={fadeUp}
+        custom={3}
+        initial="hidden"
+        animate="visible"
+        className="flex flex-col gap-5"
+      >
         <div className="flex flex-col gap-2.5">
           <div>
             <span className="px-3 py-1 rounded-full bg-red-950/60 border border-red-500/30 text-[10px] sm:text-[11px] font-mono font-bold tracking-wider text-red-300 uppercase shadow-sm">
               {d.sec3Badge || "IN-CANVAS ITERATION & PIPELINE"}
             </span>
           </div>
-          <STitle>{d.sec3Title || "In-Canvas AI Edit Pass & Two-Stage Pipeline."}</STitle>
+          <STitle>
+            {d.sec3Title || "In-Canvas AI Edit Pass & Two-Stage Pipeline."}
+          </STitle>
           <p className="text-[14px] sm:text-[16px] text-white/60 leading-relaxed max-w-3xl">
             {d.sec3Desc}
           </p>
@@ -279,13 +350,17 @@ export default function SequelDetail({ project, onClose }) {
             {d.ctaHeadline || "Ready to experience Sequel?"}
           </h3>
           <p className="text-[13px] sm:text-[14px] text-white/60 leading-relaxed">
-            {d.ctaDesc || "Explore the live studio application or inspect the architecture repository on GitHub."}
+            {d.ctaDesc ||
+              "Explore the live studio application or inspect the architecture repository on GitHub."}
           </p>
         </div>
 
         <div className="flex items-center gap-3 z-10 w-full sm:w-auto justify-center">
           <a
-            href={d.repoUrl || "https://github.com/adityafajarsy/Sequel_ai-design-clone"}
+            href={
+              d.repoUrl ||
+              "https://github.com/adityafajarsy/Sequel_ai-design-clone"
+            }
             target="_blank"
             rel="noopener noreferrer"
             className="px-4 py-2.5 rounded-xl bg-white/5 hover:bg-white/10 border border-white/10 text-white/80 text-[13px] font-bold transition-all active:scale-95 inline-flex items-center gap-2"
