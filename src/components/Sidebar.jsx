@@ -24,7 +24,7 @@ export default function Sidebar() {
         {/* Profile Picture */}
         <div className="w-[80px] h-[80px] rounded-full overflow-hidden border-2 border-white/10 shadow-lg relative group flex-shrink-0">
           <img
-            src="/assets/adityafajarsy.webp"
+            src="/assets/adityafajarsyy.webp"
             alt="Aditya Fajar SY"
             className="w-full h-full object-cover object-[center_15%]"
             width="80"

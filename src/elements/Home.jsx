@@ -92,7 +92,7 @@ export default function Home() {
             loading="eager"
             decoding="async"
             onError={(e) => {
-              e.target.src = "/assets/adityafajarsy.webp";
+              e.target.src = "/assets/adityafajarsyy.webp";
             }}
           />
         </div>
